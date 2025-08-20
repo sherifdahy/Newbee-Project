@@ -1,0 +1,16 @@
+E:\NewBee-Project\NewBee.BackEnd\Newbee.DAL\bin\Debug\net8.0\Newbee.DAL.deps.json
+E:\NewBee-Project\NewBee.BackEnd\Newbee.DAL\bin\Debug\net8.0\Newbee.DAL.dll
+E:\NewBee-Project\NewBee.BackEnd\Newbee.DAL\bin\Debug\net8.0\Newbee.DAL.pdb
+E:\NewBee-Project\NewBee.BackEnd\Newbee.DAL\bin\Debug\net8.0\Newbee.Entities.dll
+E:\NewBee-Project\NewBee.BackEnd\Newbee.DAL\bin\Debug\net8.0\Newbee.Entities.pdb
+E:\NewBee-Project\NewBee.BackEnd\Newbee.DAL\obj\Debug\net8.0\Newbee.DAL.csproj.AssemblyReference.cache
+E:\NewBee-Project\NewBee.BackEnd\Newbee.DAL\obj\Debug\net8.0\Newbee.DAL.GeneratedMSBuildEditorConfig.editorconfig
+E:\NewBee-Project\NewBee.BackEnd\Newbee.DAL\obj\Debug\net8.0\Newbee.DAL.AssemblyInfoInputs.cache
+E:\NewBee-Project\NewBee.BackEnd\Newbee.DAL\obj\Debug\net8.0\Newbee.DAL.AssemblyInfo.cs
+E:\NewBee-Project\NewBee.BackEnd\Newbee.DAL\obj\Debug\net8.0\Newbee.DAL.csproj.CoreCompileInputs.cache
+E:\NewBee-Project\NewBee.BackEnd\Newbee.DAL\obj\Debug\net8.0\Newbee.DAL.sourcelink.json
+E:\NewBee-Project\NewBee.BackEnd\Newbee.DAL\obj\Debug\net8.0\Newbee.DAL.csproj.Up2Date
+E:\NewBee-Project\NewBee.BackEnd\Newbee.DAL\obj\Debug\net8.0\Newbee.DAL.dll
+E:\NewBee-Project\NewBee.BackEnd\Newbee.DAL\obj\Debug\net8.0\refint\Newbee.DAL.dll
+E:\NewBee-Project\NewBee.BackEnd\Newbee.DAL\obj\Debug\net8.0\Newbee.DAL.pdb
+E:\NewBee-Project\NewBee.BackEnd\Newbee.DAL\obj\Debug\net8.0\ref\Newbee.DAL.dll

@@ -1,0 +1,161 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "Amazon.API/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Amazon.API.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Amazon.API.dll": {}
+        }
+      },
+      "Bosta.API/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Bosta.API.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Bosta.API.dll": {}
+        }
+      },
+      "Newbee.DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Newbee.Entities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Newbee.DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Newbee.DAL.dll": {}
+        }
+      },
+      "Newbee.Entities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Newbee.Entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Newbee.Entities.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Amazon.API/1.0.0": {
+      "type": "project",
+      "path": "../Amazon.API/Amazon.API.csproj",
+      "msbuildProject": "../Amazon.API/Amazon.API.csproj"
+    },
+    "Bosta.API/1.0.0": {
+      "type": "project",
+      "path": "../Bosta.API/Bosta.API.csproj",
+      "msbuildProject": "../Bosta.API/Bosta.API.csproj"
+    },
+    "Newbee.DAL/1.0.0": {
+      "type": "project",
+      "path": "../Newbee.DAL/Newbee.DAL.csproj",
+      "msbuildProject": "../Newbee.DAL/Newbee.DAL.csproj"
+    },
+    "Newbee.Entities/1.0.0": {
+      "type": "project",
+      "path": "../Newbee.Entities/Newbee.Entities.csproj",
+      "msbuildProject": "../Newbee.Entities/Newbee.Entities.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "Amazon.API >= 1.0.0",
+      "Bosta.API >= 1.0.0",
+      "Newbee.DAL >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\shrif\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Progress\\ToolboxNuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "E:\\NewBee-Project\\NewBee.BackEnd\\Newbee.BLL\\Newbee.BLL.csproj",
+      "projectName": "Newbee.BLL",
+      "projectPath": "E:\\NewBee-Project\\NewBee.BackEnd\\Newbee.BLL\\Newbee.BLL.csproj",
+      "packagesPath": "C:\\Users\\shrif\\.nuget\\packages\\",
+      "outputPath": "E:\\NewBee-Project\\NewBee.BackEnd\\Newbee.BLL\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Progress\\ToolboxNuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\shrif\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Telerik UI for WPF.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "E:\\NewBee-Project\\NewBee.BackEnd\\Amazon.API\\Amazon.API.csproj": {
+              "projectPath": "E:\\NewBee-Project\\NewBee.BackEnd\\Amazon.API\\Amazon.API.csproj"
+            },
+            "E:\\NewBee-Project\\NewBee.BackEnd\\Bosta.API\\Bosta.API.csproj": {
+              "projectPath": "E:\\NewBee-Project\\NewBee.BackEnd\\Bosta.API\\Bosta.API.csproj"
+            },
+            "E:\\NewBee-Project\\NewBee.BackEnd\\Newbee.DAL\\Newbee.DAL.csproj": {
+              "projectPath": "E:\\NewBee-Project\\NewBee.BackEnd\\Newbee.DAL\\Newbee.DAL.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.200"
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

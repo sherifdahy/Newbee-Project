@@ -1,0 +1,12 @@
+E:\NewBee-Project\NewBee.BackEnd\Bosta.API\bin\Debug\net8.0\Bosta.API.deps.json
+E:\NewBee-Project\NewBee.BackEnd\Bosta.API\bin\Debug\net8.0\Bosta.API.dll
+E:\NewBee-Project\NewBee.BackEnd\Bosta.API\bin\Debug\net8.0\Bosta.API.pdb
+E:\NewBee-Project\NewBee.BackEnd\Bosta.API\obj\Debug\net8.0\Bosta.API.GeneratedMSBuildEditorConfig.editorconfig
+E:\NewBee-Project\NewBee.BackEnd\Bosta.API\obj\Debug\net8.0\Bosta.API.AssemblyInfoInputs.cache
+E:\NewBee-Project\NewBee.BackEnd\Bosta.API\obj\Debug\net8.0\Bosta.API.AssemblyInfo.cs
+E:\NewBee-Project\NewBee.BackEnd\Bosta.API\obj\Debug\net8.0\Bosta.API.csproj.CoreCompileInputs.cache
+E:\NewBee-Project\NewBee.BackEnd\Bosta.API\obj\Debug\net8.0\Bosta.API.sourcelink.json
+E:\NewBee-Project\NewBee.BackEnd\Bosta.API\obj\Debug\net8.0\Bosta.API.dll
+E:\NewBee-Project\NewBee.BackEnd\Bosta.API\obj\Debug\net8.0\refint\Bosta.API.dll
+E:\NewBee-Project\NewBee.BackEnd\Bosta.API\obj\Debug\net8.0\Bosta.API.pdb
+E:\NewBee-Project\NewBee.BackEnd\Bosta.API\obj\Debug\net8.0\ref\Bosta.API.dll

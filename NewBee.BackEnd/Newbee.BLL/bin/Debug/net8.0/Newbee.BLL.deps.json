@@ -1,0 +1,83 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Newbee.BLL/1.0.0": {
+        "dependencies": {
+          "Amazon.API": "1.0.0",
+          "Bosta.API": "1.0.0",
+          "Newbee.DAL": "1.0.0"
+        },
+        "runtime": {
+          "Newbee.BLL.dll": {}
+        }
+      },
+      "Amazon.API/1.0.0": {
+        "runtime": {
+          "Amazon.API.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Bosta.API/1.0.0": {
+        "runtime": {
+          "Bosta.API.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Newbee.DAL/1.0.0": {
+        "dependencies": {
+          "Newbee.Entities": "1.0.0"
+        },
+        "runtime": {
+          "Newbee.DAL.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Newbee.Entities/1.0.0": {
+        "runtime": {
+          "Newbee.Entities.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Newbee.BLL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Amazon.API/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Bosta.API/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Newbee.DAL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Newbee.Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
