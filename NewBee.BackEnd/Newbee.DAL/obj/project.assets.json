@@ -34,9 +34,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\NewBee-Project\\NewBee.BackEnd\\Newbee.DAL\\Newbee.DAL.csproj",
+      "projectUniqueName": "E:\\NewBee-Project\\Newbee.Backend\\Newbee.DAL\\Newbee.DAL.csproj",
       "projectName": "Newbee.DAL",
-      "projectPath": "E:\\NewBee-Project\\NewBee.BackEnd\\Newbee.DAL\\Newbee.DAL.csproj",
+      "projectPath": "E:\\NewBee-Project\\Newbee.Backend\\Newbee.DAL\\Newbee.DAL.csproj",
       "packagesPath": "C:\\Users\\shrif\\.nuget\\packages\\",
       "outputPath": "E:\\NewBee-Project\\NewBee.BackEnd\\Newbee.DAL\\obj\\",
       "projectStyle": "PackageReference",
@@ -61,8 +61,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\NewBee-Project\\NewBee.BackEnd\\Newbee.Entities\\Newbee.Entities.csproj": {
-              "projectPath": "E:\\NewBee-Project\\NewBee.BackEnd\\Newbee.Entities\\Newbee.Entities.csproj"
+            "E:\\NewBee-Project\\Newbee.Backend\\Newbee.Entities\\Newbee.Entities.csproj": {
+              "projectPath": "E:\\NewBee-Project\\Newbee.Backend\\Newbee.Entities\\Newbee.Entities.csproj"
             }
           }
         }

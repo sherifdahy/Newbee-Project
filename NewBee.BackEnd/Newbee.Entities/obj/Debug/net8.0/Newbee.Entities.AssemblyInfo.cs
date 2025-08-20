@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Newbee.Entities")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d4416f6764931fda9a47ca07afe7d7127613189")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+408cd7dcfdaf01c425bfe7ec637d8f5d89bed20f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Newbee.Entities")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Newbee.Entities")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

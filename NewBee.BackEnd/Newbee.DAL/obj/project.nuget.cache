@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Z3dcGg1edJE=",
+  "dgSpecHash": "59QorYp/pDA=",
   "success": true,
-  "projectFilePath": "E:\\NewBee-Project\\NewBee.BackEnd\\Newbee.DAL\\Newbee.DAL.csproj",
+  "projectFilePath": "E:\\NewBee-Project\\Newbee.Backend\\Newbee.DAL\\Newbee.DAL.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
