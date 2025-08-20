@@ -46,10 +46,7 @@ A centralized platform that connects and integrates multiple e-commerce platform
 
 ## 📊 System Diagram
 ```
-Bosta for Shipping     Custom E-Comm     Amazon     Jumia
-         \                 |                |         /
-          \                |                |        /
-                 ---- Centralized System ----
+![Dashboard Screenshot](./Newbee.AC/system.png)
 ```
 
 ---
@@ -62,3 +59,4 @@ Bosta for Shipping     Custom E-Comm     Amazon     Jumia
 
 ## 📫 About
 This project was developed by **NewBee Team** as an innovative solution to unify e-commerce and shipping operations.
+
