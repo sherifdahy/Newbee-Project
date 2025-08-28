@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35919.96 d17.13
+VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Newbee.API", "Newbee.API\Newbee.API.csproj", "{495319AF-7D08-4A36-B652-F2A5B33D8C03}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amazon.API", "..\Amazon.API\Amazon.API.csproj", "{09082BDE-F148-4F39-887A-C0D6D75E0E58}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bosta.API", "..\Bosta.API\Bosta.API.csproj", "{576CAB89-1DFF-4E4A-92ED-BA2A6C3CE686}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Paymob.API", "..\Paymob.API\Paymob.API.csproj", "{D33B450B-5655-4EBC-AD00-092562061534}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{576CAB89-1DFF-4E4A-92ED-BA2A6C3CE686}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{576CAB89-1DFF-4E4A-92ED-BA2A6C3CE686}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{576CAB89-1DFF-4E4A-92ED-BA2A6C3CE686}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D33B450B-5655-4EBC-AD00-092562061534}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D33B450B-5655-4EBC-AD00-092562061534}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D33B450B-5655-4EBC-AD00-092562061534}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D33B450B-5655-4EBC-AD00-092562061534}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

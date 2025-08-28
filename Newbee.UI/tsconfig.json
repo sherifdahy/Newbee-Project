@@ -35,6 +35,18 @@
     },
     {
       "path": "./projects/newbee.ws/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/newbee.cs/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/newbee.cs/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/newbee.ec/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/newbee.ec/tsconfig.spec.json"
     }
   ]
 }

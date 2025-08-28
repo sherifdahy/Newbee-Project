@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ukdryUJSq+Q=",
+  "dgSpecHash": "KyTedBri7vs=",
   "success": true,
-  "projectFilePath": "E:\\NewBee-Project\\Newbee.Backend\\Newbee.API\\Newbee.API\\Newbee.API.csproj",
+  "projectFilePath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Newbee.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\shrif\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\shrif\\.nuget\\packages\\microsoft.openapi\\1.6.14\\microsoft.openapi.1.6.14.nupkg.sha512",
