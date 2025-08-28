@@ -1,18 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\NewBee-Project\\Newbee.Backend\\Newbee.API\\",
+  "WorkspaceRootPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3EB9B0DD-0CBE-415B-9243-65ED56748796}|..\\Newbee.BLL\\Newbee.BLL.csproj|e:\\newbee-project\\newbee.backend\\newbee.bll\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09082BDE-F148-4F39-887A-C0D6D75E0E58}|..\\Amazon.API\\Amazon.API.csproj|e:\\newbee-project\\newbee.backend\\amazon.api\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D914168-1868-4230-8C18-B89A5693A26B}|..\\Newbee.DAL\\Newbee.DAL.csproj|e:\\newbee-project\\newbee.backend\\newbee.dal\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C7C9773-AB71-46BE-89C8-22A17062B29C}|..\\Newbee.Entities\\Newbee.Entities.csproj|e:\\newbee-project\\newbee.backend\\newbee.entities\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|e:\\newbee-project\\newbee.be\\newbee.api\\newbee.api\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,52 +26,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.Backend\\Amazon.API\\Class1.cs",
-              "RelativeDocumentMoniker": "..\\Amazon.API\\Class1.cs",
-              "ToolTip": "E:\\NewBee-Project\\Newbee.Backend\\Amazon.API\\Class1.cs",
-              "RelativeToolTip": "..\\Amazon.API\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T20:11:35.862Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.Backend\\Newbee.BLL\\Class1.cs",
-              "RelativeDocumentMoniker": "..\\Newbee.BLL\\Class1.cs",
-              "ToolTip": "E:\\NewBee-Project\\Newbee.Backend\\Newbee.BLL\\Class1.cs",
-              "RelativeToolTip": "..\\Newbee.BLL\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "Newbee.API\\WeatherForecast.cs",
+              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\WeatherForecast.cs",
+              "RelativeToolTip": "Newbee.API\\WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T20:11:00.34Z",
+              "WhenOpened": "2025-08-28T15:31:56.254Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.Backend\\Newbee.DAL\\Class1.cs",
-              "RelativeDocumentMoniker": "..\\Newbee.DAL\\Class1.cs",
-              "ToolTip": "E:\\NewBee-Project\\Newbee.Backend\\Newbee.DAL\\Class1.cs",
-              "RelativeToolTip": "..\\Newbee.DAL\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T20:10:32.597Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.Backend\\Newbee.Entities\\Class1.cs",
-              "RelativeDocumentMoniker": "..\\Newbee.Entities\\Class1.cs",
-              "ToolTip": "E:\\NewBee-Project\\Newbee.Backend\\Newbee.Entities\\Class1.cs",
-              "RelativeToolTip": "..\\Newbee.Entities\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T20:10:11.494Z"
             }
           ]
         }
