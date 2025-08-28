@@ -10,3 +10,15 @@ E:\NewBee-Project\NewBee.BackEnd\Newbee.Entities\obj\Debug\net8.0\Newbee.Entitie
 E:\NewBee-Project\NewBee.BackEnd\Newbee.Entities\obj\Debug\net8.0\refint\Newbee.Entities.dll
 E:\NewBee-Project\NewBee.BackEnd\Newbee.Entities\obj\Debug\net8.0\Newbee.Entities.pdb
 E:\NewBee-Project\NewBee.BackEnd\Newbee.Entities\obj\Debug\net8.0\ref\Newbee.Entities.dll
+E:\NewBee-Project\Newbee.BE\Newbee.Entities\bin\Debug\net8.0\Newbee.Entities.deps.json
+E:\NewBee-Project\Newbee.BE\Newbee.Entities\bin\Debug\net8.0\Newbee.Entities.dll
+E:\NewBee-Project\Newbee.BE\Newbee.Entities\bin\Debug\net8.0\Newbee.Entities.pdb
+E:\NewBee-Project\Newbee.BE\Newbee.Entities\obj\Debug\net8.0\Newbee.Entities.GeneratedMSBuildEditorConfig.editorconfig
+E:\NewBee-Project\Newbee.BE\Newbee.Entities\obj\Debug\net8.0\Newbee.Entities.AssemblyInfoInputs.cache
+E:\NewBee-Project\Newbee.BE\Newbee.Entities\obj\Debug\net8.0\Newbee.Entities.AssemblyInfo.cs
+E:\NewBee-Project\Newbee.BE\Newbee.Entities\obj\Debug\net8.0\Newbee.Entities.csproj.CoreCompileInputs.cache
+E:\NewBee-Project\Newbee.BE\Newbee.Entities\obj\Debug\net8.0\Newbee.Entities.sourcelink.json
+E:\NewBee-Project\Newbee.BE\Newbee.Entities\obj\Debug\net8.0\Newbee.Entities.dll
+E:\NewBee-Project\Newbee.BE\Newbee.Entities\obj\Debug\net8.0\refint\Newbee.Entities.dll
+E:\NewBee-Project\Newbee.BE\Newbee.Entities\obj\Debug\net8.0\Newbee.Entities.pdb
+E:\NewBee-Project\Newbee.BE\Newbee.Entities\obj\Debug\net8.0\ref\Newbee.Entities.dll

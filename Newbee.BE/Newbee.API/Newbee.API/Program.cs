@@ -1,4 +1,9 @@
 
+using Bosta.API;
+using Bosta.API.Manager;
+using Bosta.API.Services.ApiCall;
+using Microsoft.Extensions.Configuration;
+
 namespace Newbee.API
 {
     public class Program
@@ -6,6 +11,14 @@ namespace Newbee.API
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+
+            #region Bosta Area
+            builder.Services.Configure<BostaAppSettings>(builder.Configuration.GetSection("Bosta"));
+            builder.Services.AddHttpClient<IApiCall, ApiCall>();
+            builder.Services.AddScoped<IBostaManager, BostaManager>();
+            #endregion
+
 
             // Add services to the container.
 
