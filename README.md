@@ -49,7 +49,7 @@ Here are some visuals of the system:
 
 ### 📊 System Diagram
 ![System Diagram](./Newbee.AC/Diagrams/system.png)
-![System Diagram](./Newbee.AC/ERD/ERD.svg)
+![System Diagram](./Newbee.AC/ERD/ERD.png)
 <!-- You can add more screenshots like this -->
 <!-- ![Dashboard Screenshot](./images/dashboard.png) -->
 <!-- ![Orders Page](./images/orders.png) -->
@@ -64,5 +64,6 @@ Here are some visuals of the system:
 
 ## 📫 About
 This project was developed by **NewBee Team** as an innovative solution to unify e-commerce and shipping operations.
+
 
 
