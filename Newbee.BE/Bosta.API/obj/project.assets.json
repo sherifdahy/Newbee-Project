@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\NewBee-Project\\NewBee.BackEnd\\Bosta.API\\Bosta.API.csproj",
+      "projectUniqueName": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
       "projectName": "Bosta.API",
-      "projectPath": "E:\\NewBee-Project\\NewBee.BackEnd\\Bosta.API\\Bosta.API.csproj",
+      "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
       "packagesPath": "C:\\Users\\shrif\\.nuget\\packages\\",
-      "outputPath": "E:\\NewBee-Project\\NewBee.BackEnd\\Bosta.API\\obj\\",
+      "outputPath": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

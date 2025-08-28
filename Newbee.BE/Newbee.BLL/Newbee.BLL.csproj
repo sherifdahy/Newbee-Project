@@ -12,4 +12,8 @@
     <ProjectReference Include="..\Newbee.DAL\Newbee.DAL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Identity\" />
+  </ItemGroup>
+
 </Project>
