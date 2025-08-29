@@ -1,6 +1,5 @@
 ﻿using Api.Bosta.DTOs.PickupRequests.Requests;
 using Api.Bosta.DTOs.PickupRequests.Responses;
-using Bosta.API.DTOs.Shared;
 using Bosta.API.Services.ApiCall;
 
 namespace Bosta.API.Services.PickupRequests
@@ -14,24 +13,24 @@ namespace Bosta.API.Services.PickupRequests
             _apiCall = apiCall;
         }
 
-        public async Task<ApiResponseDTO<PickupRequestCreateDataDTO>> CreateAsync(PickupRequestCreateRequestDTO requestDTO)
+        public async Task<ApiResponse<PickupRequestCreateDataDTO>> CreateAsync(PickupRequestCreateRequestDTO requestDTO)
         {
-            return await _apiCall.PostAsync<PickupRequestCreateRequestDTO,ApiResponseDTO<PickupRequestCreateDataDTO>>("pickups", requestDTO);
+            return await _apiCall.PostAsync<PickupRequestCreateRequestDTO, ApiResponse<PickupRequestCreateDataDTO>>("pickups", requestDTO);
         }
 
-        public async Task<ApiResponseDTO<List<PickupRequestCreateDataDTO>>> GetAllAsync()
+        public async Task<ApiResponse<List<PickupRequestCreateDataDTO>>> GetAllAsync()
         {
-            return await _apiCall.GetAsync<ApiResponseDTO<List<PickupRequestCreateDataDTO>>>("pickups");
+            return await _apiCall.GetAsync<ApiResponse<List<PickupRequestCreateDataDTO>>>("pickups");
         }
 
-        public async Task<ApiResponseDTO<PickupRequestCreateDataDTO>> GetByIdAsync(string id)
+        public async Task<ApiResponse<PickupRequestCreateDataDTO>> GetByIdAsync(string id)
         {
-            return await _apiCall.GetAsync<ApiResponseDTO<PickupRequestCreateDataDTO>>($"pickups/{id}");
+            return await _apiCall.GetAsync<ApiResponse<PickupRequestCreateDataDTO>>($"pickups/{id}");
         }
 
-        public async Task<ApiResponseDTO<object>> Delete(string id)
+        public async Task<ApiResponse<object>> Delete(string id)
         {
-            return await _apiCall.DeleteAsync<ApiResponseDTO<object>>($"pickups/{id}");
+            return await _apiCall.DeleteAsync<ApiResponse<object>>($"pickups/{id}");
         }
     }
 

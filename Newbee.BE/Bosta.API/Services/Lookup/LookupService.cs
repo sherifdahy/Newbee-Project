@@ -1,5 +1,4 @@
 ﻿using Api.Bosta.DTOs.Lookup;
-using Bosta.API.DTOs.Shared;
 using Bosta.API.Services.ApiCall;
 using System;
 using System.Collections.Generic;
@@ -57,9 +56,9 @@ namespace Bosta.API.Services.Lookup
 
         //    return respJson;
         //}
-        public async Task<ApiResponseDTO<List<ZoneDistrictDto>>> GetDistrictInfoAsync(string cityId)
+        public async Task<ApiResponse<List<ZoneDistrictDto>>> GetDistrictInfoAsync(string cityId)
         {
-            return await _apiCall.GetAsync<ApiResponseDTO<List<ZoneDistrictDto>>>($"cities/{cityId}/districts");
+            return await _apiCall.GetAsync<ApiResponse<List<ZoneDistrictDto>>>($"cities/{cityId}/districts");
         }
         //public Task<ApiResponseDTO<CityDetailsDTO>> GetCityInfoAsync()
         //{
