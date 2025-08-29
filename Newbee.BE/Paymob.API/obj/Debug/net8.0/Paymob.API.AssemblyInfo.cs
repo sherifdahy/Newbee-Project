@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Paymob.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd179ed6471db286dd45250afbdb9a5c044d1228")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9ff03701655033210fb99e49af1ee1a323420be")]
 [assembly: System.Reflection.AssemblyProductAttribute("Paymob.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Paymob.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
