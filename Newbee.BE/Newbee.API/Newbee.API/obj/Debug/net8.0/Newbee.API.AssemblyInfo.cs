@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Newbee.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+80a0502859a8f9d25d912492ae486bcde9bf05cb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9c8954fc25f4ae44253354474fbe634399a3cb2")]
 [assembly: System.Reflection.AssemblyProductAttribute("Newbee.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Newbee.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
