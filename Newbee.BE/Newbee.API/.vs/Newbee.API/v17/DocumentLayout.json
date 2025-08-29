@@ -81,8 +81,7 @@
               "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "ViewState": "AgIAAA8WAAAAAAAAAAAWwC0WAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2025-08-29T21:55:39.721Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-29T21:55:39.721Z"
             },
             {
               "$type": "Document",
@@ -106,8 +105,7 @@
               "RelativeToolTip": "Newbee.API\\Abstractions\\Const\\RegexPatterns.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-29T21:55:13.865Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-29T21:55:13.865Z"
             },
             {
               "$type": "Document",
@@ -119,8 +117,7 @@
               "RelativeToolTip": "Newbee.API\\DTO\\Authentication\\RegisterRequestValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-29T21:54:52.529Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-29T21:54:52.529Z"
             },
             {
               "$type": "Document",
@@ -132,8 +129,7 @@
               "RelativeToolTip": "Newbee.API\\DTO\\Authentication\\RegisterRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-29T21:54:51.522Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-29T21:54:51.522Z"
             },
             {
               "$type": "Document",
@@ -145,8 +141,7 @@
               "RelativeToolTip": "Newbee.API\\appsettings.Production.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-29T21:54:35.841Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-29T21:54:35.841Z"
             },
             {
               "$type": "Document",
@@ -158,8 +153,7 @@
               "RelativeToolTip": "Newbee.API\\appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-29T21:54:35.01Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-29T21:54:35.01Z"
             },
             {
               "$type": "Document",
@@ -171,13 +165,12 @@
               "RelativeToolTip": "Newbee.API\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-29T21:54:30.835Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-29T21:54:30.835Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "Paymob.API",
+              "Title": "Paymob.API.csproj",
               "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Paymob.API\\Paymob.API.csproj",
               "RelativeDocumentMoniker": "..\\Paymob.API\\Paymob.API.csproj",
               "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Paymob.API\\Paymob.API.csproj",
@@ -190,7 +183,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "Newbee.Entities",
+              "Title": "Newbee.Entities.csproj",
               "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
               "RelativeDocumentMoniker": "..\\Newbee.Entities\\Newbee.Entities.csproj",
               "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
@@ -203,7 +196,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "Newbee.DAL",
+              "Title": "Newbee.DAL.csproj",
               "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
               "RelativeDocumentMoniker": "..\\Newbee.DAL\\Newbee.DAL.csproj",
               "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
@@ -216,7 +209,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "Newbee.BLL",
+              "Title": "Newbee.BLL.csproj",
               "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj",
               "RelativeDocumentMoniker": "..\\Newbee.BLL\\Newbee.BLL.csproj",
               "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj",
@@ -229,12 +222,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Newbee.API",
+              "Title": "Newbee.API.csproj",
               "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Newbee.API.csproj",
               "RelativeDocumentMoniker": "Newbee.API\\Newbee.API.csproj",
               "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Newbee.API.csproj",
               "RelativeToolTip": "Newbee.API\\Newbee.API.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-08-29T21:53:56.881Z",
               "EditorCaption": ""
@@ -242,7 +235,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "Bosta.API",
+              "Title": "Bosta.API.csproj",
               "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
               "RelativeDocumentMoniker": "..\\Bosta.API\\Bosta.API.csproj",
               "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
@@ -255,7 +248,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "Amazon.API",
+              "Title": "Amazon.API.csproj",
               "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj",
               "RelativeDocumentMoniker": "..\\Amazon.API\\Amazon.API.csproj",
               "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj",

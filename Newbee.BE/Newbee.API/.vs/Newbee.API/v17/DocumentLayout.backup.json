@@ -3,6 +3,13 @@
   "WorkspaceRootPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|e:\\newbee-project\\newbee.be\\newbee.api\\newbee.api\\newbee.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\newbee.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|e:\\newbee-project\\newbee.be\\newbee.api\\newbee.api\\newbee.api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\newbee.api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
@@ -43,10 +50,6 @@
       "AbsoluteMoniker": "D:0:0:{3EB9B0DD-0CBE-415B-9243-65ED56748796}|..\\Newbee.BLL\\Newbee.BLL.csproj|e:\\newbee-project\\newbee.be\\newbee.bll\\newbee.bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|e:\\newbee-project\\newbee.be\\newbee.api\\newbee.api\\newbee.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\newbee.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{576CAB89-1DFF-4E4A-92ED-BA2A6C3CE686}|..\\Bosta.API\\Bosta.API.csproj|e:\\newbee-project\\newbee.be\\bosta.api\\bosta.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
@@ -60,7 +63,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Bookmark",
@@ -72,7 +75,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAAA8WAAAAAAAAAAAWwC0WAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-08-29T21:55:39.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Newbee.API",
               "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Newbee.API.csproj",
               "RelativeDocumentMoniker": "Newbee.API\\Newbee.API.csproj",
@@ -84,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "RegexPatterns.cs",
               "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Abstractions\\Const\\RegexPatterns.cs",
               "RelativeDocumentMoniker": "Newbee.API\\Abstractions\\Const\\RegexPatterns.cs",
@@ -97,7 +111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "RegisterRequestValidator.cs",
               "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\DTO\\Authentication\\RegisterRequestValidator.cs",
               "RelativeDocumentMoniker": "Newbee.API\\DTO\\Authentication\\RegisterRequestValidator.cs",
@@ -110,7 +124,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "RegisterRequest.cs",
               "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\DTO\\Authentication\\RegisterRequest.cs",
               "RelativeDocumentMoniker": "Newbee.API\\DTO\\Authentication\\RegisterRequest.cs",
@@ -123,7 +137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "appsettings.Production.json",
               "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\appsettings.Production.json",
               "RelativeDocumentMoniker": "Newbee.API\\appsettings.Production.json",
@@ -136,7 +150,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\appsettings.Development.json",
               "RelativeDocumentMoniker": "Newbee.API\\appsettings.Development.json",
@@ -149,7 +163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "appsettings.json",
               "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\appsettings.json",
               "RelativeDocumentMoniker": "Newbee.API\\appsettings.json",
@@ -162,7 +176,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Paymob.API",
               "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Paymob.API\\Paymob.API.csproj",
               "RelativeDocumentMoniker": "..\\Paymob.API\\Paymob.API.csproj",
@@ -175,7 +189,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Newbee.Entities",
               "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
               "RelativeDocumentMoniker": "..\\Newbee.Entities\\Newbee.Entities.csproj",
@@ -188,7 +202,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Newbee.DAL",
               "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
               "RelativeDocumentMoniker": "..\\Newbee.DAL\\Newbee.DAL.csproj",
@@ -201,7 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "Newbee.BLL",
               "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj",
               "RelativeDocumentMoniker": "..\\Newbee.BLL\\Newbee.BLL.csproj",
@@ -214,20 +228,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 0,
               "Title": "Newbee.API",
               "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Newbee.API.csproj",
               "RelativeDocumentMoniker": "Newbee.API\\Newbee.API.csproj",
               "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Newbee.API.csproj",
               "RelativeToolTip": "Newbee.API\\Newbee.API.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-08-29T21:53:56.881Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Bosta.API",
               "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
               "RelativeDocumentMoniker": "..\\Bosta.API\\Bosta.API.csproj",
@@ -240,7 +254,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Amazon.API",
               "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj",
               "RelativeDocumentMoniker": "..\\Amazon.API\\Amazon.API.csproj",
