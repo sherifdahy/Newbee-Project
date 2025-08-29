@@ -1,5 +1,5 @@
 ﻿using Api.Bosta.DTOs.Lookup;
-using Api.Bosta.DTOs.Shared;
+using Bosta.API.DTOs.Shared;
 
 namespace Bosta.API.Services.Lookup
 {
