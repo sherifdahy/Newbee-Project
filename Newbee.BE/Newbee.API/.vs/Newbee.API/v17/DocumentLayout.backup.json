@@ -3,50 +3,54 @@
   "WorkspaceRootPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{576CAB89-1DFF-4E4A-92ED-BA2A6C3CE686}|..\\Bosta.API\\Bosta.API.csproj|e:\\newbee-project\\newbee.be\\bosta.api\\services\\pickuplocations\\pickuplocationsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|e:\\newbee-project\\newbee.be\\newbee.api\\newbee.api\\newbee.api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\newbee.api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|e:\\newbee-project\\newbee.be\\newbee.api\\newbee.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|e:\\newbee-project\\newbee.be\\newbee.api\\newbee.api\\abstractions\\const\\regexpatterns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\abstractions\\const\\regexpatterns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{576CAB89-1DFF-4E4A-92ED-BA2A6C3CE686}|..\\Bosta.API\\Bosta.API.csproj|e:\\newbee-project\\newbee.be\\bosta.api\\manager\\bostamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|e:\\newbee-project\\newbee.be\\newbee.api\\newbee.api\\dto\\authentication\\registerrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\dto\\authentication\\registerrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{576CAB89-1DFF-4E4A-92ED-BA2A6C3CE686}|..\\Bosta.API\\Bosta.API.csproj|e:\\newbee-project\\newbee.be\\bosta.api\\manager\\ibostamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|e:\\newbee-project\\newbee.be\\newbee.api\\newbee.api\\dto\\authentication\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\dto\\authentication\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{576CAB89-1DFF-4E4A-92ED-BA2A6C3CE686}|..\\Bosta.API\\Bosta.API.csproj|e:\\newbee-project\\newbee.be\\bosta.api\\services\\apicall\\iapicall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|e:\\newbee-project\\newbee.be\\newbee.api\\newbee.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{576CAB89-1DFF-4E4A-92ED-BA2A6C3CE686}|..\\Bosta.API\\Bosta.API.csproj|e:\\newbee-project\\newbee.be\\bosta.api\\services\\auth\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|e:\\newbee-project\\newbee.be\\newbee.api\\newbee.api\\appsettings.production.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\appsettings.production.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{576CAB89-1DFF-4E4A-92ED-BA2A6C3CE686}|..\\Bosta.API\\Bosta.API.csproj|e:\\newbee-project\\newbee.be\\bosta.api\\services\\lookup\\lookupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|e:\\newbee-project\\newbee.be\\newbee.api\\newbee.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{576CAB89-1DFF-4E4A-92ED-BA2A6C3CE686}|..\\Bosta.API\\Bosta.API.csproj|e:\\newbee-project\\newbee.be\\bosta.api\\services\\lookup\\ilookupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D33B450B-5655-4EBC-AD00-092562061534}|..\\Paymob.API\\Paymob.API.csproj|e:\\newbee-project\\newbee.be\\paymob.api\\paymob.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{576CAB89-1DFF-4E4A-92ED-BA2A6C3CE686}|..\\Bosta.API\\Bosta.API.csproj|e:\\newbee-project\\newbee.be\\bosta.api\\services\\shipping\\ishippingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C7C9773-AB71-46BE-89C8-22A17062B29C}|..\\Newbee.Entities\\Newbee.Entities.csproj|e:\\newbee-project\\newbee.be\\newbee.entities\\newbee.entities.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{576CAB89-1DFF-4E4A-92ED-BA2A6C3CE686}|..\\Bosta.API\\Bosta.API.csproj|e:\\newbee-project\\newbee.be\\bosta.api\\services\\shipping\\shippingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2D914168-1868-4230-8C18-B89A5693A26B}|..\\Newbee.DAL\\Newbee.DAL.csproj|e:\\newbee-project\\newbee.be\\newbee.dal\\newbee.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{576CAB89-1DFF-4E4A-92ED-BA2A6C3CE686}|..\\Bosta.API\\Bosta.API.csproj|e:\\newbee-project\\newbee.be\\bosta.api\\services\\pickuplocations\\ipickuplocationsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3EB9B0DD-0CBE-415B-9243-65ED56748796}|..\\Newbee.BLL\\Newbee.BLL.csproj|e:\\newbee-project\\newbee.be\\newbee.bll\\newbee.bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{576CAB89-1DFF-4E4A-92ED-BA2A6C3CE686}|..\\Bosta.API\\Bosta.API.csproj|e:\\newbee-project\\newbee.be\\bosta.api\\services\\pickuprequests\\ipickuprequestsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|e:\\newbee-project\\newbee.be\\newbee.api\\newbee.api\\newbee.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\newbee.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{576CAB89-1DFF-4E4A-92ED-BA2A6C3CE686}|..\\Bosta.API\\Bosta.API.csproj|e:\\newbee-project\\newbee.be\\bosta.api\\services\\pickuprequests\\pickuprequestsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{576CAB89-1DFF-4E4A-92ED-BA2A6C3CE686}|..\\Bosta.API\\Bosta.API.csproj|e:\\newbee-project\\newbee.be\\bosta.api\\bosta.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{576CAB89-1DFF-4E4A-92ED-BA2A6C3CE686}|..\\Bosta.API\\Bosta.API.csproj|e:\\newbee-project\\newbee.be\\bosta.api\\services\\pricing\\ipricingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{576CAB89-1DFF-4E4A-92ED-BA2A6C3CE686}|..\\Bosta.API\\Bosta.API.csproj|e:\\newbee-project\\newbee.be\\bosta.api\\services\\pricing\\pricingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{09082BDE-F148-4F39-887A-C0D6D75E0E58}|..\\Amazon.API\\Amazon.API.csproj|e:\\newbee-project\\newbee.be\\amazon.api\\amazon.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -56,7 +60,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -68,185 +72,184 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Newbee.API",
+              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Newbee.API.csproj",
+              "RelativeDocumentMoniker": "Newbee.API\\Newbee.API.csproj",
+              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Newbee.API.csproj",
+              "RelativeToolTip": "Newbee.API\\Newbee.API.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-29T21:55:16.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Program.cs",
-              "RelativeDocumentMoniker": "Newbee.API\\Program.cs",
-              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Program.cs",
-              "RelativeToolTip": "Newbee.API\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABAAAAAAAAAAA==",
+              "Title": "RegexPatterns.cs",
+              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Abstractions\\Const\\RegexPatterns.cs",
+              "RelativeDocumentMoniker": "Newbee.API\\Abstractions\\Const\\RegexPatterns.cs",
+              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Abstractions\\Const\\RegexPatterns.cs",
+              "RelativeToolTip": "Newbee.API\\Abstractions\\Const\\RegexPatterns.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T18:53:34.815Z",
+              "WhenOpened": "2025-08-29T21:55:13.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RegisterRequestValidator.cs",
+              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\DTO\\Authentication\\RegisterRequestValidator.cs",
+              "RelativeDocumentMoniker": "Newbee.API\\DTO\\Authentication\\RegisterRequestValidator.cs",
+              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\DTO\\Authentication\\RegisterRequestValidator.cs",
+              "RelativeToolTip": "Newbee.API\\DTO\\Authentication\\RegisterRequestValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T21:54:52.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RegisterRequest.cs",
+              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\DTO\\Authentication\\RegisterRequest.cs",
+              "RelativeDocumentMoniker": "Newbee.API\\DTO\\Authentication\\RegisterRequest.cs",
+              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\DTO\\Authentication\\RegisterRequest.cs",
+              "RelativeToolTip": "Newbee.API\\DTO\\Authentication\\RegisterRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T21:54:51.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.Production.json",
+              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\appsettings.Production.json",
+              "RelativeDocumentMoniker": "Newbee.API\\appsettings.Production.json",
+              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\appsettings.Production.json",
+              "RelativeToolTip": "Newbee.API\\appsettings.Production.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-29T21:54:35.841Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "IApiCall.cs",
-              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Services\\ApiCall\\IApiCall.cs",
-              "RelativeDocumentMoniker": "..\\Bosta.API\\Services\\ApiCall\\IApiCall.cs",
-              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Services\\ApiCall\\IApiCall.cs",
-              "RelativeToolTip": "..\\Bosta.API\\Services\\ApiCall\\IApiCall.cs",
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "Newbee.API\\appsettings.Development.json",
+              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\appsettings.Development.json",
+              "RelativeToolTip": "Newbee.API\\appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T18:52:14.746Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Services\\Auth\\AuthService.cs",
-              "RelativeDocumentMoniker": "..\\Bosta.API\\Services\\Auth\\AuthService.cs",
-              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Services\\Auth\\AuthService.cs",
-              "RelativeToolTip": "..\\Bosta.API\\Services\\Auth\\AuthService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T18:50:50.921Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ILookupService.cs",
-              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Services\\Lookup\\ILookupService.cs",
-              "RelativeDocumentMoniker": "..\\Bosta.API\\Services\\Lookup\\ILookupService.cs",
-              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Services\\Lookup\\ILookupService.cs",
-              "RelativeToolTip": "..\\Bosta.API\\Services\\Lookup\\ILookupService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T18:49:48.201Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-29T21:54:35.01Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "LookupService.cs",
-              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Services\\Lookup\\LookupService.cs",
-              "RelativeDocumentMoniker": "..\\Bosta.API\\Services\\Lookup\\LookupService.cs",
-              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Services\\Lookup\\LookupService.cs",
-              "RelativeToolTip": "..\\Bosta.API\\Services\\Lookup\\LookupService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T18:49:35.257Z"
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\appsettings.json",
+              "RelativeDocumentMoniker": "Newbee.API\\appsettings.json",
+              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\appsettings.json",
+              "RelativeToolTip": "Newbee.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-29T21:54:30.835Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PickupLocationsService.cs",
-              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Services\\PickupLocations\\PickupLocationsService.cs",
-              "RelativeDocumentMoniker": "..\\Bosta.API\\Services\\PickupLocations\\PickupLocationsService.cs",
-              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Services\\PickupLocations\\PickupLocationsService.cs",
-              "RelativeToolTip": "..\\Bosta.API\\Services\\PickupLocations\\PickupLocationsService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T18:41:55.711Z",
+              "DocumentIndex": 7,
+              "Title": "Paymob.API",
+              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Paymob.API\\Paymob.API.csproj",
+              "RelativeDocumentMoniker": "..\\Paymob.API\\Paymob.API.csproj",
+              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Paymob.API\\Paymob.API.csproj",
+              "RelativeToolTip": "..\\Paymob.API\\Paymob.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-29T21:54:04.2Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Newbee.Entities",
+              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
+              "RelativeDocumentMoniker": "..\\Newbee.Entities\\Newbee.Entities.csproj",
+              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
+              "RelativeToolTip": "..\\Newbee.Entities\\Newbee.Entities.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-29T21:54:03.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Newbee.DAL",
+              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
+              "RelativeDocumentMoniker": "..\\Newbee.DAL\\Newbee.DAL.csproj",
+              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
+              "RelativeToolTip": "..\\Newbee.DAL\\Newbee.DAL.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-29T21:54:01.688Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "IPickupLocationsService.cs",
-              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Services\\PickupLocations\\IPickupLocationsService.cs",
-              "RelativeDocumentMoniker": "..\\Bosta.API\\Services\\PickupLocations\\IPickupLocationsService.cs",
-              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Services\\PickupLocations\\IPickupLocationsService.cs",
-              "RelativeToolTip": "..\\Bosta.API\\Services\\PickupLocations\\IPickupLocationsService.cs",
+              "Title": "Newbee.BLL",
+              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj",
+              "RelativeDocumentMoniker": "..\\Newbee.BLL\\Newbee.BLL.csproj",
+              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj",
+              "RelativeToolTip": "..\\Newbee.BLL\\Newbee.BLL.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T18:41:54.51Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ShippingService.cs",
-              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Services\\Shipping\\ShippingService.cs",
-              "RelativeDocumentMoniker": "..\\Bosta.API\\Services\\Shipping\\ShippingService.cs",
-              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Services\\Shipping\\ShippingService.cs",
-              "RelativeToolTip": "..\\Bosta.API\\Services\\Shipping\\ShippingService.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAABkAAABNAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T18:41:38.455Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IShippingService.cs",
-              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Services\\Shipping\\IShippingService.cs",
-              "RelativeDocumentMoniker": "..\\Bosta.API\\Services\\Shipping\\IShippingService.cs",
-              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Services\\Shipping\\IShippingService.cs",
-              "RelativeToolTip": "..\\Bosta.API\\Services\\Shipping\\IShippingService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T18:41:21.672Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "PricingService.cs",
-              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Services\\Pricing\\PricingService.cs",
-              "RelativeDocumentMoniker": "..\\Bosta.API\\Services\\Pricing\\PricingService.cs",
-              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Services\\Pricing\\PricingService.cs",
-              "RelativeToolTip": "..\\Bosta.API\\Services\\Pricing\\PricingService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T18:40:16.27Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "IPricingService.cs",
-              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Services\\Pricing\\IPricingService.cs",
-              "RelativeDocumentMoniker": "..\\Bosta.API\\Services\\Pricing\\IPricingService.cs",
-              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Services\\Pricing\\IPricingService.cs",
-              "RelativeToolTip": "..\\Bosta.API\\Services\\Pricing\\IPricingService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T18:40:06.111Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "PickupRequestsService.cs",
-              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Services\\PickupRequests\\PickupRequestsService.cs",
-              "RelativeDocumentMoniker": "..\\Bosta.API\\Services\\PickupRequests\\PickupRequestsService.cs",
-              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Services\\PickupRequests\\PickupRequestsService.cs",
-              "RelativeToolTip": "..\\Bosta.API\\Services\\PickupRequests\\PickupRequestsService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T18:39:54.423Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-29T21:54:00.424Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "IPickupRequestsService.cs",
-              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Services\\PickupRequests\\IPickupRequestsService.cs",
-              "RelativeDocumentMoniker": "..\\Bosta.API\\Services\\PickupRequests\\IPickupRequestsService.cs",
-              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Services\\PickupRequests\\IPickupRequestsService.cs",
-              "RelativeToolTip": "..\\Bosta.API\\Services\\PickupRequests\\IPickupRequestsService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T18:39:53.366Z"
+              "Title": "Newbee.API",
+              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Newbee.API.csproj",
+              "RelativeDocumentMoniker": "Newbee.API\\Newbee.API.csproj",
+              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Newbee.API.csproj",
+              "RelativeToolTip": "Newbee.API\\Newbee.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-29T21:53:56.881Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IBostaManager.cs",
-              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Manager\\IBostaManager.cs",
-              "RelativeDocumentMoniker": "..\\Bosta.API\\Manager\\IBostaManager.cs",
-              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Manager\\IBostaManager.cs",
-              "RelativeToolTip": "..\\Bosta.API\\Manager\\IBostaManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T17:58:04.683Z"
+              "DocumentIndex": 12,
+              "Title": "Bosta.API",
+              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
+              "RelativeDocumentMoniker": "..\\Bosta.API\\Bosta.API.csproj",
+              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
+              "RelativeToolTip": "..\\Bosta.API\\Bosta.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-29T21:53:54.288Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BostaManager.cs",
-              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Manager\\BostaManager.cs",
-              "RelativeDocumentMoniker": "..\\Bosta.API\\Manager\\BostaManager.cs",
-              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Manager\\BostaManager.cs",
-              "RelativeToolTip": "..\\Bosta.API\\Manager\\BostaManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T17:57:48.747Z"
+              "DocumentIndex": 13,
+              "Title": "Amazon.API",
+              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj",
+              "RelativeDocumentMoniker": "..\\Amazon.API\\Amazon.API.csproj",
+              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj",
+              "RelativeToolTip": "..\\Amazon.API\\Amazon.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-29T21:53:53.176Z",
+              "EditorCaption": ""
             }
           ]
         }

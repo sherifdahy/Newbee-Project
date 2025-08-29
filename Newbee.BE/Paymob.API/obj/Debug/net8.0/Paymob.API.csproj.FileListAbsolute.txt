@@ -1,0 +1,12 @@
+C:\Users\Mohamed_Khaled\Source\Repos\Newbee-Project\Newbee.BE\Paymob.API\bin\Debug\net8.0\Paymob.API.deps.json
+C:\Users\Mohamed_Khaled\Source\Repos\Newbee-Project\Newbee.BE\Paymob.API\bin\Debug\net8.0\Paymob.API.dll
+C:\Users\Mohamed_Khaled\Source\Repos\Newbee-Project\Newbee.BE\Paymob.API\bin\Debug\net8.0\Paymob.API.pdb
+C:\Users\Mohamed_Khaled\Source\Repos\Newbee-Project\Newbee.BE\Paymob.API\obj\Debug\net8.0\Paymob.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mohamed_Khaled\Source\Repos\Newbee-Project\Newbee.BE\Paymob.API\obj\Debug\net8.0\Paymob.API.AssemblyInfoInputs.cache
+C:\Users\Mohamed_Khaled\Source\Repos\Newbee-Project\Newbee.BE\Paymob.API\obj\Debug\net8.0\Paymob.API.AssemblyInfo.cs
+C:\Users\Mohamed_Khaled\Source\Repos\Newbee-Project\Newbee.BE\Paymob.API\obj\Debug\net8.0\Paymob.API.csproj.CoreCompileInputs.cache
+C:\Users\Mohamed_Khaled\Source\Repos\Newbee-Project\Newbee.BE\Paymob.API\obj\Debug\net8.0\Paymob.API.sourcelink.json
+C:\Users\Mohamed_Khaled\Source\Repos\Newbee-Project\Newbee.BE\Paymob.API\obj\Debug\net8.0\Paymob.API.dll
+C:\Users\Mohamed_Khaled\Source\Repos\Newbee-Project\Newbee.BE\Paymob.API\obj\Debug\net8.0\refint\Paymob.API.dll
+C:\Users\Mohamed_Khaled\Source\Repos\Newbee-Project\Newbee.BE\Paymob.API\obj\Debug\net8.0\Paymob.API.pdb
+C:\Users\Mohamed_Khaled\Source\Repos\Newbee-Project\Newbee.BE\Paymob.API\obj\Debug\net8.0\ref\Paymob.API.dll
