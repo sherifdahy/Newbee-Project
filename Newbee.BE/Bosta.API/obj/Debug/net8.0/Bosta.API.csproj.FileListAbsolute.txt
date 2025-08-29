@@ -23,3 +23,6 @@ E:\NewBee-Project\Newbee.BE\Bosta.API\obj\Debug\net8.0\Bosta.API.dll
 E:\NewBee-Project\Newbee.BE\Bosta.API\obj\Debug\net8.0\refint\Bosta.API.dll
 E:\NewBee-Project\Newbee.BE\Bosta.API\obj\Debug\net8.0\Bosta.API.pdb
 E:\NewBee-Project\Newbee.BE\Bosta.API\obj\Debug\net8.0\ref\Bosta.API.dll
+E:\NewBee-Project\Newbee.BE\Bosta.API\bin\Debug\net8.0\Newbee.Common.dll
+E:\NewBee-Project\Newbee.BE\Bosta.API\bin\Debug\net8.0\Newbee.Common.pdb
+E:\NewBee-Project\Newbee.BE\Bosta.API\obj\Debug\net8.0\Bosta.API.csproj.Up2Date

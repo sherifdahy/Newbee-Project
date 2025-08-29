@@ -1,14 +1,40 @@
 [
   {
+    "ContainingType": "Newbee.API.Controllers.PickupLocationsController",
+    "Method": "GetAll",
+    "RelativePath": "api/PickupLocations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Newbee.API.Controllers.PickupLocationsController",
+    "Method": "GetById",
+    "RelativePath": "api/PickupLocations/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Newbee.API.Controllers.PricingController",
-    "Method": "CalculatePrice",
+    "Method": "PricingCalculator",
     "RelativePath": "api/Pricing",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "pricingRequestDTO",
+        "Name": "request",
         "Type": "Bosta.API.DTOs.Price.PricingRequestDTO",
         "IsRequired": true
       }

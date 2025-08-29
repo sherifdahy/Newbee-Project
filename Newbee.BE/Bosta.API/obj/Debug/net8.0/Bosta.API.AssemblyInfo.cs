@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Bosta.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9ff03701655033210fb99e49af1ee1a323420be")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+71707eb1b7f0c9192bd8cd3621ed6a2f0fb05553")]
 [assembly: System.Reflection.AssemblyProductAttribute("Bosta.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Bosta.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

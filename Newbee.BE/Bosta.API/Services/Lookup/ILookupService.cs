@@ -1,5 +1,4 @@
 ﻿using Api.Bosta.DTOs.Lookup;
-using Bosta.API.DTOs.Shared;
 
 namespace Bosta.API.Services.Lookup
 {
@@ -9,6 +8,6 @@ namespace Bosta.API.Services.Lookup
         //Task<ApiResponseDTO<CityDetailsDTO>> GetCityInfoAsync();
         //Task<ApiResponseDTO<List<DistrictDTO>>> GetAllDistrictsAsync();
         //Task<ApiResponseDTO<List<ZoneDTO>>> GetAllZonesAsync(string cityId);
-        Task<ApiResponseDTO<List<ZoneDistrictDto>>> GetDistrictInfoAsync(string cityId);
+        Task<ApiResponse<List<ZoneDistrictDto>>> GetDistrictInfoAsync(string cityId);
     }
 }
