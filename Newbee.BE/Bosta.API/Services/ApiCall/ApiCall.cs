@@ -10,15 +10,14 @@ namespace Bosta.API.Services.ApiCall
     public class ApiCall : IApiCall
     {
         private readonly HttpClient _httpClient;
-
         public ApiCall(HttpClient client, IOptions<BostaAppSettings> options)
         {
             _httpClient = client;
             _httpClient.BaseAddress = new Uri(options.Value.BaseUrl);
+
         }
 
         #region HTTP Methods
-
         public async Task<TResponse?> GetAsync<TResponse>(string url,IDictionary<string, string>? headers = null)
         {
             var request = BuildRequest<object>(url, HttpMethod.Get, headers, null);
@@ -58,7 +57,6 @@ namespace Bosta.API.Services.ApiCall
 
             return await response.Content.ReadFromJsonAsync<TResponse>();
         }
-
         #endregion
 
         #region Build Request

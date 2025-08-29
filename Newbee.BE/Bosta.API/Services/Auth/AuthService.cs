@@ -1,7 +1,7 @@
 ﻿using Api.Bosta.DTOs;
 using Api.Bosta.DTOs.Auth.Request;
 using Api.Bosta.DTOs.Auth.Response;
-using Api.Bosta.DTOs.Shared;
+using Bosta.API.DTOs.Shared;
 using Bosta.API.Services.ApiCall;
 using System.Net.Http.Json;
 

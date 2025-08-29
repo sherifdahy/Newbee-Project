@@ -1,8 +1,7 @@
 ﻿using Api.Bosta.DTOs.PickupRequests.Requests;
 using Api.Bosta.DTOs.PickupRequests.Responses;
-using Api.Bosta.DTOs.Shared;
+using Bosta.API.DTOs.Shared;
 using Bosta.API.Services.ApiCall;
-using System.Net.Http.Json;
 
 namespace Bosta.API.Services.PickupRequests
 {
