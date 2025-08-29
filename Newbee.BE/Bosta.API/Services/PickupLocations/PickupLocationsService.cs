@@ -1,5 +1,5 @@
 ﻿using Api.Bosta.DTOs.PickupLocations.Responses;
-using Api.Bosta.DTOs.Shared;
+using Bosta.API.DTOs.Shared;
 using Bosta.API.Services.ApiCall;
 using System.Net.Http.Json;
 
