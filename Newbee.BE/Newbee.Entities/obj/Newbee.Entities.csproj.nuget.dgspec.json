@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {}
+    "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {
+    "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
+        "projectUniqueName": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
         "projectName": "Newbee.Entities",
-        "projectPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
+        "projectPath": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
         "packagesPath": "C:\\Users\\Mohamed_Khaled\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\obj\\",
         "projectStyle": "PackageReference",

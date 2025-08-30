@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj": {}
+    "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj": {
+    "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj",
+        "projectUniqueName": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj",
         "projectName": "Amazon.API",
-        "projectPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj",
+        "projectPath": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj",
         "packagesPath": "C:\\Users\\Mohamed_Khaled\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Amazon.API\\obj\\",
         "projectStyle": "PackageReference",
@@ -69,12 +69,12 @@
         }
       }
     },
-    "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj": {
+    "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
+        "projectUniqueName": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
         "projectName": "Bosta.API",
-        "projectPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
+        "projectPath": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
         "packagesPath": "C:\\Users\\Mohamed_Khaled\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Bosta.API\\obj\\",
         "projectStyle": "PackageReference",
@@ -144,14 +144,14 @@
         }
       }
     },
-    "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj": {
+    "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj",
+        "projectUniqueName": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj",
         "projectName": "Newbee.BLL",
-        "projectPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj",
+        "projectPath": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj",
         "packagesPath": "C:\\Users\\Mohamed_Khaled\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\obj\\",
+        "outputPath": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -172,14 +172,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj": {
-                "projectPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj"
+              "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj": {
+                "projectPath": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj"
               },
-              "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj": {
-                "projectPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj"
+              "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj": {
+                "projectPath": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj"
               },
-              "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj": {
-                "projectPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj"
+              "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj": {
+                "projectPath": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj"
               }
             }
           }
@@ -199,6 +199,36 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Castle.Core": {
+              "target": "Package",
+              "version": "[5.2.1, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "Mapster": {
+              "target": "Package",
+              "version": "[7.4.2-pre02, )"
+            },
+            "Microsoft.AspNetCore.Hosting": {
+              "target": "Package",
+              "version": "[2.2.7, )"
+            },
+            "Microsoft.AspNetCore.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -219,14 +249,14 @@
         }
       }
     },
-    "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj": {
+    "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
         "projectName": "Newbee.DAL",
-        "projectPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
+        "projectPath": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
         "packagesPath": "C:\\Users\\Mohamed_Khaled\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\obj\\",
+        "outputPath": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -247,8 +277,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {
-                "projectPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj"
+              "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {
+                "projectPath": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj"
               }
             }
           }
@@ -304,12 +334,12 @@
         }
       }
     },
-    "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {
+    "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
+        "projectUniqueName": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
         "projectName": "Newbee.Entities",
-        "projectPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
+        "projectPath": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
         "packagesPath": "C:\\Users\\Mohamed_Khaled\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\obj\\",
         "projectStyle": "PackageReference",

@@ -13,6 +13,7 @@ namespace Newbee.Entities.Interfaces
         public IRepository<Company> Companies { get; }
         
         public IRepository<ApplicationUser> Users { get; }
+        public IRepository<OTP> OTPs { get; }
         int Save();
     }
 }

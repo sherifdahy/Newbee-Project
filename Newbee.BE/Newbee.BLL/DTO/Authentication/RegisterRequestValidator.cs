@@ -1,8 +1,8 @@
 ﻿using FluentValidation;
 using Newbee.API.Abstractions.Const;
 
-namespace Newbee.API.DTO.Authentication
-{
+namespace Newbee.BLL.DTO.Authentication;
+
     public class RegisterRequestValidator:AbstractValidator<RegisterRequest>
     {
         public RegisterRequestValidator()
@@ -31,8 +31,6 @@ namespace Newbee.API.DTO.Authentication
             RuleFor(x => x.TaxNumber)
                 .Length(10, 25)
                 .NotEmpty();
-
-
         }
     }
-}
+

@@ -4214,9 +4214,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
+      "projectUniqueName": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
       "projectName": "Newbee.DAL",
-      "projectPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
+      "projectPath": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
       "packagesPath": "C:\\Users\\Mohamed_Khaled\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\obj\\",
       "projectStyle": "PackageReference",
@@ -4239,8 +4239,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {
-              "projectPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj"
+            "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {
+              "projectPath": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj"
             }
           }
         }
