@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Newbee.BLL.Services.Email;
 using Newbee.DAL.Data;
 using Newbee.Entities.Models;
 
@@ -32,5 +33,14 @@ public static class DependencyInjection
 
         return services;
     }
+    //public static void ConfigureServices(IServiceCollection services)
+    //{
+    //    services.AddScoped<EmailBuilder>(sp =>
+    //    {
+    //        var env = sp.GetRequiredService<IWebHostEnvironment>();
+    //        return new EmailBuilder(env.WebRootPath);
+    //    });
+    //}
+
 
 }

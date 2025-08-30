@@ -19,12 +19,12 @@ namespace Newbee.DAL.Repository
             _context = context;
 
             Companies = new Repository<Company>(_context);
-     
+            OTPs = new Repository<OTP>(_context);
             Users = new Repository<ApplicationUser>(_context);
 
         }
         public IRepository<Company> Companies { get; }
-    
+    public IRepository<OTP> OTPs { get; } 
         public IRepository<ApplicationUser> Users { get; }
 
         public void Dispose()
