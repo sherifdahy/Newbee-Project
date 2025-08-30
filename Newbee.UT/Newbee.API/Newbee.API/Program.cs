@@ -1,7 +1,7 @@
-
-using Bosta.API;
+using Bosta.API.BostaSettings;
 using Bosta.API.Manager;
 using Bosta.API.Services.ApiCall;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Newbee.API
 {
@@ -18,8 +18,15 @@ namespace Newbee.API
             builder.Services.AddScoped<IBostaManager, BostaManager>();
             #endregion
 
+            builder.Services.Configure<ApiBehaviorOptions>(options =>
+            {
+                options.SuppressModelStateInvalidFilter = true;
+            });
 
-            builder.Services.AddControllers();
+            builder.Services.AddControllers().AddJsonOptions(o=>
+            {
+                o.JsonSerializerOptions.DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull;
+            });
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();

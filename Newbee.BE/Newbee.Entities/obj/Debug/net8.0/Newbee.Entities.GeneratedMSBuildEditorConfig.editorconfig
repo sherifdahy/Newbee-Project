@@ -8,7 +8,11 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Newbee.Entities
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\Mohamed_Khaled\source\repos\Newbee-Project\Newbee.BE\Newbee.Entities\
+=======
+build_property.ProjectDir = E:\NewBee-Project\Newbee.BE\Newbee.Entities\
+>>>>>>> 133f46fa76cdadaa7acb14201cac3f27961719b8
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.EffectiveAnalysisLevelStyle = 8.0

@@ -1,7 +1,7 @@
 ﻿using Api.Bosta.DTOs.Price;
 using Bosta.API.DTOs.Price;
-using Bosta.API.DTOs.Shared;
 using Bosta.API.Services.ApiCall;
+using Newbee.Common.Errors;
 
 namespace Bosta.API.Services.Price
 {
@@ -9,19 +9,19 @@ namespace Bosta.API.Services.Price
     {
         private readonly IApiCall _apiCall;
         private readonly IDictionary<string, string> _headers;
+
         public PricingService(IApiCall apiCall)
         {
             _apiCall = apiCall;
             _headers = new Dictionary<string, string>();
         }
-        public async Task<ApiResponseDTO<PricingDataDTO>> PricingCalculator(PricingRequestDTO pricingRequestDTO,string apiKey)
+
+        public async Task<ApiResponse<PricingDataDTO>> PricingCalculator(PricingRequestDTO pricingRequestDTO, string apiKey)
         {
-            if(apiKey is null)
-                throw new ArgumentNullException(nameof(apiKey));
-
             _headers["Authorization"] = apiKey;
-
-            return await _apiCall.GetAsync<ApiResponseDTO<PricingDataDTO>>($"pricing/shipment/calculator?cod{pricingRequestDTO.Cod}&dropOffCity={pricingRequestDTO.DropOffCity}&pickupCity={pricingRequestDTO.PickupCity}&size={pricingRequestDTO.Size}",_headers);
+            return await _apiCall.GetAsync<ApiResponse<PricingDataDTO>>(
+                $"pricing/shipment/calculator?cod={pricingRequestDTO.Cod}&dropOffCity={pricingRequestDTO.DropOffCity}&pickupCity={pricingRequestDTO.PickupCity}&size={pricingRequestDTO.Size}",
+                _headers);
         }
     }
 }

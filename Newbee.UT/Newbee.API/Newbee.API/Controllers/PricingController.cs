@@ -15,17 +15,31 @@ namespace Newbee.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CalculatePrice([FromBody]PricingRequestDTO pricingRequestDTO)
+        public async Task<IActionResult> PricingCalculator([FromBody] PricingRequestDTO request)
         {
             try
             {
-                var response = await _bostaManager.PricingService.PricingCalculator(pricingRequestDTO,_apiKey);
-                return Ok(response);
+                if (!ModelState.IsValid)
+                {
+                    var errors = ModelState
+                        .Where(x => x.Value.Errors.Count > 0)
+                        .ToDictionary(
+                            kvp => kvp.Key,
+                            kvp => kvp.Value.Errors.Select(e => e.ErrorMessage).ToArray()
+                        );
+
+                    return BadRequest(errors);
+                }
+
+                var result = await _bostaManager.PricingService.PricingCalculator(request, _apiKey);
+
+                return Ok(result);
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                return StatusCode(500,ex.Message);
             }
         }
+
     }
 }
