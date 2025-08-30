@@ -1,4 +1,4 @@
-﻿using Bosta.API;
+﻿using Bosta.API.BostaSettings;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using System.Net;
@@ -85,19 +85,20 @@ namespace Bosta.API.Services.ApiCall
         #region Error Handling
         private async Task EnsureSuccess(HttpResponseMessage response)
         {
+            var responseString = await response.Content.ReadAsStringAsync();
+
             if (response.IsSuccessStatusCode)
                 return;
 
-            var responseBody = await response.Content.ReadAsStringAsync();
-
+            var responseBody = await response.Content.ReadFromJsonAsync<ApiResponse<object>>();
             throw response.StatusCode switch
             {
-                HttpStatusCode.BadRequest => new InvalidOperationException($"Bad Request: {responseBody}"),
-                HttpStatusCode.Unauthorized => new UnauthorizedAccessException($"Unauthorized: {responseBody}"),
-                HttpStatusCode.Forbidden => new UnauthorizedAccessException($"Forbidden: {responseBody}"),
-                HttpStatusCode.NotFound => new KeyNotFoundException($"Not Found: {responseBody}"),
-                HttpStatusCode.InternalServerError => new Exception($"Server Error: {responseBody}"),
-                _ => new Exception($"Unexpected Error ({(int)response.StatusCode}): {responseBody}")
+                HttpStatusCode.BadRequest => new InvalidOperationException(responseBody.Message),
+                HttpStatusCode.Unauthorized => new UnauthorizedAccessException(responseBody.Message),
+                HttpStatusCode.Forbidden => new UnauthorizedAccessException(responseBody.Message),
+                HttpStatusCode.NotFound => new KeyNotFoundException(responseBody.Message),
+                HttpStatusCode.InternalServerError => new Exception(responseBody.Message),
+                _ => new Exception(responseBody.Message)
             };
         }
         #endregion

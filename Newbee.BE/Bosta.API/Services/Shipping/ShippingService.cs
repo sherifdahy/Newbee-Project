@@ -1,9 +1,8 @@
 ﻿using Api.Bosta.DTOs.Shipping.Request;
 using Api.Bosta.DTOs.Shipping.Response;
-using Bosta.API.DTOs.Shared;
+using Bosta.API;
 using Bosta.API.Services.ApiCall;
 using Bosta.API.Services.Shipping;
-using System.Net.Http.Json;
 
 namespace Api.Bosta.Services.Shipping
 {
@@ -17,32 +16,23 @@ namespace Api.Bosta.Services.Shipping
             _headers = new Dictionary<string, string>();
             
         }
-        public async Task<ApiResponseDTO<CreateShipmentDataDTO>> CreateAsync(CreateShipmentRequestDTO data,string apiKey)
+        public async Task<ApiResponse<CreateShipmentDataDTO>> CreateAsync(CreateShipmentRequestDTO data,string apiKey)
         {
-            if (apiKey is null)
-                throw new ArgumentNullException(nameof(apiKey));
-
             _headers["Authorization"] = apiKey;
 
-            return await this._apiCall.PostAsync<CreateShipmentRequestDTO, ApiResponseDTO<CreateShipmentDataDTO>>("deliveries", data,_headers);
+            return await this._apiCall.PostAsync<CreateShipmentRequestDTO, ApiResponse<CreateShipmentDataDTO>>("deliveries", data, _headers);
         }
-        public async Task<ApiResponseDTO<ShipmentDataDTO>> GetByTrackingNumberAsync(string trackingNumber,string apiKey)
+        public async Task<ApiResponse<ShipmentDataDTO>> GetByTrackingNumberAsync(string trackingNumber,string apiKey)
         {
-            if (apiKey is null)
-                throw new ArgumentNullException(nameof(apiKey));
-
             _headers["Authorization"] = apiKey;
 
-            return await _apiCall.GetAsync<ApiResponseDTO<ShipmentDataDTO>>($"deliveries/business/{trackingNumber}",_headers);
+            return await _apiCall.GetAsync<ApiResponse<ShipmentDataDTO>>($"deliveries/business/{trackingNumber}",_headers);
         }
-        public async Task<ApiResponseDTO<TerminateDeliveryDataDTO>> TerminateAsync(string trackingNumber, string apiKey)
+        public async Task<ApiResponse<TerminateDeliveryDataDTO>> TerminateAsync(string trackingNumber, string apiKey)
         {
-            if (apiKey is null)
-                throw new ArgumentNullException(nameof(apiKey));
-
             _headers["Authorization"] = apiKey;
 
-            return await this._apiCall.DeleteAsync<ApiResponseDTO<TerminateDeliveryDataDTO>>($"deliveries/business/{trackingNumber}/terminate",_headers);
+            return await this._apiCall.DeleteAsync<ApiResponse<TerminateDeliveryDataDTO>>($"deliveries/business/{trackingNumber}/terminate",_headers);
         }
 
     }

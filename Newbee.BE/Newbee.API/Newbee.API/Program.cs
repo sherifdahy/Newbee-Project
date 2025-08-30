@@ -1,5 +1,6 @@
 
 using Bosta.API;
+using Bosta.API.BostaSettings;
 using Bosta.API.Manager;
 using Bosta.API.Services.ApiCall;
 using Microsoft.AspNetCore.Identity.UI.Services;

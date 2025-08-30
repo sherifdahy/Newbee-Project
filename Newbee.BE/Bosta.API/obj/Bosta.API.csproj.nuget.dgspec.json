@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj": {}
   },
   "projects": {
@@ -12,14 +13,29 @@
         "projectPath": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
         "packagesPath": "C:\\Users\\Mohamed_Khaled\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Bosta.API\\obj\\",
+=======
+    "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj": {}
+  },
+  "projects": {
+    "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
+        "projectName": "Bosta.API",
+        "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
+        "packagesPath": "C:\\Users\\shrif\\.nuget\\packages\\",
+        "outputPath": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\obj\\",
+>>>>>>> 133f46fa76cdadaa7acb14201cac3f27961719b8
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Progress\\ToolboxNuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Mohamed_Khaled\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\shrif\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Telerik UI for WPF.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -31,7 +47,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "E:\\NewBee-Project\\Newbee.UT\\Newbee.API\\Newbee.Common\\Newbee.Common.csproj": {
+                "projectPath": "E:\\NewBee-Project\\Newbee.UT\\Newbee.API\\Newbee.Common\\Newbee.Common.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -75,7 +95,74 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\NewBee-Project\\Newbee.UT\\Newbee.API\\Newbee.Common\\Newbee.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\NewBee-Project\\Newbee.UT\\Newbee.API\\Newbee.Common\\Newbee.Common.csproj",
+        "projectName": "Newbee.Common",
+        "projectPath": "E:\\NewBee-Project\\Newbee.UT\\Newbee.API\\Newbee.Common\\Newbee.Common.csproj",
+        "packagesPath": "C:\\Users\\shrif\\.nuget\\packages\\",
+        "outputPath": "E:\\NewBee-Project\\Newbee.UT\\Newbee.API\\Newbee.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Progress\\ToolboxNuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\shrif\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Telerik UI for WPF.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
