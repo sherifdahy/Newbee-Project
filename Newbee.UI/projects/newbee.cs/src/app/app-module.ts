@@ -3,14 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
+import { CoreModule } from './core/core.module';
+import { NotFoundPage } from './pages/not-found-page/not-found-page';
+import { UnauthorizedPage } from './pages/unauthorized-page/unauthorized-page';
 
 @NgModule({
   declarations: [
-    App
+    App,
+    NotFoundPage,
+    UnauthorizedPage
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CoreModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
