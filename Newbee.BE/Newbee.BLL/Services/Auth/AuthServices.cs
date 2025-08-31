@@ -10,10 +10,10 @@ using Newbee.BLL.DTO.Authentication;
 using Newbee.BLL.Errors;
 using Newbee.DAL.Abstractions;
 using Newbee.Entities.Interfaces;
-using Newbee.Entities.Models;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Newbee.API;
 using Newbee.BLL.Services.Email;
+using Newbee.Entities;
 namespace Newbee.BLL.Services.Auth;
 
 public class AuthServices(IUnitOfWork unitOfWork ,UserManager<ApplicationUser> userManager
@@ -49,7 +49,6 @@ public class AuthServices(IUnitOfWork unitOfWork ,UserManager<ApplicationUser> u
 
             await SendOtpAsync(user);
             var company = request.Adapt<Company>();
-            company.UserId = user.Id;
             _unitOfWork.Companies.Add(company);
             _unitOfWork.Save();
             return Result.Success(user.Id);
@@ -64,7 +63,7 @@ public class AuthServices(IUnitOfWork unitOfWork ,UserManager<ApplicationUser> u
     {
         var otpCode = new Random().Next(100000, 999999).ToString();
 
-        var existingOtps =  _unitOfWork.OTPs.FindAll(x => x.UserId == user.Id)
+        var existingOtps =  _unitOfWork.OTPs.FindAll(x => x.ApplicationUserId == user.Id)
         .ToList();
 
         if (existingOtps.Any())
@@ -76,7 +75,7 @@ public class AuthServices(IUnitOfWork unitOfWork ,UserManager<ApplicationUser> u
         {
             Code = otpCode,
             ExpiryTime = DateTime.UtcNow.AddMinutes(_otpExpiryMinutes),
-            UserId = user.Id,
+            ApplicationUserId = user.Id,
             User = user
         };
 

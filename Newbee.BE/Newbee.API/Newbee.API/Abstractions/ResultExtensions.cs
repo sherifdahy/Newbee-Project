@@ -15,15 +15,15 @@ namespace Newbee.API.Abstractions
                 .GetValue(problem_link) as ProblemDetails;
 
             problemDetails!.Extensions = new Dictionary<string, object?>
-    {
-        {
-            "errors", new[]
             {
-                result.Error.Code,
-                result.Error.Description
-            }
-        }
-    };
+                {
+                    "errors", new[]
+                    {
+                        result.Error.Code,
+                        result.Error.Description
+                    }
+                }
+            };
 
             return new ObjectResult(problemDetails)
             {
