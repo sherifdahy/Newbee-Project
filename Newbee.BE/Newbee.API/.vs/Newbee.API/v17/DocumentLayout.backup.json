@@ -1,110 +1,20 @@
 {
   "Version": 1,
-<<<<<<< HEAD
   "WorkspaceRootPath": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|c:\\users\\mohamed_khaled\\source\\repos\\newbee-project\\newbee.be\\newbee.api\\newbee.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|c:\\users\\mohamed_khaled\\source\\repos\\newbee-project\\newbee.be\\newbee.api\\newbee.api\\abstractions\\resultextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\abstractions\\resultextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|c:\\users\\mohamed_khaled\\source\\repos\\newbee-project\\newbee.be\\newbee.api\\newbee.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|c:\\users\\mohamed_khaled\\source\\repos\\newbee-project\\newbee.be\\newbee.api\\newbee.api\\newbee.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\newbee.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|c:\\users\\mohamed_khaled\\source\\repos\\newbee-project\\newbee.be\\newbee.api\\newbee.api\\email\\mailrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\email\\mailrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Microsoft.PackageDependencyResolution.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|c:\\users\\mohamed_khaled\\source\\repos\\newbee-project\\newbee.be\\newbee.api\\newbee.api\\email\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\email\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3EB9B0DD-0CBE-415B-9243-65ED56748796}|..\\Newbee.BLL\\Newbee.BLL.csproj|c:\\users\\mohamed_khaled\\source\\repos\\newbee-project\\newbee.be\\newbee.bll\\services\\emailsender\\emailbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D914168-1868-4230-8C18-B89A5693A26B}|..\\Newbee.DAL\\Newbee.DAL.csproj|c:\\users\\mohamed_khaled\\source\\repos\\newbee-project\\newbee.be\\newbee.dal\\abstractions\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|c:\\users\\mohamed_khaled\\source\\repos\\newbee-project\\newbee.be\\newbee.api\\newbee.api\\abstractions\\error.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\abstractions\\error.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3EB9B0DD-0CBE-415B-9243-65ED56748796}|..\\Newbee.BLL\\Newbee.BLL.csproj|c:\\users\\mohamed_khaled\\source\\repos\\newbee-project\\newbee.be\\newbee.bll\\services\\auth\\authservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|c:\\users\\mohamed_khaled\\source\\repos\\newbee-project\\newbee.be\\newbee.api\\newbee.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3EB9B0DD-0CBE-415B-9243-65ED56748796}|..\\Newbee.BLL\\Newbee.BLL.csproj|c:\\users\\mohamed_khaled\\source\\repos\\newbee-project\\newbee.be\\newbee.bll\\errors\\usererrors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|c:\\users\\mohamed_khaled\\source\\repos\\newbee-project\\newbee.be\\newbee.api\\newbee.api\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|c:\\users\\mohamed_khaled\\source\\repos\\newbee-project\\newbee.be\\newbee.api\\newbee.api\\abstractions\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\abstractions\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D914168-1868-4230-8C18-B89A5693A26B}|..\\Newbee.DAL\\Newbee.DAL.csproj|c:\\users\\mohamed_khaled\\source\\repos\\newbee-project\\newbee.be\\newbee.dal\\newbee.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-=======
-  "WorkspaceRootPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|e:\\newbee-project\\newbee.be\\newbee.api\\newbee.api\\newbee.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\newbee.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|e:\\newbee-project\\newbee.be\\newbee.api\\newbee.api\\newbee.api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\newbee.api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|e:\\newbee-project\\newbee.be\\newbee.api\\newbee.api\\abstractions\\const\\regexpatterns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\abstractions\\const\\regexpatterns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|e:\\newbee-project\\newbee.be\\newbee.api\\newbee.api\\dto\\authentication\\registerrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\dto\\authentication\\registerrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|e:\\newbee-project\\newbee.be\\newbee.api\\newbee.api\\dto\\authentication\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\dto\\authentication\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|e:\\newbee-project\\newbee.be\\newbee.api\\newbee.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|e:\\newbee-project\\newbee.be\\newbee.api\\newbee.api\\appsettings.production.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\appsettings.production.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|e:\\newbee-project\\newbee.be\\newbee.api\\newbee.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D33B450B-5655-4EBC-AD00-092562061534}|..\\Paymob.API\\Paymob.API.csproj|e:\\newbee-project\\newbee.be\\paymob.api\\paymob.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C7C9773-AB71-46BE-89C8-22A17062B29C}|..\\Newbee.Entities\\Newbee.Entities.csproj|e:\\newbee-project\\newbee.be\\newbee.entities\\newbee.entities.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D914168-1868-4230-8C18-B89A5693A26B}|..\\Newbee.DAL\\Newbee.DAL.csproj|e:\\newbee-project\\newbee.be\\newbee.dal\\newbee.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3EB9B0DD-0CBE-415B-9243-65ED56748796}|..\\Newbee.BLL\\Newbee.BLL.csproj|e:\\newbee-project\\newbee.be\\newbee.bll\\newbee.bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{576CAB89-1DFF-4E4A-92ED-BA2A6C3CE686}|..\\Bosta.API\\Bosta.API.csproj|e:\\newbee-project\\newbee.be\\bosta.api\\bosta.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09082BDE-F148-4F39-887A-C0D6D75E0E58}|..\\Amazon.API\\Amazon.API.csproj|e:\\newbee-project\\newbee.be\\amazon.api\\amazon.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
->>>>>>> 133f46fa76cdadaa7acb14201cac3f27961719b8
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -114,63 +24,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-<<<<<<< HEAD
-          "SelectedChildIndex": 0,
-=======
-          "SelectedChildIndex": 14,
->>>>>>> 133f46fa76cdadaa7acb14201cac3f27961719b8
+          "SelectedChildIndex": 3,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\appsettings.json",
-              "RelativeDocumentMoniker": "Newbee.API\\appsettings.json",
-              "ToolTip": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\appsettings.json*",
-              "RelativeToolTip": "Newbee.API\\appsettings.json*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-30T22:14:22.536Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Mailrequest.cs",
-              "DocumentMoniker": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Email\\Mailrequest.cs",
-              "RelativeDocumentMoniker": "Newbee.API\\Email\\Mailrequest.cs",
-              "ToolTip": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Email\\Mailrequest.cs",
-              "RelativeToolTip": "Newbee.API\\Email\\Mailrequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T22:14:10.825Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EmailSender.cs",
-              "DocumentMoniker": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Email\\EmailSender.cs",
-              "RelativeDocumentMoniker": "Newbee.API\\Email\\EmailSender.cs",
-              "ToolTip": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Email\\EmailSender.cs*",
-              "RelativeToolTip": "Newbee.API\\Email\\EmailSender.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T22:13:51.84Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Result.cs",
-              "DocumentMoniker": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Abstractions\\Result.cs",
-              "RelativeDocumentMoniker": "..\\Newbee.DAL\\Abstractions\\Result.cs",
-              "ToolTip": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Abstractions\\Result.cs",
-              "RelativeToolTip": "..\\Newbee.DAL\\Abstractions\\Result.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T22:06:50.909Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             },
             {
               "$type": "Bookmark",
@@ -182,305 +40,51 @@
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 8,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Newbee.API\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Newbee.API\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAARAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ResultExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Abstractions\\ResultExtensions.cs",
+              "RelativeDocumentMoniker": "Newbee.API\\Abstractions\\ResultExtensions.cs",
+              "ToolTip": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Abstractions\\ResultExtensions.cs",
+              "RelativeToolTip": "Newbee.API\\Abstractions\\ResultExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T21:38:21.064Z",
-=======
-              "DocumentIndex": 1,
-              "Title": "Microsoft.Common.CurrentVersion.targets",
-              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ViewState": "AgIAAA8WAAAAAAAAAAAWwC0WAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2025-08-29T21:55:39.721Z",
+              "WhenOpened": "2025-08-31T15:52:50.384Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Newbee.API",
-              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Newbee.API.csproj",
+              "DocumentIndex": 1,
+              "Title": "Newbee.API.csproj",
+              "DocumentMoniker": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Newbee.API.csproj",
               "RelativeDocumentMoniker": "Newbee.API\\Newbee.API.csproj",
-              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Newbee.API.csproj",
+              "ToolTip": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Newbee.API.csproj",
               "RelativeToolTip": "Newbee.API\\Newbee.API.csproj",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-29T21:55:16.637Z",
+              "WhenOpened": "2025-08-31T15:50:33.129Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "RegexPatterns.cs",
-              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Abstractions\\Const\\RegexPatterns.cs",
-              "RelativeDocumentMoniker": "Newbee.API\\Abstractions\\Const\\RegexPatterns.cs",
-              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Abstractions\\Const\\RegexPatterns.cs",
-              "RelativeToolTip": "Newbee.API\\Abstractions\\Const\\RegexPatterns.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-29T21:55:13.865Z",
-              "EditorCaption": ""
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAAD0bAAAAAAAAAAAcwFgbAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-08-31T15:45:48.799Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RegisterRequestValidator.cs",
-              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\DTO\\Authentication\\RegisterRequestValidator.cs",
-              "RelativeDocumentMoniker": "Newbee.API\\DTO\\Authentication\\RegisterRequestValidator.cs",
-              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\DTO\\Authentication\\RegisterRequestValidator.cs",
-              "RelativeToolTip": "Newbee.API\\DTO\\Authentication\\RegisterRequestValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-29T21:54:52.529Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RegisterRequest.cs",
-              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\DTO\\Authentication\\RegisterRequest.cs",
-              "RelativeDocumentMoniker": "Newbee.API\\DTO\\Authentication\\RegisterRequest.cs",
-              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\DTO\\Authentication\\RegisterRequest.cs",
-              "RelativeToolTip": "Newbee.API\\DTO\\Authentication\\RegisterRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-29T21:54:51.522Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "appsettings.Production.json",
-              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\appsettings.Production.json",
-              "RelativeDocumentMoniker": "Newbee.API\\appsettings.Production.json",
-              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\appsettings.Production.json",
-              "RelativeToolTip": "Newbee.API\\appsettings.Production.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-29T21:54:35.841Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "Newbee.API\\appsettings.Development.json",
-              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\appsettings.Development.json",
-              "RelativeToolTip": "Newbee.API\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-29T21:54:35.01Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\appsettings.json",
-              "RelativeDocumentMoniker": "Newbee.API\\appsettings.json",
-              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\appsettings.json",
-              "RelativeToolTip": "Newbee.API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-29T21:54:30.835Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Paymob.API",
-              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Paymob.API\\Paymob.API.csproj",
-              "RelativeDocumentMoniker": "..\\Paymob.API\\Paymob.API.csproj",
-              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Paymob.API\\Paymob.API.csproj",
-              "RelativeToolTip": "..\\Paymob.API\\Paymob.API.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-29T21:54:04.2Z",
->>>>>>> 133f46fa76cdadaa7acb14201cac3f27961719b8
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-<<<<<<< HEAD
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "Newbee.API\\DependencyInjection.cs",
-              "ToolTip": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\DependencyInjection.cs",
-              "RelativeToolTip": "Newbee.API\\DependencyInjection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T20:38:27.737Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UserErrors.cs",
-              "DocumentMoniker": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Errors\\UserErrors.cs",
-              "RelativeDocumentMoniker": "..\\Newbee.BLL\\Errors\\UserErrors.cs",
-              "ToolTip": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Errors\\UserErrors.cs",
-              "RelativeToolTip": "..\\Newbee.BLL\\Errors\\UserErrors.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T20:34:51.157Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Error.cs",
-              "DocumentMoniker": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Abstractions\\Error.cs",
-              "RelativeDocumentMoniker": "Newbee.API\\Abstractions\\Error.cs",
-              "ToolTip": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Abstractions\\Error.cs",
-              "RelativeToolTip": "Newbee.API\\Abstractions\\Error.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T20:26:23.409Z",
-=======
-              "Title": "Newbee.Entities",
-              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
-              "RelativeDocumentMoniker": "..\\Newbee.Entities\\Newbee.Entities.csproj",
-              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
-              "RelativeToolTip": "..\\Newbee.Entities\\Newbee.Entities.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-29T21:54:03.112Z",
->>>>>>> 133f46fa76cdadaa7acb14201cac3f27961719b8
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-<<<<<<< HEAD
-              "Title": "Result.cs",
-              "DocumentMoniker": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Abstractions\\Result.cs",
-              "RelativeDocumentMoniker": "Newbee.API\\Abstractions\\Result.cs",
-              "ToolTip": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Abstractions\\Result.cs",
-              "RelativeToolTip": "Newbee.API\\Abstractions\\Result.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T20:25:33.844Z",
-=======
-              "Title": "Newbee.DAL",
-              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
-              "RelativeDocumentMoniker": "..\\Newbee.DAL\\Newbee.DAL.csproj",
-              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
-              "RelativeToolTip": "..\\Newbee.DAL\\Newbee.DAL.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-29T21:54:01.688Z",
->>>>>>> 133f46fa76cdadaa7acb14201cac3f27961719b8
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Program.cs",
-              "RelativeDocumentMoniker": "Newbee.API\\Program.cs",
-              "ToolTip": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Program.cs",
-              "RelativeToolTip": "Newbee.API\\Program.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAowDkAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T20:12:42.664Z",
-=======
-              "DocumentIndex": 12,
-              "Title": "Newbee.BLL",
-              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj",
-              "RelativeDocumentMoniker": "..\\Newbee.BLL\\Newbee.BLL.csproj",
-              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj",
-              "RelativeToolTip": "..\\Newbee.BLL\\Newbee.BLL.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-29T21:54:00.424Z",
->>>>>>> 133f46fa76cdadaa7acb14201cac3f27961719b8
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 7,
-              "Title": "AuthServices.cs",
-              "DocumentMoniker": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\Auth\\AuthServices.cs",
-              "RelativeDocumentMoniker": "..\\Newbee.BLL\\Services\\Auth\\AuthServices.cs",
-              "ToolTip": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\Auth\\AuthServices.cs",
-              "RelativeToolTip": "..\\Newbee.BLL\\Services\\Auth\\AuthServices.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAswCMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T20:11:24.497Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EmailBuilder.cs",
-              "DocumentMoniker": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\Emailsender\\EmailBuilder.cs",
-              "RelativeDocumentMoniker": "..\\Newbee.BLL\\Services\\Emailsender\\EmailBuilder.cs",
-              "ToolTip": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\Emailsender\\EmailBuilder.cs",
-              "RelativeToolTip": "..\\Newbee.BLL\\Services\\Emailsender\\EmailBuilder.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T20:11:57.013Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Newbee.DAL",
-              "DocumentMoniker": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
-              "RelativeDocumentMoniker": "..\\Newbee.DAL\\Newbee.DAL.csproj",
-              "ToolTip": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
-              "RelativeToolTip": "..\\Newbee.DAL\\Newbee.DAL.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-30T20:11:20.847Z",
-=======
-              "DocumentIndex": 0,
-              "Title": "Newbee.API",
-              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Newbee.API.csproj",
-              "RelativeDocumentMoniker": "Newbee.API\\Newbee.API.csproj",
-              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Newbee.API.csproj",
-              "RelativeToolTip": "Newbee.API\\Newbee.API.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-29T21:53:56.881Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Bosta.API",
-              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
-              "RelativeDocumentMoniker": "..\\Bosta.API\\Bosta.API.csproj",
-              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
-              "RelativeToolTip": "..\\Bosta.API\\Bosta.API.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-29T21:53:54.288Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Amazon.API",
-              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj",
-              "RelativeDocumentMoniker": "..\\Amazon.API\\Amazon.API.csproj",
-              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj",
-              "RelativeToolTip": "..\\Amazon.API\\Amazon.API.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-29T21:53:53.176Z",
->>>>>>> 133f46fa76cdadaa7acb14201cac3f27961719b8
-              "EditorCaption": ""
+              "DocumentIndex": 2,
+              "Title": "Microsoft.PackageDependencyResolution.targets",
+              "DocumentMoniker": "E:\\Microsoft.PackageDependencyResolution.targets",
+              "ToolTip": "E:\\Microsoft.PackageDependencyResolution.targets",
+              "ViewState": "AgIAAEobAAAAAAAAAAAMwFgbAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-08-31T15:44:37.373Z"
             }
           ]
         }
