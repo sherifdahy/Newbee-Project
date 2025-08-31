@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewBee Verification</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6C63FF;
+            --secondary: #4D44DB;
+            --dark: #2E2E3A;
+            --light: #F8F9FA;
+            --success: #28A745;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f7ff;
+            margin: 0;
+            padding: 0;
+            color: var(--dark);
+        }
+
+        .email-container {
+            max-width: 600px;
+            margin: 30px auto;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(108, 99, 255, 0.1);
+        }
+
+        .header {
+            background: var(--primary); /* Fallback */
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        h1 {
+            color: var(--secondary);
+            margin-top: 0;
+            font-size: 24px;
+        }
+
+        .otp-display {
+            background: var(--light);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .otp-code {
+            font-size: 42px;
+            font-weight: 700;
+            letter-spacing: 5px;
+            color: var(--secondary);
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+        }
+
+        .note {
+            background-color: #E8F5E9;
+            border-left: 4px solid var(--success);
+            padding: 15px;
+            border-radius: 4px;
+            font-size: 14px;
+            margin: 25px 0;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 25px;
+            background: var(--dark);
+            color: rgba(255,255,255,0.7);
+            font-size: 12px;
+        }
+
+        .signature {
+            margin-top: 40px;
+            border-top: 1px dashed #e0e0e0;
+            padding-top: 20px;
+        }
+
+        .signature-name {
+            font-weight: 600;
+            color: var(--secondary);
+        }
+
+        .team {
+            font-style: italic;
+            color: #666;
+        }
+
+        @media (max-width: 600px) {
+            .content {
+                padding: 30px 20px;
+            }
+
+            .otp-code {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <div class="logo">NewBee</div>
+            <div class="tagline">Connect Your Commerce, Shipping, and Success</div>
+        </div>
+
+        <div class="content">
+            <h1>Email Verification Code</h1>
+
+            <p>Hello <strong>{{name}}</strong>,</p>
+            <p>Thank you for joining NewBee! With NewBee, manage your orders, track shipments, and update inventory seamlessly from one platform. Please use the following verification code to complete your registration:</p>
+
+            <div class="otp-display">
+                <div>Your Secure Code</div>
+                <div class="otp-code">{{otp_code}}</div>
+                <div>Expires in {{expiry_minutes}} minutes</div>
+            </div>
+
+            <div style="text-align: center; margin: 20px 0;">
+                <a href="https://newbee.com/verify?code={{otp_code}}" style="background: var(--primary); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600;">Verify Now</a>
+            </div>
+
+            <div class="note">
+                <strong>Security Tip:</strong> Never share this code with anyone. The NewBee team will never ask you for this code.
+            </div>
+
+            <div class="signature">
+                <p>Best regards,</p>
+                <p class="signature-name">NewBee</p>
+                <p class="team">NewBee Development Team</p>
+            </div>
+        </div>
+
+        <div class="footer" role="contentinfo">
+            <div>© NewBee. All rights reserved.</div>
+        </div>
+    </div>
+</body>
+</html>
