@@ -1,22 +1,36 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using Newbee.Entities.Models;
+using System.Reflection;
 
-namespace Newbee.DAL.Data
+
+namespace Newbee.DAL.Data;
+
+public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 {
-    public class ApplicationDbContext : DbContext
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> dbContextOptions):base (dbContextOptions)
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> dbContextOptions):base (dbContextOptions)
-        {
-            
-        }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-        }
+        
     }
+    public DbSet<Company> Companies { get; set; }
+    public DbSet<OTP> OTPs { get; set; }
+    public DbSet<RefreshToken> RefreshTokens { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+
+        modelBuilder.Entity<ApplicationUser>(user =>
+        {
+            user.OwnsMany(u => u.RefreshTokens, rt =>
+            {
+                rt.ToTable("RefreshTokens");              
+                rt.WithOwner().HasForeignKey("UserId");   
+                rt.HasKey("Id");                           
+            });
+        });
+
+        base.OnModelCreating(modelBuilder);
+    }
+
 }

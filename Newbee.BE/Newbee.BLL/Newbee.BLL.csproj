@@ -16,4 +16,15 @@
     <Folder Include="Identity\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Castle.Core" Version="5.2.1" />
+    <PackageReference Include="FluentValidation" Version="12.0.0" />
+    <PackageReference Include="Mapster" Version="7.4.2-pre02" />
+	  <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
+
+	  <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.0" />
+  </ItemGroup>
+
 </Project>

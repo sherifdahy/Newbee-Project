@@ -1,0 +1,142 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\NewBee-Project\\Newbee.UT\\Newbee.API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{26966BB9-6876-446D-BEF8-7E9904D4DBEF}|Newbee.API\\Newbee.API.csproj|e:\\newbee-project\\newbee.ut\\newbee.api\\newbee.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26966BB9-6876-446D-BEF8-7E9904D4DBEF}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06A5FD42-C806-185A-8576-D45F9D895DCC}|..\\..\\Newbee.BE\\Bosta.API\\Bosta.API.csproj|e:\\newbee-project\\newbee.be\\bosta.api\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26966BB9-6876-446D-BEF8-7E9904D4DBEF}|Newbee.API\\Newbee.API.csproj|e:\\newbee-project\\newbee.ut\\newbee.api\\newbee.api\\controllers\\pickuplocationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26966BB9-6876-446D-BEF8-7E9904D4DBEF}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\controllers\\pickuplocationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06A5FD42-C806-185A-8576-D45F9D895DCC}|..\\..\\Newbee.BE\\Bosta.API\\Bosta.API.csproj|e:\\newbee-project\\newbee.be\\bosta.api\\services\\apicall\\apicall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06A5FD42-C806-185A-8576-D45F9D895DCC}|..\\..\\Newbee.BE\\Bosta.API\\Bosta.API.csproj|e:\\newbee-project\\newbee.be\\bosta.api\\services\\pickuplocations\\pickuplocationsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06A5FD42-C806-185A-8576-D45F9D895DCC}|..\\..\\Newbee.BE\\Bosta.API\\Bosta.API.csproj|e:\\newbee-project\\newbee.be\\bosta.api\\services\\shipping\\shippingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06A5FD42-C806-185A-8576-D45F9D895DCC}|..\\..\\Newbee.BE\\Bosta.API\\Bosta.API.csproj|e:\\newbee-project\\newbee.be\\bosta.api\\services\\pricing\\pricingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.UT\\Newbee.API\\Newbee.API\\Program.cs",
+              "RelativeDocumentMoniker": "Newbee.API\\Program.cs",
+              "ToolTip": "E:\\NewBee-Project\\Newbee.UT\\Newbee.API\\Newbee.API\\Program.cs",
+              "RelativeToolTip": "Newbee.API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAACEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T16:33:03.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApiResponse.cs",
+              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\ApiResponse.cs",
+              "RelativeDocumentMoniker": "..\\..\\Newbee.BE\\Bosta.API\\ApiResponse.cs",
+              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\ApiResponse.cs",
+              "RelativeToolTip": "..\\..\\Newbee.BE\\Bosta.API\\ApiResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T16:12:49.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ApiCall.cs",
+              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Services\\ApiCall\\ApiCall.cs",
+              "RelativeDocumentMoniker": "..\\..\\Newbee.BE\\Bosta.API\\Services\\ApiCall\\ApiCall.cs",
+              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Services\\ApiCall\\ApiCall.cs",
+              "RelativeToolTip": "..\\..\\Newbee.BE\\Bosta.API\\Services\\ApiCall\\ApiCall.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAewFkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T16:10:37.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PickupLocationsService.cs",
+              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Services\\PickupLocations\\PickupLocationsService.cs",
+              "RelativeDocumentMoniker": "..\\..\\Newbee.BE\\Bosta.API\\Services\\PickupLocations\\PickupLocationsService.cs",
+              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Services\\PickupLocations\\PickupLocationsService.cs",
+              "RelativeToolTip": "..\\..\\Newbee.BE\\Bosta.API\\Services\\PickupLocations\\PickupLocationsService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T16:08:24.979Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ShippingService.cs",
+              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Services\\Shipping\\ShippingService.cs",
+              "RelativeDocumentMoniker": "..\\..\\Newbee.BE\\Bosta.API\\Services\\Shipping\\ShippingService.cs",
+              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Services\\Shipping\\ShippingService.cs",
+              "RelativeToolTip": "..\\..\\Newbee.BE\\Bosta.API\\Services\\Shipping\\ShippingService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T16:08:08.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PricingService.cs",
+              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Services\\Pricing\\PricingService.cs",
+              "RelativeDocumentMoniker": "..\\..\\Newbee.BE\\Bosta.API\\Services\\Pricing\\PricingService.cs",
+              "ToolTip": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Services\\Pricing\\PricingService.cs",
+              "RelativeToolTip": "..\\..\\Newbee.BE\\Bosta.API\\Services\\Pricing\\PricingService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T16:08:07.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PickupLocationsController.cs",
+              "DocumentMoniker": "E:\\NewBee-Project\\Newbee.UT\\Newbee.API\\Newbee.API\\Controllers\\PickupLocationsController.cs",
+              "RelativeDocumentMoniker": "Newbee.API\\Controllers\\PickupLocationsController.cs",
+              "ToolTip": "E:\\NewBee-Project\\Newbee.UT\\Newbee.API\\Newbee.API\\Controllers\\PickupLocationsController.cs",
+              "RelativeToolTip": "Newbee.API\\Controllers\\PickupLocationsController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAIwBEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T16:08:03.987Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

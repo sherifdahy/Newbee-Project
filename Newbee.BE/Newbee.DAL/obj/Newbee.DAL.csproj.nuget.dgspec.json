@@ -1,6 +1,19 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
+    "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
+        "projectName": "Newbee.DAL",
+        "projectPath": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
+        "packagesPath": "C:\\Users\\Mohamed_Khaled\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\obj\\",
+=======
     "E:\\NewBee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj": {}
   },
   "projects": {
@@ -12,6 +25,7 @@
         "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
         "packagesPath": "C:\\Users\\shrif\\.nuget\\packages\\",
         "outputPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.DAL\\obj\\",
+>>>>>>> 133f46fa76cdadaa7acb14201cac3f27961719b8
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -34,8 +48,13 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+<<<<<<< HEAD
+              "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {
+                "projectPath": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj"
+=======
               "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {
                 "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj"
+>>>>>>> 133f46fa76cdadaa7acb14201cac3f27961719b8
               }
             }
           }
@@ -57,6 +76,16 @@
           "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.0, )"
             }
@@ -81,6 +110,16 @@
         }
       }
     },
+<<<<<<< HEAD
+    "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
+        "projectName": "Newbee.Entities",
+        "projectPath": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
+        "packagesPath": "C:\\Users\\Mohamed_Khaled\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\obj\\",
+=======
     "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -89,6 +128,7 @@
         "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
         "packagesPath": "C:\\Users\\shrif\\.nuget\\packages\\",
         "outputPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\obj\\",
+>>>>>>> 133f46fa76cdadaa7acb14201cac3f27961719b8
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -128,6 +168,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

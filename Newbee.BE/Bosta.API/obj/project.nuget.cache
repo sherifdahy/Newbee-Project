@@ -1,8 +1,26 @@
 {
   "version": 2,
-  "dgSpecHash": "gQfd+DKrI48=",
+<<<<<<< HEAD
+  "dgSpecHash": "GeT5mYun8H4=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
+=======
+  "dgSpecHash": "ojQ7XaYh7ng=",
   "success": true,
   "projectFilePath": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+>>>>>>> 133f46fa76cdadaa7acb14201cac3f27961719b8
+  "expectedPackageFiles": [
+    "C:\\Users\\shrif\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\shrif\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
+    "C:\\Users\\shrif\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\shrif\\.nuget\\packages\\newtonsoft.json\\13.0.4-beta1\\newtonsoft.json.13.0.4-beta1.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
