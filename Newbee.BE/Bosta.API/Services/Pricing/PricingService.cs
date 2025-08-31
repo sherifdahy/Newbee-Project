@@ -1,7 +1,6 @@
 ﻿using Api.Bosta.DTOs.Price;
 using Bosta.API.DTOs.Price;
 using Bosta.API.Services.ApiCall;
-using Newbee.Common.Errors;
 
 namespace Bosta.API.Services.Price
 {

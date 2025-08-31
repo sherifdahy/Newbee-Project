@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\NewBee-Project\\Newbee.BE\\Paymob.API\\Paymob.API.csproj",
+      "projectUniqueName": "E:\\Newbee-Project\\Newbee.BE\\Paymob.API\\Paymob.API.csproj",
       "projectName": "Paymob.API",
-      "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Paymob.API\\Paymob.API.csproj",
+      "projectPath": "E:\\Newbee-Project\\Newbee.BE\\Paymob.API\\Paymob.API.csproj",
       "packagesPath": "C:\\Users\\shrif\\.nuget\\packages\\",
-      "outputPath": "E:\\NewBee-Project\\Newbee.BE\\Paymob.API\\obj\\",
+      "outputPath": "E:\\Newbee-Project\\Newbee.BE\\Paymob.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

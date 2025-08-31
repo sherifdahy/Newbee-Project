@@ -1,18 +1,1 @@
-[
-  {
-    "ContainingType": "Newbee.API.Controllers.AuthController",
-    "Method": "Register",
-    "RelativePath": "Auth/Register",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "Newbee.BLL.DTO.Authentication.RegisterRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  }
-]
+[]

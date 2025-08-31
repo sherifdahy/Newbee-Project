@@ -1,6 +1,6 @@
 ﻿using Newbee.DAL.Data;
+using Newbee.Entities;
 using Newbee.Entities.Interfaces;
-using Newbee.Entities.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
