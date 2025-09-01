@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Newbee.Common")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+71707eb1b7f0c9192bd8cd3621ed6a2f0fb05553")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+48ad029ee00e1bc9cf86420eaa3f1fa9f6ac904e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Newbee.Common")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Newbee.Common")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
