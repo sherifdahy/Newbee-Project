@@ -1,7 +1,24 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj": {}
+=======
+<<<<<<< HEAD
+    "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj": {}
+  },
+  "projects": {
+    "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
+        "projectName": "Newbee.DAL",
+        "projectPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
+        "packagesPath": "C:\\Users\\omarz\\.nuget\\packages\\",
+        "outputPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\obj\\",
+=======
+    "E:\\NewBee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj": {}
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
   },
   "projects": {
     "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj": {
@@ -9,15 +26,26 @@
       "restore": {
         "projectUniqueName": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
         "projectName": "Newbee.DAL",
+<<<<<<< HEAD
         "projectPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
         "packagesPath": "C:\\Users\\Mohamed_Khaled\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\obj\\",
+=======
+        "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
+        "packagesPath": "C:\\Users\\shrif\\.nuget\\packages\\",
+        "outputPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.DAL\\obj\\",
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\Mohamed_Khaled\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\omarz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,8 +60,18 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {
                 "projectPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj"
+=======
+<<<<<<< HEAD
+              "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {
+                "projectPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj"
+=======
+              "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {
+                "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj"
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
               }
             }
           }
@@ -48,7 +86,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -85,24 +123,53 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
     "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+<<<<<<< HEAD
+    "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
+        "projectName": "Newbee.Entities",
+        "projectPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
+        "packagesPath": "C:\\Users\\omarz\\.nuget\\packages\\",
+        "outputPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\obj\\",
+=======
+    "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
         "projectName": "Newbee.Entities",
+<<<<<<< HEAD
         "projectPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
         "packagesPath": "C:\\Users\\Mohamed_Khaled\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\obj\\",
+=======
+        "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
+        "packagesPath": "C:\\Users\\shrif\\.nuget\\packages\\",
+        "outputPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\obj\\",
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\Mohamed_Khaled\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\omarz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -129,7 +196,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -156,7 +223,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
         }
       }
     }

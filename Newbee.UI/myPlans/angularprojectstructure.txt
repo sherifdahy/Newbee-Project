@@ -7,6 +7,9 @@ src/
 │   │   ├── guards/
 │   │   │   ├── admin-auth.guard.ts
 │   │   │   ├── user-auth.guard.ts
+│   │   ├── layouts/
+│   │   │   ├── main-layout
+│   │   │   ├── secondary-layout
 │   │   ├── interceptors/
 │   │   ├── models/                 # Shared interfaces & types
 │   │   │   ├── user.model.ts

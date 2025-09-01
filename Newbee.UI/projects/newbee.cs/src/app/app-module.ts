@@ -6,12 +6,12 @@ import { App } from './app';
 import { CoreModule } from './core/core.module';
 import { NotFoundPage } from './pages/not-found-page/not-found-page';
 import { UnauthorizedPage } from './pages/unauthorized-page/unauthorized-page';
+import { Login } from './features/auth/components/login/login';
+import { Logout } from './features/auth/components/logout/logout';
 
 @NgModule({
   declarations: [
-    App,
-    NotFoundPage,
-    UnauthorizedPage
+    App
   ],
   imports: [
     BrowserModule,
