@@ -1,6 +1,19 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "WorkspaceRootPath": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.API\\",
+=======
+<<<<<<< HEAD
+  "WorkspaceRootPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{576CAB89-1DFF-4E4A-92ED-BA2A6C3CE686}|..\\Bosta.API\\Bosta.API.csproj|d:\\work\\newbee\\newbee-project\\newbee.be\\bosta.api\\bosta.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+=======
+  "WorkspaceRootPath": "E:\\Newbee-Project\\Newbee.BE\\Newbee.API\\",
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
   "Documents": [
     {
       "AbsoluteMoniker": "D:0:0:{3EB9B0DD-0CBE-415B-9243-65ED56748796}|..\\Newbee.BLL\\Newbee.BLL.csproj|c:\\users\\mohamed_khaled\\source\\repos\\newbee-project\\newbee.be\\newbee.bll\\services\\auth\\authservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -40,10 +53,15 @@
       "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{3EB9B0DD-0CBE-415B-9243-65ED56748796}|..\\Newbee.BLL\\Newbee.BLL.csproj|c:\\users\\mohamed_khaled\\source\\repos\\newbee-project\\newbee.be\\newbee.bll\\authentication\\ijwtprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1C7C9773-AB71-46BE-89C8-22A17062B29C}|..\\Newbee.Entities\\Newbee.Entities.csproj|c:\\users\\mohamed_khaled\\source\\repos\\newbee-project\\newbee.be\\newbee.entities\\models\\trackingbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Migrations\\20250831194237_update_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
     }
   ],
   "DocumentGroupContainers": [
@@ -53,7 +71,18 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": 15,
+=======
+<<<<<<< HEAD
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+=======
+          "SelectedChildIndex": 2,
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,9 +95,60 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
+=======
+              "DocumentIndex": 0,
+<<<<<<< HEAD
+              "Title": "Bosta.API.csproj",
+              "DocumentMoniker": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
+              "RelativeDocumentMoniker": "..\\Bosta.API\\Bosta.API.csproj",
+              "ToolTip": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
+              "RelativeToolTip": "..\\Bosta.API\\Bosta.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-01T08:27:10.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAABsXAAAAAAAAAAAQwCIXAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-09-01T08:21:51.447Z"
+=======
+              "Title": "20250831204634_init.cs",
+              "DocumentMoniker": "E:\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Migrations\\20250831204634_init.cs",
+              "RelativeDocumentMoniker": "..\\Newbee.DAL\\Migrations\\20250831204634_init.cs",
+              "ToolTip": "E:\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Migrations\\20250831204634_init.cs",
+              "RelativeToolTip": "..\\Newbee.DAL\\Migrations\\20250831204634_init.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T20:46:35.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "20250831204319_init.cs",
+              "DocumentMoniker": "E:\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Migrations\\20250831204319_init.cs",
+              "RelativeDocumentMoniker": "..\\Newbee.DAL\\Migrations\\20250831204319_init.cs",
+              "ToolTip": "E:\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Migrations\\20250831204319_init.cs",
+              "RelativeToolTip": "..\\Newbee.DAL\\Migrations\\20250831204319_init.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T20:43:19.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
               "DocumentIndex": 5,
               "Title": "JwtOptions.cs",
               "DocumentMoniker": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Authentication\\JwtOptions.cs",
@@ -207,6 +287,7 @@
               "RelativeToolTip": "..\\Newbee.Entities\\Models\\TrackingBase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< HEAD
               "WhenOpened": "2025-09-01T09:48:03.522Z",
               "EditorCaption": ""
             },
@@ -235,6 +316,10 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-01T09:46:55.355Z",
               "EditorCaption": ""
+=======
+              "WhenOpened": "2025-08-31T19:23:25.54Z"
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
             }
           ]
         }

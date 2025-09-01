@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+D:\work\NewBee\Newbee-Project\Newbee.BE\Newbee.Entities\bin\Debug\net8.0\Newbee.Entities.deps.json
+D:\work\NewBee\Newbee-Project\Newbee.BE\Newbee.Entities\bin\Debug\net8.0\Newbee.Entities.dll
+D:\work\NewBee\Newbee-Project\Newbee.BE\Newbee.Entities\bin\Debug\net8.0\Newbee.Entities.pdb
+D:\work\NewBee\Newbee-Project\Newbee.BE\Newbee.Entities\obj\Debug\net8.0\Newbee.Entities.csproj.AssemblyReference.cache
+D:\work\NewBee\Newbee-Project\Newbee.BE\Newbee.Entities\obj\Debug\net8.0\Newbee.Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\work\NewBee\Newbee-Project\Newbee.BE\Newbee.Entities\obj\Debug\net8.0\Newbee.Entities.AssemblyInfoInputs.cache
+D:\work\NewBee\Newbee-Project\Newbee.BE\Newbee.Entities\obj\Debug\net8.0\Newbee.Entities.AssemblyInfo.cs
+D:\work\NewBee\Newbee-Project\Newbee.BE\Newbee.Entities\obj\Debug\net8.0\Newbee.Entities.csproj.CoreCompileInputs.cache
+D:\work\NewBee\Newbee-Project\Newbee.BE\Newbee.Entities\obj\Debug\net8.0\Newbee.Entities.sourcelink.json
+D:\work\NewBee\Newbee-Project\Newbee.BE\Newbee.Entities\obj\Debug\net8.0\Newbee.Entities.dll
+D:\work\NewBee\Newbee-Project\Newbee.BE\Newbee.Entities\obj\Debug\net8.0\refint\Newbee.Entities.dll
+D:\work\NewBee\Newbee-Project\Newbee.BE\Newbee.Entities\obj\Debug\net8.0\Newbee.Entities.pdb
+D:\work\NewBee\Newbee-Project\Newbee.BE\Newbee.Entities\obj\Debug\net8.0\ref\Newbee.Entities.dll
+=======
 E:\Newbee-Project\Newbee.BE\Newbee.Entities\bin\Debug\net8.0\Newbee.Entities.deps.json
 E:\Newbee-Project\Newbee.BE\Newbee.Entities\bin\Debug\net8.0\Newbee.Entities.dll
 E:\Newbee-Project\Newbee.BE\Newbee.Entities\bin\Debug\net8.0\Newbee.Entities.pdb
@@ -11,6 +26,7 @@ E:\Newbee-Project\Newbee.BE\Newbee.Entities\obj\Debug\net8.0\Newbee.Entities.dll
 E:\Newbee-Project\Newbee.BE\Newbee.Entities\obj\Debug\net8.0\refint\Newbee.Entities.dll
 E:\Newbee-Project\Newbee.BE\Newbee.Entities\obj\Debug\net8.0\Newbee.Entities.pdb
 E:\Newbee-Project\Newbee.BE\Newbee.Entities\obj\Debug\net8.0\ref\Newbee.Entities.dll
+<<<<<<< HEAD
 C:\Users\Mohamed_Khaled\Source\Repos\Newbee-Project\Newbee.BE\Newbee.Entities\bin\Debug\net8.0\Newbee.Entities.deps.json
 C:\Users\Mohamed_Khaled\Source\Repos\Newbee-Project\Newbee.BE\Newbee.Entities\bin\Debug\net8.0\Newbee.Entities.dll
 C:\Users\Mohamed_Khaled\Source\Repos\Newbee-Project\Newbee.BE\Newbee.Entities\bin\Debug\net8.0\Newbee.Entities.pdb
@@ -24,3 +40,6 @@ C:\Users\Mohamed_Khaled\Source\Repos\Newbee-Project\Newbee.BE\Newbee.Entities\ob
 C:\Users\Mohamed_Khaled\Source\Repos\Newbee-Project\Newbee.BE\Newbee.Entities\obj\Debug\net8.0\refint\Newbee.Entities.dll
 C:\Users\Mohamed_Khaled\Source\Repos\Newbee-Project\Newbee.BE\Newbee.Entities\obj\Debug\net8.0\Newbee.Entities.pdb
 C:\Users\Mohamed_Khaled\Source\Repos\Newbee-Project\Newbee.BE\Newbee.Entities\obj\Debug\net8.0\ref\Newbee.Entities.dll
+=======
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
