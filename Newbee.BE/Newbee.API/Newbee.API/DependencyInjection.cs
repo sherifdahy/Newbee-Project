@@ -1,8 +1,12 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using Newbee.BLL.Authentication;
 using Newbee.BLL.Services.Email;
 using Newbee.DAL.Data;
 using Newbee.Entities;
+using System.Text;
 
 namespace Newbee.API;
 
@@ -32,6 +36,29 @@ public static class DependencyInjection
             options.User.RequireUniqueEmail = true;
         });
 
+        services.Configure<JwtOptions>(configuration.GetSection("Jwt"));
+        var setting = configuration.GetSection("Jwt").Get<JwtOptions>();
+        services.AddSingleton<IJwtProvider, JwtProvider>();
+        services.AddAuthentication(options =>
+        {
+            options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+            options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+
+        }).AddJwtBearer(o =>
+        {
+            o.SaveToken = true;
+            o.TokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateIssuerSigningKey = true,
+                ValidateIssuer = true,
+                ValidateAudience = true,
+                ValidateLifetime = true,
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(setting?.Key!)),
+                ValidIssuer =setting?.Issuer,
+                ValidAudience = setting?.Audience
+
+            };
+        });
         return services;
     }
     //public static void ConfigureServices(IServiceCollection services)

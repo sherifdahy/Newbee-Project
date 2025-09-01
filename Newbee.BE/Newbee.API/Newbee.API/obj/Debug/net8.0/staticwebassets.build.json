@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NB423NWb3nknUZFOzED3jpi5GAqinPRhMrnkgchfwrw=",
+  "Hash": "y2QbYN19OIGh9SqGoHHZve95aoutcy2tDj6BLSAA2oU=",
   "Source": "Newbee.API",
   "BasePath": "_content/Newbee.API",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "Newbee.API\\wwwroot",
       "Source": "Newbee.API",
-      "ContentRoot": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\wwwroot\\",
       "BasePath": "_content/Newbee.API",
       "Pattern": "**"
     }
