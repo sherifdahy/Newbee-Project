@@ -1,8 +1,20 @@
 {
   "version": 2,
+<<<<<<< HEAD
+  "dgSpecHash": "RVV1XugLQOQ=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Paymob.API\\Paymob.API.csproj",
+=======
+<<<<<<< HEAD
+  "dgSpecHash": "OHs4yEYAhrw=",
+  "success": true,
+  "projectFilePath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Paymob.API\\Paymob.API.csproj",
+=======
   "dgSpecHash": "357OXTha1nw=",
   "success": true,
   "projectFilePath": "E:\\NewBee-Project\\Newbee.BE\\Paymob.API\\Paymob.API.csproj",
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
   "expectedPackageFiles": [],
   "logs": []
 }

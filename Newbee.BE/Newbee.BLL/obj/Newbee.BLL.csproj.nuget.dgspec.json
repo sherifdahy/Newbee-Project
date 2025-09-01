@@ -1,27 +1,57 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "E:\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj": {}
+=======
+<<<<<<< HEAD
+    "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj": {}
+=======
+<<<<<<< HEAD
+    "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj": {}
+>>>>>>> 2282cb2f709b636a98913456b9f6df9a366c7de9
   },
   "projects": {
-    "E:\\NewBee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj": {
+    "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\NewBee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj",
+        "projectUniqueName": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj",
         "projectName": "Amazon.API",
+        "projectPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj",
+        "packagesPath": "C:\\Users\\omarz\\.nuget\\packages\\",
+        "outputPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Amazon.API\\obj\\",
+=======
+    "E:\\NewBee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj": {}
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
+  },
+  "projects": {
+    "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj",
+        "projectName": "Amazon.API",
+<<<<<<< HEAD
+        "projectPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj",
+        "packagesPath": "C:\\Users\\Mohamed_Khaled\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Amazon.API\\obj\\",
+=======
         "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj",
         "packagesPath": "C:\\Users\\shrif\\.nuget\\packages\\",
         "outputPath": "E:\\Newbee-Project\\Newbee.BE\\Amazon.API\\obj\\",
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Progress\\ToolboxNuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\shrif\\AppData\\Roaming\\NuGet\\NuGet.Config",
+<<<<<<< HEAD
+          "C:\\Users\\Mohamed_Khaled\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\omarz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Telerik UI for WPF.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -46,7 +76,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -67,28 +97,55 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+<<<<<<< HEAD
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj": {
+    "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj": {
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+<<<<<<< HEAD
+    "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
+        "projectUniqueName": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
         "projectName": "Bosta.API",
+        "projectPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
+        "packagesPath": "C:\\Users\\omarz\\.nuget\\packages\\",
+        "outputPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Bosta.API\\obj\\",
+=======
+    "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj": {
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
+        "projectName": "Bosta.API",
+<<<<<<< HEAD
+        "projectPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
+        "packagesPath": "C:\\Users\\Mohamed_Khaled\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Bosta.API\\obj\\",
+=======
         "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
         "packagesPath": "C:\\Users\\shrif\\.nuget\\packages\\",
         "outputPath": "E:\\Newbee-Project\\Newbee.BE\\Bosta.API\\obj\\",
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Progress\\ToolboxNuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\shrif\\AppData\\Roaming\\NuGet\\NuGet.Config",
+<<<<<<< HEAD
+          "C:\\Users\\Mohamed_Khaled\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\omarz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Telerik UI for WPF.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -100,7 +157,15 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
+<<<<<<< HEAD
+            "projectReferences": {
+              "D:\\work\\NewBee\\Newbee-Project\\Newbee.UT\\Newbee.API\\Newbee.Common\\Newbee.Common.csproj": {
+                "projectPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.UT\\Newbee.API\\Newbee.Common\\Newbee.Common.csproj"
+              }
+            }
+=======
             "projectReferences": {}
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
           }
         },
         "warningProperties": {
@@ -113,7 +178,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -144,10 +209,12 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+<<<<<<< HEAD
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
+<<<<<<< HEAD
     "E:\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -156,16 +223,52 @@
         "projectPath": "E:\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj",
         "packagesPath": "C:\\Users\\shrif\\.nuget\\packages\\",
         "outputPath": "E:\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\obj\\",
+=======
+    "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj": {
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+<<<<<<< HEAD
+    "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj",
+        "projectName": "Newbee.BLL",
+        "projectPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj",
+        "packagesPath": "C:\\Users\\omarz\\.nuget\\packages\\",
+        "outputPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\obj\\",
+=======
+    "E:\\NewBee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj": {
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj",
+        "projectName": "Newbee.BLL",
+<<<<<<< HEAD
+        "projectPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj",
+        "packagesPath": "C:\\Users\\Mohamed_Khaled\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\obj\\",
+=======
+        "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj",
+        "packagesPath": "C:\\Users\\shrif\\.nuget\\packages\\",
+        "outputPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.BLL\\obj\\",
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
+>>>>>>> 2282cb2f709b636a98913456b9f6df9a366c7de9
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Progress\\ToolboxNuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\shrif\\AppData\\Roaming\\NuGet\\NuGet.Config",
+<<<<<<< HEAD
+          "C:\\Users\\Mohamed_Khaled\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\omarz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Telerik UI for WPF.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -178,6 +281,7 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+<<<<<<< HEAD
               "E:\\Newbee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj": {
                 "projectPath": "E:\\Newbee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj"
               },
@@ -186,6 +290,37 @@
               },
               "E:\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj": {
                 "projectPath": "E:\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj"
+=======
+<<<<<<< HEAD
+              "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj": {
+                "projectPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj"
+=======
+<<<<<<< HEAD
+              "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj": {
+                "projectPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj"
+              },
+              "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj": {
+                "projectPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj"
+              },
+              "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj": {
+                "projectPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj"
+=======
+              "E:\\NewBee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj": {
+                "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj"
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
+              },
+              "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj": {
+                "projectPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj"
+              },
+<<<<<<< HEAD
+              "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj": {
+                "projectPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj"
+=======
+              "E:\\NewBee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj": {
+                "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj"
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
+>>>>>>> 2282cb2f709b636a98913456b9f6df9a366c7de9
               }
             }
           }
@@ -200,7 +335,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -217,6 +352,10 @@
             "Mapster": {
               "target": "Package",
               "version": "[7.4.2-pre02, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             },
             "Microsoft.AspNetCore.Hosting": {
               "target": "Package",
@@ -251,10 +390,12 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+<<<<<<< HEAD
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
+<<<<<<< HEAD
     "E:\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -263,16 +404,52 @@
         "projectPath": "E:\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
         "packagesPath": "C:\\Users\\shrif\\.nuget\\packages\\",
         "outputPath": "E:\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\obj\\",
+=======
+    "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj": {
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+<<<<<<< HEAD
+    "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
+        "projectName": "Newbee.DAL",
+        "projectPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
+        "packagesPath": "C:\\Users\\omarz\\.nuget\\packages\\",
+        "outputPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\obj\\",
+=======
+    "E:\\NewBee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj": {
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
+        "projectName": "Newbee.DAL",
+<<<<<<< HEAD
+        "projectPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
+        "packagesPath": "C:\\Users\\Mohamed_Khaled\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\obj\\",
+=======
+        "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
+        "packagesPath": "C:\\Users\\shrif\\.nuget\\packages\\",
+        "outputPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.DAL\\obj\\",
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
+>>>>>>> 2282cb2f709b636a98913456b9f6df9a366c7de9
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Progress\\ToolboxNuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\shrif\\AppData\\Roaming\\NuGet\\NuGet.Config",
+<<<<<<< HEAD
+          "C:\\Users\\Mohamed_Khaled\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\omarz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Telerik UI for WPF.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -285,8 +462,23 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+<<<<<<< HEAD
               "E:\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {
                 "projectPath": "E:\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj"
+=======
+<<<<<<< HEAD
+              "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {
+                "projectPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj"
+=======
+<<<<<<< HEAD
+              "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {
+                "projectPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj"
+=======
+              "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {
+                "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj"
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
+>>>>>>> 2282cb2f709b636a98913456b9f6df9a366c7de9
               }
             }
           }
@@ -301,7 +493,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -338,28 +530,55 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+<<<<<<< HEAD
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {
+    "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+<<<<<<< HEAD
+    "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
+        "projectUniqueName": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
         "projectName": "Newbee.Entities",
+        "projectPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
+        "packagesPath": "C:\\Users\\omarz\\.nuget\\packages\\",
+        "outputPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\obj\\",
+=======
+    "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
+        "projectName": "Newbee.Entities",
+<<<<<<< HEAD
+        "projectPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
+        "packagesPath": "C:\\Users\\Mohamed_Khaled\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\obj\\",
+=======
         "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
         "packagesPath": "C:\\Users\\shrif\\.nuget\\packages\\",
         "outputPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\obj\\",
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Progress\\ToolboxNuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\shrif\\AppData\\Roaming\\NuGet\\NuGet.Config",
+<<<<<<< HEAD
+          "C:\\Users\\Mohamed_Khaled\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\omarz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Telerik UI for WPF.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -384,7 +603,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -411,7 +630,15 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+=======
+<<<<<<< HEAD
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+=======
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
         }
       }
     }

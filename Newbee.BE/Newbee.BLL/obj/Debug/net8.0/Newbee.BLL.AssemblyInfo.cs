@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Newbee.BLL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bbaa069261be1e41dd8a74a140a71ad629c96817")]
 [assembly: System.Reflection.AssemblyProductAttribute("Newbee.BLL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Newbee.BLL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

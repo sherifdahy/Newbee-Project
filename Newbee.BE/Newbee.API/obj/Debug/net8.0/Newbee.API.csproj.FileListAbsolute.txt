@@ -45,6 +45,8 @@ E:\NewBee-Project\NewBee.BackEnd\Newbee.API\Newbee.API\obj\Debug\net8.0\refint\N
 E:\NewBee-Project\NewBee.BackEnd\Newbee.API\Newbee.API\obj\Debug\net8.0\Newbee.API.pdb
 E:\NewBee-Project\NewBee.BackEnd\Newbee.API\Newbee.API\obj\Debug\net8.0\Newbee.API.genruntimeconfig.cache
 E:\NewBee-Project\NewBee.BackEnd\Newbee.API\Newbee.API\obj\Debug\net8.0\ref\Newbee.API.dll
+<<<<<<< HEAD
+=======
 C:\Users\Mohamed_Khaled\source\repos\Newbee-Project\Newbee.BE\Newbee.API\Newbee.API\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\Mohamed_Khaled\source\repos\Newbee-Project\Newbee.BE\Newbee.API\Newbee.API\bin\Debug\net8.0\appsettings.json
 C:\Users\Mohamed_Khaled\source\repos\Newbee-Project\Newbee.BE\Newbee.API\Newbee.API\bin\Debug\net8.0\appsettings.Production.json
@@ -211,6 +213,10 @@ C:\Users\Mohamed_Khaled\source\repos\Newbee-Project\Newbee.BE\Newbee.API\Newbee.
 C:\Users\Mohamed_Khaled\source\repos\Newbee-Project\Newbee.BE\Newbee.API\Newbee.API\obj\Debug\net8.0\Newbee.API.pdb
 C:\Users\Mohamed_Khaled\source\repos\Newbee-Project\Newbee.BE\Newbee.API\Newbee.API\obj\Debug\net8.0\Newbee.API.genruntimeconfig.cache
 C:\Users\Mohamed_Khaled\source\repos\Newbee-Project\Newbee.BE\Newbee.API\Newbee.API\obj\Debug\net8.0\ref\Newbee.API.dll
+D:\work\NewBee\Newbee-Project\Newbee.BE\Newbee.API\Newbee.API\obj\Debug\net8.0\Newbee.API.dll
+D:\work\NewBee\Newbee-Project\Newbee.BE\Newbee.API\Newbee.API\obj\Debug\net8.0\refint\Newbee.API.dll
+D:\work\NewBee\Newbee-Project\Newbee.BE\Newbee.API\Newbee.API\obj\Debug\net8.0\Newbee.API.pdb
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
 E:\Newbee-Project\Newbee.BE\Newbee.API\Newbee.API\obj\Debug\net8.0\Newbee.API.csproj.AssemblyReference.cache
 E:\Newbee-Project\Newbee.BE\Newbee.API\Newbee.API\obj\Debug\net8.0\Newbee.API.GeneratedMSBuildEditorConfig.editorconfig
 E:\Newbee-Project\Newbee.BE\Newbee.API\Newbee.API\obj\Debug\net8.0\Newbee.API.AssemblyInfoInputs.cache
@@ -377,6 +383,7 @@ E:\Newbee-Project\Newbee.BE\Newbee.API\Newbee.API\obj\Debug\net8.0\Newbee.API.pd
 E:\Newbee-Project\Newbee.BE\Newbee.API\Newbee.API\obj\Debug\net8.0\Newbee.API.genruntimeconfig.cache
 E:\Newbee-Project\Newbee.BE\Newbee.API\Newbee.API\obj\Debug\net8.0\ref\Newbee.API.dll
 E:\NewBee-Project\Newbee.BE\Newbee.API\Newbee.API\obj\Debug\net8.0\Newbee.API.MvcApplicationPartsAssemblyInfo.cs
+<<<<<<< HEAD:Newbee.BE/Newbee.API/obj/Debug/net8.0/Newbee.API.csproj.FileListAbsolute.txt
 E:\Newbee-Project\Newbee.BE\Newbee.API\obj\Debug\net8.0\Newbee.API.dll
 E:\Newbee-Project\Newbee.BE\Newbee.API\obj\Debug\net8.0\refint\Newbee.API.dll
 E:\Newbee-Project\Newbee.BE\Newbee.API\obj\Debug\net8.0\Newbee.API.pdb
@@ -543,3 +550,6 @@ E:\Newbee-Project\Newbee.BE\Newbee.API\obj\Debug\net8.0\staticwebassets.upToDate
 E:\Newbee-Project\Newbee.BE\Newbee.API\obj\Debug\net8.0\Newbee.API.csproj.Up2Date
 E:\Newbee-Project\Newbee.BE\Newbee.API\obj\Debug\net8.0\Newbee.API.genruntimeconfig.cache
 E:\Newbee-Project\Newbee.BE\Newbee.API\obj\Debug\net8.0\ref\Newbee.API.dll
+C:\Users\Mohamed_Khaled\Source\Repos\Newbee-Project\Newbee.BE\Newbee.API\Newbee.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
+>>>>>>> 2282cb2f709b636a98913456b9f6df9a366c7de9:Newbee.BE/Newbee.API/Newbee.API/obj/Debug/net8.0/Newbee.API.csproj.FileListAbsolute.txt
