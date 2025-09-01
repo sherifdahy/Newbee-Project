@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {}
+    "E:\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {}
   },
   "projects": {
-    "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {
+    "E:\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
+        "projectUniqueName": "E:\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
         "projectName": "Newbee.Entities",
-        "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
+        "projectPath": "E:\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
         "packagesPath": "C:\\Users\\shrif\\.nuget\\packages\\",
-        "outputPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\obj\\",
+        "outputPath": "E:\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

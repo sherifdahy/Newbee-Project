@@ -1,13 +1,10 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Newbee.Entities;
 using Newbee.Entities.Extensions;
-using Newbee.Entities.ModelConfigurations;
 using Newbee.Entities.Models;
 using Newbee.Entities.Models.Platform;
 using Newbee.Entities.Models.Unit;
-using System.Reflection;
 
 
 namespace Newbee.DAL.Data;

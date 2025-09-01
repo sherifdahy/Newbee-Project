@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "M5YIYwVKVWA=",
+  "dgSpecHash": "U0QIjvxyDSI=",
   "success": true,
-  "projectFilePath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj",
+  "projectFilePath": "E:\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\shrif\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\shrif\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

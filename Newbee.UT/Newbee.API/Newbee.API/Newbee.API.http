@@ -1,6 +1,0 @@
-@Newbee.API_HostAddress = http://localhost:5208
-
-GET {{Newbee.API_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
