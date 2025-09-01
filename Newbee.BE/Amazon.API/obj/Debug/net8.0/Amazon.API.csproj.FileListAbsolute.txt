@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+D:\work\NewBee\Newbee-Project\Newbee.BE\Amazon.API\bin\Debug\net8.0\Amazon.API.deps.json
+D:\work\NewBee\Newbee-Project\Newbee.BE\Amazon.API\bin\Debug\net8.0\Amazon.API.dll
+D:\work\NewBee\Newbee-Project\Newbee.BE\Amazon.API\bin\Debug\net8.0\Amazon.API.pdb
+D:\work\NewBee\Newbee-Project\Newbee.BE\Amazon.API\obj\Debug\net8.0\Amazon.API.GeneratedMSBuildEditorConfig.editorconfig
+D:\work\NewBee\Newbee-Project\Newbee.BE\Amazon.API\obj\Debug\net8.0\Amazon.API.AssemblyInfoInputs.cache
+D:\work\NewBee\Newbee-Project\Newbee.BE\Amazon.API\obj\Debug\net8.0\Amazon.API.AssemblyInfo.cs
+D:\work\NewBee\Newbee-Project\Newbee.BE\Amazon.API\obj\Debug\net8.0\Amazon.API.csproj.CoreCompileInputs.cache
+D:\work\NewBee\Newbee-Project\Newbee.BE\Amazon.API\obj\Debug\net8.0\Amazon.API.sourcelink.json
+D:\work\NewBee\Newbee-Project\Newbee.BE\Amazon.API\obj\Debug\net8.0\Amazon.API.dll
+D:\work\NewBee\Newbee-Project\Newbee.BE\Amazon.API\obj\Debug\net8.0\refint\Amazon.API.dll
+D:\work\NewBee\Newbee-Project\Newbee.BE\Amazon.API\obj\Debug\net8.0\Amazon.API.pdb
+D:\work\NewBee\Newbee-Project\Newbee.BE\Amazon.API\obj\Debug\net8.0\ref\Amazon.API.dll
+=======
 E:\Newbee-Project\Newbee.BE\Amazon.API\bin\Debug\net8.0\Amazon.API.deps.json
 E:\Newbee-Project\Newbee.BE\Amazon.API\bin\Debug\net8.0\Amazon.API.dll
 E:\Newbee-Project\Newbee.BE\Amazon.API\bin\Debug\net8.0\Amazon.API.pdb
@@ -10,3 +24,19 @@ E:\Newbee-Project\Newbee.BE\Amazon.API\obj\Debug\net8.0\Amazon.API.dll
 E:\Newbee-Project\Newbee.BE\Amazon.API\obj\Debug\net8.0\refint\Amazon.API.dll
 E:\Newbee-Project\Newbee.BE\Amazon.API\obj\Debug\net8.0\Amazon.API.pdb
 E:\Newbee-Project\Newbee.BE\Amazon.API\obj\Debug\net8.0\ref\Amazon.API.dll
+<<<<<<< HEAD
+C:\Users\Mohamed_Khaled\Source\Repos\Newbee-Project\Newbee.BE\Amazon.API\bin\Debug\net8.0\Amazon.API.deps.json
+C:\Users\Mohamed_Khaled\Source\Repos\Newbee-Project\Newbee.BE\Amazon.API\bin\Debug\net8.0\Amazon.API.dll
+C:\Users\Mohamed_Khaled\Source\Repos\Newbee-Project\Newbee.BE\Amazon.API\bin\Debug\net8.0\Amazon.API.pdb
+C:\Users\Mohamed_Khaled\Source\Repos\Newbee-Project\Newbee.BE\Amazon.API\obj\Debug\net8.0\Amazon.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mohamed_Khaled\Source\Repos\Newbee-Project\Newbee.BE\Amazon.API\obj\Debug\net8.0\Amazon.API.AssemblyInfoInputs.cache
+C:\Users\Mohamed_Khaled\Source\Repos\Newbee-Project\Newbee.BE\Amazon.API\obj\Debug\net8.0\Amazon.API.AssemblyInfo.cs
+C:\Users\Mohamed_Khaled\Source\Repos\Newbee-Project\Newbee.BE\Amazon.API\obj\Debug\net8.0\Amazon.API.csproj.CoreCompileInputs.cache
+C:\Users\Mohamed_Khaled\Source\Repos\Newbee-Project\Newbee.BE\Amazon.API\obj\Debug\net8.0\Amazon.API.sourcelink.json
+C:\Users\Mohamed_Khaled\Source\Repos\Newbee-Project\Newbee.BE\Amazon.API\obj\Debug\net8.0\Amazon.API.dll
+C:\Users\Mohamed_Khaled\Source\Repos\Newbee-Project\Newbee.BE\Amazon.API\obj\Debug\net8.0\refint\Amazon.API.dll
+C:\Users\Mohamed_Khaled\Source\Repos\Newbee-Project\Newbee.BE\Amazon.API\obj\Debug\net8.0\Amazon.API.pdb
+C:\Users\Mohamed_Khaled\Source\Repos\Newbee-Project\Newbee.BE\Amazon.API\obj\Debug\net8.0\ref\Amazon.API.dll
+=======
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f

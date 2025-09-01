@@ -1,27 +1,53 @@
 {
   "format": 1,
   "restore": {
-    "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj": {}
+<<<<<<< HEAD
+    "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj": {}
+=======
+<<<<<<< HEAD
+    "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj": {}
   },
   "projects": {
-    "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj": {
+    "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
+        "projectUniqueName": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
         "projectName": "Bosta.API",
+        "projectPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
+        "packagesPath": "C:\\Users\\omarz\\.nuget\\packages\\",
+        "outputPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Bosta.API\\obj\\",
+=======
+    "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj": {}
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
+  },
+  "projects": {
+    "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
+        "projectName": "Bosta.API",
+<<<<<<< HEAD
+        "projectPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
+        "packagesPath": "C:\\Users\\Mohamed_Khaled\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Bosta.API\\obj\\",
+=======
         "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
         "packagesPath": "C:\\Users\\shrif\\.nuget\\packages\\",
         "outputPath": "E:\\Newbee-Project\\Newbee.BE\\Bosta.API\\obj\\",
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Progress\\ToolboxNuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\shrif\\AppData\\Roaming\\NuGet\\NuGet.Config",
+<<<<<<< HEAD
+          "C:\\Users\\Mohamed_Khaled\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\omarz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Telerik UI for WPF.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -33,7 +59,15 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
+<<<<<<< HEAD
+            "projectReferences": {
+              "D:\\work\\NewBee\\Newbee-Project\\Newbee.UT\\Newbee.API\\Newbee.Common\\Newbee.Common.csproj": {
+                "projectPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.UT\\Newbee.API\\Newbee.Common\\Newbee.Common.csproj"
+              }
+            }
+=======
             "projectReferences": {}
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
           }
         },
         "warningProperties": {
@@ -46,7 +80,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -77,7 +111,15 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+=======
+<<<<<<< HEAD
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+=======
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
         }
       }
     }

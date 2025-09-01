@@ -212,33 +212,55 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "D:\\work\\NewBee\\Newbee-Project\\Newbee.UT\\Newbee.API\\Newbee.Common\\Newbee.Common.csproj",
       "Microsoft.Extensions.Options >= 8.0.0",
       "Newtonsoft.Json >= 13.0.4-beta1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\shrif\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Progress\\ToolboxNuGetPackages": {}
+<<<<<<< HEAD
+    "C:\\Users\\Mohamed_Khaled\\.nuget\\packages\\": {},
+=======
+    "C:\\Users\\omarz\\.nuget\\packages\\": {},
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
+      "projectUniqueName": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
+      "projectName": "Bosta.API",
+      "projectPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
+      "packagesPath": "C:\\Users\\Mohamed_Khaled\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mohamed_Khaled\\Source\\Repos\\Newbee-Project\\Newbee.BE\\Bosta.API\\obj\\",
+=======
+<<<<<<< HEAD
+      "projectUniqueName": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
+      "projectName": "Bosta.API",
+      "projectPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
+      "packagesPath": "C:\\Users\\omarz\\.nuget\\packages\\",
+      "outputPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Bosta.API\\obj\\",
+=======
       "projectUniqueName": "E:\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
       "projectName": "Bosta.API",
       "projectPath": "E:\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
       "packagesPath": "C:\\Users\\shrif\\.nuget\\packages\\",
       "outputPath": "E:\\Newbee-Project\\Newbee.BE\\Bosta.API\\obj\\",
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Progress\\ToolboxNuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\shrif\\AppData\\Roaming\\NuGet\\NuGet.Config",
+<<<<<<< HEAD
+        "C:\\Users\\Mohamed_Khaled\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+        "C:\\Users\\omarz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Telerik UI for WPF.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -250,7 +272,15 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+<<<<<<< HEAD
+          "projectReferences": {
+            "D:\\work\\NewBee\\Newbee-Project\\Newbee.UT\\Newbee.API\\Newbee.Common\\Newbee.Common.csproj": {
+              "projectPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.UT\\Newbee.API\\Newbee.Common\\Newbee.Common.csproj"
+            }
+          }
+=======
           "projectReferences": {}
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
         }
       },
       "warningProperties": {
@@ -263,7 +293,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -294,8 +324,27 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+<<<<<<< HEAD
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+>>>>>>> 3a63dda487618ed8ca83573bd470436284cadd1f
       }
     }
+<<<<<<< HEAD
+  },
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'D:\\work\\NewBee\\Newbee-Project\\Newbee.UT\\Newbee.API\\Newbee.Common\\Newbee.Common.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "libraryId": "D:\\work\\NewBee\\Newbee-Project\\Newbee.UT\\Newbee.API\\Newbee.Common\\Newbee.Common.csproj",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
+=======
   }
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
 }
