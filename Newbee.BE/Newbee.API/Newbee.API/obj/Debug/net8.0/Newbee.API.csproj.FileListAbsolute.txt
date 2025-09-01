@@ -262,3 +262,6 @@ C:\Users\Mohamed_Khaled\source\repos\Newbee-Project\Newbee.BE\Newbee.API\Newbee.
 C:\Users\Mohamed_Khaled\source\repos\Newbee-Project\Newbee.BE\Newbee.API\Newbee.API\obj\Debug\net8.0\Newbee.API.pdb
 C:\Users\Mohamed_Khaled\source\repos\Newbee-Project\Newbee.BE\Newbee.API\Newbee.API\obj\Debug\net8.0\Newbee.API.genruntimeconfig.cache
 C:\Users\Mohamed_Khaled\source\repos\Newbee-Project\Newbee.BE\Newbee.API\Newbee.API\obj\Debug\net8.0\ref\Newbee.API.dll
+D:\work\NewBee\Newbee-Project\Newbee.BE\Newbee.API\Newbee.API\obj\Debug\net8.0\Newbee.API.dll
+D:\work\NewBee\Newbee-Project\Newbee.BE\Newbee.API\Newbee.API\obj\Debug\net8.0\refint\Newbee.API.dll
+D:\work\NewBee\Newbee-Project\Newbee.BE\Newbee.API\Newbee.API\obj\Debug\net8.0\Newbee.API.pdb

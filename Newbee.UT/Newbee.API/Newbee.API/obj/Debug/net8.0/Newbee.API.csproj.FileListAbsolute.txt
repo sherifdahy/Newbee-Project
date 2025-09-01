@@ -235,3 +235,15 @@ E:\NewBee-Project\Newbee.UT\Newbee.API\Newbee.API\bin\Debug\net8.0\runtimes\win\
 E:\NewBee-Project\Newbee.UT\Newbee.API\Newbee.API\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 E:\NewBee-Project\Newbee.UT\Newbee.API\Newbee.API\bin\Debug\net8.0\Newbee.Common.dll
 E:\NewBee-Project\Newbee.UT\Newbee.API\Newbee.API\bin\Debug\net8.0\Newbee.Common.pdb
+D:\work\NewBee\Newbee-Project\Newbee.UT\Newbee.API\Newbee.API\obj\Debug\net8.0\Newbee.API.csproj.AssemblyReference.cache
+D:\work\NewBee\Newbee-Project\Newbee.UT\Newbee.API\Newbee.API\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\work\NewBee\Newbee-Project\Newbee.UT\Newbee.API\Newbee.API\obj\Debug\net8.0\Newbee.API.GeneratedMSBuildEditorConfig.editorconfig
+D:\work\NewBee\Newbee-Project\Newbee.UT\Newbee.API\Newbee.API\obj\Debug\net8.0\Newbee.API.AssemblyInfoInputs.cache
+D:\work\NewBee\Newbee-Project\Newbee.UT\Newbee.API\Newbee.API\obj\Debug\net8.0\Newbee.API.AssemblyInfo.cs
+D:\work\NewBee\Newbee-Project\Newbee.UT\Newbee.API\Newbee.API\obj\Debug\net8.0\Newbee.API.csproj.CoreCompileInputs.cache
+D:\work\NewBee\Newbee-Project\Newbee.UT\Newbee.API\Newbee.API\obj\Debug\net8.0\Newbee.API.MvcApplicationPartsAssemblyInfo.cs
+D:\work\NewBee\Newbee-Project\Newbee.UT\Newbee.API\Newbee.API\obj\Debug\net8.0\Newbee.API.MvcApplicationPartsAssemblyInfo.cache
+D:\work\NewBee\Newbee-Project\Newbee.UT\Newbee.API\Newbee.API\obj\Debug\net8.0\Newbee.API.sourcelink.json
+D:\work\NewBee\Newbee-Project\Newbee.UT\Newbee.API\Newbee.API\obj\Debug\net8.0\Newbee.API.dll
+D:\work\NewBee\Newbee-Project\Newbee.UT\Newbee.API\Newbee.API\obj\Debug\net8.0\refint\Newbee.API.dll
+D:\work\NewBee\Newbee-Project\Newbee.UT\Newbee.API\Newbee.API\obj\Debug\net8.0\Newbee.API.pdb

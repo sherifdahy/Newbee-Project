@@ -14,11 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Newbee.DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+08c1bfdacd0049733596f4c734c78f28e634956f")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9c8954fc25f4ae44253354474fbe634399a3cb2")]
->>>>>>> 133f46fa76cdadaa7acb14201cac3f27961719b8
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+48ad029ee00e1bc9cf86420eaa3f1fa9f6ac904e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Newbee.DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Newbee.DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
