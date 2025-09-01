@@ -1,12 +1,9 @@
 ﻿
 using Microsoft.AspNetCore.Http;
-using Newbee.DAL.Abstractions;
-
 namespace Newbee.BLL.Errors;
 
 public static class UserErrors
 {
-    
         public static readonly Error InvalidCredentials = new("User.InvalidCredentials", "Invalid email or password", StatusCodes.Status401Unauthorized);
         public static readonly Error EmailIsRequired =
             new("User.EmailIsRequired", "Email is required", StatusCodes.Status400BadRequest);
@@ -30,7 +27,4 @@ public static class UserErrors
 
         public static readonly Error DuplicatedConfirmation =
             new("User.DuplicatedConfirmation", "Email already confirmed", StatusCodes.Status400BadRequest);
-
-    
-
 }

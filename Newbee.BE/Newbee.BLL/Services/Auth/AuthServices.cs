@@ -1,19 +1,10 @@
-﻿
-
-
-using Mapster;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using Newbee.BLL.DTO.Authentication;
 using Newbee.BLL.Errors;
-using Newbee.DAL.Abstractions;
-using Newbee.Entities.Interfaces;
 using Microsoft.AspNetCore.Identity.UI.Services;
-using Newbee.API;
 using Newbee.BLL.Services.Email;
-using Newbee.Entities;
 namespace Newbee.BLL.Services.Auth;
 
 public class AuthServices(IUnitOfWork unitOfWork ,UserManager<ApplicationUser> userManager

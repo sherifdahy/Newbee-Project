@@ -7,13 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Amazon.API\Amazon.API.csproj" />
-    <ProjectReference Include="..\Bosta.API\Bosta.API.csproj" />
-    <ProjectReference Include="..\Newbee.DAL\Newbee.DAL.csproj" />
+    <Compile Remove="Identity\**" />
+    <EmbeddedResource Remove="Identity\**" />
+    <None Remove="Identity\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Identity\" />
+    <ProjectReference Include="..\Amazon.API\Amazon.API.csproj" />
+    <ProjectReference Include="..\Bosta.API\Bosta.API.csproj" />
+    <ProjectReference Include="..\Newbee.DAL\Newbee.DAL.csproj" />
   </ItemGroup>
 
   <ItemGroup>

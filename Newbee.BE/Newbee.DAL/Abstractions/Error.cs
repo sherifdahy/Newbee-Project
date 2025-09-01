@@ -1,6 +1,6 @@
 ﻿namespace Newbee.DAL.Abstractions;
 
-public record Error(string code,string description ,int ? statusCode)
+public record Error(string Code, string Description, int? StatusCode)
 {
-    public static Error None = new Error(string.Empty, string.Empty, null);
+    public static readonly Error None = new(string.Empty, string.Empty, null);
 }

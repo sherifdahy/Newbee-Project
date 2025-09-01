@@ -1,0 +1,20 @@
+{
+  "Version": 1,
+  "Hash": "tMDZqWTYSBnLADjV5i+5QPh5n4Z24IsBVY85YKVfWfw=",
+  "Source": "Newbee.API",
+  "BasePath": "_content/Newbee.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Newbee.API\\wwwroot",
+      "Source": "Newbee.API",
+      "ContentRoot": "E:\\Newbee-Project\\Newbee.BE\\Newbee.API\\wwwroot\\",
+      "BasePath": "_content/Newbee.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [],
+  "Endpoints": []
+}

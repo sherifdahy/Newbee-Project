@@ -1,12 +1,4 @@
-﻿using Newbee.DAL.Data;
-using Newbee.Entities;
-using Newbee.Entities.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace Newbee.DAL.Repository
 {
@@ -21,17 +13,17 @@ namespace Newbee.DAL.Repository
             Companies = new Repository<Company>(_context);
             OTPs = new Repository<OTP>(_context);
             Users = new Repository<ApplicationUser>(_context);
-
+            Products = new Repository<Product>(_context);
         }
         public IRepository<Company> Companies { get; }
-    public IRepository<OTP> OTPs { get; } 
+        public IRepository<OTP> OTPs { get; } 
         public IRepository<ApplicationUser> Users { get; }
+        public IRepository<Product> Products { get; }
 
         public void Dispose()
         {
             _context.Dispose();
         }
-
         public int Save()
         {
             return _context.SaveChanges();

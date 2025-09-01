@@ -4012,9 +4012,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\NewBee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj",
+      "projectUniqueName": "E:\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj",
       "projectName": "Newbee.BLL",
-      "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj",
+      "projectPath": "E:\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj",
       "packagesPath": "C:\\Users\\shrif\\.nuget\\packages\\",
       "outputPath": "E:\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\obj\\",
       "projectStyle": "PackageReference",
@@ -4039,14 +4039,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\NewBee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj": {
-              "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj"
+            "E:\\Newbee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj": {
+              "projectPath": "E:\\Newbee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj"
             },
-            "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj": {
-              "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj"
+            "E:\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj": {
+              "projectPath": "E:\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj"
             },
-            "E:\\NewBee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj": {
-              "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj"
+            "E:\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj": {
+              "projectPath": "E:\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj"
             }
           }
         }

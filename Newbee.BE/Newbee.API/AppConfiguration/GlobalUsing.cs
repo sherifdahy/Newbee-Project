@@ -1,0 +1,13 @@
+﻿global using Microsoft.AspNetCore.Identity;
+global using Microsoft.EntityFrameworkCore;
+global using Newbee.DAL.Data;
+global using Newbee.Entities;
+global using Newbee.DAL.Abstractions;
+global using Bosta.API.BostaSettings;
+global using Bosta.API.Manager;
+global using Bosta.API.Services.ApiCall;
+global using Newbee.BLL.Interfaces;
+global using Newbee.BLL.Services.Auth;
+global using Newbee.BLL.Services.Email;
+global using Newbee.DAL.Repository;
+global using Newbee.Entities.Interfaces;

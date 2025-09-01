@@ -1,4 +1,4 @@
-﻿namespace Newbee.API.Abstractions.Const
+﻿namespace Newbee.DAL.Abstractions.Const
 {
     public static class RegexPatterns
     {

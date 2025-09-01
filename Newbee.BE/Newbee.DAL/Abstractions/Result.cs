@@ -4,8 +4,10 @@ public class Result
 {
     public Result(bool isSuccess, Error error)
     {
-        if ((isSuccess && error != Error.None) || (!isSuccess && error == Error.None))
+        if ((isSuccess && !error.Equals(Error.None)) || (!isSuccess && error.Equals(Error.None)))
+        {
             throw new InvalidOperationException();
+        }
 
         IsSuccess = isSuccess;
         Error = error;
@@ -14,7 +16,6 @@ public class Result
     public bool IsSuccess { get; }
     public bool IsFailure => !IsSuccess;
     public Error Error { get; } = default!;
-
     public static Result Success() => new(true, Error.None);
     public static Result Failure(Error error) => new(false, error);
 
@@ -31,7 +32,5 @@ public class Result<TValue> : Result
         _value = value;
     }
 
-    public TValue Value => IsSuccess
-        ? _value!
-        : throw new InvalidOperationException("Failure results cannot have value");
+    public TValue Value => IsSuccess ? _value! : throw new InvalidOperationException("Failure Result Can't Have Value");
 }

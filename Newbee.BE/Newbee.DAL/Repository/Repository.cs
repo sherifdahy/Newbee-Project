@@ -1,6 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Newbee.DAL.Data;
-using Newbee.Entities.Interfaces;
 using System.Linq.Expressions;
 
 namespace Newbee.DAL.Repository;
