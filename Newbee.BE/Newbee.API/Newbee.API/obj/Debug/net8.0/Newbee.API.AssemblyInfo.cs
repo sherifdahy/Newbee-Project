@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("6b7bbe3b-d151-4c58-82f4-97e73139e582")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Newbee.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+578ca7f8121119641bdc82a77184d8c9ce7ce145")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Newbee.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Newbee.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
