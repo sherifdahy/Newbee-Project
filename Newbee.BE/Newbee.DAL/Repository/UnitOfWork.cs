@@ -1,5 +1,7 @@
 ﻿
 
+using System.Threading.Tasks;
+
 namespace Newbee.DAL.Repository
 {
     public class UnitOfWork : IUnitOfWork
@@ -24,9 +26,9 @@ namespace Newbee.DAL.Repository
         {
             _context.Dispose();
         }
-        public int Save()
+        public async Task<int> SaveAsync()
         {
-            return _context.SaveChanges();
+            return await _context.SaveChangesAsync();
         }
     }
 }
