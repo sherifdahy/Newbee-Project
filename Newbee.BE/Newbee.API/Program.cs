@@ -1,19 +1,9 @@
 
-using Bosta.API;
-using Bosta.API.BostaSettings;
-using Bosta.API.Manager;
-using Bosta.API.Services.ApiCall;
 using Microsoft.AspNetCore.Identity.UI.Services;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Newbee.API.AppConfiguration;
 using Newbee.API.Email;
-using Newbee.BLL.Services.Auth;
-using Newbee.BLL.Services.Email;
 using Newbee.BLL.Setting;
-using Newbee.DAL.Repository;
-using Newbee.Entities.Interfaces;
 
 namespace Newbee.API
 {
@@ -24,7 +14,6 @@ namespace Newbee.API
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddDependencies(builder.Configuration);
-        
 
             //Email Service Configuration
             builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
@@ -50,6 +39,8 @@ namespace Newbee.API
             }
 
             app.UseHttpsRedirection();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

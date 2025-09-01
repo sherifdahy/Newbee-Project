@@ -1,10 +1,4 @@
-﻿using FluentValidation;
-using Newbee.API.Abstractions.Const;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Newbee.DAL.Abstractions.Const;
 
 namespace Newbee.BLL.DTO.Authentication
 {

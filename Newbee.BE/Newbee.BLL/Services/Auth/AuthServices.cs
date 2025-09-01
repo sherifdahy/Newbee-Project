@@ -1,17 +1,12 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using Newbee.BLL.Errors;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Newbee.BLL.Services.Email;
-<<<<<<< HEAD
-=======
-using Newbee.Entities;
 using Newbee.BLL.DTO.Mail;
 using Newbee.BLL.Authentication;
 using Microsoft.Extensions.Options;
->>>>>>> 2282cb2f709b636a98913456b9f6df9a366c7de9
+using Newbee.BLL.DTO.Authentication;
 namespace Newbee.BLL.Services.Auth;
 
 public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser> signInManager , UserManager<ApplicationUser> userManager
