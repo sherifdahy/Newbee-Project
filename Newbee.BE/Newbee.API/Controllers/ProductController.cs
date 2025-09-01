@@ -11,7 +11,7 @@ public class ProductController(IProductService productService) :BaseController
 {
     private readonly IProductService _productService = productService;
 
-    [HttpGet("{companyId}")]
+    [HttpGet("")]
     public async Task<IActionResult> GetAll()
     {
         var result = await _productService.GetAllAsync(CompanyId);

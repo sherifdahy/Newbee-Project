@@ -13,8 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Amazon.API\Amazon.API.csproj" />
-    <ProjectReference Include="..\Bosta.API\Bosta.API.csproj" />
     <ProjectReference Include="..\Newbee.DAL\Newbee.DAL.csproj" />
   </ItemGroup>
 
