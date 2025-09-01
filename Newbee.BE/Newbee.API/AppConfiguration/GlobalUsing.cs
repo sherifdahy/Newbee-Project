@@ -4,7 +4,5 @@ global using Newbee.DAL.Data;
 global using Newbee.Entities;
 global using Newbee.DAL.Abstractions;
 global using Newbee.BLL.Interfaces;
-global using Newbee.BLL.Services.Auth;
-global using Newbee.BLL.Services.Email;
 global using Newbee.DAL.Repository;
 global using Newbee.Entities.Interfaces;

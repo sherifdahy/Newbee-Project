@@ -57,11 +57,11 @@ public class ProductService(IUnitOfWork unitOfWork) : IProductService
         var result = await GetByIdAsync(id);
 
         if (!result.IsSuccess)
-            return Result.Failure<bool>(ProductErrors.NotFound);
+            return Result.Failure<bool>(result.Error);
 
         product.Adapt(result.Value);
 
-        _unitOfWork.Products.Update(product);
+        _unitOfWork.Products.Update(result.Value);
         await _unitOfWork.SaveAsync();
 
         return Result.Success(true);
