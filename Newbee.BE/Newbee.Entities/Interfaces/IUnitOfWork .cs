@@ -6,5 +6,6 @@ public interface IUnitOfWork : IDisposable
     public IRepository<ApplicationUser> Users { get; }
     public IRepository<OTP> OTPs { get; }
     public IRepository<Product> Products { get; }
+    public IRepository<Customer> Customers { get; }
     Task<int> SaveAsync();
 }

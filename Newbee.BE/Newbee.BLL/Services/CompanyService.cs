@@ -1,28 +1,64 @@
 ﻿namespace Newbee.BLL.Services;
-public class CompanyService : ICompanyService
+public class CompanyService(IUnitOfWork unitOfWork) : ICompanyService
 {
-    public Task<Result<Company>> CreateAsync(Company company)
+    private readonly IUnitOfWork _unitOfWork = unitOfWork;
+
+    public async Task<Result<Company>> CreateAsync(Company company)
     {
-        throw new NotImplementedException();
+        await _unitOfWork.Companies.AddAsync(company);
+        await _unitOfWork.SaveAsync();
+
+        return Result.Success(company);
     }
 
-    public Task<Result<bool>> DeleteAsync(int id)
+    public async Task<Result<bool>> DeleteAsync(int id)
     {
-        throw new NotImplementedException();
+        if(id == 0)
+            return Result.Failure<bool>(CompanyErrors.InvalidId);
+
+        var result = await GetByIdAsync(id);
+
+        if (!result.IsSuccess)
+            return Result.Failure<bool>(CompanyErrors.NotFound);
+
+        _unitOfWork.Companies.Delete(result.Value);
+        await _unitOfWork.SaveAsync();
+
+        return Result.Success(true);
     }
 
-    public Task<Result<IEnumerable<Company>>> GetAllAsync()
+    public async Task<Result<IEnumerable<Company>>> GetAllAsync()
     {
-        throw new NotImplementedException();
+        var companies = await _unitOfWork.Companies.GetAllAsync();
+        
+        return Result.Success(companies);
     }
 
-    public Task<Result<Company>> GetByIdAsync(int id)
+    public async Task<Result<Company>> GetByIdAsync(int id)
     {
-        throw new NotImplementedException();
+        if (id == 0)
+            return Result.Failure<Company>(CompanyErrors.InvalidId);
+
+        var company = await _unitOfWork.Companies.GetByIdAsync(id);
+        
+        if (company is null)
+            return Result.Failure<Company>(CompanyErrors.NotFound);
+
+        return Result.Success(company);
     }
 
-    public Task<Result<bool>> UpdateAsync(int id, Company company)
+    public async Task<Result<bool>> UpdateAsync(int id, Company company)
     {
-        throw new NotImplementedException();
+        var result = await GetByIdAsync(id);
+
+        if(result.IsSuccess)
+            return Result.Failure<bool>(result.Error);
+
+        company.Adapt(result.Value);
+
+        _unitOfWork.Companies.Update(result.Value);
+        await _unitOfWork.SaveAsync();
+
+        return Result.Success(true);
     }
 }
