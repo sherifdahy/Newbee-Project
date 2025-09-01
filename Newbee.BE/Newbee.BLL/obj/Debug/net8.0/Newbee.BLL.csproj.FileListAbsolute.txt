@@ -1,0 +1,25 @@
+<<<<<<< HEAD
+=======
+E:\Newbee-Project\Newbee.BE\Newbee.BLL\obj\Debug\net8.0\Newbee.BLL.csproj.AssemblyReference.cache
+E:\Newbee-Project\Newbee.BE\Newbee.BLL\obj\Debug\net8.0\Newbee.BLL.GeneratedMSBuildEditorConfig.editorconfig
+E:\Newbee-Project\Newbee.BE\Newbee.BLL\obj\Debug\net8.0\Newbee.BLL.AssemblyInfoInputs.cache
+E:\Newbee-Project\Newbee.BE\Newbee.BLL\obj\Debug\net8.0\Newbee.BLL.AssemblyInfo.cs
+E:\Newbee-Project\Newbee.BE\Newbee.BLL\obj\Debug\net8.0\Newbee.BLL.csproj.CoreCompileInputs.cache
+E:\Newbee-Project\Newbee.BE\Newbee.BLL\obj\Debug\net8.0\Newbee.BLL.sourcelink.json
+E:\Newbee-Project\Newbee.BE\Newbee.BLL\bin\Debug\net8.0\Newbee.BLL.deps.json
+E:\Newbee-Project\Newbee.BE\Newbee.BLL\bin\Debug\net8.0\Newbee.BLL.dll
+E:\Newbee-Project\Newbee.BE\Newbee.BLL\bin\Debug\net8.0\Newbee.BLL.pdb
+E:\Newbee-Project\Newbee.BE\Newbee.BLL\bin\Debug\net8.0\Amazon.API.dll
+E:\Newbee-Project\Newbee.BE\Newbee.BLL\bin\Debug\net8.0\Bosta.API.dll
+E:\Newbee-Project\Newbee.BE\Newbee.BLL\bin\Debug\net8.0\Newbee.DAL.dll
+E:\Newbee-Project\Newbee.BE\Newbee.BLL\bin\Debug\net8.0\Newbee.Entities.dll
+E:\Newbee-Project\Newbee.BE\Newbee.BLL\bin\Debug\net8.0\Amazon.API.pdb
+E:\Newbee-Project\Newbee.BE\Newbee.BLL\bin\Debug\net8.0\Bosta.API.pdb
+E:\Newbee-Project\Newbee.BE\Newbee.BLL\bin\Debug\net8.0\Newbee.DAL.pdb
+E:\Newbee-Project\Newbee.BE\Newbee.BLL\bin\Debug\net8.0\Newbee.Entities.pdb
+E:\Newbee-Project\Newbee.BE\Newbee.BLL\obj\Debug\net8.0\Newbee.BLL.csproj.Up2Date
+E:\Newbee-Project\Newbee.BE\Newbee.BLL\obj\Debug\net8.0\Newbee.BLL.dll
+E:\Newbee-Project\Newbee.BE\Newbee.BLL\obj\Debug\net8.0\refint\Newbee.BLL.dll
+E:\Newbee-Project\Newbee.BE\Newbee.BLL\obj\Debug\net8.0\Newbee.BLL.pdb
+E:\Newbee-Project\Newbee.BE\Newbee.BLL\obj\Debug\net8.0\ref\Newbee.BLL.dll
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3

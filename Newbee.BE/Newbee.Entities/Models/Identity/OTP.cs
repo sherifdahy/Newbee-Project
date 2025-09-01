@@ -1,6 +1,4 @@
-﻿
-
-namespace Newbee.Entities.Models;
+﻿namespace Newbee.Entities;
 
 public class OTP
 {
@@ -9,9 +7,9 @@ public class OTP
     public string Code { get; set; } = string.Empty;
     public DateTime ExpiryTime { get; set; }
 
-    public string UserId { get; set; }
+    public int ApplicationUserId { get; set; }
 
-    public ApplicationUser? User { get; set; }
+    public virtual ApplicationUser? User { get; set; }
 
 
 }

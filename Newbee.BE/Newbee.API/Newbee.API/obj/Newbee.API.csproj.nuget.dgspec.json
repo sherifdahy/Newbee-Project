@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Newbee.API.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj",
         "packagesPath": "C:\\Users\\omarz\\.nuget\\packages\\",
         "outputPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Amazon.API\\obj\\",
+=======
+    "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Newbee.API.csproj": {}
+  },
+  "projects": {
+    "E:\\NewBee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\NewBee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj",
+        "projectName": "Amazon.API",
+        "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj",
+        "packagesPath": "C:\\Users\\shrif\\.nuget\\packages\\",
+        "outputPath": "E:\\Newbee-Project\\Newbee.BE\\Amazon.API\\obj\\",
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -69,6 +83,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -77,6 +92,16 @@
         "projectPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
         "packagesPath": "C:\\Users\\omarz\\.nuget\\packages\\",
         "outputPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Bosta.API\\obj\\",
+=======
+    "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
+        "projectName": "Bosta.API",
+        "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
+        "packagesPath": "C:\\Users\\shrif\\.nuget\\packages\\",
+        "outputPath": "E:\\Newbee-Project\\Newbee.BE\\Bosta.API\\obj\\",
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -96,11 +121,15 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
+<<<<<<< HEAD
             "projectReferences": {
               "D:\\work\\NewBee\\Newbee-Project\\Newbee.UT\\Newbee.API\\Newbee.Common\\Newbee.Common.csproj": {
                 "projectPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.UT\\Newbee.API\\Newbee.Common\\Newbee.Common.csproj"
               }
             }
+=======
+            "projectReferences": {}
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
           }
         },
         "warningProperties": {
@@ -148,6 +177,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Newbee.API.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -156,6 +186,16 @@
         "projectPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Newbee.API.csproj",
         "packagesPath": "C:\\Users\\omarz\\.nuget\\packages\\",
         "outputPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\obj\\",
+=======
+    "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Newbee.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Newbee.API.csproj",
+        "projectName": "Newbee.API",
+        "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Newbee.API.csproj",
+        "packagesPath": "C:\\Users\\shrif\\.nuget\\packages\\",
+        "outputPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\obj\\",
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -176,8 +216,13 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+<<<<<<< HEAD
               "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj": {
                 "projectPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj"
+=======
+              "E:\\NewBee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj": {
+                "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj"
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
               }
             }
           }
@@ -240,6 +285,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -248,6 +294,16 @@
         "projectPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj",
         "packagesPath": "C:\\Users\\omarz\\.nuget\\packages\\",
         "outputPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\obj\\",
+=======
+    "E:\\NewBee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\NewBee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj",
+        "projectName": "Newbee.BLL",
+        "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj",
+        "packagesPath": "C:\\Users\\shrif\\.nuget\\packages\\",
+        "outputPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.BLL\\obj\\",
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -268,6 +324,7 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+<<<<<<< HEAD
               "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj": {
                 "projectPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj"
               },
@@ -276,6 +333,16 @@
               },
               "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj": {
                 "projectPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj"
+=======
+              "E:\\NewBee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj": {
+                "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Amazon.API\\Amazon.API.csproj"
+              },
+              "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj": {
+                "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj"
+              },
+              "E:\\NewBee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj": {
+                "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj"
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
               }
             }
           }
@@ -345,6 +412,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -353,6 +421,16 @@
         "projectPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
         "packagesPath": "C:\\Users\\omarz\\.nuget\\packages\\",
         "outputPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\obj\\",
+=======
+    "E:\\NewBee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\NewBee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
+        "projectName": "Newbee.DAL",
+        "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
+        "packagesPath": "C:\\Users\\shrif\\.nuget\\packages\\",
+        "outputPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.DAL\\obj\\",
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -373,8 +451,13 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+<<<<<<< HEAD
               "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {
                 "projectPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj"
+=======
+              "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {
+                "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj"
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
               }
             }
           }
@@ -430,6 +513,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -438,6 +522,16 @@
         "projectPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
         "packagesPath": "C:\\Users\\omarz\\.nuget\\packages\\",
         "outputPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\obj\\",
+=======
+    "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
+        "projectName": "Newbee.Entities",
+        "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
+        "packagesPath": "C:\\Users\\shrif\\.nuget\\packages\\",
+        "outputPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\obj\\",
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -497,7 +591,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
         }
       }
     }

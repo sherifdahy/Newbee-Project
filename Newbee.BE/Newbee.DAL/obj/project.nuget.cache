@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "yS3WKfzHnJQ=",
   "success": true,
   "projectFilePath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
+=======
+  "dgSpecHash": "l8iaWaCnIEU=",
+  "success": true,
+  "projectFilePath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
   "expectedPackageFiles": [
     "C:\\Users\\omarz\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\omarz\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

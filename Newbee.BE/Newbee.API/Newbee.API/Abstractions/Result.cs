@@ -13,12 +13,9 @@ public class Result
         Error = error;
     }
 
-
-
     public bool IsSuccess { get; }
     public bool IsFailure => !IsSuccess;
     public Error Error { get; } = default!;
-
     public static Result Success() => new(true, Error.None);
     public static Result Failure(Error error) => new(false, error);
 

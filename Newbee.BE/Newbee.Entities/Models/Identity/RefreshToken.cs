@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Newbee.Entities.Models;
+namespace Newbee.Entities;
 
 public class RefreshToken
 {

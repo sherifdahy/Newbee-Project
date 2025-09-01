@@ -1,10 +1,7 @@
-﻿
-
-
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Newbee.Entities.Models.ModelConfigurations;
+namespace Newbee.Entities.ModelConfigurations;
 
 public class ApplicationUserConfiguration : IEntityTypeConfiguration<ApplicationUser>
 {
@@ -20,10 +17,5 @@ public class ApplicationUserConfiguration : IEntityTypeConfiguration<Application
         builder.Property(x => x.LastName)
             .IsRequired()
                 .HasMaxLength(100);
-        builder.Property(x => x.IsVerifiedAdmin)
-                .HasDefaultValue(false);
-    
-
-
     }
 }
