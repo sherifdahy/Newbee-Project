@@ -8,7 +8,7 @@ public class ProductService(IUnitOfWork unitOfWork) : IProductService
     public async Task<Result<Product>> CreateAsync(Product product)
     {
         await _unitOfWork.Products.AddAsync(product);
-        _unitOfWork.Save();
+        await _unitOfWork.SaveAsync();
 
         return Result.Success(product);
     }
@@ -21,7 +21,7 @@ public class ProductService(IUnitOfWork unitOfWork) : IProductService
             return Result.Failure<bool>(ProductErrors.NotFound);
 
         _unitOfWork.Products.Delete(result.Value);
-        _unitOfWork.Save();
+        await _unitOfWork.SaveAsync();
 
         return Result.Success(true);
     }
@@ -36,7 +36,7 @@ public class ProductService(IUnitOfWork unitOfWork) : IProductService
         
         var products = await _unitOfWork.Products.FindAllAsync(x=>x.CompanyId == companyId);
 
-        return Result.Success(products.Adapt<IEnumerable<Product>>());
+        return Result.Success(products);
     }
 
     public async Task<Result<Product>> GetByIdAsync(int id)
@@ -46,11 +46,24 @@ public class ProductService(IUnitOfWork unitOfWork) : IProductService
 
         var product = await _unitOfWork.Products.FindAsync(x => x.Id == id);
 
-        return Result.Success(product.Adapt<Product>());
+        return Result.Success(product);
     }
 
-    public Task<Result<bool>> UpdateAsync(int id, Product product)
+    public async Task<Result<bool>> UpdateAsync(int id, Product product)
     {
-        throw new NotImplementedException();
+        if (id == 0)
+            return Result.Failure<bool>(ProductErrors.InvalidId);
+
+        var result = await GetByIdAsync(id);
+
+        if (!result.IsSuccess)
+            return Result.Failure<bool>(ProductErrors.NotFound);
+
+        product.Adapt(result.Value);
+
+        _unitOfWork.Products.Update(product);
+        await _unitOfWork.SaveAsync();
+
+        return Result.Success(true);
     }
 }

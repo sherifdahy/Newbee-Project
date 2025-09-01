@@ -1,4 +1,4 @@
-﻿namespace Newbee.BLL.Services.Email;
+﻿namespace Newbee.BLL.Services;
 public class EmailBuilder
 {
     private readonly Microsoft.AspNetCore.Hosting.IWebHostEnvironment _env;

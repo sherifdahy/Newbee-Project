@@ -1,8 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Newbee.API.Abstractions;
-using Newbee.BLL.Interfaces;
-using System.Threading.Tasks;
 
 namespace Newbee.API.Controllers;
 [Route("api/[controller]")]
