@@ -4214,11 +4214,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
       "projectName": "Newbee.DAL",
       "projectPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
       "packagesPath": "C:\\Users\\omarz\\.nuget\\packages\\",
       "outputPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\obj\\",
+=======
+      "projectUniqueName": "E:\\NewBee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
+      "projectName": "Newbee.DAL",
+      "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.DAL\\Newbee.DAL.csproj",
+      "packagesPath": "C:\\Users\\shrif\\.nuget\\packages\\",
+      "outputPath": "E:\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\obj\\",
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4239,8 +4247,13 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+<<<<<<< HEAD
             "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {
               "projectPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj"
+=======
+            "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj": {
+              "projectPath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj"
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
             }
           }
         }

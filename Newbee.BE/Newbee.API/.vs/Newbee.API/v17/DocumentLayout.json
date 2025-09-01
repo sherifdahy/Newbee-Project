@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "WorkspaceRootPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.API\\",
   "Documents": [
     {
@@ -14,6 +15,56 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+=======
+  "WorkspaceRootPath": "E:\\Newbee-Project\\Newbee.BE\\Newbee.API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2D914168-1868-4230-8C18-B89A5693A26B}|..\\Newbee.DAL\\Newbee.DAL.csproj|e:\\newbee-project\\newbee.be\\newbee.dal\\migrations\\20250831204634_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C7C9773-AB71-46BE-89C8-22A17062B29C}|..\\Newbee.Entities\\Newbee.Entities.csproj|e:\\newbee-project\\newbee.be\\newbee.entities\\modelconfigurations\\orderconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C7C9773-AB71-46BE-89C8-22A17062B29C}|..\\Newbee.Entities\\Newbee.Entities.csproj|e:\\newbee-project\\newbee.be\\newbee.entities\\modelconfigurations\\orderdetailsconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C7C9773-AB71-46BE-89C8-22A17062B29C}|..\\Newbee.Entities\\Newbee.Entities.csproj|e:\\newbee-project\\newbee.be\\newbee.entities\\modelconfigurations\\shoppingcartitemconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Migrations\\20250831204319_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C7C9773-AB71-46BE-89C8-22A17062B29C}|..\\Newbee.Entities\\Newbee.Entities.csproj|e:\\newbee-project\\newbee.be\\newbee.entities\\modelconfigurations\\otpconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D914168-1868-4230-8C18-B89A5693A26B}|..\\Newbee.DAL\\Newbee.DAL.csproj|e:\\newbee-project\\newbee.be\\newbee.dal\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C7C9773-AB71-46BE-89C8-22A17062B29C}|..\\Newbee.Entities\\Newbee.Entities.csproj|e:\\newbee-project\\newbee.be\\newbee.entities\\extensions\\modelbuilderextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C7C9773-AB71-46BE-89C8-22A17062B29C}|..\\Newbee.Entities\\Newbee.Entities.csproj|e:\\newbee-project\\newbee.be\\newbee.entities\\modelconfigurations\\applicationuserconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Migrations\\20250831195404_update_3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|e:\\newbee-project\\newbee.be\\newbee.api\\newbee.api\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EB9B0DD-0CBE-415B-9243-65ED56748796}|..\\Newbee.BLL\\Newbee.BLL.csproj|e:\\newbee-project\\newbee.be\\newbee.bll\\services\\auth\\authservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Migrations\\20250831192325_update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|e:\\newbee-project\\newbee.be\\newbee.api\\newbee.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Migrations\\20250831194237_update_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
     }
   ],
   "DocumentGroupContainers": [
@@ -27,6 +78,7 @@
           "Children": [
             {
               "$type": "Bookmark",
+<<<<<<< HEAD
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
@@ -40,10 +92,146 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-09-01T08:32:25.216Z",
+=======
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20250831204634_init.cs",
+              "DocumentMoniker": "E:\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Migrations\\20250831204634_init.cs",
+              "RelativeDocumentMoniker": "..\\Newbee.DAL\\Migrations\\20250831204634_init.cs",
+              "ToolTip": "E:\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Migrations\\20250831204634_init.cs",
+              "RelativeToolTip": "..\\Newbee.DAL\\Migrations\\20250831204634_init.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T20:46:35.641Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "20250831204319_init.cs",
+              "DocumentMoniker": "E:\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Migrations\\20250831204319_init.cs",
+              "RelativeDocumentMoniker": "..\\Newbee.DAL\\Migrations\\20250831204319_init.cs",
+              "ToolTip": "E:\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Migrations\\20250831204319_init.cs",
+              "RelativeToolTip": "..\\Newbee.DAL\\Migrations\\20250831204319_init.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T20:43:19.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OTPConfiguration.cs",
+              "DocumentMoniker": "E:\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\ModelConfigurations\\OTPConfiguration.cs",
+              "RelativeDocumentMoniker": "..\\Newbee.Entities\\ModelConfigurations\\OTPConfiguration.cs",
+              "ToolTip": "E:\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\ModelConfigurations\\OTPConfiguration.cs",
+              "RelativeToolTip": "..\\Newbee.Entities\\ModelConfigurations\\OTPConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T20:34:01.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ShoppingCartItemConfiguration.cs",
+              "DocumentMoniker": "E:\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\ModelConfigurations\\ShoppingCartItemConfiguration.cs",
+              "RelativeDocumentMoniker": "..\\Newbee.Entities\\ModelConfigurations\\ShoppingCartItemConfiguration.cs",
+              "ToolTip": "E:\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\ModelConfigurations\\ShoppingCartItemConfiguration.cs",
+              "RelativeToolTip": "..\\Newbee.Entities\\ModelConfigurations\\ShoppingCartItemConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T20:33:41.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ModelBuilderExtensions.cs",
+              "DocumentMoniker": "E:\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Extensions\\ModelBuilderExtensions.cs",
+              "RelativeDocumentMoniker": "..\\Newbee.Entities\\Extensions\\ModelBuilderExtensions.cs",
+              "ToolTip": "E:\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Extensions\\ModelBuilderExtensions.cs",
+              "RelativeToolTip": "..\\Newbee.Entities\\Extensions\\ModelBuilderExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T20:28:31.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderDetailsConfiguration.cs",
+              "DocumentMoniker": "E:\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\ModelConfigurations\\OrderDetailsConfiguration.cs",
+              "RelativeDocumentMoniker": "..\\Newbee.Entities\\ModelConfigurations\\OrderDetailsConfiguration.cs",
+              "ToolTip": "E:\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\ModelConfigurations\\OrderDetailsConfiguration.cs",
+              "RelativeToolTip": "..\\Newbee.Entities\\ModelConfigurations\\OrderDetailsConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T20:07:56.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrderConfiguration.cs",
+              "DocumentMoniker": "E:\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\ModelConfigurations\\OrderConfiguration.cs",
+              "RelativeDocumentMoniker": "..\\Newbee.Entities\\ModelConfigurations\\OrderConfiguration.cs",
+              "ToolTip": "E:\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\ModelConfigurations\\OrderConfiguration.cs",
+              "RelativeToolTip": "..\\Newbee.Entities\\ModelConfigurations\\OrderConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T20:07:38.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ApplicationUserConfiguration.cs",
+              "DocumentMoniker": "E:\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\ModelConfigurations\\ApplicationUserConfiguration.cs",
+              "RelativeDocumentMoniker": "..\\Newbee.Entities\\ModelConfigurations\\ApplicationUserConfiguration.cs",
+              "ToolTip": "E:\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\ModelConfigurations\\ApplicationUserConfiguration.cs",
+              "RelativeToolTip": "..\\Newbee.Entities\\ModelConfigurations\\ApplicationUserConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T20:07:15.905Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "20250831195404_update_3.cs",
+              "DocumentMoniker": "E:\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Migrations\\20250831195404_update_3.cs",
+              "RelativeDocumentMoniker": "..\\Newbee.DAL\\Migrations\\20250831195404_update_3.cs",
+              "ToolTip": "E:\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Migrations\\20250831195404_update_3.cs",
+              "RelativeToolTip": "..\\Newbee.DAL\\Migrations\\20250831195404_update_3.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T19:54:04.449Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AuthServices.cs",
+              "DocumentMoniker": "E:\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\Auth\\AuthServices.cs",
+              "RelativeDocumentMoniker": "..\\Newbee.BLL\\Services\\Auth\\AuthServices.cs",
+              "ToolTip": "E:\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\Auth\\AuthServices.cs",
+              "RelativeToolTip": "..\\Newbee.BLL\\Services\\Auth\\AuthServices.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAAwE0AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T19:52:33.457Z",
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 0,
               "Title": "Newbee.BLL",
               "DocumentMoniker": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Newbee.BLL.csproj",
@@ -53,10 +241,58 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-09-01T08:32:16.034Z",
+=======
+              "DocumentIndex": 10,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "E:\\Newbee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "Newbee.API\\DependencyInjection.cs",
+              "ToolTip": "E:\\Newbee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\DependencyInjection.cs",
+              "RelativeToolTip": "Newbee.API\\DependencyInjection.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBgAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T19:51:59.668Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Newbee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Program.cs",
+              "RelativeDocumentMoniker": "Newbee.API\\Program.cs",
+              "ToolTip": "E:\\Newbee-Project\\Newbee.BE\\Newbee.API\\Newbee.API\\Program.cs",
+              "RelativeToolTip": "Newbee.API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T19:51:58.867Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "20250831194237_update_2.cs",
+              "DocumentMoniker": "E:\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Migrations\\20250831194237_update_2.cs",
+              "RelativeDocumentMoniker": "..\\Newbee.DAL\\Migrations\\20250831194237_update_2.cs",
+              "ToolTip": "E:\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Migrations\\20250831194237_update_2.cs",
+              "RelativeToolTip": "..\\Newbee.DAL\\Migrations\\20250831194237_update_2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T19:42:37.449Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "E:\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "..\\Newbee.DAL\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "E:\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "..\\Newbee.DAL\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAuwDAAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T19:30:43.929Z",
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 2,
               "Title": "Bosta.API.csproj",
               "DocumentMoniker": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
@@ -77,6 +313,17 @@
               "ViewState": "AgIAABsXAAAAAAAAAAAQwCIXAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
               "WhenOpened": "2025-09-01T08:21:51.447Z"
+=======
+              "DocumentIndex": 12,
+              "Title": "20250831192325_update.cs",
+              "DocumentMoniker": "E:\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Migrations\\20250831192325_update.cs",
+              "RelativeDocumentMoniker": "..\\Newbee.DAL\\Migrations\\20250831192325_update.cs",
+              "ToolTip": "E:\\Newbee-Project\\Newbee.BE\\Newbee.DAL\\Migrations\\20250831192325_update.cs",
+              "RelativeToolTip": "..\\Newbee.DAL\\Migrations\\20250831192325_update.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T19:23:25.54Z"
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
             }
           ]
         }

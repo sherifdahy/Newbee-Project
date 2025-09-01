@@ -12,7 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Newbee.UT\Newbee.API\Newbee.Common\Newbee.Common.csproj" />
   </ItemGroup>
 
 </Project>

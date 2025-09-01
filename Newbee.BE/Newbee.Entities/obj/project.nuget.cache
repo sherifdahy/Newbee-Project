@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "2qN7U7jjdhw=",
   "success": true,
   "projectFilePath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
+=======
+  "dgSpecHash": "V95pfvkmu/M=",
+  "success": true,
+  "projectFilePath": "E:\\NewBee-Project\\Newbee.BE\\Newbee.Entities\\Newbee.Entities.csproj",
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
   "expectedPackageFiles": [
     "C:\\Users\\omarz\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.0\\microsoft.aspnetcore.cryptography.internal.8.0.0.nupkg.sha512",
     "C:\\Users\\omarz\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\8.0.0\\microsoft.aspnetcore.cryptography.keyderivation.8.0.0.nupkg.sha512",

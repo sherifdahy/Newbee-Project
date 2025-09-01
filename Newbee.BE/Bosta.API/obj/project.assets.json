@@ -224,11 +224,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
       "projectName": "Bosta.API",
       "projectPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
       "packagesPath": "C:\\Users\\omarz\\.nuget\\packages\\",
       "outputPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.BE\\Bosta.API\\obj\\",
+=======
+      "projectUniqueName": "E:\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
+      "projectName": "Bosta.API",
+      "projectPath": "E:\\Newbee-Project\\Newbee.BE\\Bosta.API\\Bosta.API.csproj",
+      "packagesPath": "C:\\Users\\shrif\\.nuget\\packages\\",
+      "outputPath": "E:\\Newbee-Project\\Newbee.BE\\Bosta.API\\obj\\",
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -248,11 +256,15 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+<<<<<<< HEAD
           "projectReferences": {
             "D:\\work\\NewBee\\Newbee-Project\\Newbee.UT\\Newbee.API\\Newbee.Common\\Newbee.Common.csproj": {
               "projectPath": "D:\\work\\NewBee\\Newbee-Project\\Newbee.UT\\Newbee.API\\Newbee.Common\\Newbee.Common.csproj"
             }
           }
+=======
+          "projectReferences": {}
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
         }
       },
       "warningProperties": {
@@ -299,6 +311,7 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
       }
     }
+<<<<<<< HEAD
   },
   "logs": [
     {
@@ -311,4 +324,7 @@
       ]
     }
   ]
+=======
+  }
+>>>>>>> 2507a71003e4486536a8ac7dc5ea2c7ebe66f2b3
 }
