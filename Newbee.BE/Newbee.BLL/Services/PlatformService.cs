@@ -11,9 +11,8 @@ public class PlatformService(IUnitOfWork unitOfWork) : IPlatformService
 
     public async Task<Result<Platform>> CreateAsync(Platform platform, CancellationToken cancellationToken = default)
     {
-
         await _unitOfWork.Platforms.AddAsync(platform);
-        await _unitOfWork.SaveAsync();
+        await _unitOfWork.SaveAsync(cancellationToken);
 
         return Result.Success(platform);
     }
@@ -25,7 +24,7 @@ public class PlatformService(IUnitOfWork unitOfWork) : IPlatformService
             return Result.Failure<bool>(result.Error);
 
         _unitOfWork.Platforms.Delete(result.Value);
-        await _unitOfWork.SaveAsync();
+        await _unitOfWork.SaveAsync(cancellationToken);
 
         return Result.Success(true);
     }
@@ -52,7 +51,7 @@ public class PlatformService(IUnitOfWork unitOfWork) : IPlatformService
         if (id == 0)
             return Result.Failure<bool>(PlatformErrors.InvalidId);
 
-        var result = await GetByIdAsync(id);
+        var result = await GetByIdAsync(id,cancellationToken);
 
         if (!result.IsSuccess)
             return Result.Failure<bool>(result.Error);
@@ -60,7 +59,7 @@ public class PlatformService(IUnitOfWork unitOfWork) : IPlatformService
         platform.Adapt(result.Value);
 
         _unitOfWork.Platforms.Update(result.Value);
-        await _unitOfWork.SaveAsync();
+        await _unitOfWork.SaveAsync(cancellationToken);
 
         return Result.Success(true);
     }

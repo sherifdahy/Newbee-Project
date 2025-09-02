@@ -1,6 +1,7 @@
 ﻿using MapsterMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using Newbee.BLL.Authentication;
 using Newbee.BLL.Services;
 using System.Reflection;
@@ -47,6 +48,7 @@ public static class DependencyInjection
         services.AddScoped<IProductService, ProductService>();
         services.AddScoped<IJwtProvider, JwtProvider>();
         services.AddScoped<IPlatformService,PlatformService>();
+        services.AddScoped<ICompanyService,CompanyService>();
         services.AddScoped<IProductCategoryService,ProductCategoryService>();
         services.AddScoped<EmailBuilder>();
         return services;
@@ -54,8 +56,37 @@ public static class DependencyInjection
     private static IServiceCollection AddSwaggerConfig(this IServiceCollection services)
     {
         services.AddEndpointsApiExplorer();
-        services.AddSwaggerGen();
+        services.AddSwaggerGen(options =>
+        {
+            options.SwaggerDoc("v1", new OpenApiInfo
+            {
+                Title = "Newbee API",
+                Version = "v1",
+            });
 
+            options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+            {
+                Name = "Authorization",
+                In = ParameterLocation.Header,
+                Type = SecuritySchemeType.ApiKey,
+                Scheme = "Bearer"
+            });
+
+            options.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            }
+                        },
+                        Array.Empty<string>()
+                    }
+                });
+        });
         return services;
     }
     private static IServiceCollection AddBostaConfig(this IServiceCollection services,IConfiguration configuration)

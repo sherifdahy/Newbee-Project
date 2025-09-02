@@ -5,12 +5,13 @@ using Newbee.BLL.DTO.Company.Responses;
 namespace Newbee.API.Controllers;
 
 [Route("api/[controller]")]
+[Authorize]
 [ApiController]
 public class CompaniesController(ICompanyService companyService) : BaseController
 {
     private readonly ICompanyService _companyService = companyService;
 
-    [HttpGet)]
+    [HttpGet]
     public async Task<IActionResult> GetAll(CancellationToken cancellationToken)
     {
         var result = await _companyService.GetAllAsync(cancellationToken);

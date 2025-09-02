@@ -1,11 +1,10 @@
-﻿using Mapster;
-using Microsoft.AspNetCore.Mvc;
-using Newbee.API.Abstractions;
+﻿using Microsoft.AspNetCore.Mvc;
 using Newbee.BLL.DTO.Product.Requests;
 
 namespace Newbee.API.Controllers;
 [Route("api/[controller]")]
 [ApiController]
+[Authorize]
 public class ProductsController(IProductService productService) :BaseController
 {
     private readonly IProductService _productService = productService;
