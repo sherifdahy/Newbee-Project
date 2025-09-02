@@ -58,8 +58,6 @@ public class ProductService(IUnitOfWork unitOfWork) : IProductService
 
         product.Adapt(result.Value);
 
-        result.Value.UpdatedAt = DateTime.Now;
-
         _unitOfWork.Products.Update(result.Value);
         await _unitOfWork.SaveAsync();
 

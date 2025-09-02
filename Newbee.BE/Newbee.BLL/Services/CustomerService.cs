@@ -1,4 +1,6 @@
-﻿namespace Newbee.BLL.Services;
+﻿using Newbee.Entities;
+
+namespace Newbee.BLL.Services;
 
 public class CustomerService(IUnitOfWork unitOfWork) : ICustomerService
 {
@@ -48,6 +50,9 @@ public class CustomerService(IUnitOfWork unitOfWork) : ICustomerService
 
         var customer = await _unitOfWork.Customers.FindAsync(x => x.Id == id);
 
+        if (customer is null)
+            return Result.Failure<Customer>(CustomerErrors.NotFound);
+
         return Result.Success(customer);
     }
     public async Task<Result<bool>> UpdateAsync(int id, Customer customer, CancellationToken cancellationToken = default)
@@ -61,8 +66,6 @@ public class CustomerService(IUnitOfWork unitOfWork) : ICustomerService
             return Result.Failure<bool>(result.Error);
 
         customer.Adapt(result.Value);
-
-        result.Value.UpdatedAt = DateTime.Now;
 
         _unitOfWork.Customers.Update(result.Value);
         await _unitOfWork.SaveAsync();

@@ -18,6 +18,7 @@ namespace Newbee.DAL.Repository
             Users = new Repository<ApplicationUser>(_context);
             Products = new Repository<Product>(_context);
             ProductCategories = new Repository<ProductCategory>(_context);
+            Platforms = new Repository<Platform>(_context);
         }
         public IRepository<Company> Companies { get; }
         public IRepository<OTP> OTPs { get; } 
@@ -25,6 +26,7 @@ namespace Newbee.DAL.Repository
         public IRepository<Product> Products { get; }
         public IRepository<Customer> Customers { get; }
         public IRepository<ProductCategory> ProductCategories { get; }
+        public IRepository<Platform> Platforms { get; }
 
         public void Dispose()
         {
