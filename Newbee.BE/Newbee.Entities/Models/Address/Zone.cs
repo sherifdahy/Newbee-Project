@@ -8,8 +8,8 @@ namespace Newbee.Entities;
 public class Zone : TrackingBase
 {
     public int Id { get; set; }
-    public string Code { get; set; }
-    public string Name { get; set; }
+    public string Code { get; set; } = string.Empty;
+    public string Name { get; set; } = string.Empty;
     public int CityId { get; set; }
     public virtual City City { get; set; }
 }

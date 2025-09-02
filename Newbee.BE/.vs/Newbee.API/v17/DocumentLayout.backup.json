@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "WorkspaceRootPath": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\",
   "Documents": [
     {
@@ -17,6 +18,93 @@
     {
       "AbsoluteMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|c:\\users\\mohamed_khaled\\source\\repos\\newbee-project\\newbee.be\\newbee.bll\\authentication\\ijwtprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|solutionrelative:newbee.bll\\authentication\\ijwtprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+  "WorkspaceRootPath": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|d:\\mobadara_newbee\\newbee-project\\newbee.be\\newbee.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|d:\\mobadara_newbee\\newbee-project\\newbee.be\\newbee.bll\\services\\authservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|solutionrelative:newbee.bll\\services\\authservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|d:\\mobadara_newbee\\newbee-project\\newbee.be\\newbee.bll\\services\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|solutionrelative:newbee.bll\\services\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|d:\\mobadara_newbee\\newbee-project\\newbee.be\\newbee.bll\\services\\emailbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|solutionrelative:newbee.bll\\services\\emailbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|d:\\mobadara_newbee\\newbee-project\\newbee.be\\newbee.bll\\dto\\auth\\validations\\registerrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|solutionrelative:newbee.bll\\dto\\auth\\validations\\registerrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|d:\\mobadara_newbee\\newbee-project\\newbee.be\\newbee.bll\\dto\\auth\\validations\\loginrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|solutionrelative:newbee.bll\\dto\\auth\\validations\\loginrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|d:\\mobadara_newbee\\newbee-project\\newbee.be\\newbee.bll\\dto\\auth\\responses\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|solutionrelative:newbee.bll\\dto\\auth\\responses\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|d:\\mobadara_newbee\\newbee-project\\newbee.be\\newbee.bll\\dto\\auth\\requests\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|solutionrelative:newbee.bll\\dto\\auth\\requests\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|d:\\mobadara_newbee\\newbee-project\\newbee.be\\newbee.api\\controllers\\companiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\controllers\\companiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|d:\\mobadara_newbee\\newbee-project\\newbee.be\\newbee.bll\\dto\\company\\validations\\createcompanyrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|solutionrelative:newbee.bll\\dto\\company\\validations\\createcompanyrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|d:\\mobadara_newbee\\newbee-project\\newbee.be\\newbee.bll\\dto\\company\\responses\\companyresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|solutionrelative:newbee.bll\\dto\\company\\responses\\companyresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|d:\\mobadara_newbee\\newbee-project\\newbee.be\\newbee.bll\\dto\\company\\requests\\companyrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|solutionrelative:newbee.bll\\dto\\company\\requests\\companyrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|d:\\mobadara_newbee\\newbee-project\\newbee.be\\newbee.bll\\dto\\product\\validations\\createproductrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|solutionrelative:newbee.bll\\dto\\product\\validations\\createproductrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|d:\\mobadara_newbee\\newbee-project\\newbee.be\\newbee.bll\\dto\\product\\responses\\productresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|solutionrelative:newbee.bll\\dto\\product\\responses\\productresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|d:\\mobadara_newbee\\newbee-project\\newbee.be\\newbee.bll\\dto\\product\\requests\\productrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|solutionrelative:newbee.bll\\dto\\product\\requests\\productrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|d:\\mobadara_newbee\\newbee-project\\newbee.be\\newbee.bll\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|solutionrelative:newbee.bll\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|d:\\mobadara_newbee\\newbee-project\\newbee.be\\newbee.api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|d:\\mobadara_newbee\\newbee-project\\newbee.be\\newbee.bll\\services\\companyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|solutionrelative:newbee.bll\\services\\companyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|d:\\mobadara_newbee\\newbee-project\\newbee.be\\newbee.bll\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|solutionrelative:newbee.bll\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|d:\\mobadara_newbee\\newbee-project\\newbee.be\\newbee.api\\controllers\\productcategoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\controllers\\productcategoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A9A51D4-29E5-31A2-108B-7FB14477CD79}|Newbee.Entities\\Newbee.Entities.csproj|d:\\mobadara_newbee\\newbee-project\\newbee.be\\newbee.entities\\models\\company\\company.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A9A51D4-29E5-31A2-108B-7FB14477CD79}|Newbee.Entities\\Newbee.Entities.csproj|solutionrelative:newbee.entities\\models\\company\\company.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> a8b24b0dda37bb7dd90680706e9d425acc166678
     }
   ],
   "DocumentGroupContainers": [
@@ -26,6 +114,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": 4,
           "Children": [
             {
@@ -51,11 +140,79 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-02T17:15:03.151Z",
+=======
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmailSender.cs",
+              "DocumentMoniker": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\EmailSender.cs",
+              "RelativeDocumentMoniker": "Newbee.BLL\\Services\\EmailSender.cs",
+              "ToolTip": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\EmailSender.cs",
+              "RelativeToolTip": "Newbee.BLL\\Services\\EmailSender.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAcwDoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T17:23:36.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmailBuilder.cs",
+              "DocumentMoniker": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\EmailBuilder.cs",
+              "RelativeDocumentMoniker": "Newbee.BLL\\Services\\EmailBuilder.cs",
+              "ToolTip": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\EmailBuilder.cs",
+              "RelativeToolTip": "Newbee.BLL\\Services\\EmailBuilder.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAcwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T17:23:14.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginRequestValidator.cs",
+              "DocumentMoniker": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\DTO\\Auth\\Validations\\LoginRequestValidator.cs",
+              "RelativeDocumentMoniker": "Newbee.BLL\\DTO\\Auth\\Validations\\LoginRequestValidator.cs",
+              "ToolTip": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\DTO\\Auth\\Validations\\LoginRequestValidator.cs",
+              "RelativeToolTip": "Newbee.BLL\\DTO\\Auth\\Validations\\LoginRequestValidator.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAwwA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T17:22:26.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthResponse.cs",
+              "DocumentMoniker": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\DTO\\Auth\\Responses\\AuthResponse.cs",
+              "RelativeDocumentMoniker": "Newbee.BLL\\DTO\\Auth\\Responses\\AuthResponse.cs",
+              "ToolTip": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\DTO\\Auth\\Responses\\AuthResponse.cs",
+              "RelativeToolTip": "Newbee.BLL\\DTO\\Auth\\Responses\\AuthResponse.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAIwBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T17:22:10.775Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthServices.cs",
+              "DocumentMoniker": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\AuthServices.cs",
+              "RelativeDocumentMoniker": "Newbee.BLL\\Services\\AuthServices.cs",
+              "ToolTip": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\AuthServices.cs",
+              "RelativeToolTip": "Newbee.BLL\\Services\\AuthServices.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAAHgAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T14:56:00.991Z",
+>>>>>>> a8b24b0dda37bb7dd90680706e9d425acc166678
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< HEAD
               "Title": "AuthServices.cs",
               "DocumentMoniker": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\AuthServices.cs",
               "RelativeDocumentMoniker": "Newbee.BLL\\Services\\AuthServices.cs",
@@ -64,10 +221,63 @@
               "ViewState": "AgIAAD4AAAAAAAAAAAAcwFAAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-02T17:14:44.038Z",
+=======
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Newbee.API\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Newbee.API\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T14:53:54.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RegisterRequest.cs",
+              "DocumentMoniker": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\DTO\\Auth\\Requests\\RegisterRequest.cs",
+              "RelativeDocumentMoniker": "Newbee.BLL\\DTO\\Auth\\Requests\\RegisterRequest.cs",
+              "ToolTip": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\DTO\\Auth\\Requests\\RegisterRequest.cs",
+              "RelativeToolTip": "Newbee.BLL\\DTO\\Auth\\Requests\\RegisterRequest.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAIwA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T17:21:55.631Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CreateProductRequestValidator.cs",
+              "DocumentMoniker": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\DTO\\Product\\Validations\\CreateProductRequestValidator.cs",
+              "RelativeDocumentMoniker": "Newbee.BLL\\DTO\\Product\\Validations\\CreateProductRequestValidator.cs",
+              "ToolTip": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\DTO\\Product\\Validations\\CreateProductRequestValidator.cs",
+              "RelativeToolTip": "Newbee.BLL\\DTO\\Product\\Validations\\CreateProductRequestValidator.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAwwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T16:16:01.339Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RegisterRequestValidator.cs",
+              "DocumentMoniker": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\DTO\\Auth\\Validations\\RegisterRequestValidator.cs",
+              "RelativeDocumentMoniker": "Newbee.BLL\\DTO\\Auth\\Validations\\RegisterRequestValidator.cs",
+              "ToolTip": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\DTO\\Auth\\Validations\\RegisterRequestValidator.cs",
+              "RelativeToolTip": "Newbee.BLL\\DTO\\Auth\\Validations\\RegisterRequestValidator.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAcwDAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T14:55:36.281Z",
+>>>>>>> a8b24b0dda37bb7dd90680706e9d425acc166678
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 3,
               "Title": "IJwtProvider.cs",
               "DocumentMoniker": "C:\\Users\\Mohamed_Khaled\\source\\repos\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Authentication\\IJwtProvider.cs",
@@ -91,6 +301,150 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-02T17:05:55.055Z",
               "EditorCaption": ""
+=======
+              "DocumentIndex": 11,
+              "Title": "CompanyRequest.cs",
+              "DocumentMoniker": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\DTO\\Company\\Requests\\CompanyRequest.cs",
+              "RelativeDocumentMoniker": "Newbee.BLL\\DTO\\Company\\Requests\\CompanyRequest.cs",
+              "ToolTip": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\DTO\\Company\\Requests\\CompanyRequest.cs",
+              "RelativeToolTip": "Newbee.BLL\\DTO\\Company\\Requests\\CompanyRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T16:18:43.867Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CompanyResponse.cs",
+              "DocumentMoniker": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\DTO\\Company\\Responses\\CompanyResponse.cs",
+              "RelativeDocumentMoniker": "Newbee.BLL\\DTO\\Company\\Responses\\CompanyResponse.cs",
+              "ToolTip": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\DTO\\Company\\Responses\\CompanyResponse.cs",
+              "RelativeToolTip": "Newbee.BLL\\DTO\\Company\\Responses\\CompanyResponse.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T16:19:14.707Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ProductResponse.cs",
+              "DocumentMoniker": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\DTO\\Product\\Responses\\ProductResponse.cs",
+              "RelativeDocumentMoniker": "Newbee.BLL\\DTO\\Product\\Responses\\ProductResponse.cs",
+              "ToolTip": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\DTO\\Product\\Responses\\ProductResponse.cs",
+              "RelativeToolTip": "Newbee.BLL\\DTO\\Product\\Responses\\ProductResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T16:15:48.2Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CompaniesController.cs",
+              "DocumentMoniker": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.API\\Controllers\\CompaniesController.cs",
+              "RelativeDocumentMoniker": "Newbee.API\\Controllers\\CompaniesController.cs",
+              "ToolTip": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.API\\Controllers\\CompaniesController.cs",
+              "RelativeToolTip": "Newbee.API\\Controllers\\CompaniesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T14:53:37.485Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CreateCompanyRequestValidator.cs",
+              "DocumentMoniker": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\DTO\\Company\\Validations\\CreateCompanyRequestValidator.cs",
+              "RelativeDocumentMoniker": "Newbee.BLL\\DTO\\Company\\Validations\\CreateCompanyRequestValidator.cs",
+              "ToolTip": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\DTO\\Company\\Validations\\CreateCompanyRequestValidator.cs",
+              "RelativeToolTip": "Newbee.BLL\\DTO\\Company\\Validations\\CreateCompanyRequestValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T16:19:58.105Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ProductRequest.cs",
+              "DocumentMoniker": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\DTO\\Product\\Requests\\ProductRequest.cs",
+              "RelativeDocumentMoniker": "Newbee.BLL\\DTO\\Product\\Requests\\ProductRequest.cs",
+              "ToolTip": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\DTO\\Product\\Requests\\ProductRequest.cs",
+              "RelativeToolTip": "Newbee.BLL\\DTO\\Product\\Requests\\ProductRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T16:15:34.777Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CompanyService.cs",
+              "DocumentMoniker": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\CompanyService.cs",
+              "RelativeDocumentMoniker": "Newbee.BLL\\Services\\CompanyService.cs",
+              "ToolTip": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\CompanyService.cs",
+              "RelativeToolTip": "Newbee.BLL\\Services\\CompanyService.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAcwEUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T14:58:30.373Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "Newbee.BLL\\Services\\ProductService.cs",
+              "ToolTip": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\ProductService.cs",
+              "RelativeToolTip": "Newbee.BLL\\Services\\ProductService.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAcwEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T14:58:24.113Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Company.cs",
+              "DocumentMoniker": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Models\\Company\\Company.cs",
+              "RelativeDocumentMoniker": "Newbee.Entities\\Models\\Company\\Company.cs",
+              "ToolTip": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.Entities\\Models\\Company\\Company.cs",
+              "RelativeToolTip": "Newbee.Entities\\Models\\Company\\Company.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T14:55:23.762Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.API\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Newbee.API\\Controllers\\ProductsController.cs",
+              "ToolTip": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.API\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Newbee.API\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAwwC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T14:52:44.766Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CustomerService.cs",
+              "DocumentMoniker": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\CustomerService.cs",
+              "RelativeDocumentMoniker": "Newbee.BLL\\Services\\CustomerService.cs",
+              "ToolTip": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\CustomerService.cs",
+              "RelativeToolTip": "Newbee.BLL\\Services\\CustomerService.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T15:10:38.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ProductCategoriesController.cs",
+              "DocumentMoniker": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.API\\Controllers\\ProductCategoriesController.cs",
+              "RelativeDocumentMoniker": "Newbee.API\\Controllers\\ProductCategoriesController.cs",
+              "ToolTip": "D:\\Mobadara_NewBee\\Newbee-Project\\Newbee.BE\\Newbee.API\\Controllers\\ProductCategoriesController.cs",
+              "RelativeToolTip": "Newbee.API\\Controllers\\ProductCategoriesController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBsAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T14:53:32.649Z"
+>>>>>>> a8b24b0dda37bb7dd90680706e9d425acc166678
             }
           ]
         }

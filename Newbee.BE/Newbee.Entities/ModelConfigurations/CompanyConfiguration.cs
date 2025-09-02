@@ -13,6 +13,16 @@ namespace Newbee.Entities.ModelConfigurations
         public void Configure(EntityTypeBuilder<Company> builder)
         {
             builder.Property(c => c.Name).IsRequired().HasMaxLength(100);
+
+            builder
+                .HasMany(x=>x.ProductCategories)
+                .WithOne(x=>x.Company)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            builder
+                .HasMany(x => x.Customers)
+                .WithOne(x => x.Company)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }
