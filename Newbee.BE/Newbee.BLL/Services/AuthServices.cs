@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Newbee.BLL.DTO.Mail;
 using Newbee.BLL.Authentication;
 using Newbee.BLL.DTO.Authentication;
+using System.Security.Cryptography;
 namespace Newbee.BLL.Services;
 
 public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser> signInManager , UserManager<ApplicationUser> userManager,
@@ -21,6 +22,7 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
     private readonly IJwtProvider jwtProvider = jwtProvider;
     private readonly EmailBuilder _builder = _builder;
     private readonly int _otpExpiryMinutes = 5;
+    private readonly int _resetRefreshTokenExpiryDays = 14;
 
     public async Task<Result<AuthResponse?>> GetTokenAsync(LoginRequest request, CancellationToken cancellationToken)
     {
@@ -40,7 +42,15 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
         if (result.Succeeded)
         {
             var (token, expiresIn) = jwtProvider.GenerateToken(user);
-            var response = new AuthResponse(user.Id, user.Email, user.FirstName,user.LastName, token, expiresIn);
+            var refreshToken =GenerateRefreshToken();
+            var refreshTokenExpiry = DateTime.UtcNow.AddDays(_resetRefreshTokenExpiryDays);
+           user.RefreshTokens.Add(new RefreshToken
+           {
+               Token = refreshToken,
+               ExpiresOn = refreshTokenExpiry
+           });
+            await _userManager.UpdateAsync(user);
+            var response = new AuthResponse(user.Id, user.Email, user.FirstName,user.LastName, token, expiresIn,refreshToken,refreshTokenExpiry);
         // return new auth response
 
             return Result.Success(response);
@@ -63,7 +73,7 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
             TaxRegistrationNumber = request.TaxNumber,
         }; _unitOfWork.Companies.Add(company);
 
-        _unitOfWork.Save();
+        await _unitOfWork.SaveAsync();
         var user = request.Adapt<ApplicationUser>();
         user.UserName = request.Email;
         user.CompanyId = company.Id;
@@ -74,12 +84,8 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
         {
 
             await SendOtpAsync(user);
-<<<<<<< HEAD:Newbee.BE/Newbee.BLL/Services/Auth/AuthServices.cs
-=======
-            var company = request.Adapt<Company>();
-            await _unitOfWork.Companies.AddAsync(company);
+           
             await _unitOfWork.SaveAsync();
->>>>>>> fab850860bdb8ba6533464bff4409a498c3e6de6:Newbee.BE/Newbee.BLL/Services/AuthServices.cs
             return Result.Success(user.Id);
         }
 
@@ -146,8 +152,34 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
 
     }
 
+   
+    public async Task<AuthResponse?> GetRefreshTokenAsync(string token, string refreshToken, CancellationToken cancellationToken = default)
+    {
+        var userId = jwtProvider.ValidateToken(token);
+        if (userId == null)
+            Result.Failure<AuthResponse?>(UserErrors.InvalidJwtToken);
+        var user = await _userManager.FindByIdAsync(userId);
+        if (user == null)
+            Result.Failure<AuthResponse?>(UserErrors.InvalidJwtToken);
+        var userRefreshToken = user.RefreshTokens.SingleOrDefault(rt => rt.Token == refreshToken&& rt.IsActive);
+        if (userRefreshToken == null)
+            Result.Failure<AuthResponse?>(UserErrors.InvalidRefreshToken);
+        userRefreshToken.RevokedOn = DateTime.UtcNow;
+        var newRefreshToken = GenerateRefreshToken();
+        var refreshTokenExpiry = DateTime.UtcNow.AddDays(_resetRefreshTokenExpiryDays);
+        user.RefreshTokens.Add(new RefreshToken
+        {
+            Token = newRefreshToken,
+            ExpiresOn = refreshTokenExpiry
+        });
+        await _userManager.UpdateAsync(user);
+        var (newJwtToken, expiresIn) = jwtProvider.GenerateToken(user);
+        var response = new AuthResponse(user.Id, user.Email, user.FirstName, user.LastName, newJwtToken, expiresIn, newRefreshToken, refreshTokenExpiry);
+        return  response;
+    }
+    private static string GenerateRefreshToken()
+    {
+        return Convert.ToBase64String(RandomNumberGenerator.GetBytes(64));
+    }
 
-  
-
-  
 }
