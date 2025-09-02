@@ -8,5 +8,6 @@ public interface IUnitOfWork : IDisposable
     public IRepository<Product> Products { get; }
     public IRepository<Customer> Customers { get; }
     public IRepository<ProductCategory> ProductCategories { get; }
-    Task<int> SaveAsync();
+    public IRepository<Platform> Platforms { get; }
+    Task<int> SaveAsync(CancellationToken cancellationToken = default);
 }

@@ -19,7 +19,8 @@
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CompaniesController.cs" />
-    <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
+    <Compile Include="Controllers\PlatformsController.cs" />
     <Compile Include="Controllers\ProductCategoriesController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
   </ItemGroup>

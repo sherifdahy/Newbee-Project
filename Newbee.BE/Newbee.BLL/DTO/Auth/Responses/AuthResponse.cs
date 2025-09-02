@@ -1,4 +1,5 @@
-﻿namespace Newbee.BLL.DTO.Authentication;
+﻿namespace Newbee.BLL.DTO.Auth.Responses;
+
 public record AuthResponse
 (
     int  UserId,

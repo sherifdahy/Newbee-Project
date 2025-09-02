@@ -18,6 +18,7 @@ namespace Newbee.DAL.Repository
             Users = new Repository<ApplicationUser>(_context);
             Products = new Repository<Product>(_context);
             ProductCategories = new Repository<ProductCategory>(_context);
+            Platforms = new Repository<Platform>(_context);
         }
         public IRepository<Company> Companies { get; }
         public IRepository<OTP> OTPs { get; } 
@@ -25,14 +26,15 @@ namespace Newbee.DAL.Repository
         public IRepository<Product> Products { get; }
         public IRepository<Customer> Customers { get; }
         public IRepository<ProductCategory> ProductCategories { get; }
+        public IRepository<Platform> Platforms { get; }
 
         public void Dispose()
         {
             _context.Dispose();
         }
-        public async Task<int> SaveAsync()
+        public async Task<int> SaveAsync(CancellationToken cancellationToken = default)
         {
-            return await _context.SaveChangesAsync();
+            return await _context.SaveChangesAsync(cancellationToken);
         }
     }
 }

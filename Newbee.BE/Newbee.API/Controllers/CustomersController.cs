@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Newbee.API.Controllers;
 [Route("api/[controller]")]
 [ApiController]
-public class CustomerController : BaseController
+public class CustomersController : BaseController
 {
+
 }

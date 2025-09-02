@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Newbee.Entities.Models.Platform;
+namespace Newbee.Entities;
 public class Platform : TrackingBase
 {
     public int Id { get; set; }

@@ -1,4 +1,6 @@
-﻿namespace Newbee.BLL.Services;
+﻿using Newbee.Entities;
+
+namespace Newbee.BLL.Services;
 
 public class CustomerService(IUnitOfWork unitOfWork) : ICustomerService
 {
@@ -7,7 +9,7 @@ public class CustomerService(IUnitOfWork unitOfWork) : ICustomerService
     public async Task<Result<Customer>> CreateAsync(Customer customer, CancellationToken cancellationToken = default)
     {
         await _unitOfWork.Customers.AddAsync(customer);
-        await _unitOfWork.SaveAsync();
+        await _unitOfWork.SaveAsync(cancellationToken);
 
         return Result.Success(customer);
     }
@@ -19,7 +21,7 @@ public class CustomerService(IUnitOfWork unitOfWork) : ICustomerService
             return Result.Failure<bool>(CustomerErrors.NotFound);
 
         _unitOfWork.Customers.Delete(result.Value);
-        await _unitOfWork.SaveAsync();
+        await _unitOfWork.SaveAsync(cancellationToken);
 
         return Result.Success(true);
     }
@@ -48,6 +50,9 @@ public class CustomerService(IUnitOfWork unitOfWork) : ICustomerService
 
         var customer = await _unitOfWork.Customers.FindAsync(x => x.Id == id);
 
+        if (customer is null)
+            return Result.Failure<Customer>(CustomerErrors.NotFound);
+
         return Result.Success(customer);
     }
     public async Task<Result<bool>> UpdateAsync(int id, Customer customer, CancellationToken cancellationToken = default)
@@ -62,10 +67,8 @@ public class CustomerService(IUnitOfWork unitOfWork) : ICustomerService
 
         customer.Adapt(result.Value);
 
-        result.Value.UpdatedAt = DateTime.Now;
-
         _unitOfWork.Customers.Update(result.Value);
-        await _unitOfWork.SaveAsync();
+        await _unitOfWork.SaveAsync(cancellationToken);
 
         return Result.Success(true);
     }

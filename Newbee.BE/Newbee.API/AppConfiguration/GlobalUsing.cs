@@ -9,3 +9,9 @@ global using Newbee.Entities.Interfaces;
 global using Newbee.BLL.DTO.Product.Responses;
 global using Newbee.BLL.DTO.ProductCategory.Responses;
 global using Newbee.BLL.DTO.Auth.Requests;
+global using Newbee.API.Abstractions;
+global using Newbee.BLL.DTO.Platform.Responses;
+global using Newbee.BLL.DTO.ProductCategory.Requests;
+global using Mapster;
+global using Microsoft.AspNetCore.Authorization;
+

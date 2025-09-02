@@ -1,4 +1,6 @@
-﻿namespace Newbee.BLL.Services;
+﻿using Newbee.Entities;
+
+namespace Newbee.BLL.Services;
 public class ProductCategoryService(IUnitOfWork unitOfWork) : IProductCategoryService
 {
     private readonly IUnitOfWork _unitOfWork = unitOfWork;
@@ -20,7 +22,7 @@ public class ProductCategoryService(IUnitOfWork unitOfWork) : IProductCategorySe
             return Result.Failure<bool>(result.Error);
 
         _unitOfWork.ProductCategories.Delete(result.Value);
-        await _unitOfWork.SaveAsync();
+        await _unitOfWork.SaveAsync(cancellationToken);
 
         return Result.Success(true);
     }
@@ -43,6 +45,9 @@ public class ProductCategoryService(IUnitOfWork unitOfWork) : IProductCategorySe
 
         var productCategory = await _unitOfWork.ProductCategories.FindAsync(x => x.Id == id);
 
+        if (productCategory is null)
+            return Result.Failure<ProductCategory>(ProductCategoryErrors.NotFound);
+
         return Result.Success(productCategory);
     }
     public async Task<Result<bool>> UpdateAsync(int id, ProductCategory productCategory, CancellationToken cancellationToken = default)
@@ -57,10 +62,8 @@ public class ProductCategoryService(IUnitOfWork unitOfWork) : IProductCategorySe
 
         productCategory.Adapt(result.Value);
 
-        result.Value.UpdatedAt = DateTime.Now;
-
         _unitOfWork.ProductCategories.Update(result.Value);
-        await _unitOfWork.SaveAsync();
+        await _unitOfWork.SaveAsync(cancellationToken);
 
         return Result.Success(true);
     }
