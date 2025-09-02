@@ -12,5 +12,7 @@ namespace Newbee.Entities
        
         public ICollection<Platform> Platforms { get; set; } = new HashSet<Platform>();
         public ICollection<District> Districts { get; set; } = new HashSet<District>();
+        public ICollection<Customer> Customers { get; set; } = new HashSet<Customer>();
+        
     }
 }
