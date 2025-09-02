@@ -59,8 +59,6 @@ public class CompanyService(IUnitOfWork unitOfWork) : ICompanyService
 
         company.Adapt(result.Value);
 
-        result.Value.UpdatedAt = DateTime.Now;
-
         _unitOfWork.Companies.Update(result.Value);
         await _unitOfWork.SaveAsync();
 

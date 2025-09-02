@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using MapsterMapper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Newbee.BLL.Authentication;
 using Newbee.BLL.Services;
+using System.Reflection;
 using System.Text;
 
 namespace Newbee.API.AppConfiguration;
@@ -15,6 +17,7 @@ public static class DependencyInjection
             .AddSwaggerConfig()
             .AddBostaConfig(configuration)
             .AddAuthConfig(configuration)
+            .AddMapsterConfig()
             .AddControllers();
 
         var connectionString = configuration.GetConnectionString("default") ??
@@ -29,24 +32,33 @@ public static class DependencyInjection
         return services;
     }
 
-    public static IServiceCollection AddBusinessLogicConfig(this IServiceCollection services, IConfiguration configuration)
+    private static IServiceCollection AddMapsterConfig(this IServiceCollection services)
+    {
+        var mappingConfig = TypeAdapterConfig.GlobalSettings;
+        mappingConfig.Scan(Assembly.GetExecutingAssembly());
+        services.AddSingleton<IMapper>(new Mapper(mappingConfig));
+        return services;
+    }
+
+    private static IServiceCollection AddBusinessLogicConfig(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddTransient<IUnitOfWork, UnitOfWork>();
         services.AddScoped<IAuthServices, AuthServices>();
         services.AddScoped<IProductService, ProductService>();
         services.AddScoped<IJwtProvider, JwtProvider>();
+        services.AddScoped<IPlatformService,PlatformService>();
         services.AddScoped<IProductCategoryService,ProductCategoryService>();
         services.AddScoped<EmailBuilder>();
         return services;
     }
-    public static IServiceCollection AddSwaggerConfig(this IServiceCollection services)
+    private static IServiceCollection AddSwaggerConfig(this IServiceCollection services)
     {
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen();
 
         return services;
     }
-    public static IServiceCollection AddBostaConfig(this IServiceCollection services,IConfiguration configuration)
+    private static IServiceCollection AddBostaConfig(this IServiceCollection services,IConfiguration configuration)
     {
         //services.Configure<BostaAppSettings>(configuration.GetSection("Bosta"));
         //services.AddHttpClient<IApiCall, ApiCall>();

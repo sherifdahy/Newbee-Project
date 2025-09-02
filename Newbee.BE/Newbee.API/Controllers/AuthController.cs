@@ -11,7 +11,7 @@ namespace Newbee.API.Controllers
         public async Task<IActionResult> Register([FromBody] RegisterRequest request,CancellationToken cancellationToken)
         {
             var result = await _authServices.RegisterMerchantAsync(request,cancellationToken);
-            return result.IsSuccess ? Ok(result.value) : result.ToProblem();
+            return result.IsSuccess ? Created() : result.ToProblem();
         }
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequest request,CancellationToken cancellationToken)
