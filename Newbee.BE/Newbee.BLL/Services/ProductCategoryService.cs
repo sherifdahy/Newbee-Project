@@ -22,7 +22,7 @@ public class ProductCategoryService(IUnitOfWork unitOfWork) : IProductCategorySe
             return Result.Failure<bool>(result.Error);
 
         _unitOfWork.ProductCategories.Delete(result.Value);
-        await _unitOfWork.SaveAsync();
+        await _unitOfWork.SaveAsync(cancellationToken);
 
         return Result.Success(true);
     }
@@ -63,7 +63,7 @@ public class ProductCategoryService(IUnitOfWork unitOfWork) : IProductCategorySe
         productCategory.Adapt(result.Value);
 
         _unitOfWork.ProductCategories.Update(result.Value);
-        await _unitOfWork.SaveAsync();
+        await _unitOfWork.SaveAsync(cancellationToken);
 
         return Result.Success(true);
     }

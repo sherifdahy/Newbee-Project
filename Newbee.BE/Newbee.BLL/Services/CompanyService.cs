@@ -10,7 +10,7 @@ public class CompanyService(IUnitOfWork unitOfWork) : ICompanyService
             return Result.Failure<Company>(CompanyErrors.DuplicatedTRN);
 
         await _unitOfWork.Companies.AddAsync(company);
-        await _unitOfWork.SaveAsync();
+        await _unitOfWork.SaveAsync(cancellationToken);
 
         return Result.Success(company);
     }
@@ -25,7 +25,7 @@ public class CompanyService(IUnitOfWork unitOfWork) : ICompanyService
             return Result.Failure<bool>(CompanyErrors.NotFound);
 
         _unitOfWork.Companies.Delete(result.Value);
-        await _unitOfWork.SaveAsync();
+        await _unitOfWork.SaveAsync(cancellationToken);
 
         return Result.Success(true);
     }
@@ -60,7 +60,7 @@ public class CompanyService(IUnitOfWork unitOfWork) : ICompanyService
         company.Adapt(result.Value);
 
         _unitOfWork.Companies.Update(result.Value);
-        await _unitOfWork.SaveAsync();
+        await _unitOfWork.SaveAsync(cancellationToken);
 
         return Result.Success(true);
     }

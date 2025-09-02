@@ -32,9 +32,9 @@ namespace Newbee.DAL.Repository
         {
             _context.Dispose();
         }
-        public async Task<int> SaveAsync()
+        public async Task<int> SaveAsync(CancellationToken cancellationToken = default)
         {
-            return await _context.SaveChangesAsync();
+            return await _context.SaveChangesAsync(cancellationToken);
         }
     }
 }

@@ -9,7 +9,7 @@ public class ProductService(IUnitOfWork unitOfWork) : IProductService
         product.CompanyId = companyId;
 
         await _unitOfWork.Products.AddAsync(product);
-        await _unitOfWork.SaveAsync();
+        await _unitOfWork.SaveAsync(cancellationToken);
 
         return Result.Success(product);
     }
@@ -21,7 +21,7 @@ public class ProductService(IUnitOfWork unitOfWork) : IProductService
             return Result.Failure<bool>(ProductErrors.NotFound);
 
         _unitOfWork.Products.Delete(result.Value);
-        await _unitOfWork.SaveAsync();
+        await _unitOfWork.SaveAsync(cancellationToken);
 
         return Result.Success(true);
     }
@@ -59,7 +59,7 @@ public class ProductService(IUnitOfWork unitOfWork) : IProductService
         product.Adapt(result.Value);
 
         _unitOfWork.Products.Update(result.Value);
-        await _unitOfWork.SaveAsync();
+        await _unitOfWork.SaveAsync(cancellationToken);
 
         return Result.Success(true);
     }

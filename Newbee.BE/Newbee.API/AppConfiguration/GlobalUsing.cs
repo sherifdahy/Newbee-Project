@@ -13,3 +13,5 @@ global using Newbee.API.Abstractions;
 global using Newbee.BLL.DTO.Platform.Responses;
 global using Newbee.BLL.DTO.ProductCategory.Requests;
 global using Mapster;
+global using Microsoft.AspNetCore.Authorization;
+

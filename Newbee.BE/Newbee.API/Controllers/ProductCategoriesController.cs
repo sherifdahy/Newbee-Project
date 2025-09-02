@@ -6,6 +6,7 @@ using Newbee.BLL.DTO.ProductCategory.Requests;
 namespace Newbee.API.Controllers;
 [Route("api/[controller]")]
 [ApiController]
+[Authorize]
 public class ProductCategoriesController(IProductCategoryService productCategoryService) : BaseController
 {
     private readonly IProductCategoryService _productCategoryService = productCategoryService;
