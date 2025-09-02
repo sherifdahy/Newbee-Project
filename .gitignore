@@ -36,3 +36,6 @@ Thumbs.db
 
 # Publish
 publish/
+.vs/
+bin/
+obj/
