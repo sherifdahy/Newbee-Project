@@ -8,3 +8,4 @@ global using Newbee.DAL.Repository;
 global using Newbee.Entities.Interfaces;
 global using Newbee.BLL.DTO.Product.Responses;
 global using Newbee.BLL.DTO.ProductCategory.Responses;
+global using Newbee.BLL.DTO.Auth.Requests;
