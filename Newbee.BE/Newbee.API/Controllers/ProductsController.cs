@@ -6,7 +6,7 @@ using Newbee.BLL.DTO.Product.Requests;
 namespace Newbee.API.Controllers;
 [Route("api/[controller]")]
 [ApiController]
-public class ProductController(IProductService productService) :BaseController
+public class ProductsController(IProductService productService) :BaseController
 {
     private readonly IProductService _productService = productService;
 
