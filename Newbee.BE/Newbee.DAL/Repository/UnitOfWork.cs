@@ -1,5 +1,7 @@
 ﻿
 
+using System.Threading.Tasks;
+
 namespace Newbee.DAL.Repository
 {
     public class UnitOfWork : IUnitOfWork
@@ -10,6 +12,7 @@ namespace Newbee.DAL.Repository
         {
             _context = context;
 
+            Customers = new Repository<Customer>(_context);
             Companies = new Repository<Company>(_context);
             OTPs = new Repository<OTP>(_context);
             Users = new Repository<ApplicationUser>(_context);
@@ -19,14 +22,15 @@ namespace Newbee.DAL.Repository
         public IRepository<OTP> OTPs { get; } 
         public IRepository<ApplicationUser> Users { get; }
         public IRepository<Product> Products { get; }
+        public IRepository<Customer> Customers { get; }
 
         public void Dispose()
         {
             _context.Dispose();
         }
-        public int Save()
+        public async Task<int> SaveAsync()
         {
-            return _context.SaveChanges();
+            return await _context.SaveChangesAsync();
         }
     }
 }

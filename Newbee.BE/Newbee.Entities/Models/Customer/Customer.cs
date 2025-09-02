@@ -17,5 +17,7 @@ public class Customer : TrackingBase
     public virtual District District { get; set; }
 
 
+    public int CompanyId { get; set; }
+    public Company Company { get; set; }
     public ICollection<Order> Orders { get; set; } = new HashSet<Order>();
 }

@@ -2,30 +2,24 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Identity.UI.Services;
-using Newbee.BLL.Services.Email;
 using Newbee.BLL.DTO.Mail;
 using Newbee.BLL.Authentication;
-using Microsoft.Extensions.Options;
 using Newbee.BLL.DTO.Authentication;
-namespace Newbee.BLL.Services.Auth;
+namespace Newbee.BLL.Services;
 
-public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser> signInManager , UserManager<ApplicationUser> userManager
-    , ILogger<AuthServices> logger,
-    IEmailSender emailSender,
-    IHttpContextAccessor httpContextAccessor,
-    IJwtProvider jwtProvider,
-     EmailBuilder _builder,
-     IOptions<JwtOptions>options) : IAuthServices
+public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser> signInManager , UserManager<ApplicationUser> userManager,
+     ILogger<AuthServices> logger,
+     IEmailSender emailSender,
+     IJwtProvider jwtProvider,
+     EmailBuilder _builder) : IAuthServices
 {
     private readonly IUnitOfWork _unitOfWork = unitOfWork;
     private readonly SignInManager<ApplicationUser> _signInManager = signInManager;
     private readonly UserManager<ApplicationUser> _userManager = userManager;
     private readonly ILogger<AuthServices> _logger = logger;
     private readonly IEmailSender _emailSender = emailSender;
-    private readonly IHttpContextAccessor httpContextAccessor = httpContextAccessor;
     private readonly IJwtProvider jwtProvider = jwtProvider;
     private readonly EmailBuilder _builder = _builder;
-    private readonly JwtOptions options = options.Value;
     private readonly int _otpExpiryMinutes = 5;
 
     public async Task<Result<AuthResponse?>> GetTokenAsync(LoginRequest request, CancellationToken cancellationToken)
@@ -74,8 +68,8 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
 
             await SendOtpAsync(user);
             var company = request.Adapt<Company>();
-            _unitOfWork.Companies.Add(company);
-            _unitOfWork.Save();
+            await _unitOfWork.Companies.AddAsync(company);
+            await _unitOfWork.SaveAsync();
             return Result.Success(user.Id);
         }
 
@@ -100,7 +94,7 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
         user.EmailConfirmed = true;
         _unitOfWork.OTPs.Delete(otp);
         await _userManager.UpdateAsync(user);
-        _unitOfWork.Save();
+        await _unitOfWork.SaveAsync();
         return Result.Success();
 
     }
@@ -124,8 +118,8 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
             User = user
         };
 
-        _unitOfWork.OTPs.Add(otp);
-         _unitOfWork.Save();
+         await _unitOfWork.OTPs.AddAsync(otp);
+         await _unitOfWork.SaveAsync();
 
         var emailBody = _builder.GenerateEmailBody("EmailConfirmation",
             templateModel: new Dictionary<string, string>
