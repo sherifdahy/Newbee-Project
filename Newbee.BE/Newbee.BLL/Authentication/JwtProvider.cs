@@ -4,7 +4,6 @@ using Newbee.Entities;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-
 namespace Newbee.BLL.Authentication;
 
 public class JwtProvider(IOptions<JwtOptions>options) : IJwtProvider
@@ -14,12 +13,12 @@ public class JwtProvider(IOptions<JwtOptions>options) : IJwtProvider
     public (string token, int expiresIn) GenerateToken(ApplicationUser user)
     {
         Claim[] claims = [
-            new(JwtRegisteredClaimNames.Sub,user.Id.ToString()),
-            new(JwtRegisteredClaimNames.Email,user.Email!),
-          new(JwtRegisteredClaimNames.GivenName,user.FirstName!),
-            new(JwtRegisteredClaimNames.FamilyName,user.LastName!),
-  new(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString())
-
+             new(JwtRegisteredClaimNames.Sub,user.Id.ToString()),
+             new(JwtRegisteredClaimNames.Email,user.Email!),
+             new(JwtRegisteredClaimNames.GivenName,user.FirstName!),
+             new(JwtRegisteredClaimNames.FamilyName,user.LastName!),
+             new("CompanyId", user.CompanyId.ToString()),
+             new(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString())
             ];
         var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(options.Key));
         var signingCredentials = new SigningCredentials(symmetricSecurityKey, SecurityAlgorithms.HmacSha256);
@@ -32,5 +31,31 @@ public class JwtProvider(IOptions<JwtOptions>options) : IJwtProvider
             signingCredentials: signingCredentials
             );
        return(token: new JwtSecurityTokenHandler().WriteToken(token), expiresIn: options.ExpiryMinutes*60);
+    }
+
+    public string? ValidateToken(string token)
+    {
+        var tokenHandler = new JwtSecurityTokenHandler();
+        var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(options.Key));
+        try
+        {
+            tokenHandler.ValidateToken(token, new TokenValidationParameters
+            {
+                IssuerSigningKey = symmetricSecurityKey,
+                ValidateIssuerSigningKey = true,
+                ValidateIssuer = false,
+                ValidateAudience = false,
+                ClockSkew = TimeSpan.Zero
+            }, out SecurityToken validatedToken);
+            
+              var jwtToken = (JwtSecurityToken)validatedToken;
+              return jwtToken.Claims.First(x => x.Type == JwtRegisteredClaimNames.Sub).Value;
+            
+        }
+        catch
+        {
+            return null;
+        }
+
     }
 }
