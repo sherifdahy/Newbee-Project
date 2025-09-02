@@ -4,13 +4,12 @@ using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Newbee.BLL.DTO.Mail;
 using Newbee.BLL.Authentication;
-<<<<<<< HEAD
 using Newbee.BLL.DTO.Authentication;
 using System.Security.Cryptography;
-=======
-using Newbee.BLL.DTO.Auth.Responses;
 using Newbee.BLL.DTO.Auth.Requests;
->>>>>>> a8b24b0dda37bb7dd90680706e9d425acc166678
+using Microsoft.AspNetCore.Identity.Data;
+using RegisterRequest = Newbee.BLL.DTO.Auth.Requests.RegisterRequest;
+using LoginRequest = Newbee.BLL.DTO.Auth.Requests.LoginRequest;
 namespace Newbee.BLL.Services;
 
 public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser> signInManager , UserManager<ApplicationUser> userManager,
@@ -65,91 +64,85 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
 
     }
 
-    //public async Task<Result> RegisterMerchantAsync(RegisterRequest request, CancellationToken cancellationToken = default)
-    //{
-
-    //    var emailIsExists = await _userManager.Users.AnyAsync(x => x.Email == request.Email, cancellationToken);
-
-    //    if (emailIsExists)
-    //        return Result.Failure(UserErrors.DuplicatedEmail);
-    //    var company = new Company
-    //    {
-    //        Name = request.CompanyName,
-    //        TaxRegistrationNumber = request.TaxNumber,
-    //    }; _unitOfWork.Companies.Add(company);
-
-    //    await _unitOfWork.SaveAsync();
-    //    var user = request.Adapt<ApplicationUser>();
-    //    user.UserName = request.Email;
-    //    user.CompanyId = company.Id;
-    //    var result = await _userManager.CreateAsync(user, request.Password);
-    //    // var roleResult = await _userManager.AddToRoleAsync(user, "merchant");
-
-    //    if (result.Succeeded)
-    //    {
-
-    //        await SendOtpAsync(user);
-    //        company = request.Adapt<Company>();
-    //        await _unitOfWork.Companies.AddAsync(company);
-    //        await _unitOfWork.SaveAsync();
-    //        return Result.Success(user.Id);
-    //    }
-
-    //    var error = result.Errors.First();
-
-    //    return Result.Failure(new Error(error.Code, error.Description, StatusCodes.Status400BadRequest));
-
-    //}
     public async Task<Result> RegisterMerchantAsync(RegisterRequest request, CancellationToken cancellationToken = default)
     {
-        
-        bool emailExists = await _userManager.Users
-            .AnyAsync(x => x.Email == request.Email, cancellationToken);
 
-        if (emailExists)
+        var emailIsExists = await _userManager.Users.AnyAsync(x => x.Email == request.Email, cancellationToken);
+
+        if (emailIsExists)
             return Result.Failure(UserErrors.DuplicatedEmail);
-
-        
         var company = new Company
         {
             Name = request.CompanyName,
             TaxRegistrationNumber = request.TaxNumber,
-        };
+        }; _unitOfWork.Companies.Add(company);
 
-<<<<<<< HEAD
         await _unitOfWork.SaveAsync();
-=======
-        _unitOfWork.Companies.Add(company);
-        await _unitOfWork.SaveAsync();
-
-        
->>>>>>> a8b24b0dda37bb7dd90680706e9d425acc166678
         var user = request.Adapt<ApplicationUser>();
         user.UserName = request.Email;
         user.CompanyId = company.Id;
+        var result = await _userManager.CreateAsync(user, request.Password);
+        // var roleResult = await _userManager.AddToRoleAsync(user, "merchant");
 
-        var createUserResult = await _userManager.CreateAsync(user, request.Password);
-        if (!createUserResult.Succeeded)
+        if (result.Succeeded)
         {
-<<<<<<< HEAD
 
             await SendOtpAsync(user);
-           
+            company = request.Adapt<Company>();
+            await _unitOfWork.Companies.AddAsync(company);
             await _unitOfWork.SaveAsync();
             return Result.Success(user.Id);
-=======
-            var error = createUserResult.Errors.First();
-            return Result.Failure(new Error(error.Code, error.Description, StatusCodes.Status400BadRequest));
->>>>>>> a8b24b0dda37bb7dd90680706e9d425acc166678
         }
 
-        
-        await SendOtpAsync(user);
+        var error = result.Errors.First();
 
-        
+        return Result.Failure(new Error(error.Code, error.Description, StatusCodes.Status400BadRequest));
 
-        return Result.Success(); 
     }
+    //public async Task<Result> RegisterMerchantAsync(RegisterRequest request, CancellationToken cancellationToken = default)
+    //{
+
+    //    bool emailExists = await _userManager.Users
+    //        .AnyAsync(x => x.Email == request.Email, cancellationToken);
+
+    //    if (emailExists)
+    //        return Result.Failure(UserErrors.DuplicatedEmail);
+
+
+    //    var company = new Company
+    //    {
+    //        Name = request.CompanyName,
+    //        TaxRegistrationNumber = request.TaxNumber,
+    //    };
+
+    //    await _unitOfWork.SaveAsync();
+    //    _unitOfWork.Companies.Add(company);
+    //    await _unitOfWork.SaveAsync();
+
+
+    //    var user = request.Adapt<ApplicationUser>();
+    //    user.UserName = request.Email;
+    //    user.CompanyId = company.Id;
+
+    //    var createUserResult = await _userManager.CreateAsync(user, request.Password);
+    //    if (!createUserResult.Succeeded)
+    //    {
+
+    //        await SendOtpAsync(user);
+
+    //        await _unitOfWork.SaveAsync();
+    //        return Result.Success(user.Id);
+    //        var error = createUserResult.Errors.First();
+    //        return Result.Failure(new Error(error.Code, error.Description, StatusCodes.Status400BadRequest));
+    //    }
+
+
+    //    await SendOtpAsync(user);
+
+
+
+    //    return Result.Success(); 
+    //}
 
 
     public async Task<Result> ConfirmEmailAsync(MailRequest request, CancellationToken cancellationToken = default)
@@ -172,43 +165,7 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
         return Result.Success();
 
     }
-    private async Task SendOtpAsync(ApplicationUser user)
-    {
-        var otpCode = new Random().Next(100000, 999999).ToString();
 
-        var existingOtps =  _unitOfWork.OTPs.FindAll(x => x.ApplicationUserId == user.Id)
-        .ToList();
-
-        if (existingOtps.Any())
-        {
-            _unitOfWork.OTPs.DeleteRange(existingOtps);
-        }
-
-        var otp = new OTP
-        {
-            Code = otpCode,
-            ExpiryTime = DateTime.UtcNow.AddMinutes(_otpExpiryMinutes),
-            ApplicationUserId = user.Id,
-            User = user
-        };
-
-         await _unitOfWork.OTPs.AddAsync(otp);
-         await _unitOfWork.SaveAsync();
-
-        var emailBody = _builder.GenerateEmailBody("EmailConfirmation",
-            templateModel: new Dictionary<string, string>
-            {
-                { "{{name}}", user.FirstName },
-                { "{{otp_code}}", otpCode },
-                { "{{expiry_minutes}}", _otpExpiryMinutes.ToString() }
-            }
-        );
-
-        await _emailSender.SendEmailAsync(user.Email!, "✅ NewBee: Email Verification OTP", emailBody);
-
-        _logger.LogInformation("OTP sent to user {UserId}: {OtpCode}", user.Id, otpCode);
-
-    }
 
    
     public async Task<AuthResponse?> GetRefreshTokenAsync(string token, string refreshToken, CancellationToken cancellationToken = default)
@@ -234,6 +191,146 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
         var (newJwtToken, expiresIn) = jwtProvider.GenerateToken(user);
         var response = new AuthResponse(user.Id, user.Email, user.FirstName, user.LastName, newJwtToken, expiresIn, newRefreshToken, refreshTokenExpiry);
         return  response;
+    }
+   
+
+    public async  Task<Result> ResendConfirmationEmailAsync(MailRequest request, CancellationToken cancellationToken = default)
+    {
+        if (await _userManager.FindByEmailAsync(request.Email) is not { } user)
+            return Result.Success();
+
+        if (user.EmailConfirmed)
+            return Result.Failure(UserErrors.DuplicatedConfirmation);
+
+        await SendOtpAsync(user);
+
+        return Result.Success();
+    }
+
+    public async Task<Result> ResetPasswordAsync(DTO.Auth.Requests.ResetPasswordRequest request)
+    {
+        var user = await _userManager.FindByEmailAsync(request.Email);
+
+        if (user is null || !user.EmailConfirmed)
+            return Result.Failure(UserErrors.InvalidCode);
+
+        var otpRecord = await _unitOfWork.OTPs
+            .FindAsync(x => x.ApplicationUserId == user.Id && x.Code == request.Code);
+          
+
+        if (otpRecord == null || otpRecord.ExpiryTime < DateTime.UtcNow)
+        {
+            if (otpRecord != null)
+            {
+                _unitOfWork.OTPs.Delete(otpRecord);
+                await _unitOfWork.SaveAsync();
+            }
+
+            return Result.Failure(UserErrors.InvalidCode);
+        }
+
+        _unitOfWork.OTPs.Delete(otpRecord);
+        await _unitOfWork.SaveAsync();
+
+        var resetToken = await _userManager.GeneratePasswordResetTokenAsync(user);
+
+        var result = await _userManager.ResetPasswordAsync(user, resetToken, request.newPassword);
+
+        if (result.Succeeded)
+        {
+            return Result.Success();
+        }
+
+        var error = result.Errors.First();
+        return Result.Failure(new Error(error.Code, error.Description, StatusCodes.Status400BadRequest));
+
+    }
+    public async Task<Result> SendResetOtpAsync(string email)
+    {
+        if (await _userManager.FindByEmailAsync(email) is not { } user)
+            return Result.Failure(UserErrors.EmailNotFound);
+
+        if (!user.EmailConfirmed)
+            return Result.Failure(UserErrors.EmailNotConfirmed);
+
+        await SendPasswordResetOtpAsync(user);
+        return Result.Success();
+    }
+    private async Task<Result> SendPasswordResetOtpAsync(ApplicationUser user)
+    {
+        var otpCode = new Random().Next(100000, 999999).ToString();
+
+        var existingOtps = await _unitOfWork.OTPs
+            .FindAllAsync(x => x.ApplicationUserId == user.Id);
+            
+
+        if (existingOtps.Any())
+        {
+            _unitOfWork.OTPs.DeleteRange(existingOtps);
+        }
+
+        var otp = new OTP
+        {
+            Code = otpCode,
+            ExpiryTime = DateTime.UtcNow.AddMinutes(_otpExpiryMinutes),
+            ApplicationUserId = user.Id,
+            User = user
+        };
+
+        _unitOfWork.OTPs.Add(otp);
+        await _unitOfWork.SaveAsync();
+        var FullName = $"{user.FirstName} {user.LastName}";
+        var emailBody = _builder.GenerateEmailBody("ForgetPassword",
+            templateModel: new Dictionary<string, string>
+            {
+                { "{{name}}", FullName },
+                { "{{otp_code}}", otpCode },
+                { "{{expiry_minutes}}", _otpExpiryMinutes.ToString() }
+            }
+        );
+
+        await _emailSender.SendEmailAsync(user.Email!, "🔐 NewBee: Password Reset OTP", emailBody);
+
+        _logger.LogInformation("Password reset OTP sent to user {UserId}: {OtpCode}", user.Id, otpCode);
+
+        return Result.Success();
+    }
+    private async Task SendOtpAsync(ApplicationUser user)
+    {
+        var otpCode = new Random().Next(100000, 999999).ToString();
+
+        var existingOtps = _unitOfWork.OTPs.FindAll(x => x.ApplicationUserId == user.Id)
+        .ToList();
+
+        if (existingOtps.Any())
+        {
+            _unitOfWork.OTPs.DeleteRange(existingOtps);
+        }
+
+        var otp = new OTP
+        {
+            Code = otpCode,
+            ExpiryTime = DateTime.UtcNow.AddMinutes(_otpExpiryMinutes),
+            ApplicationUserId = user.Id,
+            User = user
+        };
+
+        await _unitOfWork.OTPs.AddAsync(otp);
+        await _unitOfWork.SaveAsync();
+
+        var emailBody = _builder.GenerateEmailBody("EmailConfirmation",
+            templateModel: new Dictionary<string, string>
+            {
+                { "{{name}}", user.FirstName },
+                { "{{otp_code}}", otpCode },
+                { "{{expiry_minutes}}", _otpExpiryMinutes.ToString() }
+            }
+        );
+
+        await _emailSender.SendEmailAsync(user.Email!, "✅ NewBee: Email Verification OTP", emailBody);
+
+        _logger.LogInformation("OTP sent to user {UserId}: {OtpCode}", user.Id, otpCode);
+
     }
     private static string GenerateRefreshToken()
     {
