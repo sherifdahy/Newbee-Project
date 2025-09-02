@@ -58,17 +58,24 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
 
         if (emailIsExists)
             return Result.Failure(UserErrors.DuplicatedEmail);
+        var company = new Company
+        {
+            Name = request.CompanyName,
+            TaxRegistrationNumber = request.TaxNumber,
+        }; _unitOfWork.Companies.Add(company);
 
+        await _unitOfWork.SaveAsync();
         var user = request.Adapt<ApplicationUser>();
         user.UserName = request.Email;
-       await  _userManager.AddToRoleAsync(user, "merchant");
+        user.CompanyId = company.Id;
         var result = await _userManager.CreateAsync(user, request.Password);
+       // var roleResult = await _userManager.AddToRoleAsync(user, "merchant");
 
         if (result.Succeeded)
         {
 
             await SendOtpAsync(user);
-            var company = request.Adapt<Company>();
+            company = request.Adapt<Company>();
             await _unitOfWork.Companies.AddAsync(company);
             await _unitOfWork.SaveAsync();
             return Result.Success(user.Id);

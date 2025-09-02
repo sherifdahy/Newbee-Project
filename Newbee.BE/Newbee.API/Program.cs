@@ -29,8 +29,9 @@ namespace Newbee.API
                     emailSettings.IsBodyHtml
                 );
             });
+         
             var app = builder.Build();
-
+          
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
