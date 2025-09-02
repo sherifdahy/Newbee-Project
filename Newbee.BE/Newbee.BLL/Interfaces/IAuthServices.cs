@@ -1,6 +1,6 @@
 ﻿
 using Newbee.BLL.DTO.Auth.Requests;
-using Newbee.BLL.DTO.Authentication;
+using Newbee.BLL.DTO.Auth.Responses;
 using Newbee.BLL.DTO.Mail;
 
 namespace Newbee.BLL.Interfaces;

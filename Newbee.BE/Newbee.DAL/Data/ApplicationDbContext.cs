@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Newbee.Entities.Extensions;
 using Newbee.Entities.Models;
-using Newbee.Entities.Models.Platform;
 using Newbee.Entities.Models.Unit;
 
 

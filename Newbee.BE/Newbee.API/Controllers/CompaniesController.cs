@@ -1,18 +1,17 @@
-﻿using Mapster;
 using Microsoft.AspNetCore.Mvc;
-using Newbee.API.Abstractions;
 using Newbee.BLL.DTO.Company.Requests;
 using Newbee.BLL.DTO.Company.Responses;
 
 namespace Newbee.API.Controllers;
 
 [Route("api/[controller]")]
+[Authorize]
 [ApiController]
 public class CompaniesController(ICompanyService companyService) : BaseController
 {
     private readonly ICompanyService _companyService = companyService;
 
-    [HttpGet("")]
+    [HttpGet]
     public async Task<IActionResult> GetAll(CancellationToken cancellationToken)
     {
         var result = await _companyService.GetAllAsync(cancellationToken);
@@ -22,7 +21,7 @@ public class CompaniesController(ICompanyService companyService) : BaseControlle
             : result.ToProblem();
     }
 
-    [HttpGet("{id:int}")]
+    [HttpGet("{id}")]
     public async Task<IActionResult> GetById(int id, CancellationToken cancellationToken)
     {
         var result = await _companyService.GetByIdAsync(id, cancellationToken);
@@ -32,7 +31,7 @@ public class CompaniesController(ICompanyService companyService) : BaseControlle
             : result.ToProblem();
     }
 
-    [HttpPatch("{id:int}")]
+    [HttpPatch("{id}")]
     public async Task<IActionResult> Update(int id, [FromBody] CompanyRequest request, CancellationToken cancellationToken)
     {
         var result = await _companyService.UpdateAsync(id, request.Adapt<Company>(), cancellationToken);
@@ -42,7 +41,7 @@ public class CompaniesController(ICompanyService companyService) : BaseControlle
             : result.ToProblem();
     }
 
-    [HttpDelete("{id:int}")]
+    [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(int id, CancellationToken cancellationToken)
     {
         var result = await _companyService.DeleteAsync(id, cancellationToken);

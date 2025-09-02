@@ -4,15 +4,17 @@ using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Newbee.BLL.DTO.Mail;
 using Newbee.BLL.Authentication;
-using Newbee.BLL.DTO.Authentication;
 using System.Security.Cryptography;
 using Newbee.BLL.DTO.Auth.Requests;
 using Microsoft.AspNetCore.Identity.Data;
 using RegisterRequest = Newbee.BLL.DTO.Auth.Requests.RegisterRequest;
 using LoginRequest = Newbee.BLL.DTO.Auth.Requests.LoginRequest;
+using Newbee.BLL.DTO.Auth.Responses;
+using System.Security.Cryptography;
+using Newbee.BLL.DTO.Auth.Responses;
 namespace Newbee.BLL.Services;
 
-public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser> signInManager , UserManager<ApplicationUser> userManager,
+public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser> signInManager, UserManager<ApplicationUser> userManager,
      ILogger<AuthServices> logger,
      IEmailSender emailSender,
      IJwtProvider jwtProvider,
@@ -32,11 +34,11 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
     {
         //check user?
         var user = await _userManager.FindByEmailAsync(request.Email);
-        if(user is null)
+        if (user is null)
             return Result.Failure<AuthResponse?>(UserErrors.InvalidCredentials);
         // check password?
         var isValidPassword = await _userManager.CheckPasswordAsync(user, request.Password);
-          if(!isValidPassword)
+        if (!isValidPassword)
             return Result.Failure<AuthResponse?>(UserErrors.InvalidCredentials);
         //check email confirmed?
         if (!user.EmailConfirmed)
@@ -46,16 +48,16 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
         if (result.Succeeded)
         {
             var (token, expiresIn) = jwtProvider.GenerateToken(user);
-            var refreshToken =GenerateRefreshToken();
+            var refreshToken = GenerateRefreshToken();
             var refreshTokenExpiry = DateTime.UtcNow.AddDays(_resetRefreshTokenExpiryDays);
-           user.RefreshTokens.Add(new RefreshToken
-           {
-               Token = refreshToken,
-               ExpiresOn = refreshTokenExpiry
-           });
+            user.RefreshTokens.Add(new RefreshToken
+            {
+                Token = refreshToken,
+                ExpiresOn = refreshTokenExpiry
+            });
             await _userManager.UpdateAsync(user);
-            var response = new AuthResponse(user.Id, user.Email, user.FirstName,user.LastName, token, expiresIn,refreshToken,refreshTokenExpiry);
-        // return new auth response
+            var response = new AuthResponse(user.Id, user.Email, user.FirstName, user.LastName, token, expiresIn, refreshToken, refreshTokenExpiry);
+            // return new auth response
 
             return Result.Success(response);
 
@@ -78,6 +80,8 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
         }; _unitOfWork.Companies.Add(company);
 
         await _unitOfWork.SaveAsync();
+
+
         var user = request.Adapt<ApplicationUser>();
         user.UserName = request.Email;
         user.CompanyId = company.Id;
@@ -97,52 +101,7 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
         var error = result.Errors.First();
 
         return Result.Failure(new Error(error.Code, error.Description, StatusCodes.Status400BadRequest));
-
     }
-    //public async Task<Result> RegisterMerchantAsync(RegisterRequest request, CancellationToken cancellationToken = default)
-    //{
-
-    //    bool emailExists = await _userManager.Users
-    //        .AnyAsync(x => x.Email == request.Email, cancellationToken);
-
-    //    if (emailExists)
-    //        return Result.Failure(UserErrors.DuplicatedEmail);
-
-
-    //    var company = new Company
-    //    {
-    //        Name = request.CompanyName,
-    //        TaxRegistrationNumber = request.TaxNumber,
-    //    };
-
-    //    await _unitOfWork.SaveAsync();
-    //    _unitOfWork.Companies.Add(company);
-    //    await _unitOfWork.SaveAsync();
-
-
-    //    var user = request.Adapt<ApplicationUser>();
-    //    user.UserName = request.Email;
-    //    user.CompanyId = company.Id;
-
-    //    var createUserResult = await _userManager.CreateAsync(user, request.Password);
-    //    if (!createUserResult.Succeeded)
-    //    {
-
-    //        await SendOtpAsync(user);
-
-    //        await _unitOfWork.SaveAsync();
-    //        return Result.Success(user.Id);
-    //        var error = createUserResult.Errors.First();
-    //        return Result.Failure(new Error(error.Code, error.Description, StatusCodes.Status400BadRequest));
-    //    }
-
-
-    //    await SendOtpAsync(user);
-
-
-
-    //    return Result.Success(); 
-    //}
 
 
     public async Task<Result> ConfirmEmailAsync(MailRequest request, CancellationToken cancellationToken = default)
@@ -337,4 +296,5 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
         return Convert.ToBase64String(RandomNumberGenerator.GetBytes(64));
     }
 
+ 
 }
