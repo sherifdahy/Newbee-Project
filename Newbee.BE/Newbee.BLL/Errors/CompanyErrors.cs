@@ -5,4 +5,8 @@ public class CompanyErrors
         = new Error("Company.NotFound","Company is Not Exist.",StatusCodes.Status404NotFound);
     public static readonly Error InvalidId
         = new Error("Company.InvalidId", "Invalid Id.", StatusCodes.Status400BadRequest);
+    public static readonly Error DuplicatedTRN =
+            new("Company.DuplicatedCompany", "Tax Registration Number is Already Exist.", StatusCodes.Status409Conflict);
+
+
 }

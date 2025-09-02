@@ -3,28 +3,8 @@
   "WorkspaceRootPath": "E:\\Newbee-Project\\Newbee.BE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|e:\\newbee-project\\newbee.be\\newbee.api\\appconfiguration\\globalusing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\appconfiguration\\globalusing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|e:\\newbee-project\\newbee.be\\newbee.bll\\services\\authservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|solutionrelative:newbee.bll\\services\\authservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|e:\\newbee-project\\newbee.be\\newbee.bll\\services\\companyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|solutionrelative:newbee.bll\\services\\companyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|e:\\newbee-project\\newbee.be\\newbee.bll\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|solutionrelative:newbee.bll\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|e:\\newbee-project\\newbee.be\\newbee.bll\\services\\emailbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|solutionrelative:newbee.bll\\services\\emailbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|e:\\newbee-project\\newbee.be\\newbee.bll\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|solutionrelative:newbee.bll\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|e:\\newbee-project\\newbee.be\\newbee.api\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,76 +27,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "GlobalUsing.cs",
-              "DocumentMoniker": "E:\\Newbee-Project\\Newbee.BE\\Newbee.API\\AppConfiguration\\GlobalUsing.cs",
-              "RelativeDocumentMoniker": "Newbee.API\\AppConfiguration\\GlobalUsing.cs",
-              "ToolTip": "E:\\Newbee-Project\\Newbee.BE\\Newbee.API\\AppConfiguration\\GlobalUsing.cs*",
-              "RelativeToolTip": "Newbee.API\\AppConfiguration\\GlobalUsing.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "E:\\Newbee-Project\\Newbee.BE\\Newbee.API\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Newbee.API\\Controllers\\ProductController.cs",
+              "ToolTip": "E:\\Newbee-Project\\Newbee.BE\\Newbee.API\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Newbee.API\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T21:48:33.271Z",
+              "WhenOpened": "2025-09-02T14:52:44.766Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthServices.cs",
-              "DocumentMoniker": "E:\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\AuthServices.cs",
-              "RelativeDocumentMoniker": "Newbee.BLL\\Services\\AuthServices.cs",
-              "ToolTip": "E:\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\AuthServices.cs",
-              "RelativeToolTip": "Newbee.BLL\\Services\\AuthServices.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABNAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T21:44:10.094Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ProductService.cs",
-              "DocumentMoniker": "E:\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\ProductService.cs",
-              "RelativeDocumentMoniker": "Newbee.BLL\\Services\\ProductService.cs",
-              "ToolTip": "E:\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\ProductService.cs",
-              "RelativeToolTip": "Newbee.BLL\\Services\\ProductService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T21:44:04.087Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EmailBuilder.cs",
-              "DocumentMoniker": "E:\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\EmailBuilder.cs",
-              "RelativeDocumentMoniker": "Newbee.BLL\\Services\\EmailBuilder.cs",
-              "ToolTip": "E:\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\EmailBuilder.cs",
-              "RelativeToolTip": "Newbee.BLL\\Services\\EmailBuilder.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T21:44:03.247Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CustomerService.cs",
-              "DocumentMoniker": "E:\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\CustomerService.cs",
-              "RelativeDocumentMoniker": "Newbee.BLL\\Services\\CustomerService.cs",
-              "ToolTip": "E:\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\CustomerService.cs",
-              "RelativeToolTip": "Newbee.BLL\\Services\\CustomerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T21:44:02.424Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CompanyService.cs",
-              "DocumentMoniker": "E:\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\CompanyService.cs",
-              "RelativeDocumentMoniker": "Newbee.BLL\\Services\\CompanyService.cs",
-              "ToolTip": "E:\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\CompanyService.cs",
-              "RelativeToolTip": "Newbee.BLL\\Services\\CompanyService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T21:44:01.374Z"
             }
           ]
         }

@@ -8,9 +8,9 @@ namespace Newbee.Entities;
 public class District : TrackingBase
 {
     public int Id { get; set; }
-    public string Code { get; set; }
-    public string Name { get; set; }
-    public int ZoneId { get; set; }
+    public string Code { get; set; } = string.Empty;
+    public string Name { get; set; } = string.Empty;
+    public int ZoneId { get; set; } 
     public virtual Zone Zone { get; set; }
 
     public ICollection<Company> Companies { get; set; } = new HashSet<Company>();

@@ -365,6 +365,9 @@ namespace Newbee.DAL.Migrations
                     b.Property<int>("ApplicationUserId")
                         .HasColumnType("int");
 
+                    b.Property<int>("CompanyId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
@@ -381,6 +384,8 @@ namespace Newbee.DAL.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("ApplicationUserId");
+
+                    b.HasIndex("CompanyId");
 
                     b.HasIndex("DistrictId");
 
@@ -630,6 +635,9 @@ namespace Newbee.DAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("CompanyId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
@@ -641,6 +649,8 @@ namespace Newbee.DAL.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CompanyId");
 
                     b.ToTable("ProductCategories");
                 });
@@ -1003,6 +1013,12 @@ namespace Newbee.DAL.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Newbee.Entities.Company", "Company")
+                        .WithMany("Customers")
+                        .HasForeignKey("CompanyId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.HasOne("Newbee.Entities.District", "District")
                         .WithMany("Customers")
                         .HasForeignKey("DistrictId")
@@ -1010,6 +1026,8 @@ namespace Newbee.DAL.Migrations
                         .IsRequired();
 
                     b.Navigation("Application");
+
+                    b.Navigation("Company");
 
                     b.Navigation("District");
                 });
@@ -1063,7 +1081,7 @@ namespace Newbee.DAL.Migrations
                     b.HasOne("Newbee.Entities.Order", "Order")
                         .WithMany("OrderDetails")
                         .HasForeignKey("OrderId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("Newbee.Entities.ProductUnit", "ProductUnit")
@@ -1086,7 +1104,7 @@ namespace Newbee.DAL.Migrations
                         .IsRequired();
 
                     b.HasOne("Newbee.Entities.ProductCategory", "ProductCategory")
-                        .WithMany()
+                        .WithMany("Products")
                         .HasForeignKey("ProductCategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1094,6 +1112,17 @@ namespace Newbee.DAL.Migrations
                     b.Navigation("Company");
 
                     b.Navigation("ProductCategory");
+                });
+
+            modelBuilder.Entity("Newbee.Entities.ProductCategory", b =>
+                {
+                    b.HasOne("Newbee.Entities.Company", "Company")
+                        .WithMany("ProductCategories")
+                        .HasForeignKey("CompanyId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Company");
                 });
 
             modelBuilder.Entity("Newbee.Entities.ProductUnit", b =>
@@ -1188,6 +1217,13 @@ namespace Newbee.DAL.Migrations
                     b.Navigation("OTPs");
                 });
 
+            modelBuilder.Entity("Newbee.Entities.Company", b =>
+                {
+                    b.Navigation("Customers");
+
+                    b.Navigation("ProductCategories");
+                });
+
             modelBuilder.Entity("Newbee.Entities.Customer", b =>
                 {
                     b.Navigation("Orders");
@@ -1201,6 +1237,11 @@ namespace Newbee.DAL.Migrations
             modelBuilder.Entity("Newbee.Entities.Order", b =>
                 {
                     b.Navigation("OrderDetails");
+                });
+
+            modelBuilder.Entity("Newbee.Entities.ProductCategory", b =>
+                {
+                    b.Navigation("Products");
                 });
 
             modelBuilder.Entity("Newbee.Entities.ProductUnit", b =>

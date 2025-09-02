@@ -27,7 +27,7 @@ public class BaseController : ControllerBase
     {
         get
         {
-            var claimValue = User.FindFirst("CustomerId")?.Value;
+            var claimValue = User.FindFirst("UserId")?.Value;
             return int.TryParse(claimValue, out var userId) ? userId : 0;
         }
     }

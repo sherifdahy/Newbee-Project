@@ -8,7 +8,7 @@ namespace Newbee.Entities;
 public class Product : TrackingBase
 {
     public int Id { get; set; }
-    public string Name { get; set; }
+    public string Name { get; set; } = string.Empty;
 
     public int CompanyId { get; set; }
     public virtual Company Company { get; set; }

@@ -36,3 +36,4 @@ appsettings.Development.json
 # Others
 *.DS_Store
 Thumbs.db
+.vs/

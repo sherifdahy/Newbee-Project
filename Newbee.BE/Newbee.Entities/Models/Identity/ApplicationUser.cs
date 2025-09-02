@@ -9,10 +9,10 @@ namespace Newbee.Entities
 {
     public class ApplicationUser: IdentityUser<int>
     {
-        public string FirstName { get; set; } 
-        public string LastName { get; set; }
-        public string SSN { get; set; }
-        public string PhoneNumber { get; set; }
+        public string FirstName { get; set; } = string.Empty;
+        public string LastName { get; set; } = string.Empty;
+        public string SSN { get; set; } = string.Empty;
+        public string PhoneNumber { get; set; } = string.Empty;
         public virtual ICollection<RefreshToken> RefreshTokens { get; set; } = new HashSet<RefreshToken>();
         public virtual ICollection<OTP>? OTPs { get; set; } =  new HashSet<OTP>();
 
