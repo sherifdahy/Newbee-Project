@@ -1,48 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\Newbee-Project\\Newbee.BE\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|e:\\newbee-project\\newbee.be\\newbee.bll\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|solutionrelative:newbee.bll\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|e:\\newbee-project\\newbee.be\\newbee.bll\\services\\productcategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|solutionrelative:newbee.bll\\services\\productcategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|e:\\newbee-project\\newbee.be\\newbee.bll\\services\\platformservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|solutionrelative:newbee.bll\\services\\platformservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|e:\\newbee-project\\newbee.be\\newbee.bll\\services\\emailbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|solutionrelative:newbee.bll\\services\\emailbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|e:\\newbee-project\\newbee.be\\newbee.bll\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|solutionrelative:newbee.bll\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|e:\\newbee-project\\newbee.be\\newbee.bll\\services\\companyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B58804AD-06E1-A7D8-744E-75EB9E7CFEEB}|Newbee.BLL\\Newbee.BLL.csproj|solutionrelative:newbee.bll\\services\\companyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|e:\\newbee-project\\newbee.be\\newbee.api\\appconfiguration\\mappingconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\appconfiguration\\mappingconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|e:\\newbee-project\\newbee.be\\newbee.api\\controllers\\platformscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\controllers\\platformscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|e:\\newbee-project\\newbee.be\\newbee.api\\appconfiguration\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\appconfiguration\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|e:\\newbee-project\\newbee.be\\newbee.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{495319AF-7D08-4A36-B652-F2A5B33D8C03}|Newbee.API\\Newbee.API.csproj|solutionrelative:newbee.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -50,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -59,136 +18,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProductService.cs",
-              "DocumentMoniker": "E:\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\ProductService.cs",
-              "RelativeDocumentMoniker": "Newbee.BLL\\Services\\ProductService.cs",
-              "ToolTip": "E:\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\ProductService.cs",
-              "RelativeToolTip": "Newbee.BLL\\Services\\ProductService.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAD4vzwAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T17:29:50.08Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProductCategoryService.cs",
-              "DocumentMoniker": "E:\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\ProductCategoryService.cs",
-              "RelativeDocumentMoniker": "Newbee.BLL\\Services\\ProductCategoryService.cs",
-              "ToolTip": "E:\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\ProductCategoryService.cs",
-              "RelativeToolTip": "Newbee.BLL\\Services\\ProductCategoryService.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAD4vzsAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T17:29:43.96Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PlatformService.cs",
-              "DocumentMoniker": "E:\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\PlatformService.cs",
-              "RelativeDocumentMoniker": "Newbee.BLL\\Services\\PlatformService.cs",
-              "ToolTip": "E:\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\PlatformService.cs",
-              "RelativeToolTip": "Newbee.BLL\\Services\\PlatformService.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAD4vzoAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T17:29:36.248Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EmailBuilder.cs",
-              "DocumentMoniker": "E:\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\EmailBuilder.cs",
-              "RelativeDocumentMoniker": "Newbee.BLL\\Services\\EmailBuilder.cs",
-              "ToolTip": "E:\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\EmailBuilder.cs",
-              "RelativeToolTip": "Newbee.BLL\\Services\\EmailBuilder.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T17:29:34.473Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CustomerService.cs",
-              "DocumentMoniker": "E:\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\CustomerService.cs",
-              "RelativeDocumentMoniker": "Newbee.BLL\\Services\\CustomerService.cs",
-              "ToolTip": "E:\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\CustomerService.cs",
-              "RelativeToolTip": "Newbee.BLL\\Services\\CustomerService.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAkwEAAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T17:29:06.361Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CompanyService.cs",
-              "DocumentMoniker": "E:\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\CompanyService.cs",
-              "RelativeDocumentMoniker": "Newbee.BLL\\Services\\CompanyService.cs",
-              "ToolTip": "E:\\Newbee-Project\\Newbee.BE\\Newbee.BLL\\Services\\CompanyService.cs",
-              "RelativeToolTip": "Newbee.BLL\\Services\\CompanyService.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAkwDEAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T17:28:55.729Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PlatformsController.cs",
-              "DocumentMoniker": "E:\\Newbee-Project\\Newbee.BE\\Newbee.API\\Controllers\\PlatformsController.cs",
-              "RelativeDocumentMoniker": "Newbee.API\\Controllers\\PlatformsController.cs",
-              "ToolTip": "E:\\Newbee-Project\\Newbee.BE\\Newbee.API\\Controllers\\PlatformsController.cs",
-              "RelativeToolTip": "Newbee.API\\Controllers\\PlatformsController.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAhwCsAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T17:12:19.866Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\Newbee-Project\\Newbee.BE\\Newbee.API\\Program.cs",
-              "RelativeDocumentMoniker": "Newbee.API\\Program.cs",
-              "ToolTip": "E:\\Newbee-Project\\Newbee.BE\\Newbee.API\\Program.cs",
-              "RelativeToolTip": "Newbee.API\\Program.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T17:07:41.221Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "E:\\Newbee-Project\\Newbee.BE\\Newbee.API\\AppConfiguration\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "Newbee.API\\AppConfiguration\\DependencyInjection.cs",
-              "ToolTip": "E:\\Newbee-Project\\Newbee.BE\\Newbee.API\\AppConfiguration\\DependencyInjection.cs",
-              "RelativeToolTip": "Newbee.API\\AppConfiguration\\DependencyInjection.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAQwCIAAABYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T17:07:25.421Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MappingConfiguration.cs",
-              "DocumentMoniker": "E:\\Newbee-Project\\Newbee.BE\\Newbee.API\\AppConfiguration\\MappingConfiguration.cs",
-              "RelativeDocumentMoniker": "Newbee.API\\AppConfiguration\\MappingConfiguration.cs",
-              "ToolTip": "E:\\Newbee-Project\\Newbee.BE\\Newbee.API\\AppConfiguration\\MappingConfiguration.cs",
-              "RelativeToolTip": "Newbee.API\\AppConfiguration\\MappingConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T17:07:20.093Z",
-              "EditorCaption": ""
             }
           ]
         }
