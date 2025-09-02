@@ -1,6 +1,7 @@
-﻿using Newbee.DAL.Abstractions.Const;
+﻿using Newbee.BLL.DTO.Auth.Requests;
+using Newbee.DAL.Abstractions.Const;
 
-namespace Newbee.BLL.DTO.Validations;
+namespace Newbee.BLL.DTO.Auth.Validations;
 
 public class RegisterRequestValidator:AbstractValidator<RegisterRequest>
 {

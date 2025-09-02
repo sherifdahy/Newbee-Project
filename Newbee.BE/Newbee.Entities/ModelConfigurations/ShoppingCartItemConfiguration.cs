@@ -11,7 +11,8 @@ public class ShoppingCartItemConfiguration : IEntityTypeConfiguration<ShoppingCa
 {
     public void Configure(EntityTypeBuilder<ShoppingCartItem> builder)
     {
-        builder.HasOne(x=>x.ShoppingCart)
+        builder
+            .HasOne(x=>x.ShoppingCart)
             .WithMany(x=>x.ShoppingCartItems)
             .HasForeignKey(x=>x.ShoppingCartId)
             .OnDelete(DeleteBehavior.Restrict);

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Newbee.BLL.DTO.Authentication
+namespace Newbee.BLL.DTO.Auth.Responses
 {
     public record AuthResponse
     (

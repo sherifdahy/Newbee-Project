@@ -8,5 +8,10 @@ namespace Newbee.Entities;
 public class ProductCategory : TrackingBase
 {
     public int Id { get; set; }
-    public string Name { get; set; }
+    public string Name { get; set; } = string.Empty;
+
+    public int CompanyId { get; set; }
+    public Company Company { get; set; }
+
+    public ICollection<Product> Products { get; set; } = new HashSet<Product>();
 }

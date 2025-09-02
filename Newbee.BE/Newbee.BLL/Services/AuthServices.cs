@@ -4,7 +4,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Newbee.BLL.DTO.Mail;
 using Newbee.BLL.Authentication;
-using Newbee.BLL.DTO.Authentication;
+using Newbee.BLL.DTO.Auth.Responses;
+using Newbee.BLL.DTO.Auth.Requests;
 namespace Newbee.BLL.Services;
 
 public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser> signInManager , UserManager<ApplicationUser> userManager,
