@@ -1,19 +1,19 @@
-﻿
-namespace Newbee.BLL.Services;
+﻿namespace Newbee.BLL.Services;
 
 public class ProductService(IUnitOfWork unitOfWork) : IProductService
 {
     private readonly IUnitOfWork _unitOfWork = unitOfWork;
 
-    public async Task<Result<Product>> CreateAsync(Product product)
+    public async Task<Result<Product>> CreateAsync(int companyId, Product product, CancellationToken cancellationToken = default)
     {
+        product.CompanyId = companyId;
+
         await _unitOfWork.Products.AddAsync(product);
         await _unitOfWork.SaveAsync();
 
         return Result.Success(product);
     }
-
-    public async Task<Result<bool>> DeleteAsync(int id)
+    public async Task<Result<bool>> DeleteAsync(int id, CancellationToken cancellationToken = default)
     {
         var result = await GetByIdAsync(id);
 
@@ -25,8 +25,7 @@ public class ProductService(IUnitOfWork unitOfWork) : IProductService
 
         return Result.Success(true);
     }
-
-    public async Task<Result<IEnumerable<Product>>> GetAllAsync(int companyId)
+    public async Task<Result<IEnumerable<Product>>> GetAllAsync(int companyId, CancellationToken cancellationToken = default)
     {
         if (companyId == 0)
             return Result.Failure<IEnumerable<Product>>(CompanyErrors.InvalidId);
@@ -38,8 +37,7 @@ public class ProductService(IUnitOfWork unitOfWork) : IProductService
 
         return Result.Success(products);
     }
-
-    public async Task<Result<Product>> GetByIdAsync(int id)
+    public async Task<Result<Product>> GetByIdAsync(int id, CancellationToken cancellationToken = default)
     {
         if (id == 0)
             return Result.Failure<Product>(ProductErrors.InvalidId);
@@ -48,8 +46,7 @@ public class ProductService(IUnitOfWork unitOfWork) : IProductService
 
         return Result.Success(product);
     }
-
-    public async Task<Result<bool>> UpdateAsync(int id, Product product)
+    public async Task<Result<bool>> UpdateAsync(int id, Product product, CancellationToken cancellationToken = default)
     {
         if (id == 0)
             return Result.Failure<bool>(ProductErrors.InvalidId);
@@ -60,6 +57,8 @@ public class ProductService(IUnitOfWork unitOfWork) : IProductService
             return Result.Failure<bool>(result.Error);
 
         product.Adapt(result.Value);
+
+        result.Value.UpdatedAt = DateTime.Now;
 
         _unitOfWork.Products.Update(result.Value);
         await _unitOfWork.SaveAsync();

@@ -1,4 +1,4 @@
-﻿namespace Newbee.BLL.DTO.Requests;
+﻿namespace Newbee.BLL.DTO.Auth.Requests;
 
 public record RegisterRequest
 (

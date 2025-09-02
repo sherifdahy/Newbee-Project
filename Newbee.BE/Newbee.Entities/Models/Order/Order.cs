@@ -9,7 +9,7 @@ public class Order : TrackingBase
 {
     public int Id { get; set; }
     public OrderState State { get; set; }
-    public string TrackingNumber { get; set; }
+    public string TrackingNumber { get; set; } = string.Empty;
 
     public int CustomerId { get; set; }
     public virtual Customer Customer { get; set; }

@@ -8,5 +8,5 @@ namespace Newbee.Entities;
 public class ProductSize : TrackingBase
 {
     public int Id { get; set; }
-    public string Value { get; set; }
+    public string Value { get; set; } = string.Empty;
 }
