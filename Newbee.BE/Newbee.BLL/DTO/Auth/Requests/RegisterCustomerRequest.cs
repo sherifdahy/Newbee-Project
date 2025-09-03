@@ -14,6 +14,5 @@ public record RegisterCustomerRequest
     string Password,
     string FirstLine,
     string PhoneNumber,
-    int DistrictId,
     int CompanyId
 );

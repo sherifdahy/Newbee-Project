@@ -1,14 +1,13 @@
 ﻿namespace Newbee.BLL.DTO.Auth.Requests;
 
-public record RegisterRequest
+public record RegisterCompanyRequest
 (
+    string Name,
     string FirstName,
     string LastName,
-    string Email,
     string SSN,
+    string Email,
     string Password,
-    string CompanyName,
-    string CompanyAddress,
     string PhoneNumber,
-    string TaxNumber
+    string TaxRegistrationNumber
 );

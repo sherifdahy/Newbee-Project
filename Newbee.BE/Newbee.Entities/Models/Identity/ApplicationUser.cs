@@ -12,7 +12,6 @@ namespace Newbee.Entities
         public string FirstName { get; set; } = string.Empty;
         public string LastName { get; set; } = string.Empty;
         public string SSN { get; set; } = string.Empty;
-        public string PhoneNumber { get; set; } = string.Empty;
         public virtual ICollection<RefreshToken> RefreshTokens { get; set; } = new HashSet<RefreshToken>();
         public virtual ICollection<OTP>? OTPs { get; set; } =  new HashSet<OTP>();
 

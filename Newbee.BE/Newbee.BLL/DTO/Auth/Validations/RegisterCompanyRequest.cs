@@ -2,9 +2,9 @@
 
 namespace Newbee.BLL.DTO.Auth.Validations;
 
-public class RegisterRequestValidator:AbstractValidator<RegisterRequest>
+public class RegisterCompanyRequest:AbstractValidator<Requests.RegisterCompanyRequest>
 {
-    public RegisterRequestValidator()
+    public RegisterCompanyRequest()
     {
         RuleFor(x => x.FirstName)
             .NotEmpty().WithMessage("First name is required.")
@@ -27,19 +27,15 @@ public class RegisterRequestValidator:AbstractValidator<RegisterRequest>
             .NotEmpty().WithMessage("SSN is required.")
             .Length(10, 20).WithMessage("SSN must be between 10 and 20 characters.");
 
-        RuleFor(x => x.CompanyName)
+        RuleFor(x => x.Name)
             .NotEmpty().WithMessage("Company name is required.")
             .Length(3, 200).WithMessage("Company name must be between 3 and 200 characters.");
-
-        RuleFor(x => x.CompanyAddress)
-            .NotEmpty().WithMessage("Company address is required.")
-            .Length(3, 300).WithMessage("Company address must be between 3 and 300 characters.");
 
         RuleFor(x => x.PhoneNumber)
             .NotEmpty().WithMessage("Phone number is required.")
             .Matches(@"^\d{10,15}$").WithMessage("Phone number must contain only digits and be between 10 and 15 digits long.");
 
-        RuleFor(x => x.TaxNumber)
+        RuleFor(x => x.TaxRegistrationNumber)
             .NotEmpty().WithMessage("Tax number is required.")
             .Length(10, 25).WithMessage("Tax number must be between 10 and 25 characters.");
     }

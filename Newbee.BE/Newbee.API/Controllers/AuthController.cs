@@ -6,7 +6,7 @@ using Newbee.BLL.DTO.Mail;
 using Newbee.DAL.Abstractions;
 using System.Threading;
 using LoginRequest = Newbee.BLL.DTO.Auth.Requests.LoginRequest;
-using RegisterRequest = Newbee.BLL.DTO.Auth.Requests.RegisterRequest;
+using RegisterCompanyRequest = Newbee.BLL.DTO.Auth.Requests.RegisterCompanyRequest;
 
 namespace Newbee.API.Controllers;
 
@@ -15,13 +15,13 @@ namespace Newbee.API.Controllers;
 public class AuthController(IAuthServices authServices) : BaseController
 {
     private readonly IAuthServices _authServices = authServices;
-    [HttpPost("register")]
-    public async Task<IActionResult> Register([FromBody] RegisterRequest request,CancellationToken cancellationToken)
+    [HttpPost("register-company")]
+    public async Task<IActionResult> Register([FromBody] RegisterCompanyRequest request,CancellationToken cancellationToken)
     {
         var result = await _authServices.RegisterAsync(request,cancellationToken);
         return result.IsSuccess ? Ok() : result.ToProblem();
     }
-    [HttpPost("register-Customer")]
+    [HttpPost("register-customer")]
     public async Task<IActionResult> RegisterCustomer([FromBody] RegisterCustomerRequest request, CancellationToken cancellationToken)
     {
         var result = await _authServices.RegisterAsync(request, cancellationToken);

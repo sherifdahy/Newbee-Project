@@ -24,5 +24,16 @@ public class MappingConfiguration : IRegister
         config.NewConfig<ProductCategory,ProductCategory>()
             .Ignore(x => x.Id).Ignore(x => x.CreatedAt);
 
+        //////////////////////////////////////////////////////
+
+        config.NewConfig<RegisterCompanyRequest, ApplicationUser>()
+            .Map(destination => destination.Email,source => source.Email)
+            .Map(destination => destination.UserName,source => source.Email)
+            .Map(destination => destination.Company, source => new Company()
+            {
+                Name = source.Name,
+                TaxRegistrationNumber = source.TaxRegistrationNumber,
+            });
+
     }
 }
