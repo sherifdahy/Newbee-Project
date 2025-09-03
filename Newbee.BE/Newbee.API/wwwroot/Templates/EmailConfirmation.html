@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NewBee Verification</title>
+    <title>Reset Your Password - NewBee</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -120,7 +120,7 @@
             font-weight: 500;
         }
 
-        .verify-button {
+        .reset-button {
             display: inline-block;
             background: var(--primary);
             color: white;
@@ -133,9 +133,9 @@
             transition: background-color 0.2s ease;
         }
 
-            .verify-button:hover {
-                background: var(--primary-dark);
-            }
+        .reset-button:hover {
+            background: var(--primary-dark);
+        }
 
         .security-alert {
             background: #FEF3C7;
@@ -154,6 +154,28 @@
 
         .security-text {
             color: #92400E;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .no-action-alert {
+            background: #FEF2F2;
+            border: 1px solid #FCA5A5;
+            border-left: 4px solid #EF4444;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 25px 0;
+        }
+
+        .no-action-title {
+            font-weight: 600;
+            color: #B91C1C;
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+
+        .no-action-text {
+            color: #B91C1C;
             font-size: 14px;
             line-height: 1.5;
         }
@@ -232,9 +254,9 @@
             font-size: 12px;
         }
 
-            .footer-link:hover {
-                color: white;
-            }
+        .footer-link:hover {
+            color: white;
+        }
 
         @media (max-width: 600px) {
             body {
@@ -272,45 +294,52 @@
         </div>
 
         <div class="content">
-            <h1>Email Verification Required</h1>
+            <h1>Password Reset Request</h1>
 
             <div class="greeting">Hello <strong>{{name}}</strong>,</div>
 
             <p class="intro-text">
-                Welcome to NewBee! You're now part of a platform designed to streamline your business operations. Manage orders, track shipments, and update inventory seamlessly from one central dashboard.
+                We received a request to reset your NewBee account password. Use the verification code below to complete the password reset process and get back to managing your business operations.
             </p>
 
             <div class="otp-container">
-                <div class="otp-label">Your Verification Code</div>
+                <div class="otp-label">Your Password Reset Code</div>
                 <div class="otp-code">{{otp_code}}</div>
                 <div class="otp-expiry">Expires in {{expiry_minutes}} minutes</div>
             </div>
 
             <div style="text-align: center;">
-                <a href="https://newbee.com/verify?code={{otp_code}}" class="verify-button">
-                    Verify Email Address
+                <a href="https://newbee.com/reset-password?code={{otp_code}}" class="reset-button">
+                    Reset Password
                 </a>
             </div>
 
             <div class="features-section">
-                <div class="features-title">What you can do with NewBee</div>
+                <div class="features-title">Security Best Practices</div>
                 <div class="features-list">
                     <div class="feature-item">
-                        <div class="feature-title">Order Management</div>
+                        <div class="feature-title">Strong Password</div>
                     </div>
                     <div class="feature-item">
-                        <div class="feature-title">Shipment Tracking</div>
+                        <div class="feature-title">Two-Factor Auth</div>
                     </div>
                     <div class="feature-item">
-                        <div class="feature-title">Inventory Control</div>
+                        <div class="feature-title">Regular Updates</div>
                     </div>
+                </div>
+            </div>
+
+            <div class="no-action-alert">
+                <div class="no-action-title">Didn't Request This?</div>
+                <div class="no-action-text">
+                    If you didn't request a password reset, please ignore this email or contact our support team immediately if you have security concerns about your account.
                 </div>
             </div>
 
             <div class="security-alert">
                 <div class="security-title">Security Notice</div>
                 <div class="security-text">
-                    Keep this code private and secure. NewBee will never ask you to share this verification code via phone or email.
+                    Keep this code private and secure. NewBee will never ask you to share this verification code via phone or email. Only enter this code on the official NewBee website.
                 </div>
             </div>
 
