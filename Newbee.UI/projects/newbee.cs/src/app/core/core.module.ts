@@ -9,6 +9,7 @@ import { Header } from './layout/main-layout/header/header';
 import { Footer } from './layout/main-layout/footer/footer'
 import { AppRoutingModule } from "../app-routing-module";
 import { SecondaryLayout } from './layout/secondary-layout/secondary-layout';
+import { SideBar } from './layout/main-layout/side-bar/side-bar';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { SecondaryLayout } from './layout/secondary-layout/secondary-layout';
     MainLayout,
     Header,
     Footer,
-    SecondaryLayout
+    SecondaryLayout,
+    SideBar
   ],
   imports: [
     CommonModule,

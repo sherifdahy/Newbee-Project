@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import {SharedModule} from '../../shared/shared-module'
 import { AuthRoutingModule } from './auth-routing-module';
 import {Login} from './components/login/login';
 import {Logout} from './components/logout/logout';
@@ -9,7 +9,8 @@ import {Logout} from './components/logout/logout';
   declarations: [Login,Logout],
   imports: [
     CommonModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    SharedModule
   ]
 })
 export class AuthModule { }
