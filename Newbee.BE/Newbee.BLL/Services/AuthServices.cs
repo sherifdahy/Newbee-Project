@@ -6,176 +6,176 @@ using Newbee.BLL.DTO.Mail;
 using Newbee.BLL.Authentication;
 using System.Security.Cryptography;
 using Newbee.BLL.DTO.Auth.Requests;
-using Microsoft.AspNetCore.Identity.Data;
-using RegisterRequest = Newbee.BLL.DTO.Auth.Requests.RegisterRequest;
-using LoginRequest = Newbee.BLL.DTO.Auth.Requests.LoginRequest;
 using Newbee.BLL.DTO.Auth.Responses;
-using System.Security.Cryptography;
-using Newbee.BLL.DTO.Auth.Responses;
+
 namespace Newbee.BLL.Services;
 
-public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser> signInManager, UserManager<ApplicationUser> userManager,
-     ILogger<AuthServices> logger,
-     IEmailSender emailSender,
-     IJwtProvider jwtProvider,
-     EmailBuilder _builder) : IAuthServices
+public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser> signInManager,
+    UserManager<ApplicationUser> userManager, ILogger<AuthServices> logger,
+    IEmailSender emailSender, IJwtProvider jwtProvider, EmailBuilder builder) : IAuthServices
 {
     private readonly IUnitOfWork _unitOfWork = unitOfWork;
     private readonly SignInManager<ApplicationUser> _signInManager = signInManager;
     private readonly UserManager<ApplicationUser> _userManager = userManager;
     private readonly ILogger<AuthServices> _logger = logger;
     private readonly IEmailSender _emailSender = emailSender;
-    private readonly IJwtProvider jwtProvider = jwtProvider;
-    private readonly EmailBuilder _builder = _builder;
+    private readonly IJwtProvider _jwtProvider = jwtProvider;
+    private readonly EmailBuilder _builder = builder;
     private readonly int _otpExpiryMinutes = 5;
     private readonly int _resetRefreshTokenExpiryDays = 14;
 
     public async Task<Result<AuthResponse?>> GetTokenAsync(LoginRequest request, CancellationToken cancellationToken)
     {
-        //check user?
+        // Check if user exists
         var user = await _userManager.FindByEmailAsync(request.Email);
         if (user is null)
             return Result.Failure<AuthResponse?>(UserErrors.InvalidCredentials);
-        // check password?
+
+        // Check password
         var isValidPassword = await _userManager.CheckPasswordAsync(user, request.Password);
         if (!isValidPassword)
             return Result.Failure<AuthResponse?>(UserErrors.InvalidCredentials);
-        //check email confirmed?
+
+        // Check email confirmed
         if (!user.EmailConfirmed)
             return Result.Failure<AuthResponse?>(UserErrors.EmailNotConfirmed);
+
         var result = await _signInManager.PasswordSignInAsync(user, request.Password, false, false);
-        //generate token
+
+        // Generate token
         if (result.Succeeded)
         {
-            var (token, expiresIn) = jwtProvider.GenerateToken(user);
+            var (token, expiresIn) = _jwtProvider.GenerateToken(user);
             var refreshToken = GenerateRefreshToken();
             var refreshTokenExpiry = DateTime.UtcNow.AddDays(_resetRefreshTokenExpiryDays);
+
             user.RefreshTokens.Add(new RefreshToken
             {
                 Token = refreshToken,
                 ExpiresOn = refreshTokenExpiry
             });
+
             await _userManager.UpdateAsync(user);
-            var response = new AuthResponse(user.Id, user.Email, user.FirstName, user.LastName, token, expiresIn, refreshToken, refreshTokenExpiry);
-            // return new auth response
 
-            return Result.Success(response);
+            var response = new AuthResponse(user.Id, user.Email, user.FirstName, user.LastName,
+                token, expiresIn, refreshToken, refreshTokenExpiry);
 
+            return Result.Success<AuthResponse?>(response);
         }
-        return Result.Failure<AuthResponse>(UserErrors.InvalidCredentials);
 
+        return Result.Failure<AuthResponse?>(UserErrors.InvalidCredentials);
     }
 
     public async Task<Result> RegisterMerchantAsync(RegisterRequest request, CancellationToken cancellationToken = default)
     {
-
         var emailIsExists = await _userManager.Users.AnyAsync(x => x.Email == request.Email, cancellationToken);
-
         if (emailIsExists)
             return Result.Failure(UserErrors.DuplicatedEmail);
+
         var company = new Company
         {
             Name = request.CompanyName,
             TaxRegistrationNumber = request.TaxNumber,
-        }; _unitOfWork.Companies.Add(company);
+        };
 
+        _unitOfWork.Companies.Add(company);
         await _unitOfWork.SaveAsync();
-
 
         var user = request.Adapt<ApplicationUser>();
         user.UserName = request.Email;
         user.CompanyId = company.Id;
+
         var result = await _userManager.CreateAsync(user, request.Password);
-        // var roleResult = await _userManager.AddToRoleAsync(user, "merchant");
 
         if (result.Succeeded)
         {
-
             await SendOtpAsync(user);
-            company = request.Adapt<Company>();
-            await _unitOfWork.Companies.AddAsync(company);
-            await _unitOfWork.SaveAsync();
-            return Result.Success(user.Id);
+            return Result.Success();
         }
 
         var error = result.Errors.First();
-
         return Result.Failure(new Error(error.Code, error.Description, StatusCodes.Status400BadRequest));
     }
 
-
-    public async Task<Result> ConfirmEmailAsync(MailRequest request, CancellationToken cancellationToken = default)
+    public async Task<Result> ConfirmEmailAsync(ConfirmEmailRequest request, CancellationToken cancellationToken = default)
     {
-        var EmailIsExist = await _userManager.Users.AnyAsync(x => x.Email == request.Email, cancellationToken);
-        if (!EmailIsExist)
+        var emailExists = await _userManager.Users.AnyAsync(x => x.Email == request.Email, cancellationToken);
+        if (!emailExists)
             return Result.Failure(UserErrors.EmailNotFound);
+
         var user = await _userManager.FindByEmailAsync(request.Email);
+
         if (request.Code == null || request.Code.Length != 6 || !request.Code.All(char.IsDigit))
             return Result.Failure(UserErrors.InvalidCode);
+
         var otp = await _unitOfWork.OTPs.FindAsync(x => x.ApplicationUserId == user!.Id && x.Code == request.Code);
         if (otp == null)
             return Result.Failure(UserErrors.InvalidCode);
+
         if (otp.ExpiryTime < DateTime.UtcNow)
             return Result.Failure(UserErrors.InvalidCode);
-        user.EmailConfirmed = true;
+
+        user!.EmailConfirmed = true;
         _unitOfWork.OTPs.Delete(otp);
         await _userManager.UpdateAsync(user);
         await _unitOfWork.SaveAsync();
-        return Result.Success();
 
+        return Result.Success();
     }
 
-
-   
-    public async Task<AuthResponse?> GetRefreshTokenAsync(string token, string refreshToken, CancellationToken cancellationToken = default)
+    public async Task<Result<AuthResponse?>> GetRefreshTokenAsync(string token, string refreshToken, CancellationToken cancellationToken = default)
     {
-        var userId = jwtProvider.ValidateToken(token);
+        var userId = _jwtProvider.ValidateToken(token);
         if (userId == null)
-            Result.Failure<AuthResponse?>(UserErrors.InvalidJwtToken);
+            return Result.Failure<AuthResponse?>(UserErrors.InvalidJwtToken);
+
         var user = await _userManager.FindByIdAsync(userId);
         if (user == null)
-            Result.Failure<AuthResponse?>(UserErrors.InvalidJwtToken);
-        var userRefreshToken = user.RefreshTokens.SingleOrDefault(rt => rt.Token == refreshToken&& rt.IsActive);
+            return Result.Failure<AuthResponse?>(UserErrors.InvalidJwtToken);
+
+        var userRefreshToken = user.RefreshTokens.SingleOrDefault(rt => rt.Token == refreshToken && rt.IsActive);
         if (userRefreshToken == null)
-            Result.Failure<AuthResponse?>(UserErrors.InvalidRefreshToken);
+            return Result.Failure<AuthResponse?>(UserErrors.InvalidRefreshToken);
+
         userRefreshToken.RevokedOn = DateTime.UtcNow;
         var newRefreshToken = GenerateRefreshToken();
         var refreshTokenExpiry = DateTime.UtcNow.AddDays(_resetRefreshTokenExpiryDays);
+
         user.RefreshTokens.Add(new RefreshToken
         {
             Token = newRefreshToken,
             ExpiresOn = refreshTokenExpiry
         });
-        await _userManager.UpdateAsync(user);
-        var (newJwtToken, expiresIn) = jwtProvider.GenerateToken(user);
-        var response = new AuthResponse(user.Id, user.Email, user.FirstName, user.LastName, newJwtToken, expiresIn, newRefreshToken, refreshTokenExpiry);
-        return  response;
-    }
-   
 
-    public async  Task<Result> ResendConfirmationEmailAsync(MailRequest request, CancellationToken cancellationToken = default)
+        await _userManager.UpdateAsync(user);
+
+        var (newJwtToken, expiresIn) = _jwtProvider.GenerateToken(user);
+        var response = new AuthResponse(user.Id, user.Email, user.FirstName, user.LastName,
+            newJwtToken, expiresIn, newRefreshToken, refreshTokenExpiry);
+
+        return Result.Success<AuthResponse?>(response);
+    }
+
+    public async Task<Result> ResendConfirmationEmailAsync(string email, CancellationToken cancellationToken = default)
     {
-        if (await _userManager.FindByEmailAsync(request.Email) is not { } user)
+        if (await _userManager.FindByEmailAsync(email) is not { } user)
             return Result.Success();
 
         if (user.EmailConfirmed)
             return Result.Failure(UserErrors.DuplicatedConfirmation);
 
         await SendOtpAsync(user);
-
         return Result.Success();
     }
 
-    public async Task<Result> ResetPasswordAsync(DTO.Auth.Requests.ResetPasswordRequest request)
+    public async Task<Result> ResetPasswordAsync(ResetPasswordRequest request)
     {
         var user = await _userManager.FindByEmailAsync(request.Email);
-
         if (user is null || !user.EmailConfirmed)
             return Result.Failure(UserErrors.InvalidCode);
 
         var otpRecord = await _unitOfWork.OTPs
             .FindAsync(x => x.ApplicationUserId == user.Id && x.Code == request.Code);
-          
 
         if (otpRecord == null || otpRecord.ExpiryTime < DateTime.UtcNow)
         {
@@ -184,7 +184,6 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
                 _unitOfWork.OTPs.Delete(otpRecord);
                 await _unitOfWork.SaveAsync();
             }
-
             return Result.Failure(UserErrors.InvalidCode);
         }
 
@@ -192,18 +191,15 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
         await _unitOfWork.SaveAsync();
 
         var resetToken = await _userManager.GeneratePasswordResetTokenAsync(user);
-
         var result = await _userManager.ResetPasswordAsync(user, resetToken, request.newPassword);
 
         if (result.Succeeded)
-        {
             return Result.Success();
-        }
 
         var error = result.Errors.First();
         return Result.Failure(new Error(error.Code, error.Description, StatusCodes.Status400BadRequest));
-
     }
+
     public async Task<Result> SendResetOtpAsync(string email)
     {
         if (await _userManager.FindByEmailAsync(email) is not { } user)
@@ -215,52 +211,56 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
         await SendPasswordResetOtpAsync(user);
         return Result.Success();
     }
+
     private async Task<Result> SendPasswordResetOtpAsync(ApplicationUser user)
     {
-        var otpCode = new Random().Next(100000, 999999).ToString();
-
-        var existingOtps = await _unitOfWork.OTPs
-            .FindAllAsync(x => x.ApplicationUserId == user.Id);
-            
-
-        if (existingOtps.Any())
+        try
         {
-            _unitOfWork.OTPs.DeleteRange(existingOtps);
-        }
+            var otpCode = GenerateSecureOtpCode();
 
-        var otp = new OTP
-        {
-            Code = otpCode,
-            ExpiryTime = DateTime.UtcNow.AddMinutes(_otpExpiryMinutes),
-            ApplicationUserId = user.Id,
-            User = user
-        };
-
-        _unitOfWork.OTPs.Add(otp);
-        await _unitOfWork.SaveAsync();
-        var FullName = $"{user.FirstName} {user.LastName}";
-        var emailBody = _builder.GenerateEmailBody("ForgetPassword",
-            templateModel: new Dictionary<string, string>
+            var existingOtps = await _unitOfWork.OTPs.FindAllAsync(x => x.ApplicationUserId == user.Id);
+            if (existingOtps.Any())
             {
-                { "{{name}}", FullName },
-                { "{{otp_code}}", otpCode },
-                { "{{expiry_minutes}}", _otpExpiryMinutes.ToString() }
+                _unitOfWork.OTPs.DeleteRange(existingOtps);
             }
-        );
 
-        await _emailSender.SendEmailAsync(user.Email!, "🔐 NewBee: Password Reset OTP", emailBody);
+            var otp = new OTP
+            {
+                Code = otpCode,
+                ExpiryTime = DateTime.UtcNow.AddMinutes(_otpExpiryMinutes),
+                ApplicationUserId = user.Id,
+                User = user
+            };
 
-        _logger.LogInformation("Password reset OTP sent to user {UserId}: {OtpCode}", user.Id, otpCode);
+            _unitOfWork.OTPs.Add(otp);
+            await _unitOfWork.SaveAsync();
 
-        return Result.Success();
+            var fullName = $"{user.FirstName} {user.LastName}";
+            var emailBody = _builder.GenerateEmailBody("ForgetPassword",
+                templateModel: new Dictionary<string, string>
+                {
+                    { "{{name}}", fullName },
+                    { "{{otp_code}}", otpCode },
+                    { "{{expiry_minutes}}", _otpExpiryMinutes.ToString() }
+                });
+
+            await _emailSender.SendEmailAsync(user.Email!, "🔐 NewBee: Password Reset OTP", emailBody);
+            _logger.LogInformation("Password reset OTP sent to user {UserId}", user.Id);
+
+            return Result.Success();
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error sending password reset OTP to user {UserId}", user.Id);
+            return Result.Failure(new Error("EmailSendError", "Failed to send OTP email", StatusCodes.Status500InternalServerError));
+        }
     }
+
     private async Task SendOtpAsync(ApplicationUser user)
     {
-        var otpCode = new Random().Next(100000, 999999).ToString();
+        var otpCode = GenerateSecureOtpCode();
 
-        var existingOtps = _unitOfWork.OTPs.FindAll(x => x.ApplicationUserId == user.Id)
-        .ToList();
-
+        var existingOtps = _unitOfWork.OTPs.FindAll(x => x.ApplicationUserId == user.Id).ToList();
         if (existingOtps.Any())
         {
             _unitOfWork.OTPs.DeleteRange(existingOtps);
@@ -283,18 +283,23 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
                 { "{{name}}", user.FirstName },
                 { "{{otp_code}}", otpCode },
                 { "{{expiry_minutes}}", _otpExpiryMinutes.ToString() }
-            }
-        );
+            });
 
         await _emailSender.SendEmailAsync(user.Email!, "✅ NewBee: Email Verification OTP", emailBody);
-
-        _logger.LogInformation("OTP sent to user {UserId}: {OtpCode}", user.Id, otpCode);
-
+        _logger.LogInformation("OTP sent to user {UserId}", user.Id);
     }
+
     private static string GenerateRefreshToken()
     {
         return Convert.ToBase64String(RandomNumberGenerator.GetBytes(64));
     }
 
- 
+    private static string GenerateSecureOtpCode()
+    {
+        using var rng = RandomNumberGenerator.Create();
+        var bytes = new byte[4];
+        rng.GetBytes(bytes);
+        var randomNumber = BitConverter.ToUInt32(bytes, 0);
+        return (randomNumber % 900000 + 100000).ToString();
+    }
 }
