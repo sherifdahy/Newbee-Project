@@ -18,7 +18,13 @@ public class AuthController(IAuthServices authServices) : BaseController
     [HttpPost("register")]
     public async Task<IActionResult> Register([FromBody] RegisterRequest request,CancellationToken cancellationToken)
     {
-        var result = await _authServices.RegisterMerchantAsync(request,cancellationToken);
+        var result = await _authServices.RegisterAsync(request,cancellationToken);
+        return result.IsSuccess ? Ok() : result.ToProblem();
+    }
+    [HttpPost("register-Customer")]
+    public async Task<IActionResult> RegisterCustomer([FromBody] RegisterCustomerRequest request, CancellationToken cancellationToken)
+    {
+        var result = await _authServices.RegisterAsync(request, cancellationToken);
         return result.IsSuccess ? Ok() : result.ToProblem();
     }
     [HttpPost("login")]
