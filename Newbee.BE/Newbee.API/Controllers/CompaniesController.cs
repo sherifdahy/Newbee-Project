@@ -31,7 +31,7 @@ public class CompaniesController(ICompanyService companyService) : BaseControlle
             : result.ToProblem();
     }
 
-    [HttpPatch("{id}")]
+    [HttpPut("{id}")]
     public async Task<IActionResult> Update(int id, [FromBody] CompanyRequest request, CancellationToken cancellationToken)
     {
         var result = await _companyService.UpdateAsync(id, request.Adapt<Company>(), cancellationToken);

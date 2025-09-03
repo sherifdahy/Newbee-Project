@@ -16,7 +16,6 @@ public class AuthController(IAuthServices authServices) : BaseController
     {
         var result = await _authServices.RegisterMerchantAsync(request,cancellationToken);
         return result.IsSuccess ? Ok() : result.ToProblem();
-        return result.IsSuccess ? Created() : result.ToProblem();
     }
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] LoginRequest request,CancellationToken cancellationToken)
