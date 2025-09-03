@@ -17,7 +17,7 @@ public class CompaniesController(ICompanyService companyService) : BaseControlle
         var result = await _companyService.GetAllAsync(cancellationToken);
 
         return result.IsSuccess
-            ? Ok(result.Value.Adapt<IEnumerable<CompanyResponse>>())
+            ? Ok(result.Value)
             : result.ToProblem();
     }
 
@@ -27,14 +27,14 @@ public class CompaniesController(ICompanyService companyService) : BaseControlle
         var result = await _companyService.GetByIdAsync(id, cancellationToken);
 
         return result.IsSuccess
-            ? Ok(result.Value.Adapt<CompanyResponse>())
+            ? Ok(result.Value)
             : result.ToProblem();
     }
 
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(int id, [FromBody] CompanyRequest request, CancellationToken cancellationToken)
     {
-        var result = await _companyService.UpdateAsync(id, request.Adapt<Company>(), cancellationToken);
+        var result = await _companyService.UpdateAsync(id, request, cancellationToken);
 
         return result.IsSuccess
             ? NoContent()
@@ -54,7 +54,7 @@ public class CompaniesController(ICompanyService companyService) : BaseControlle
     [HttpPost]
     public async Task<IActionResult> Create([FromBody] CompanyRequest request, CancellationToken cancellationToken)
     {
-        var result = await _companyService.CreateAsync(request.Adapt<Company>(), cancellationToken);
+        var result = await _companyService.CreateAsync(request, cancellationToken);
 
         return result.IsSuccess
             ? CreatedAtAction(nameof(GetById), new { id = result.Value.Id }, result.Value.Adapt<CompanyResponse>())

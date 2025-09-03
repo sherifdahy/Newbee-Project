@@ -14,19 +14,19 @@ public class ProductsController(IProductService productService) :BaseController
     {
         var result = await _productService.GetAllAsync(CompanyId,cancellationToken);
 
-        return result.IsSuccess ? Ok(result.Value.Adapt<IEnumerable<ProductResponse>>()) : result.ToProblem();
+        return result.IsSuccess ? Ok(result.Value) : result.ToProblem();
     }
 
     [HttpGet("{id:int}")]
     public async Task<IActionResult> GetById(int id,CancellationToken cancellationToken)
     {
         var result = await _productService.GetByIdAsync(id,cancellationToken);
-        return result.IsSuccess ? Ok(result.Value.Adapt<ProductResponse>()) : result.ToProblem();
+        return result.IsSuccess ? Ok(result.Value) : result.ToProblem();
     }
     [HttpPut("{id:int}")]
     public async Task<IActionResult> Update(int id, [FromBody] ProductRequest request,CancellationToken cancellationToken)
     {
-        var result = await _productService.UpdateAsync(id, request.Adapt<Product>(),cancellationToken);
+        var result = await _productService.UpdateAsync(id, request,cancellationToken);
         return result.IsSuccess ? NoContent() : result.ToProblem();
     }
 
@@ -40,7 +40,7 @@ public class ProductsController(IProductService productService) :BaseController
     [HttpPost]
     public async Task<IActionResult> Create([FromBody] ProductRequest request, CancellationToken cancellationToken)
     {
-        var result = await _productService.CreateAsync(CompanyId,request.Adapt<Product>(),cancellationToken);
+        var result = await _productService.CreateAsync(CompanyId,request,cancellationToken);
         return result.IsSuccess ? CreatedAtAction(nameof(GetAll), new { id = result.Value.Id }, result.Value) : result.ToProblem();
     }
 }

@@ -66,29 +66,20 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
         return Result.Failure<AuthResponse?>(UserErrors.InvalidCredentials);
     }
 
-    public async Task<Result> RegisterAsync(RegisterRequest request, CancellationToken cancellationToken = default)
+    public async Task<Result> RegisterAsync(RegisterCompanyRequest request, CancellationToken cancellationToken = default)
     {
         var emailIsExists = await _userManager.Users.AnyAsync(x => x.Email == request.Email, cancellationToken);
+
         if (emailIsExists)
             return Result.Failure(UserErrors.DuplicatedEmail);
 
-        var company = new Company
-        {
-            Name = request.CompanyName,
-            TaxRegistrationNumber = request.TaxNumber,
-        };
+        var applicationUser = request.Adapt<ApplicationUser>();
+        
+        var result = await _userManager.CreateAsync(applicationUser, request.Password);
 
-        _unitOfWork.Companies.Add(company);
-        await _unitOfWork.SaveAsync();
-
-        var user = request.Adapt<ApplicationUser>();
-        user.UserName = request.Email;
-        user.CompanyId = company.Id;
-        var result = await _userManager.CreateAsync(user, request.Password);
-      
         if (result.Succeeded)
         {
-            await SendOtpAsync(user);
+            await SendOtpAsync(applicationUser);
             return Result.Success();
         }
 
@@ -98,8 +89,10 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
     public async Task<Result> RegisterAsync(RegisterCustomerRequest request, CancellationToken cancellationToken = default)
     {
         var emailIsExits= await _userManager.Users.AnyAsync(x => x.Email == request.Email, cancellationToken);
+
         if (emailIsExits)
             return Result.Failure(UserErrors.DuplicatedEmail);
+
         var user = request.Adapt<ApplicationUser>();
         user.UserName = request.Email;
         user.CompanyId = request.CompanyId;
