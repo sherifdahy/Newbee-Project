@@ -23,7 +23,7 @@ public class ProductsController(IProductService productService) :BaseController
         var result = await _productService.GetByIdAsync(id,cancellationToken);
         return result.IsSuccess ? Ok(result.Value.Adapt<ProductResponse>()) : result.ToProblem();
     }
-    [HttpPatch("{id:int}")]
+    [HttpPut("{id:int}")]
     public async Task<IActionResult> Update(int id, [FromBody] ProductRequest request,CancellationToken cancellationToken)
     {
         var result = await _productService.UpdateAsync(id, request.Adapt<Product>(),cancellationToken);

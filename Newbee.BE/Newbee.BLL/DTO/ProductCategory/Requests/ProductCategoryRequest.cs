@@ -8,5 +8,6 @@ namespace Newbee.BLL.DTO.ProductCategory.Requests;
 public class ProductCategoryRequest
 {
     public string Name { get; set; } = string.Empty;
+    public int CompanyId { get; set; }
 
 }
