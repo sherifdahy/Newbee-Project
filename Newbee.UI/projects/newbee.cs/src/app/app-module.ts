@@ -4,10 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { CoreModule } from './core/core.module';
-import { NotFoundPage } from './pages/not-found-page/not-found-page';
-import { UnauthorizedPage } from './pages/unauthorized-page/unauthorized-page';
-import { Login } from './features/auth/components/login/login';
-import { Logout } from './features/auth/components/logout/logout';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
   declarations: [
@@ -15,8 +14,16 @@ import { Logout } from './features/auth/components/logout/logout';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
-    CoreModule
+
+  ToastrModule.forRoot({
+    positionClass: 'toast-bottom-right',
+    timeOut: 3000,
+    preventDuplicates: true
+  })
+,
+    CoreModule,
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),

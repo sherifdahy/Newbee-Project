@@ -22,7 +22,8 @@
               }
             ],
             "styles": [
-              "projects/newbee.cs/src/styles.css"
+              "projects/newbee.cs/src/styles.css",
+              "node_modules/ngx-toastr/toastr.css"
             ]
           },
           "configurations": {
@@ -188,7 +189,8 @@
               }
             ],
             "styles": [
-              "projects/newbee.cs/src/styles.css"
+              "projects/newbee.cs/src/styles.css",
+              "node_modules/ngx-toastr/toastr.css"
             ]
           },
           "configurations": {
