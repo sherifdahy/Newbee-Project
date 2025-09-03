@@ -1,17 +1,15 @@
-﻿
-using Newbee.BLL.DTO.Auth.Requests;
+﻿using Newbee.BLL.DTO.Auth.Requests;
 using Newbee.BLL.DTO.Auth.Responses;
-using Newbee.BLL.DTO.Mail;
 
 namespace Newbee.BLL.Interfaces;
 
 public interface IAuthServices
 {
     Task<Result> RegisterMerchantAsync(RegisterRequest request, CancellationToken cancellationToken = default);
-    Task<Result> ConfirmEmailAsync(MailRequest request, CancellationToken cancellationToken = default);
+    Task<Result> ConfirmEmailAsync(ConfirmEmailRequest request, CancellationToken cancellationToken = default);
     Task<Result<AuthResponse?>> GetTokenAsync(LoginRequest request, CancellationToken cancellationToken = default);
-    Task<AuthResponse?>GetRefreshTokenAsync(string token, string refreshToken,CancellationToken cancellationToken=default);
-    Task<Result> ResendConfirmationEmailAsync(MailRequest request, CancellationToken cancellationToken = default);
-    Task<Result> ResetPasswordAsync(DTO.Auth.Requests.ResetPasswordRequest request);
+    Task<Result<AuthResponse?>> GetRefreshTokenAsync(string token, string refreshToken, CancellationToken cancellationToken = default);
+    Task<Result> ResendConfirmationEmailAsync(string email, CancellationToken cancellationToken = default);
+    Task<Result> ResetPasswordAsync(ResetPasswordRequest request);
     Task<Result> SendResetOtpAsync(string email);
 }
