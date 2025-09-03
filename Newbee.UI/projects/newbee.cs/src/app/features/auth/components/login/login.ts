@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -8,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class Login {
 
+  constructor(private toast:ToastrService){
+
+  }
+test(){
+
+this.toast.success("It Works","title");
+}
 }
