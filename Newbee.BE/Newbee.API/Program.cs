@@ -1,54 +1,69 @@
-
-using Microsoft.AspNetCore.Identity.UI.Services;
+﻿using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Newbee.API.AppConfiguration;
 using Newbee.API.Email;
 using Newbee.BLL.Setting;
 
-namespace Newbee.API
+namespace Newbee.API;
+
+public class Program
 {
-    public class Program
+    public static async Task Main(string[] args)
     {
-        public static void Main(string[] args)
+        var builder = WebApplication.CreateBuilder(args);
+        builder.Services.AddDependencies(builder.Configuration);
+
+        //Email Service Configuration
+        builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
+        builder.Services.AddTransient<IEmailSender>(provider =>
         {
-            var builder = WebApplication.CreateBuilder(args);
+            var emailSettings = provider.GetRequiredService<IOptions<MailSettings>>().Value;
+            return new EmailSender(
+                emailSettings.Email,
+                emailSettings.AppPassword,
+                emailSettings.Host,
+                emailSettings.SSL,
+                emailSettings.Port,
+                emailSettings.IsBodyHtml
+            );
+        });
 
-            builder.Services.AddDependencies(builder.Configuration);
+        var app = builder.Build();
 
-            //Email Service Configuration
-            builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
-            builder.Services.AddTransient<IEmailSender>(provider =>
-            {
-                var emailSettings = provider.GetRequiredService<IOptions<MailSettings>>().Value;
-                return new EmailSender(
-                    emailSettings.Email,
-                    emailSettings.AppPassword,
-                    emailSettings.Host,
-                    emailSettings.SSL,
-                    emailSettings.Port,
-                    emailSettings.IsBodyHtml
-                );
-            });
-         
-            var app = builder.Build();
-          
-            // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
-            {
-                app.UseSwagger();
-                app.UseSwaggerUI();
-            }
+        // Configure the HTTP request pipeline.
+        if (app.Environment.IsDevelopment())
+        {
+            app.UseSwagger();
+            app.UseSwaggerUI();
+        }
+        else
+        {
+            await AutoMigrate(app);
 
-            app.UseHttpsRedirection();
+            app.UseSwagger();
+            app.UseSwaggerUI();
+        }
 
-            app.UseAuthentication();
+        app.UseHttpsRedirection();
+        app.UseAuthentication();
+        app.UseAuthorization();
+        app.MapControllers();
 
-            app.UseAuthorization();
+        app.Run();
+    }
 
+    private static async Task AutoMigrate(WebApplication app)
+    {
+        using var scope = app.Services.CreateScope();
 
-            app.MapControllers();
+        var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
 
-            app.Run();
+        var pendingMigrations = await context.Database.GetPendingMigrationsAsync();
+
+        if (pendingMigrations.Any())
+        {
+            await context.Database.MigrateAsync();
         }
     }
 }
