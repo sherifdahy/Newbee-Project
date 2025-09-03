@@ -40,7 +40,6 @@ public class Program
         else
         {
             await AutoMigrate(app);
-
             app.UseSwagger();
             app.UseSwaggerUI();
         }

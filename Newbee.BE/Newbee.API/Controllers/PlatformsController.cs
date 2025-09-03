@@ -5,7 +5,7 @@ using Newbee.BLL.DTO.Platform.Requests;
 
 namespace Newbee.API.Controllers;
 [Route("api/[controller]")]
-//[Authorize]
+[Authorize]
 [ApiController]
 public class PlatformsController(IPlatformService platformService) : BaseController
 {
