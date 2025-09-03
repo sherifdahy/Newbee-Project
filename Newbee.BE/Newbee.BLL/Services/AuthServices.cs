@@ -66,7 +66,7 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
         return Result.Failure<AuthResponse?>(UserErrors.InvalidCredentials);
     }
 
-    public async Task<Result> RegisterMerchantAsync(RegisterRequest request, CancellationToken cancellationToken = default)
+    public async Task<Result> RegisterAsync(RegisterRequest request, CancellationToken cancellationToken = default)
     {
         var emailIsExists = await _userManager.Users.AnyAsync(x => x.Email == request.Email, cancellationToken);
         if (emailIsExists)
@@ -84,15 +84,36 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
         var user = request.Adapt<ApplicationUser>();
         user.UserName = request.Email;
         user.CompanyId = company.Id;
-
         var result = await _userManager.CreateAsync(user, request.Password);
-
+      
         if (result.Succeeded)
         {
             await SendOtpAsync(user);
             return Result.Success();
         }
 
+        var error = result.Errors.First();
+        return Result.Failure(new Error(error.Code, error.Description, StatusCodes.Status400BadRequest));
+    }
+    public async Task<Result> RegisterAsync(RegisterCustomerRequest request, CancellationToken cancellationToken = default)
+    {
+        var emailIsExits= await _userManager.Users.AnyAsync(x => x.Email == request.Email, cancellationToken);
+        if (emailIsExits)
+            return Result.Failure(UserErrors.DuplicatedEmail);
+        var user = request.Adapt<ApplicationUser>();
+        user.UserName = request.Email;
+        user.CompanyId = request.CompanyId;
+        var result = await _userManager.CreateAsync(user, request.Password);
+        var customer = request.Adapt<Customer>();
+        customer.ApplicationUserId = user.Id;
+        _unitOfWork.Customers.Add(customer);
+        await _unitOfWork.SaveAsync();
+
+        if (result.Succeeded)
+        {
+            await SendOtpAsync(user);
+            return Result.Success();
+        }
         var error = result.Errors.First();
         return Result.Failure(new Error(error.Code, error.Description, StatusCodes.Status400BadRequest));
     }
@@ -302,4 +323,6 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
         var randomNumber = BitConverter.ToUInt32(bytes, 0);
         return (randomNumber % 900000 + 100000).ToString();
     }
+
+  
 }

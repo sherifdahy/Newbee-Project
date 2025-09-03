@@ -5,7 +5,9 @@ namespace Newbee.BLL.Interfaces;
 
 public interface IAuthServices
 {
-    Task<Result> RegisterMerchantAsync(RegisterRequest request, CancellationToken cancellationToken = default);
+    Task<Result> RegisterAsync(RegisterRequest request, CancellationToken cancellationToken = default);
+    Task<Result> RegisterAsync(RegisterCustomerRequest request, CancellationToken cancellationToken = default);
+
     Task<Result> ConfirmEmailAsync(ConfirmEmailRequest request, CancellationToken cancellationToken = default);
     Task<Result<AuthResponse?>> GetTokenAsync(LoginRequest request, CancellationToken cancellationToken = default);
     Task<Result<AuthResponse?>> GetRefreshTokenAsync(string token, string refreshToken, CancellationToken cancellationToken = default);
