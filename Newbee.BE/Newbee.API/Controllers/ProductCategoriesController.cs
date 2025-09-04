@@ -32,7 +32,7 @@ public class ProductCategoriesController(IProductCategoryService productCategory
         return result.IsSuccess ? CreatedAtAction(nameof(Create),result.Value.Id,result.Value) : result.ToProblem();
     }
 
-    [HttpDelete]
+    [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(int id,CancellationToken cancellationToken)
     {
         var result = await _productCategoryService.DeleteAsync(id, cancellationToken);

@@ -1,5 +1,6 @@
 ﻿using Newbee.BLL.DTO.Product.Requests;
 using Newbee.BLL.DTO.Product.Responses;
+using Newbee.Entities;
 
 namespace Newbee.BLL.Services;
 
@@ -7,11 +8,9 @@ public class ProductService(IUnitOfWork unitOfWork) : IProductService
 {
     private readonly IUnitOfWork _unitOfWork = unitOfWork;
 
-    public async Task<Result<ProductResponse>> CreateAsync(int companyId, ProductRequest request, CancellationToken cancellationToken = default)
+    public async Task<Result<ProductResponse>> CreateAsync(ProductRequest request, CancellationToken cancellationToken = default)
     {
         var product = request.Adapt<Product>();
-
-        product.CompanyId = companyId;
 
         await _unitOfWork.Products.AddAsync(product);
         await _unitOfWork.SaveAsync(cancellationToken);
@@ -33,15 +32,12 @@ public class ProductService(IUnitOfWork unitOfWork) : IProductService
 
         return Result.Success(true);
     }
-    public async Task<Result<IEnumerable<ProductResponse>>> GetAllAsync(int companyId, CancellationToken cancellationToken = default)
+    public async Task<Result<IEnumerable<ProductResponse>>> GetAllAsync(int productCategoryId, CancellationToken cancellationToken = default)
     {
-        if (companyId == 0)
+        if (productCategoryId == 0)
             return Result.Failure<IEnumerable<ProductResponse>>(CompanyErrors.InvalidId);
 
-        if (!_unitOfWork.Companies.IsExist(x => x.Id == companyId))
-            return Result.Failure<IEnumerable<ProductResponse>>(CompanyErrors.NotFound);
-        
-        var products = await _unitOfWork.Products.FindAllAsync(x=>x.CompanyId == companyId);
+        var products = await _unitOfWork.Products.FindAllAsync(x=>x.ProductCategoryId == productCategoryId);
 
         return Result.Success(products.Adapt<IEnumerable<ProductResponse>>());
     }

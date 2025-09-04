@@ -18,13 +18,13 @@ public class AuthController(IAuthServices authServices) : BaseController
     [HttpPost("register-company")]
     public async Task<IActionResult> Register([FromBody] RegisterCompanyRequest request,CancellationToken cancellationToken)
     {
-        var result = await _authServices.RegisterAsync(request,cancellationToken);
+        var result = await _authServices.RegisterCompanyAsync(request,cancellationToken);
         return result.IsSuccess ? Ok() : result.ToProblem();
     }
     [HttpPost("register-customer")]
-    public async Task<IActionResult> RegisterCustomer([FromBody] RegisterCustomerRequest request, CancellationToken cancellationToken)
+    public async Task<IActionResult> RegisterCustomer([FromHeader(Name = "X-Api-Key")] Guid apiKey, [FromBody] RegisterCustomerRequest request, CancellationToken cancellationToken)
     {
-        var result = await _authServices.RegisterAsync(request, cancellationToken);
+        var result = await _authServices.RegisterCustomerAsync(request,apiKey, cancellationToken);
         return result.IsSuccess ? Ok() : result.ToProblem();
     }
     [HttpPost("login")]

@@ -10,4 +10,5 @@ public interface IUnitOfWork : IDisposable
     public IRepository<ProductCategory> ProductCategories { get; }
     public IRepository<Platform> Platforms { get; }
     Task<int> SaveAsync(CancellationToken cancellationToken = default);
+    Task<TResult> ExecuteInTransactionAsync<TResult>(Func<Task<TResult>> action);
 }

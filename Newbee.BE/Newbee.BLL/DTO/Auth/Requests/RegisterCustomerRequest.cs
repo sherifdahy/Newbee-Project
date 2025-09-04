@@ -10,9 +10,9 @@ public record RegisterCustomerRequest
 (
     string FirstName,
     string LastName,
+    string SSN,
     string Email,
     string Password,
     string FirstLine,
-    string PhoneNumber,
-    int CompanyId
+    string PhoneNumber
 );

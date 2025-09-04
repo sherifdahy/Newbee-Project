@@ -1,10 +1,4 @@
-﻿using Newbee.BLL.DTO.Platform.Requests;
-using Newbee.BLL.DTO.Platform.Responses;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace Newbee.BLL.Interfaces;
 public interface IPlatformService

@@ -27,12 +27,13 @@ public class MappingConfiguration : IRegister
         //////////////////////////////////////////////////////
 
         config.NewConfig<RegisterCompanyRequest, ApplicationUser>()
-            .Map(destination => destination.Email,source => source.Email)
-            .Map(destination => destination.UserName,source => source.Email)
+            .Map(destination => destination.Email, source => source.Email)
+            .Map(destination => destination.UserName, source => source.Email)
             .Map(destination => destination.Company, source => new Company()
             {
                 Name = source.Name,
                 TaxRegistrationNumber = source.TaxRegistrationNumber,
+                ApiKey = Guid.NewGuid()
             });
 
     }

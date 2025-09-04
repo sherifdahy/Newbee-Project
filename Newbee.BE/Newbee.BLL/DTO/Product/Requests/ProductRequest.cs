@@ -7,5 +7,6 @@ using System.Threading.Tasks;
 namespace Newbee.BLL.DTO.Product.Requests;
 public class ProductRequest
 {
-    public string Name { get; set; }
+    public string Name { get; set; } = string.Empty;
+    public int ProductCategoryId { get; set; }
 }
