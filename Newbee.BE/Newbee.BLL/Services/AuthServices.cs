@@ -213,9 +213,9 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
         var user = await _userManager.FindByEmailAsync(request.Email);
         if (user is null || !user.EmailConfirmed)
             return Result.Failure(UserErrors.InvalidCode);
-
         var otpRecord = await _unitOfWork.OTPs
             .FindAsync(x => x.ApplicationUserId == user.Id && x.Code == request.Code);
+
 
         if (otpRecord == null || otpRecord.ExpiryTime < DateTime.UtcNow)
         {
