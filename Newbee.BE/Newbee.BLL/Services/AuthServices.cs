@@ -66,7 +66,7 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
         return Result.Failure<AuthResponse?>(UserErrors.InvalidCredentials);
     }
 
-    public async Task<Result> RegisterAsync(RegisterCompanyRequest request, CancellationToken cancellationToken = default)
+    public async Task<Result> RegisterCompanyAsync(RegisterCompanyRequest request, CancellationToken cancellationToken = default)
     {
         var emailIsExists = await _userManager.Users.AnyAsync(x => x.Email == request.Email, cancellationToken);
 
@@ -74,42 +74,65 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
             return Result.Failure(UserErrors.DuplicatedEmail);
 
         var applicationUser = request.Adapt<ApplicationUser>();
-        
-        var result = await _userManager.CreateAsync(applicationUser, request.Password);
 
-        if (result.Succeeded)
+        var result = await _unitOfWork.ExecuteInTransactionAsync(async () =>
         {
+            var identityResult = await _userManager.CreateAsync(applicationUser, request.Password);
+
+            if (!identityResult.Succeeded)
+            {
+                var error = identityResult.Errors.First();
+                return Result.Failure(new Error(error.Code, error.Description, StatusCodes.Status400BadRequest));
+            }
+
             await SendOtpAsync(applicationUser);
+
             return Result.Success();
-        }
+        });
 
-        var error = result.Errors.First();
-        return Result.Failure(new Error(error.Code, error.Description, StatusCodes.Status400BadRequest));
+        return result;
     }
-    public async Task<Result> RegisterAsync(RegisterCustomerRequest request, CancellationToken cancellationToken = default)
+    public async Task<Result> RegisterCustomerAsync(RegisterCustomerRequest request,Guid apiKey,CancellationToken cancellationToken = default)
     {
-        var emailIsExits= await _userManager.Users.AnyAsync(x => x.Email == request.Email, cancellationToken);
+        var currentCompany = await _unitOfWork.Companies.FindAsync(x => x.ApiKey == apiKey);
+        if (currentCompany is null)
+            return Result.Failure(CompanyErrors.InvalidId);
 
+        var emailIsExits = await _userManager.Users.AnyAsync(x => x.Email == request.Email, cancellationToken);
         if (emailIsExits)
             return Result.Failure(UserErrors.DuplicatedEmail);
 
-        var user = request.Adapt<ApplicationUser>();
-        user.UserName = request.Email;
-        user.CompanyId = request.CompanyId;
-        var result = await _userManager.CreateAsync(user, request.Password);
-        var customer = request.Adapt<Customer>();
-        customer.ApplicationUserId = user.Id;
-        _unitOfWork.Customers.Add(customer);
-        await _unitOfWork.SaveAsync();
-
-        if (result.Succeeded)
+        var applicationUser = new ApplicationUser
         {
-            await SendOtpAsync(user);
+            UserName = request.Email,
+            Email = request.Email,
+            CompanyId = currentCompany.Id,
+        };
+
+        var result = await _unitOfWork.ExecuteInTransactionAsync<Result>(async () =>
+        {
+            var identityResult = await _userManager.CreateAsync(applicationUser, request.Password);
+            if (!identityResult.Succeeded)
+            {
+                var error = identityResult.Errors.First();
+                return Result.Failure(new Error(error.Code, error.Description, StatusCodes.Status400BadRequest));
+            }
+
+            var customer = request.Adapt<Customer>();
+            customer.CompanyId = currentCompany.Id;
+            customer.ApplicationUserId = applicationUser.Id;
+
+            await _unitOfWork.Customers.AddAsync(customer);
+            await _unitOfWork.SaveAsync();
+
+            await SendOtpAsync(applicationUser);
+
             return Result.Success();
-        }
-        var error = result.Errors.First();
-        return Result.Failure(new Error(error.Code, error.Description, StatusCodes.Status400BadRequest));
+        });
+
+        return result;
     }
+
 
     public async Task<Result> ConfirmEmailAsync(ConfirmEmailRequest request, CancellationToken cancellationToken = default)
     {

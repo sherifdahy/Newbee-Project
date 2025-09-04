@@ -29,4 +29,10 @@
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DTO\Country\Validations\" />
+    <Folder Include="DTO\Country\Requests\" />
+    <Folder Include="DTO\Country\Responses\" />
+  </ItemGroup>
+
 </Project>

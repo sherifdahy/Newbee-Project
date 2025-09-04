@@ -32,7 +32,7 @@ public class PlatformsController(IPlatformService platformService) : BaseControl
         return result.IsSuccess ? CreatedAtAction(nameof(Create), result.Value.Id, result) : result.ToProblem();
     }
 
-    [HttpDelete]
+    [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(int id, CancellationToken cancellationToken)
     {
         var result = await _platformService.DeleteAsync(id, cancellationToken);

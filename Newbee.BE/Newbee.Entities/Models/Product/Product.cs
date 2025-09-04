@@ -10,9 +10,8 @@ public class Product : TrackingBase
     public int Id { get; set; }
     public string Name { get; set; } = string.Empty;
 
-    public int CompanyId { get; set; }
-    public virtual Company Company { get; set; }
-
     public int ProductCategoryId { get; set; }
     public ProductCategory ProductCategory { get; set; }
+
+    public ICollection<ProductUnit> ProductUnits { get; set; } = new HashSet<ProductUnit>();
 }

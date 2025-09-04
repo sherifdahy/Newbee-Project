@@ -6,13 +6,12 @@ public class Customer : TrackingBase
     public string FirstLine { get; set; } = string.Empty;
 
     public int ApplicationUserId { get; set; }
-    public virtual ApplicationUser Application { get; set; }
-
-    public  int DistrictId { get; set; }
-    public virtual District District { get; set; }
+    public virtual ApplicationUser ApplicationUser { get; set; }
 
 
     public int CompanyId { get; set; }
     public Company Company { get; set; }
     public ICollection<Order> Orders { get; set; } = new HashSet<Order>();
+    public ICollection<District> Districts { get; set; } = new HashSet<District>();
+
 }

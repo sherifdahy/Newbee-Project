@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Newbee.BLL.Services;
-public class ProductUnitService : IProductUnitService
+public class SizeService : ISizeService
 {
-    public Task<Result<ProductUnit>> CreateAsync(int companyId, ProductUnit productUnit, CancellationToken cancellationToken = default)
+    public Task<Result<SizeResponse>> CreateAsync(SizeRequest request, CancellationToken cancellationToken = default)
     {
         throw new NotImplementedException();
     }
@@ -17,17 +17,17 @@ public class ProductUnitService : IProductUnitService
         throw new NotImplementedException();
     }
 
-    public Task<Result<IEnumerable<ProductUnit>>> GetAllAsync(int companyId, CancellationToken cancellationToken = default)
+    public Task<Result<IEnumerable<SizeResponse>>> GetAllAsync(CancellationToken cancellationToken = default)
     {
         throw new NotImplementedException();
     }
 
-    public Task<Result<ProductUnit>> GetByIdAsync(int id, CancellationToken cancellationToken = default)
+    public Task<Result<SizeResponse>> GetByIdAsync(int id, CancellationToken cancellationToken = default)
     {
         throw new NotImplementedException();
     }
 
-    public Task<Result<bool>> UpdateAsync(int id, ProductUnit productUnit, CancellationToken cancellationToken = default)
+    public Task<Result<bool>> UpdateAsync(int id, SizeRequest request, CancellationToken cancellationToken = default)
     {
         throw new NotImplementedException();
     }

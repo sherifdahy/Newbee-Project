@@ -9,10 +9,10 @@ public class ProductsController(IProductService productService) :BaseController
 {
     private readonly IProductService _productService = productService;
 
-    [HttpGet("")]
-    public async Task<IActionResult> GetAll(CancellationToken cancellationToken)
+    [HttpGet]
+    public async Task<IActionResult> GetAll(int productCategoryId, CancellationToken cancellationToken)
     {
-        var result = await _productService.GetAllAsync(CompanyId,cancellationToken);
+        var result = await _productService.GetAllAsync(productCategoryId, cancellationToken);
 
         return result.IsSuccess ? Ok(result.Value) : result.ToProblem();
     }
@@ -40,7 +40,7 @@ public class ProductsController(IProductService productService) :BaseController
     [HttpPost]
     public async Task<IActionResult> Create([FromBody] ProductRequest request, CancellationToken cancellationToken)
     {
-        var result = await _productService.CreateAsync(CompanyId,request,cancellationToken);
+        var result = await _productService.CreateAsync(request,cancellationToken);
         return result.IsSuccess ? CreatedAtAction(nameof(GetAll), new { id = result.Value.Id }, result.Value) : result.ToProblem();
     }
 }

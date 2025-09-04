@@ -8,5 +8,9 @@ global using Mapster;
 global using Microsoft.AspNetCore.Http;
 global using Newbee.BLL.Errors;
 global using Newbee.BLL.DTO.ProductCategory.Requests;
-
-
+global using Newbee.BLL.DTO.Color.Requests;
+global using Newbee.BLL.DTO.Color.Responses;
+global using Newbee.BLL.DTO.Platform.Requests;
+global using Newbee.BLL.DTO.Platform.Responses;
+global using Newbee.BLL.DTO.Size.Requests;
+global using Newbee.BLL.DTO.Size.Responses;

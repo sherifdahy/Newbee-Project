@@ -7,6 +7,8 @@ public class CompanyErrors
         = new Error("Company.InvalidId", "Invalid Id.", StatusCodes.Status400BadRequest);
     public static readonly Error DuplicatedTRN =
             new("Company.DuplicatedCompany", "Tax Registration Number is Already Exist.", StatusCodes.Status409Conflict);
+    public static readonly Error InvalidApiKey =
+            new("Company.InvalidApiKey", "ApiKey is Invalid", StatusCodes.Status400BadRequest);
 
 
 }

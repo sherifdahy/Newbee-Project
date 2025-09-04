@@ -3,6 +3,7 @@
 public class Company : TrackingBase
 {
     public int Id { get; set; }
+    public Guid ApiKey { get; set; }
     public string Name { get; set; } = string.Empty;
     public string TaxRegistrationNumber { get; set; } = string.Empty;
 

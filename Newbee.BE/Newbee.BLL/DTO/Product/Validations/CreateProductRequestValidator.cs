@@ -14,6 +14,5 @@ public class CreateProductRequestValidator : AbstractValidator<ProductRequest>
             .Length(3, 100)
             .NotEmpty();
 
-
     }
 }
