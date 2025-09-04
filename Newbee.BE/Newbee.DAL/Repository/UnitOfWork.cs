@@ -15,6 +15,9 @@ public class UnitOfWork : IUnitOfWork
         Products = new Repository<Product>(_context);
         ProductCategories = new Repository<ProductCategory>(_context);
         Platforms = new Repository<Platform>(_context);
+        Countries = new Repository<Country>(_context);
+        Cities = new Repository<City>(_context);
+        Zones = new Repository<Zone>(_context);
     }
     public IRepository<Company> Companies { get; }
     public IRepository<OTP> OTPs { get; } 
@@ -23,6 +26,9 @@ public class UnitOfWork : IUnitOfWork
     public IRepository<Customer> Customers { get; }
     public IRepository<ProductCategory> ProductCategories { get; }
     public IRepository<Platform> Platforms { get; }
+    public IRepository<Country> Countries { get; }
+    public IRepository<City> Cities { get; }
+    public IRepository<Zone> Zones { get; }
     public async Task<TResult> ExecuteInTransactionAsync<TResult>(Func<Task<TResult>> action)
     {
         using var transaction = await _context.Database.BeginTransactionAsync();

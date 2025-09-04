@@ -9,6 +9,9 @@ public interface IUnitOfWork : IDisposable
     public IRepository<Customer> Customers { get; }
     public IRepository<ProductCategory> ProductCategories { get; }
     public IRepository<Platform> Platforms { get; }
+    public IRepository<Country> Countries { get; }
+    public IRepository<City> Cities { get; }
+    public IRepository<Zone> Zones { get; }
     Task<int> SaveAsync(CancellationToken cancellationToken = default);
     Task<TResult> ExecuteInTransactionAsync<TResult>(Func<Task<TResult>> action);
 }
