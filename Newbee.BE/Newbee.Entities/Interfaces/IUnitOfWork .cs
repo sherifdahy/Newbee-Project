@@ -1,4 +1,6 @@
-﻿namespace Newbee.Entities.Interfaces;
+﻿using Newbee.Entities.Models;
+
+namespace Newbee.Entities.Interfaces;
 
 public interface IUnitOfWork : IDisposable
 {

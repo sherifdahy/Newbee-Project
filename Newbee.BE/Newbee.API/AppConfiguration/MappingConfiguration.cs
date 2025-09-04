@@ -1,4 +1,6 @@
-﻿namespace Newbee.API.AppConfiguration;
+﻿using Newbee.Entities.Models;
+
+namespace Newbee.API.AppConfiguration;
 
 public class MappingConfiguration : IRegister
 {
@@ -33,7 +35,7 @@ public class MappingConfiguration : IRegister
             {
                 Name = source.Name,
                 TaxRegistrationNumber = source.TaxRegistrationNumber,
-                ApiKey = Guid.NewGuid()
+                ApiKey = Guid.NewGuid(),
             });
 
     }

@@ -7,6 +7,7 @@ using Newbee.BLL.Authentication;
 using System.Security.Cryptography;
 using Newbee.BLL.DTO.Auth.Requests;
 using Newbee.BLL.DTO.Auth.Responses;
+using Newbee.Entities.Models;
 
 namespace Newbee.BLL.Services;
 
@@ -85,6 +86,7 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
                 return Result.Failure(new Error(error.Code, error.Description, StatusCodes.Status400BadRequest));
             }
 
+
             await SendOtpAsync(applicationUser);
 
             return Result.Success();
@@ -95,6 +97,7 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
     public async Task<Result> RegisterCustomerAsync(RegisterCustomerRequest request,Guid apiKey,CancellationToken cancellationToken = default)
     {
         var currentCompany = await _unitOfWork.Companies.FindAsync(x => x.ApiKey == apiKey);
+
         if (currentCompany is null)
             return Result.Failure(CompanyErrors.InvalidId);
 
@@ -119,7 +122,7 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
             }
 
             var customer = request.Adapt<Customer>();
-            customer.CompanyId = currentCompany.Id;
+
             customer.ApplicationUserId = applicationUser.Id;
 
             await _unitOfWork.Customers.AddAsync(customer);
