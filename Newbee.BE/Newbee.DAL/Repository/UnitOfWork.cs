@@ -1,4 +1,6 @@
-﻿namespace Newbee.DAL.Repository;
+﻿using Newbee.Entities.Models;
+
+namespace Newbee.DAL.Repository;
 
 public class UnitOfWork : IUnitOfWork
 {

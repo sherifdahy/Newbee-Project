@@ -19,10 +19,6 @@ namespace Newbee.Entities.ModelConfigurations
                 .WithOne(x=>x.Company)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            builder
-                .HasMany(x => x.Customers)
-                .WithOne(x => x.Company)
-                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }
