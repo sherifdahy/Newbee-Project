@@ -1,0 +1,2 @@
+1-add the spinner
+2-add the validations
