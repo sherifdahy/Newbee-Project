@@ -32,7 +32,6 @@ public static class DependencyInjection
 
         return services;
     }
-
     private static IServiceCollection AddMapsterConfig(this IServiceCollection services)
     {
         var mappingConfig = TypeAdapterConfig.GlobalSettings;
@@ -40,7 +39,6 @@ public static class DependencyInjection
         services.AddSingleton<IMapper>(new Mapper(mappingConfig));
         return services;
     }
-
     private static IServiceCollection AddBusinessLogicConfig(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddTransient<IUnitOfWork, UnitOfWork>();
