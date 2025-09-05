@@ -48,6 +48,9 @@ public static class DependencyInjection
         services.AddScoped<IPlatformService,PlatformService>();
         services.AddScoped<ICompanyService,CompanyService>();
         services.AddScoped<IProductCategoryService,ProductCategoryService>();
+        services.AddScoped<IZoneServices, ZoneServices>();
+        services.AddScoped<ICountryServices, CountryServices>();
+        services.AddScoped<ICityServices, CityServices>();
         services.AddScoped<EmailBuilder>();
         return services;
     }
