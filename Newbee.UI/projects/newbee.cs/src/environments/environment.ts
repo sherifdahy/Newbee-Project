@@ -1,6 +1,6 @@
 export const environment = {
   production: false,
-  apiBaseUrl: 'http://localhost:5000/api',
+  apiBaseUrl: 'https://newbee.tryasp.net',
   //Test
   protectedEndpoints: [
     '/users',

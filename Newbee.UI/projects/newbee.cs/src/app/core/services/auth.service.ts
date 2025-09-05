@@ -1,22 +1,47 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
-
+import { BehaviorSubject, catchError, Observable, retry, throwError } from 'rxjs';
+import { IRegisterCompanyVm } from '../view-models/register-vm';
+import {environment} from '../../../environments/environment.prod';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { IApiErrorVm } from '../view-models/api-error-response';
+import { IOtpVm } from '../view-models/otp-vm';
 @Injectable()
 export class AuthService {
 
     private isUserLoginObservable:BehaviorSubject<boolean>;
     public apiToken='apiToken';
-    constructor() {
+    private apiUrl:string = environment.apiBaseUrl;
+    constructor(private http:HttpClient) {
       this.isUserLoginObservable=new BehaviorSubject<boolean>(this.isUserLogin);
      }
+private handleError(error: HttpErrorResponse) {
+  let errorMessage = 'An unexpected error occurred, please try again';
+  if (error.error) {
+    const apiError = error.error as IApiErrorVm;
 
-     //Regsiter ?
-     //Login
-     //Logout
-     //gard Will Redirct To Login
-     //An observable To Know To the other if it logged or not
-     //I will Use the Inceptors to attach the token automatically when the req need it
+    if (apiError.errors && apiError.errors.length > 0) {
+      errorMessage = apiError.errors.join(', ');
+    }
+  }
 
+  return throwError(() => new Error(errorMessage));
+}
+     registerCompany(registerVm:IRegisterCompanyVm):Observable<void>{
+       return this.http.post<void>(`${this.apiUrl}/Auth/register-company`,registerVm).pipe(
+          retry(2),
+          catchError(this.handleError)
+        )
+     }
+     confirmEmail(email:string,code:string):Observable<void>{
+        let otp: IOtpVm = {
+          email: email,
+          code: code
+        };
+          return this.http.post<void>(`${this.apiUrl}/Auth/confirm-email`,otp).pipe(
+          retry(2),
+          catchError(this.handleError)
+        )
+     }
      login(userName:string,password:string){
       //For Now Will Be static
       let token:string="123";

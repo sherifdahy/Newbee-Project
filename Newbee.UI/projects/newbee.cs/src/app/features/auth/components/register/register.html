@@ -1,0 +1,104 @@
+<div class="container mt-5">
+  <h1>Register Manger</h1>
+  <form [formGroup]="userRegForm" (ngSubmit)="submit()">
+
+    <!-- Name -->
+    <div class="mb-3">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" formControlName="name" placeholder="Enter Name">
+      </div>
+      <div class="alert alert-warning" [hidden]="name?.valid || name?.untouched">
+        <div *ngIf="name?.errors?.['required']">The Name is required</div>
+      </div>
+    </div>
+
+    <!-- First Name -->
+    <div class="mb-3">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" class="form-control" id="firstName" formControlName="firstName"
+          placeholder="Enter First Name">
+      </div>
+      <div class="alert alert-warning" [hidden]="firstName?.valid || firstName?.untouched">
+        <div *ngIf="firstName?.errors?.['required']">The First Name is required</div>
+      </div>
+    </div>
+
+    <!-- Last Name -->
+    <div class="mb-3">
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" class="form-control" id="lastName" formControlName="lastName" placeholder="Enter Last Name">
+      </div>
+      <div class="alert alert-warning" [hidden]="lastName?.valid || lastName?.untouched">
+        <div *ngIf="lastName?.errors?.['required']">The Last Name is required</div>
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="mb-3">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" formControlName="email" placeholder="Enter Email">
+      </div>
+      <div class="alert alert-warning" [hidden]="email?.valid || email?.untouched">
+        <div *ngIf="email?.errors?.['required']">The Email is required</div>
+        <div *ngIf="email?.errors?.['email']">Invalid Email format</div>
+      </div>
+    </div>
+
+    <!-- SSN -->
+    <div class="mb-3">
+      <div class="form-group">
+        <label for="ssn">SSN</label>
+        <input type="text" class="form-control" id="ssn" formControlName="ssn" placeholder="Enter SSN">
+      </div>
+      <div class="alert alert-warning" [hidden]="ssn?.valid || ssn?.untouched">
+        <div *ngIf="ssn?.errors?.['required']">The SSN is required</div>
+      </div>
+    </div>
+
+    <!-- Password -->
+    <div class="mb-3">
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" formControlName="password"
+          placeholder="Enter Password">
+      </div>
+      <div class="alert alert-warning" [hidden]="password?.valid || password?.untouched">
+        <div *ngIf="password?.errors?.['required']">The Password is required</div>
+        <div *ngIf="password?.errors?.['minlength']">Password must be at least 8 characters</div>
+      </div>
+    </div>
+
+    <!-- Phone Number -->
+    <div class="mb-3">
+      <div class="form-group">
+        <label for="phoneNumber">Phone Number</label>
+        <input type="text" class="form-control" id="phoneNumber" formControlName="phoneNumber"
+          placeholder="Enter Phone Number">
+      </div>
+      <div class="alert alert-warning" [hidden]="phoneNumber?.valid || phoneNumber?.untouched">
+        <div *ngIf="phoneNumber?.errors?.['required']">The Phone Number is required</div>
+        <div *ngIf="phoneNumber?.errors?.['pattern']">Invalid Phone Number</div>
+      </div>
+    </div>
+
+    <!-- Tax Registration Number -->
+    <div class="mb-3">
+      <div class="form-group">
+        <label for="taxRegistrationNumber">Tax Registration Number</label>
+        <input type="text" class="form-control" id="taxRegistrationNumber" formControlName="taxRegistrationNumber"
+          placeholder="Enter Tax Registration Number">
+      </div>
+      <div class="alert alert-warning" [hidden]="taxRegistrationNumber?.valid || taxRegistrationNumber?.untouched">
+        <div *ngIf="taxRegistrationNumber?.errors?.['required']">The Tax Registration Number is required</div>
+      </div>
+    </div>
+
+    <button [disabled]="userRegForm.invalid" type="submit" class="btn btn-primary">Submit</button>
+
+    <span>Have An Account? <a routerLink="/auth/login">Login</a></span>
+  </form>
+</div>

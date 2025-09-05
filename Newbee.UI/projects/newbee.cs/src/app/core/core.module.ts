@@ -10,6 +10,7 @@ import { Footer } from './layout/main-layout/footer/footer'
 import { AppRoutingModule } from "../app-routing-module";
 import { SecondaryLayout } from './layout/secondary-layout/secondary-layout';
 import { SideBar } from './layout/main-layout/side-bar/side-bar';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { SideBar } from './layout/main-layout/side-bar/side-bar';
   ],
   imports: [
     CommonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
 ],
   providers: [
     ApiService,

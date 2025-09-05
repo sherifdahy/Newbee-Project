@@ -26,8 +26,8 @@ const routes: Routes = [
       }
     ]
   },
-  { path: '', redirectTo: 'auth/login', pathMatch: 'full' }, // default
-  { path: '**', redirectTo: 'auth/login' } // not-found redirect
+  { path: '', redirectTo: 'auth/register', pathMatch: 'full' }, // default
+  { path: '**', redirectTo: 'auth/register' } // not-found redirect
 ];
 
 @NgModule({
