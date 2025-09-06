@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Newbee.API.AppConfiguration;
 using Newbee.API.Email;
+using Newbee.BLL.Services;
 using Newbee.BLL.Setting;
 
 namespace Newbee.API;

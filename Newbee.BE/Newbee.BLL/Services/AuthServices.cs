@@ -48,7 +48,7 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
         {
             var (token, expiresIn) = _jwtProvider.GenerateToken(user);
             var refreshToken = GenerateRefreshToken();
-            var refreshTokenExpiry = DateTime.UtcNow.AddDays(_resetRefreshTokenExpiryDays);
+            var refreshTokenExpiry = DateTime.UtcNow.AddMinutes(_resetRefreshTokenExpiryDays) ;
 
             user.RefreshTokens.Add(new RefreshToken
             {
