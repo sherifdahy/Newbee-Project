@@ -13,6 +13,7 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
         builder.Services.AddDependencies(builder.Configuration);
+        builder.Services.AddHttpClient<IPaymobService, PaymobService>();
 
         //Email Service Configuration
         builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
