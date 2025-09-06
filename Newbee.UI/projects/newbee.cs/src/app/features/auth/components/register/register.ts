@@ -20,9 +20,9 @@ export class Register {
       firstName: ['', [Validators.required]],
       lastName: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
-      ssn: ['', [Validators.required]],
-      password: ['', [Validators.required, Validators.minLength(8)]],
-      phoneNumber: ['', [Validators.required]],
+      ssn: ['', [ Validators.required,Validators.pattern(/^\d{14}$/)]],
+      password: ['', [Validators.required, Validators.minLength(8), Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)]],
+      phoneNumber: ['', [Validators.required,Validators.pattern(/^(010|011|012|015)\d{8}$/)]],
       taxRegistrationNumber: ['', [Validators.required]],
     });
   }

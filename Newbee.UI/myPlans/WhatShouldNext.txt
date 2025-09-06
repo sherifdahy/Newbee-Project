@@ -1,2 +1,4 @@
+3-the login and the logic
 1-add the spinner
-2-add the validations
+5-reset password 
+6-ask about when close the otp what next ?

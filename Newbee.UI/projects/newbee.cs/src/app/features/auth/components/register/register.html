@@ -56,6 +56,7 @@
       </div>
       <div class="alert alert-warning" [hidden]="ssn?.valid || ssn?.untouched">
         <div *ngIf="ssn?.errors?.['required']">The SSN is required</div>
+        <div *ngIf="ssn?.errors?.['pattern']">The SSN must be 14 numbers or less</div>
       </div>
     </div>
 
@@ -69,7 +70,10 @@
       <div class="alert alert-warning" [hidden]="password?.valid || password?.untouched">
         <div *ngIf="password?.errors?.['required']">The Password is required</div>
         <div *ngIf="password?.errors?.['minlength']">Password must be at least 8 characters</div>
+      <div *ngIf="password?.errors?.['pattern']">
+          Password must contain at least 1 uppercase letter, 1 lowercase letter, 1 number, and 1 special character
       </div>
+    </div>
     </div>
 
     <!-- Phone Number -->
@@ -81,7 +85,7 @@
       </div>
       <div class="alert alert-warning" [hidden]="phoneNumber?.valid || phoneNumber?.untouched">
         <div *ngIf="phoneNumber?.errors?.['required']">The Phone Number is required</div>
-        <div *ngIf="phoneNumber?.errors?.['pattern']">Invalid Phone Number</div>
+        <div *ngIf="phoneNumber?.errors?.['pattern']">Invalid Egyption Phone Number</div>
       </div>
     </div>
 
