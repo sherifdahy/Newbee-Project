@@ -5,6 +5,8 @@ import {environment} from '../../../environments/environment.prod';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { IApiErrorVm } from '../view-models/api-error-response';
 import { IOtpVm } from '../view-models/otp-vm';
+import { IOtpResendVm } from '../view-models/otp-resend-vm';
+
 @Injectable()
 export class AuthService {
 
@@ -16,6 +18,7 @@ export class AuthService {
      }
 private handleError(error: HttpErrorResponse) {
   let errorMessage = 'An unexpected error occurred, please try again';
+  alert(error.status);
   if (error.error) {
     const apiError = error.error as IApiErrorVm;
 
@@ -38,6 +41,16 @@ private handleError(error: HttpErrorResponse) {
           code: code
         };
           return this.http.post<void>(`${this.apiUrl}/Auth/confirm-email`,otp).pipe(
+          retry(2),
+          catchError(this.handleError)
+        )
+     }
+     reConfirmEmail(email:string):Observable<void>{
+      alert(email);
+      let otp:IOtpResendVm={
+        email:email,
+      }
+        return this.http.post<void>(`${this.apiUrl}/Auth/resend-confirmation-email`,otp).pipe(
           retry(2),
           catchError(this.handleError)
         )

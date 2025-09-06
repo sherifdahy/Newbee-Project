@@ -17,7 +17,7 @@ export class Otp implements OnInit{
   email:string="";
   constructor(private toast:ToastService,private fb:FormBuilder,private activeRouter:ActivatedRoute,private router:Router,private auth:AuthService){
     this.otpFrom=fb.group({
-      code:['',Validators.required]
+      code: ['', [Validators.required,Validators.minLength(6),Validators.maxLength(6)]]
     })
   }
   ngOnInit(): void {
@@ -27,6 +27,7 @@ export class Otp implements OnInit{
     })
   }
 
+get code() { return this.otpFrom.get('code'); }
 
 submit() {
   this.auth.confirmEmail(this.email, this.code?.value).subscribe(
@@ -39,6 +40,16 @@ submit() {
     }
   );
 }
-  get code() { return this.otpFrom.get('code'); }
+
+resendOtp(){
+    this.auth.reConfirmEmail(this.email).subscribe(
+    () => {
+      this.toast.success("Correct Code");
+    },
+    (error: any) => {
+      this.toast.error(error);
+    }
+  );
+}
 
 }

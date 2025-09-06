@@ -8,9 +8,12 @@
     </div>
     <div class="alert alert-warning" [hidden]="code?.valid || code?.untouched">
       <div *ngIf="code?.errors?.['required']">The Code Is required</div>
+      <div *ngIf="code?.errors?.['maxlength']">The Code maxlength must be 6</div>
+      <div *ngIf="code?.errors?.['minlength']">The Code maxlength must be 6</div>
     </div>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" [disabled]="otpFrom.invalid" class="btn btn-primary">Submit</button>
+  <span>Have not recive Any message? <a style="cursor: pointer;" (click)="resendOtp()">resend otp</a></span>
 </form>
 </div>
 
