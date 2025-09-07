@@ -1,3 +1,31 @@
-<p>login works!</p>
+<div class="container mt-5">
+  <h1>Login</h1>
+  <form [formGroup]="userLoginForm" (ngSubmit)="submit()">
 
-<button (click)="test()">Clickdddddddddddddddd</button>
+
+    <!-- Email -->
+    <div class="mb-3">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" formControlName="email" placeholder="Enter Email">
+      </div>
+      <div class="alert alert-warning" [hidden]="email?.valid || email?.untouched">
+        <div *ngIf="email?.errors?.['required']">The Email is required</div>
+      </div>
+    </div>
+
+
+    <!-- Password -->
+    <div class="mb-3">
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" formControlName="password"
+          placeholder="Enter Password">
+      </div>
+      <div class="alert alert-warning" [hidden]="password?.valid || password?.untouched">
+        <div *ngIf="password?.errors?.['required']">The Password is required</div>
+      </div>
+    </div>
+    <button [disabled]="userLoginForm.invalid" type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

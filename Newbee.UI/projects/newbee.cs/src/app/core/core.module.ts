@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 //here import services & incepteros & guards
 import { ApiService } from './services/api.service'
 import { AuthService } from './services/auth.service';
+import { LocalStorgeService } from './services/local-storge.service';
 import { MainLayout } from './layout/main-layout/main-layout';
 import { Header } from './layout/main-layout/header/header';
 import { Footer } from './layout/main-layout/footer/footer'
@@ -28,7 +29,8 @@ import { HttpClientModule } from '@angular/common/http';
 ],
   providers: [
     ApiService,
-    AuthService
+    AuthService,
+    LocalStorgeService
   ]
 })
 export class CoreModule {

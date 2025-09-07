@@ -1,4 +1,11 @@
-3-the login and the logic
 1-add the spinner
 5-reset password 
 6-ask about when close the otp what next ?
+
+
+logout 
+gard & inceptors 
+change the names in the service
+make the ui depend on the observable 
+store the user
+complete the login and check again on it 
