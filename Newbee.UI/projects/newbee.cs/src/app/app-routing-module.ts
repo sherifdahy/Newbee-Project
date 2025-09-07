@@ -16,13 +16,13 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'cart',
+    path: 'home',
     component: MainLayout,
     children: [
       {
         path: '',
         loadChildren: () =>
-          import('./features/cart/cart-module').then(m => m.CartModule)
+          import('./features/home/home-module').then(m => m.HomeModule)
       }
     ]
   },
