@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import {
   BehaviorSubject,
   catchError,
+  map,
   Observable,
-  retry,
   tap,
   throwError,
 } from 'rxjs';
@@ -19,6 +19,7 @@ import { ILoginResponse } from '../view-models/login-response-vm';
 import { ITokenStoreVm } from '../view-models/token-store-vm';
 import { IRefreshTokenStoreVm } from '../view-models/refresh-token-store-vm';
 import { AuthStatus } from '../enums/authstatus.enum';
+import { IRefreshRequestVm } from '../view-models/refresh-request-vm';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
@@ -56,7 +57,7 @@ export class AuthService {
   registerCompany(registerVm: IRegisterCompanyVm): Observable<void> {
     return this.http
       .post<void>(`${this.apiUrl}/Auth/register-company`, registerVm)
-      .pipe(retry(2), catchError(this.handleError));
+      .pipe(catchError(this.handleError));
   }
 
   confirmEmail(email: string, code: string): Observable<void> {
@@ -66,7 +67,7 @@ export class AuthService {
     };
     return this.http
       .post<void>(`${this.apiUrl}/Auth/confirm-email`, otp)
-      .pipe(retry(2), catchError(this.handleError));
+      .pipe(catchError(this.handleError));
   }
 
   reConfirmEmail(email: string): Observable<void> {
@@ -75,28 +76,16 @@ export class AuthService {
     };
     return this.http
       .post<void>(`${this.apiUrl}/Auth/resend-confirmation-email`, otp)
-      .pipe(retry(2), catchError(this.handleError));
+      .pipe(catchError(this.handleError));
   }
 
   login(user: ILoginVm): Observable<ILoginResponse> {
     return this.http
       .post<ILoginResponse>(`${this.apiUrl}/Auth/login`, user)
       .pipe(
-        retry(2),
         tap((res) => {
-          let token: ITokenStoreVm = {
-            token: res.token,
-            expiresInSeconds: res.expiresIn,
-            createdAt: new Date().toISOString(),
-          };
-          let refreshToken: IRefreshTokenStoreVm = {
-            refreshToken: res.refreshToken,
-            expiresAt: res.refreshTokenExpiration,
-            createdAt: new Date().toISOString(),
-          };
-          this.localStorage.setItem<ITokenStoreVm>(this.apiToken, token);
-          this.localStorage.setItem(this.apiRefreshToken, refreshToken);
-          this.isUserLoginObservable.next(AuthStatus.Valid);
+          this.saveNewTokens(res);
+          this.isUserLoginObservable.next(AuthStatus.valid);
         }),
         catchError(this.handleError)
       );
@@ -105,7 +94,7 @@ export class AuthService {
   logout() {
     this.localStorage.removeItem(this.apiToken);
     this.localStorage.removeItem(this.apiRefreshToken);
-    this.isUserLoginObservable.next(AuthStatus.RefreshExpired);
+    this.isUserLoginObservable.next(AuthStatus.refreshTokenExpired);
   }
 
   get authStatus(): AuthStatus {
@@ -114,7 +103,7 @@ export class AuthService {
       this.apiRefreshToken
     );
 
-    if (!token || !refreshToken) return AuthStatus.RefreshExpired;
+    if (!token || !refreshToken) return AuthStatus.emptyTokens;
 
     const now = Date.now();
     const tokenCreated = new Date(token.createdAt).getTime();
@@ -125,17 +114,66 @@ export class AuthService {
     const isRefreshExpired = now > refreshExpireAt;
 
     if (isRefreshExpired) {
-      return AuthStatus.RefreshExpired;
+      return AuthStatus.refreshTokenExpired;
     }
 
     if (isAccessExpired) {
-      return AuthStatus.AccessExpired;
+      return AuthStatus.tokenExpired;
     }
 
-    return AuthStatus.Valid;
+    return AuthStatus.valid;
   }
 
   isUserLoginAsObservable() {
     return this.isUserLoginObservable.asObservable();
+  }
+
+  getTokenFromLocal(): ITokenStoreVm | null {
+    return this.localStorage.getItem<ITokenStoreVm>(this.apiToken);
+  }
+
+  getRefreshTokenFromLocal(): IRefreshTokenStoreVm | null {
+    return this.localStorage.getItem<IRefreshTokenStoreVm>(
+      this.apiRefreshToken
+    );
+  }
+  refreshToken(): Observable<ILoginResponse> {
+    const refreshRequest: IRefreshRequestVm = {
+      token: this.getTokenFromLocal()?.token ?? '',
+      refreshToken: this.getRefreshTokenFromLocal()?.refreshToken ?? '',
+    };
+
+    return this.http
+      .post<ILoginResponse>(`${this.apiUrl}/Auth/refresh`, refreshRequest)
+      .pipe(
+        catchError(this.handleError),
+        tap((res) => {
+          this.saveNewTokens(res);
+          this.isUserLoginObservable.next(AuthStatus.valid);
+        })
+      );
+  }
+
+  private saveNewTokens(res: ILoginResponse) {
+    alert('Save Tokens');
+    const token: ITokenStoreVm = {
+      token: res.token,
+      expiresInSeconds: res.expiresIn,
+      createdAt: new Date().toISOString(),
+    };
+
+    const refreshToken: IRefreshTokenStoreVm = {
+      refreshToken: res.refreshToken,
+      expiresAt: res.refreshTokenExpiration,
+      createdAt: new Date().toISOString(),
+    };
+    console.log(token);
+    console.log(refreshToken);
+
+    this.localStorage.setItem<ITokenStoreVm>(this.apiToken, token);
+    this.localStorage.setItem<IRefreshTokenStoreVm>(
+      this.apiRefreshToken,
+      refreshToken
+    );
   }
 }

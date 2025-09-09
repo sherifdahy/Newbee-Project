@@ -1,5 +1,6 @@
 export enum AuthStatus {
-  Valid,          // التوكن لسه شغال
-  AccessExpired,  // محتاج تجديد Access Token
-  RefreshExpired  // لازم Login جديد
+  emptyTokens,
+  valid, // التوكن لسه شغال
+  tokenExpired, // محتاج تجديد Access Token
+  refreshTokenExpired, // لازم Login جديد
 }

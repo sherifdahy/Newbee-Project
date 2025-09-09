@@ -3,11 +3,15 @@
 6-ask about when close the otp what next ?
 
 
-logout 
-gard & inceptors 
-change the names in the service
+
+
+Watch Out the login and the logout still navigate hard coded
+make a new test again and check the code again
+reset the validations and make them one  
+then make a guard and then complete 
+
+
+
 make the ui depend on the observable 
 store the user
-complete the login and check again on it 
 
-reset the validations and make them one 
