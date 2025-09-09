@@ -52,6 +52,7 @@ public static class DependencyInjection
         services.AddScoped<ICountryServices, CountryServices>();
         services.AddScoped<ICityServices, CityServices>();
         services.AddScoped<EmailBuilder>();
+        services.AddScoped<IUserService, UserService>();
         return services;
     }
     private static IServiceCollection AddSwaggerConfig(this IServiceCollection services)
