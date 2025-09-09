@@ -195,7 +195,20 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
 
         return Result.Success<AuthResponse?>(response);
     }
-
+    public async  Task<bool> RevokedRefreshTokenAsync(string token, string refreshToken, CancellationToken cancellationToken = default)
+    {
+        var userId = _jwtProvider.ValidateToken(token);
+        if (userId == null)
+            return false;
+        var user = await _userManager.FindByIdAsync(userId);
+        if (user == null)
+            return false;
+        var userRefreshToken = user.RefreshTokens.SingleOrDefault(rt => rt.Token == refreshToken && rt.IsActive);
+        if (userRefreshToken == null)
+            return false;
+        userRefreshToken.RevokedOn = DateTime.UtcNow;
+        return true;
+    }
     public async Task<Result> ResendConfirmationEmailAsync(string email, CancellationToken cancellationToken = default)
     {
         if (await _userManager.FindByEmailAsync(email) is not { } user)
