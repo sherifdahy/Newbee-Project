@@ -4,6 +4,10 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+<<<<<<< HEAD
+=======
+    <UserSecretsId>2b29fb6e-4842-4471-b801-e3bed8f84f20</UserSecretsId>
+>>>>>>> d8396f1e8a19c352a3f4ce797f9913b100ef5c2b
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,12 +20,21 @@
   </ItemGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
+=======
+    <Compile Include="Controllers\AccountController.cs" />
+>>>>>>> d8396f1e8a19c352a3f4ce797f9913b100ef5c2b
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CitiesController.cs" />
     <Compile Include="Controllers\CompaniesController.cs" />
     <Compile Include="Controllers\CountriesController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="Controllers\PaymentController .cs" />
+    <Compile Include="Controllers\PaymentsController.cs" />
+>>>>>>> d8396f1e8a19c352a3f4ce797f9913b100ef5c2b
     <Compile Include="Controllers\PlatformsController.cs" />
     <Compile Include="Controllers\ProductCategoriesController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />

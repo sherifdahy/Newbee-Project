@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿{
   "$schema": "http://json.schemastore.org/launchsettings.json",
   "iisSettings": {
@@ -39,3 +40,17 @@
     }
   }
 }
+=======
+{
+  "profiles": {
+    "Newbee.API": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:54251;http://localhost:54252"
+    }
+  }
+}
+>>>>>>> d8396f1e8a19c352a3f4ce797f9913b100ef5c2b

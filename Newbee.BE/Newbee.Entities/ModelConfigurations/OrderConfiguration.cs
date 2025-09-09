@@ -9,5 +9,9 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
             .WithMany(c => c.Orders)
             .HasForeignKey(o => o.CustomerId)
             .OnDelete(DeleteBehavior.Restrict);
+<<<<<<< HEAD
+=======
+        builder.Property(e => e.PaymobOrderId).HasMaxLength(150);
+>>>>>>> d8396f1e8a19c352a3f4ce797f9913b100ef5c2b
     }
 }

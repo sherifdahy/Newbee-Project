@@ -48,7 +48,11 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
         {
             var (token, expiresIn) = _jwtProvider.GenerateToken(user);
             var refreshToken = GenerateRefreshToken();
+<<<<<<< HEAD
             var refreshTokenExpiry = DateTime.UtcNow.AddDays(_resetRefreshTokenExpiryDays);
+=======
+            var refreshTokenExpiry = DateTime.UtcNow.AddMinutes(_resetRefreshTokenExpiryDays) ;
+>>>>>>> d8396f1e8a19c352a3f4ce797f9913b100ef5c2b
 
             user.RefreshTokens.Add(new RefreshToken
             {
@@ -195,7 +199,24 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
 
         return Result.Success<AuthResponse?>(response);
     }
+<<<<<<< HEAD
 
+=======
+    public async  Task<bool> RevokedRefreshTokenAsync(string token, string refreshToken, CancellationToken cancellationToken = default)
+    {
+        var userId = _jwtProvider.ValidateToken(token);
+        if (userId == null)
+            return false;
+        var user = await _userManager.FindByIdAsync(userId);
+        if (user == null)
+            return false;
+        var userRefreshToken = user.RefreshTokens.SingleOrDefault(rt => rt.Token == refreshToken && rt.IsActive);
+        if (userRefreshToken == null)
+            return false;
+        userRefreshToken.RevokedOn = DateTime.UtcNow;
+        return true;
+    }
+>>>>>>> d8396f1e8a19c352a3f4ce797f9913b100ef5c2b
     public async Task<Result> ResendConfirmationEmailAsync(string email, CancellationToken cancellationToken = default)
     {
         if (await _userManager.FindByEmailAsync(email) is not { } user)
@@ -213,10 +234,17 @@ public class AuthServices(IUnitOfWork unitOfWork, SignInManager<ApplicationUser>
         var user = await _userManager.FindByEmailAsync(request.Email);
         if (user is null || !user.EmailConfirmed)
             return Result.Failure(UserErrors.InvalidCode);
+<<<<<<< HEAD
 
         var otpRecord = await _unitOfWork.OTPs
             .FindAsync(x => x.ApplicationUserId == user.Id && x.Code == request.Code);
 
+=======
+        var otpRecord = await _unitOfWork.OTPs
+            .FindAsync(x => x.ApplicationUserId == user.Id && x.Code == request.Code);
+
+
+>>>>>>> d8396f1e8a19c352a3f4ce797f9913b100ef5c2b
         if (otpRecord == null || otpRecord.ExpiryTime < DateTime.UtcNow)
         {
             if (otpRecord != null)

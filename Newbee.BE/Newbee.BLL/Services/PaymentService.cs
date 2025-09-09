@@ -177,3 +177,7 @@ namespace Newbee.BLL.Services
         }
     }
 }
+<<<<<<< HEAD
+=======
+﻿
+>>>>>>> d8396f1e8a19c352a3f4ce797f9913b100ef5c2b

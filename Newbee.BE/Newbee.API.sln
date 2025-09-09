@@ -11,6 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Newbee.DAL", "Newbee.DAL\Ne
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Newbee.Entities", "Newbee.Entities\Newbee.Entities.csproj", "{0A9A51D4-29E5-31A2-108B-7FB14477CD79}"
 EndProject
+<<<<<<< HEAD
+=======
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Paymob.API", "Paymob.API\Paymob.API.csproj", "{E4EC2C2A-9005-0130-8C98-E8A5F06C1248}"
+EndProject
+>>>>>>> d8396f1e8a19c352a3f4ce797f9913b100ef5c2b
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +38,13 @@ Global
 		{0A9A51D4-29E5-31A2-108B-7FB14477CD79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A9A51D4-29E5-31A2-108B-7FB14477CD79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A9A51D4-29E5-31A2-108B-7FB14477CD79}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
+=======
+		{E4EC2C2A-9005-0130-8C98-E8A5F06C1248}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4EC2C2A-9005-0130-8C98-E8A5F06C1248}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4EC2C2A-9005-0130-8C98-E8A5F06C1248}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4EC2C2A-9005-0130-8C98-E8A5F06C1248}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> d8396f1e8a19c352a3f4ce797f9913b100ef5c2b
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

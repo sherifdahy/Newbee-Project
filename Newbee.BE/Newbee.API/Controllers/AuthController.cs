@@ -46,6 +46,16 @@ public class AuthController(IAuthServices authServices) : BaseController
 
         return authResult.IsSuccess ? Ok(authResult.Value) : authResult.ToProblem();
     }
+<<<<<<< HEAD
+=======
+    [HttpPost("revoked-refresh")]
+    public async Task<IActionResult> RevokedRefresh([FromBody] RefreshTokenRequest request, CancellationToken cancellationToken)
+    {
+        var authResult = await _authServices.RevokedRefreshTokenAsync(request.Token, request.RefreshToken, cancellationToken);
+
+        return authResult ? Ok() : BadRequest();
+    }
+>>>>>>> d8396f1e8a19c352a3f4ce797f9913b100ef5c2b
 
 
 

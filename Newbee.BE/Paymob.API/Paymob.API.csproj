@@ -7,9 +7,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
     <Folder Include="DTOs\" />
     <Folder Include="Manager\" />
     <Folder Include="Services\" />
+=======
+    <Compile Remove="DTOs\**" />
+    <Compile Remove="Manager\**" />
+    <EmbeddedResource Remove="DTOs\**" />
+    <EmbeddedResource Remove="Manager\**" />
+    <None Remove="DTOs\**" />
+    <None Remove="Manager\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Newbee.API\Newbee.API.csproj" />
+    <ProjectReference Include="..\Newbee.Entities\Newbee.Entities.csproj" />
+>>>>>>> d8396f1e8a19c352a3f4ce797f9913b100ef5c2b
   </ItemGroup>
 
 </Project>

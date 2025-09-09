@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Newbee.DAL.Data;
 
@@ -11,9 +12,11 @@ using Newbee.DAL.Data;
 namespace Newbee.DAL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250905153215_AddPaymob")]
+    partial class AddPaymob
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -465,8 +468,6 @@ namespace Newbee.DAL.Migrations
                     b.ToTable("Payments");
                 });
 
-<<<<<<< HEAD
-=======
             modelBuilder.Entity("Newbee.Entities.Models.Transaction", b =>
                 {
                     b.Property<int>("Id")
@@ -506,7 +507,6 @@ namespace Newbee.DAL.Migrations
                     b.ToTable("Transactions");
                 });
 
->>>>>>> d8396f1e8a19c352a3f4ce797f9913b100ef5c2b
             modelBuilder.Entity("Newbee.Entities.Models.Unit.Unit", b =>
                 {
                     b.Property<int>("Id")
@@ -574,14 +574,11 @@ namespace Newbee.DAL.Migrations
                     b.Property<int>("CustomerId")
                         .HasColumnType("int");
 
-<<<<<<< HEAD
-=======
                     b.Property<string>("PaymobOrderId")
                         .IsRequired()
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
 
->>>>>>> d8396f1e8a19c352a3f4ce797f9913b100ef5c2b
                     b.Property<byte>("State")
                         .HasColumnType("tinyint");
 
@@ -1105,8 +1102,6 @@ namespace Newbee.DAL.Migrations
                     b.Navigation("Order");
                 });
 
-<<<<<<< HEAD
-=======
             modelBuilder.Entity("Newbee.Entities.Models.Transaction", b =>
                 {
                     b.HasOne("Newbee.Entities.Order", "Order")
@@ -1118,7 +1113,6 @@ namespace Newbee.DAL.Migrations
                     b.Navigation("Order");
                 });
 
->>>>>>> d8396f1e8a19c352a3f4ce797f9913b100ef5c2b
             modelBuilder.Entity("Newbee.Entities.OTP", b =>
                 {
                     b.HasOne("Newbee.Entities.ApplicationUser", "User")

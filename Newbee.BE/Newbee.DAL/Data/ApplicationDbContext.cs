@@ -36,6 +36,10 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser,IdentityRo
     public virtual DbSet<Zone> Zones { get; set; }
     public virtual DbSet<City> Cities { get; set; }
     public virtual DbSet<Country> Countries { get; set; }
+<<<<<<< HEAD
+=======
+    public DbSet<Transaction> Transactions { get; set; }
+>>>>>>> d8396f1e8a19c352a3f4ce797f9913b100ef5c2b
     #endregion
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
