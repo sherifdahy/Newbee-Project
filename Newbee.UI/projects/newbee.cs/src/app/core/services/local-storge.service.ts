@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class LocalStorgeService {
-
-constructor() { }
+  constructor() {}
 
   // Save item (generic type)
   setItem<T>(key: string, value: T): void {

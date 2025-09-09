@@ -4,12 +4,12 @@ import { AuthService } from '../services/auth.service';
 
 export const authGuard: CanActivateFn = (route, state) => {
   const authService = inject(AuthService);
-  const router=inject(Router);
-  if(authService.isUserLogin==true)
-    return true;
-  else{
-    //I will Add The Login Component At Futrue
-    router.navigate([""]);
-  return false;
-  }
+  const router = inject(Router);
+  // if (authService.isUserLogin == true) return true;
+  // else {
+  //   //I will Add The Login Component At Futrue
+  //   router.navigate(['']);
+  //   return false;
+  // }
+  return true;
 };

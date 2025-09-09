@@ -20,12 +20,13 @@ import { ITokenStoreVm } from '../view-models/token-store-vm';
 import { IRefreshTokenStoreVm } from '../view-models/refresh-token-store-vm';
 import { AuthStatus } from '../enums/authstatus.enum';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class AuthService {
   private isUserLoginObservable: BehaviorSubject<AuthStatus>;
   public apiToken = 'token';
   public apiRefreshToken = 'refreshToken';
   private apiUrl: string = environment.apiBaseUrl;
+
   constructor(
     private http: HttpClient,
     private localStorage: LocalStorgeService
@@ -34,23 +35,30 @@ export class AuthService {
       this.authStatus
     );
   }
-  private handleError(error: HttpErrorResponse) {
-    let errorMessage = 'An unexpected error occurred, please try again';
-    alert(error.status);
-    if (error.error) {
-      const apiError = error.error as IApiErrorVm;
 
-      if (apiError.errors && apiError.errors.length > 0) {
-        errorMessage = apiError.errors.join(', ');
-      }
+  private handleError(error: HttpErrorResponse) {
+    if (error.error && error.error.errors) {
+      // رجع الـ IApiErrorVm زي ما هو
+      return throwError(() => error.error as IApiErrorVm);
     }
-    return throwError(() => new Error(errorMessage));
+
+    // في حالة errors تانية (500, network, إلخ)
+    return throwError(
+      () =>
+        ({
+          title: 'An unexpected error occurred, please try again',
+          status: error.status,
+          errors: {},
+        } as IApiErrorVm)
+    );
   }
+
   registerCompany(registerVm: IRegisterCompanyVm): Observable<void> {
     return this.http
       .post<void>(`${this.apiUrl}/Auth/register-company`, registerVm)
       .pipe(retry(2), catchError(this.handleError));
   }
+
   confirmEmail(email: string, code: string): Observable<void> {
     let otp: IOtpVm = {
       email: email,
@@ -60,6 +68,7 @@ export class AuthService {
       .post<void>(`${this.apiUrl}/Auth/confirm-email`, otp)
       .pipe(retry(2), catchError(this.handleError));
   }
+
   reConfirmEmail(email: string): Observable<void> {
     let otp: IOtpResendVm = {
       email: email,
@@ -68,6 +77,7 @@ export class AuthService {
       .post<void>(`${this.apiUrl}/Auth/resend-confirmation-email`, otp)
       .pipe(retry(2), catchError(this.handleError));
   }
+
   login(user: ILoginVm): Observable<ILoginResponse> {
     return this.http
       .post<ILoginResponse>(`${this.apiUrl}/Auth/login`, user)
@@ -124,7 +134,8 @@ export class AuthService {
 
     return AuthStatus.Valid;
   }
-isUserLoginAsObservable() {
+
+  isUserLoginAsObservable() {
     return this.isUserLoginObservable.asObservable();
   }
 }

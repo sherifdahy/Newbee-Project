@@ -9,3 +9,5 @@ change the names in the service
 make the ui depend on the observable 
 store the user
 complete the login and check again on it 
+
+reset the validations and make them one 
