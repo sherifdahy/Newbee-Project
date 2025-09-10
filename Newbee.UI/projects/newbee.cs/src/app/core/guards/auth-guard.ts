@@ -1,15 +1,17 @@
 import { CanActivateFn, Router } from '@angular/router';
 import { inject } from '@angular/core';
-import { AuthService } from '../services/auth.service';
+import { AuthService } from '../services/auth/auth.service';
+import { AuthStatus } from '../enums/authstatus.enum';
 
 export const authGuard: CanActivateFn = (route, state) => {
   const authService = inject(AuthService);
   const router = inject(Router);
-  // if (authService.isUserLogin == true) return true;
-  // else {
-  //   //I will Add The Login Component At Futrue
-  //   router.navigate(['']);
-  //   return false;
-  // }
+  if (
+    authService.authStatus === AuthStatus.refreshTokenExpired ||
+    authService.authStatus === AuthStatus.emptyTokens
+  ) {
+    router.navigate(['/auth/login']);
+    return false;
+  }
   return true;
 };

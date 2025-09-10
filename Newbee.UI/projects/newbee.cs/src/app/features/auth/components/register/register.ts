@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { IRegisterCompanyVm } from '../../../../core/view-models/register-vm';
-import { AuthService } from '../../../../core/services/auth.service';
+import { IRegisterCompanyVm } from '../../../../core/view-models/responses/register-vm';
+import { AuthService } from '../../../../core/services/auth/auth.service';
 import { ToastService } from '../../../../shared/services/toast.service';
 import { Router } from '@angular/router';
-import { ErrorMapperService } from '../../../../core/services/errormapper.service';
-import { IApiErrorVm } from '../../../../core/view-models/api-error-response';
+import { ErrorMapperService } from '../../../../core/services/error-mapper/errormapper.service';
+import { IApiErrorVm } from '../../../../core/view-models/responses/api-error-response';
 
 @Component({
   selector: 'app-register',
@@ -24,32 +24,63 @@ export class Register {
     private errorMapper: ErrorMapperService
   ) {
     this.userRegForm = fb.group({
-      name: ['', [Validators.required]],
-      firstName: ['', [Validators.required]],
-      lastName: ['', [Validators.required]],
+      firstName: [
+        '',
+        [
+          Validators.required,
+          Validators.minLength(3),
+          Validators.maxLength(100),
+        ],
+      ],
+      lastName: [
+        '',
+        [
+          Validators.required,
+          Validators.minLength(3),
+          Validators.maxLength(100),
+        ],
+      ],
       email: ['', [Validators.required, Validators.email]],
-      ssn: ['', [Validators.required, Validators.pattern(/^\d{14}$/)]],
       password: [
         '',
         [
           Validators.required,
-          Validators.minLength(8),
           Validators.pattern(
-            /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
+            /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()\-=+{};:,<.>]).{8,}$/
           ),
+        ],
+      ],
+      ssn: [
+        '',
+        [
+          Validators.required,
+          Validators.minLength(10),
+          Validators.maxLength(20),
+        ],
+      ],
+      name: [
+        '',
+        [
+          Validators.required,
+          Validators.minLength(3),
+          Validators.maxLength(200),
         ],
       ],
       phoneNumber: [
         '',
-        [Validators.required, Validators.pattern(/^(010|011|012|015)\d{8}$/)],
+        [Validators.required, Validators.pattern(/^\d{10,15}$/)],
       ],
-      taxRegistrationNumber: ['', [Validators.required]],
+      taxRegistrationNumber: [
+        '',
+        [
+          Validators.required,
+          Validators.minLength(10),
+          Validators.maxLength(25),
+        ],
+      ],
     });
   }
 
-  get name() {
-    return this.userRegForm.get('name');
-  }
   get firstName() {
     return this.userRegForm.get('firstName');
   }
@@ -59,11 +90,14 @@ export class Register {
   get email() {
     return this.userRegForm.get('email');
   }
+  get password() {
+    return this.userRegForm.get('password');
+  }
   get ssn() {
     return this.userRegForm.get('ssn');
   }
-  get password() {
-    return this.userRegForm.get('password');
+  get name() {
+    return this.userRegForm.get('name');
   }
   get phoneNumber() {
     return this.userRegForm.get('phoneNumber');
@@ -75,16 +109,6 @@ export class Register {
   submit() {
     let register: IRegisterCompanyVm = this.userRegForm
       .value as IRegisterCompanyVm;
-
-    // this.auth.registerCompany(register).subscribe(
-    //   () => {
-    //     this.toast.success('Data Added Successfully');
-    //     this.router.navigate(['/auth/otp', register.email]);
-    //   },
-    //   (error) => {
-    //     this.toast.error(error);
-    //   }
-    // );
 
     this.auth.registerCompany(register).subscribe({
       next: () => {

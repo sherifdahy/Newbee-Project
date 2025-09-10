@@ -2,9 +2,9 @@ import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 //here import services & incepteros & guards
-import { ApiService } from './services/api.service';
-import { AuthService } from './services/auth.service';
-import { LocalStorgeService } from './services/local-storge.service';
+import { ApiService } from './services/api/api.service';
+import { AuthService } from './services/auth/auth.service';
+import { LocalStorgeService } from './services/local-storge/local-storge.service';
 import { MainLayout } from './layout/main-layout/main-layout';
 import { Header } from './layout/main-layout/header/header';
 import { Footer } from './layout/main-layout/footer/footer';
@@ -28,11 +28,4 @@ import { AuthInterceptor } from './interceptors/auth-interceptor';
     LocalStorgeService,
   ],
 })
-export class CoreModule {
-  //To Import the
-  // constructor(@Optional() @SkipSelf() parentModule: CoreModule) {
-  //   if (parentModule) {
-  //     throw new Error('CoreModule is already loaded. Import it in the AppModule only.');
-  //   }
-  // }
-}
+export class CoreModule {}

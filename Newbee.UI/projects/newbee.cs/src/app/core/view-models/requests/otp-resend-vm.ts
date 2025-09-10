@@ -1,3 +1,3 @@
 export interface IOtpResendVm {
-  email:string,
+  email: string;
 }

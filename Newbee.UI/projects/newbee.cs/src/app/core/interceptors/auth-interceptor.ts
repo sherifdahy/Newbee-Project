@@ -6,9 +6,8 @@ import {
   HttpInterceptorFn,
   HttpRequest,
 } from '@angular/common/http';
-import { inject, Injectable } from '@angular/core';
-import { AuthService } from '../services/auth.service';
-import { environment } from '../../../environments/environment';
+import { Injectable } from '@angular/core';
+import { AuthService } from '../services/auth/auth.service';
 import { Router } from '@angular/router';
 import { Observable, throwError, catchError, switchMap } from 'rxjs';
 import { AuthStatus } from '../enums/authstatus.enum';
@@ -24,7 +23,6 @@ export class AuthInterceptor implements HttpInterceptor {
     const status = this.authService.authStatus;
 
     if (status === AuthStatus.emptyTokens) {
-      alert('Start');
       return next.handle(req);
     }
 
@@ -34,8 +32,6 @@ export class AuthInterceptor implements HttpInterceptor {
     // لو الـ Refresh Token منتهي → لازم يعمل Logout و يرجع على صفحة الـ Login
     if (status === AuthStatus.refreshTokenExpired) {
       this.authService.logout();
-      console.log('refreshTokenExpired');
-      alert('refreshTokenExpired');
 
       this.router.navigate(['/auth/login']);
       return throwError(
@@ -46,8 +42,6 @@ export class AuthInterceptor implements HttpInterceptor {
     // لو الـ Access Token شغال → نضيفه على الـ headers
     if (status === AuthStatus.valid) {
       const token = this.authService.getTokenFromLocal();
-      console.log('Valid');
-      alert('Valid');
       if (token) {
         const cloned = req.clone({
           setHeaders: {
@@ -55,15 +49,11 @@ export class AuthInterceptor implements HttpInterceptor {
           },
         });
         return next.handle(cloned);
-        // .pipe(catchError((err) => this.handleAuthError(err)));
       }
     }
 
     // لو الـ Access Token منتهي بس الـ Refresh Token لسه عايش → نطلب توكن جديد
     if (status === AuthStatus.tokenExpired) {
-      console.log('tokenExpired');
-      alert('tokenExpired');
-
       return this.authService.refreshToken().pipe(
         switchMap((newToken) => {
           const cloned = req.clone({
@@ -73,24 +63,10 @@ export class AuthInterceptor implements HttpInterceptor {
           });
           return next.handle(cloned);
         })
-        // catchError((err) => {
-        //   this.authService.logout();
-        //   this.router.navigate(['/login']);
-        //   return throwError(() => err);
-        // })
       );
     }
 
     // في أي حالة تانية → نكمل الطلب عادي
     return next.handle(req);
   }
-
-  // private handleAuthError(err: any) {
-  //   alert('handleAuthError');
-  //   if (err instanceof HttpErrorResponse && err.status === 401) {
-  //     this.authService.logout();
-  //     this.router.navigate(['/login']);
-  //   }
-  //   return throwError(() => err);
-  // }
 }

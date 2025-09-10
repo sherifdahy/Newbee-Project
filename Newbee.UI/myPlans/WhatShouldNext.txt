@@ -5,11 +5,13 @@
 
 
 
-Watch Out the login and the logout still navigate hard coded
-make a new test again and check the code again
-reset the validations and make them one  
-then make a guard and then complete 
 
+Complete reset the validations and make them one
+Prevent The Actions That do not want the tokens
+Role where ??
+
+
+ 
 
 
 make the ui depend on the observable 

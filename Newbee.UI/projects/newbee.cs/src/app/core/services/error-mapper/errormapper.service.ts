@@ -12,6 +12,7 @@ export class ErrorMapperService {
       if (!errors.hasOwnProperty(field)) continue;
 
       const control = form.get(field.charAt(0).toLowerCase() + field.slice(1));
+      alert(field);
       if (control) {
         alert('Control');
         const backendMessage = errors[field][0]; // ناخد أول رسالة بس
@@ -19,7 +20,7 @@ export class ErrorMapperService {
         control.markAsTouched();
       } else {
         alert('Not Control');
-        globalErrors.push(...errors[field].map((msg) => `${field}: ${msg}`));
+        globalErrors.push(...errors[field].map((msg) => `${msg}`));
       }
     }
     return globalErrors;

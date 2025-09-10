@@ -1,117 +1,115 @@
 <div class="container mt-5">
-  <h1>Register Manger</h1>
+  <h1>Register Manager</h1>
   <form [formGroup]="userRegForm" (ngSubmit)="submit()">
-
-    <!-- Name -->
-    <div class="mb-3">
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" class="form-control" id="name" formControlName="name" placeholder="Enter Name">
-      </div>
-      <div class="alert alert-warning" [hidden]="name?.valid || name?.untouched">
-        <div *ngIf="name?.errors?.['required']">The Name is required</div>
-        <div class="error" *ngIf="name?.errors?.['backend']">{{ name?.errors?.['backend'] }}</div>
-      </div>
-    </div>
-
     <!-- First Name -->
     <div class="mb-3">
-      <div class="form-group">
-        <label for="firstName">First Name</label>
-        <input type="text" class="form-control" id="firstName" formControlName="firstName"
-          placeholder="Enter First Name">
-      </div>
+      <label for="firstName">First Name</label>
+      <input type="text" id="firstName" class="form-control" formControlName="firstName" />
       <div class="alert alert-warning" [hidden]="firstName?.valid || firstName?.untouched">
-        <div *ngIf="firstName?.errors?.['required']">The First Name is required</div>
-        <div class="error" *ngIf="firstName?.errors?.['backend']">{{ firstName?.errors?.['backend'] }}</div>
+        <div *ngIf="firstName?.errors?.['required']">First name is required .</div>
+        <div *ngIf="firstName?.errors?.['minlength']">First name must be at least 3 characters.</div>
+        <div *ngIf="firstName?.errors?.['maxlength']">First name must be at most 100 characters.</div>
+        <div *ngIf="firstName?.errors?.['backend']">{{ firstName?.errors?.['backend'] }}</div>
       </div>
     </div>
 
     <!-- Last Name -->
     <div class="mb-3">
-      <div class="form-group">
-        <label for="lastName">Last Name</label>
-        <input type="text" class="form-control" id="lastName" formControlName="lastName" placeholder="Enter Last Name">
-      </div>
+      <label for="lastName">Last Name</label>
+      <input type="text" id="lastName" class="form-control" formControlName="lastName" />
       <div class="alert alert-warning" [hidden]="lastName?.valid || lastName?.untouched">
-        <div *ngIf="lastName?.errors?.['required']">The Last Name is required</div>
-        <div class="error" *ngIf="lastName?.errors?.['backend']">{{ lastName?.errors?.['backend'] }}</div>
+        <div *ngIf="lastName?.errors?.['required']">Last name is required.</div>
+        <div *ngIf="lastName?.errors?.['minlength']">Last name must be at least 3 characters.</div>
+        <div *ngIf="lastName?.errors?.['maxlength']">Last name must be at most 100 characters.</div>
+        <div *ngIf="lastName?.errors?.['backend']">{{ lastName?.errors?.['backend'] }}</div>
       </div>
     </div>
 
     <!-- Email -->
     <div class="mb-3">
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" class="form-control" id="email" formControlName="email" placeholder="Enter Email">
-      </div>
+      <label for="email">Email</label>
+      <input type="email" id="email" class="form-control" formControlName="email" />
       <div class="alert alert-warning" [hidden]="email?.valid || email?.untouched">
-        <div *ngIf="email?.errors?.['required']">The Email is required</div>
-        <div *ngIf="email?.errors?.['email']">Invalid Email format</div>
-        <div class="error" *ngIf="email?.errors?.['backend']">{{ email?.errors?.['backend'] }}</div>
-      </div>
-    </div>
-
-    <!-- SSN -->
-    <div class="mb-3">
-      <div class="form-group">
-        <label for="ssn">SSN</label>
-        <input type="text" class="form-control" id="ssn" formControlName="ssn" placeholder="Enter SSN">
-      </div>
-      <div class="alert alert-warning" [hidden]="ssn?.valid || ssn?.untouched">
-        <div *ngIf="ssn?.errors?.['required']">The SSN is required</div>
-        <div *ngIf="ssn?.errors?.['pattern']">The SSN must be 14 numbers or less</div>
-        <div class="error" *ngIf="ssn?.errors?.['backend']">{{ ssn?.errors?.['backend'] }}</div>
+        <div *ngIf="email?.errors?.['required']">Email is required.</div>
+        <div *ngIf="email?.errors?.['email']">Invalid email format.</div>
+        <div *ngIf="email?.errors?.['backend']">{{ email?.errors?.['backend'] }}</div>
       </div>
     </div>
 
     <!-- Password -->
     <div class="mb-3">
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" class="form-control" id="password" formControlName="password"
-          placeholder="Enter Password">
-      </div>
+      <label for="password">Password</label>
+      <input type="password" id="password" class="form-control" formControlName="password" />
       <div class="alert alert-warning" [hidden]="password?.valid || password?.untouched">
-        <div *ngIf="password?.errors?.['required']">The Password is required</div>
-        <div *ngIf="password?.errors?.['minlength']">Password must be at least 8 characters</div>
+        <div *ngIf="password?.errors?.['required']">Password is required.</div>
         <div *ngIf="password?.errors?.['pattern']">
-          Password must contain at least 1 uppercase letter, 1 lowercase letter, 1 number, and 1 special character
+          Password must be at least 8 characters long and contain at least one uppercase letter,
+          one lowercase letter, one digit, and one special character.
         </div>
-        <div class="error" *ngIf="password?.errors?.['backend']">{{ password?.errors?.['backend'] }}</div>
+        <div *ngIf="password?.errors?.['backend']">{{ password?.errors?.['backend'] }}</div>
+      </div>
+    </div>
+
+    <!-- SSN -->
+    <div class="mb-3">
+      <label for="ssn">SSN</label>
+      <input type="text" id="ssn" class="form-control" formControlName="ssn" />
+      <div class="alert alert-warning" [hidden]="ssn?.valid || ssn?.untouched">
+        <div *ngIf="ssn?.errors?.['required']">SSN is required.</div>
+        <div *ngIf="ssn?.errors?.['minlength']">SSN must be at least 10 characters.</div>
+        <div *ngIf="ssn?.errors?.['maxlength']">SSN must be at most 20 characters.</div>
+        <div *ngIf="ssn?.errors?.['backend']">{{ ssn?.errors?.['backend'] }}</div>
+      </div>
+    </div>
+
+    <!-- Company Name -->
+    <div class="mb-3">
+      <label for="name">Company Name</label>
+      <input type="text" id="name" class="form-control" formControlName="name" />
+      <div class="alert alert-warning" [hidden]="name?.valid || name?.untouched">
+        <div *ngIf="name?.errors?.['required']">Company name is required.</div>
+        <div *ngIf="name?.errors?.['minlength']">Company name must be at least 3 characters.</div>
+        <div *ngIf="name?.errors?.['maxlength']">Company name must be at most 200 characters.</div>
+        <div *ngIf="name?.errors?.['backend']">{{ name?.errors?.['backend'] }}</div>
       </div>
     </div>
 
     <!-- Phone Number -->
     <div class="mb-3">
-      <div class="form-group">
-        <label for="phoneNumber">Phone Number</label>
-        <input type="text" class="form-control" id="phoneNumber" formControlName="phoneNumber"
-          placeholder="Enter Phone Number">
-      </div>
+      <label for="phoneNumber">Phone Number</label>
+      <input type="text" id="phoneNumber" class="form-control" formControlName="phoneNumber" />
       <div class="alert alert-warning" [hidden]="phoneNumber?.valid || phoneNumber?.untouched">
-        <div *ngIf="phoneNumber?.errors?.['required']">The Phone Number is required</div>
-        <div *ngIf="phoneNumber?.errors?.['pattern']">Invalid Egyptian Phone Number</div>
-        <div class="error" *ngIf="phoneNumber?.errors?.['backend']">{{ phoneNumber?.errors?.['backend'] }}</div>
+        <div *ngIf="phoneNumber?.errors?.['required']">Phone number is required.</div>
+        <div *ngIf="phoneNumber?.errors?.['pattern']">
+          Phone number must contain only digits and be between 10 and 15 digits long.
+        </div>
+        <div *ngIf="phoneNumber?.errors?.['backend']">{{ phoneNumber?.errors?.['backend'] }}</div>
       </div>
     </div>
 
     <!-- Tax Registration Number -->
     <div class="mb-3">
-      <div class="form-group">
-        <label for="taxRegistrationNumber">Tax Registration Number</label>
-        <input type="text" class="form-control" id="taxRegistrationNumber" formControlName="taxRegistrationNumber"
-          placeholder="Enter Tax Registration Number">
-      </div>
+      <label for="taxRegistrationNumber">Tax Registration Number</label>
+      <input type="text" id="taxRegistrationNumber" class="form-control" formControlName="taxRegistrationNumber" />
       <div class="alert alert-warning" [hidden]="taxRegistrationNumber?.valid || taxRegistrationNumber?.untouched">
-        <div *ngIf="taxRegistrationNumber?.errors?.['required']">The Tax Registration Number is required</div>
-        <div class="error" *ngIf="taxRegistrationNumber?.errors?.['backend']">{{
-          taxRegistrationNumber?.errors?.['backend'] }}</div>
+        <div *ngIf="taxRegistrationNumber?.errors?.['required']">
+          Tax number is required.
+        </div>
+        <div *ngIf="taxRegistrationNumber?.errors?.['minlength']">
+          Tax number must be at least 10 characters.
+        </div>
+        <div *ngIf="taxRegistrationNumber?.errors?.['maxlength']">
+          Tax number must be at most 25 characters.
+        </div>
+        <div *ngIf="taxRegistrationNumber?.errors?.['backend']">
+          {{ taxRegistrationNumber?.errors?.['backend'] }}
+        </div>
       </div>
     </div>
 
-    <button [disabled]="userRegForm.invalid" type="submit" class="btn btn-primary">Submit</button>
-
+    <button [disabled]="userRegForm.invalid" type="submit" class="btn btn-primary">
+      Submit
+    </button>
     <span>Have An Account? <a routerLink="/auth/login">Login</a></span>
   </form>
 </div>
