@@ -1,12 +1,5 @@
 import { Injectable } from '@angular/core';
-import {
-  BehaviorSubject,
-  catchError,
-  map,
-  Observable,
-  tap,
-  throwError,
-} from 'rxjs';
+import { BehaviorSubject, catchError, Observable, tap, throwError } from 'rxjs';
 import { IRegisterCompanyVm } from '../../view-models/responses/register-vm';
 import { environment } from '../../../../environments/environment.prod';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
@@ -20,12 +13,15 @@ import { ITokenStoreVm } from '../../view-models/stores/token-store-vm';
 import { IRefreshTokenStoreVm } from '../../view-models/stores/refresh-token-store-vm';
 import { AuthStatus } from '../../enums/authstatus.enum';
 import { IRefreshRequestVm } from '../../view-models/requests/refresh-request-vm';
+import { IUserVm } from '../../view-models/stores/user-vm';
+import { IForgetPassworVm } from '../../view-models/requests/forget-passwor-vm';
+import { IResetPasswordVm } from '../../view-models/requests/reset-password-vm';
+import { StorageKeys } from '../../statics/storage-keys';
+import { AuthMapper } from '../../mappers/auth-mapper';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
   private isUserLoginObservable: BehaviorSubject<AuthStatus>;
-  public apiToken = 'token';
-  public apiRefreshToken = 'refreshToken';
   private apiUrl: string = environment.apiBaseUrl;
 
   constructor(
@@ -39,11 +35,9 @@ export class AuthService {
 
   private handleError(error: HttpErrorResponse) {
     if (error.error && error.error.errors) {
-      // رجع الـ IApiErrorVm زي ما هو
       return throwError(() => error.error as IApiErrorVm);
     }
 
-    // في حالة errors تانية (500, network, إلخ)
     return throwError(
       () =>
         ({
@@ -89,22 +83,27 @@ export class AuthService {
       .pipe(catchError(this.handleError));
   }
 
-  confirmEmail(email: string, code: string): Observable<void> {
-    let otp: IOtpVm = {
-      email: email,
-      code: code,
-    };
+  confirmEmail(otpVm: IOtpVm): Observable<void> {
     return this.http
-      .post<void>(`${this.apiUrl}/Auth/confirm-email`, otp)
+      .post<void>(`${this.apiUrl}/Auth/confirm-email`, otpVm)
       .pipe(catchError(this.handleError));
   }
 
-  reConfirmEmail(email: string): Observable<void> {
-    let otp: IOtpResendVm = {
-      email: email,
-    };
+  reConfirmEmail(otpResendVm: IOtpResendVm): Observable<void> {
     return this.http
-      .post<void>(`${this.apiUrl}/Auth/resend-confirmation-email`, otp)
+      .post<void>(`${this.apiUrl}/Auth/resend-confirmation-email`, otpResendVm)
+      .pipe(catchError(this.handleError));
+  }
+
+  forgetPassword(forgetPassworVm: IForgetPassworVm): Observable<void> {
+    return this.http
+      .post<void>(`${this.apiUrl}/Auth/forget-password`, forgetPassworVm)
+      .pipe(catchError(this.handleError));
+  }
+
+  resetPassword(resetPasswordVm: IResetPasswordVm): Observable<void> {
+    return this.http
+      .post<void>(`${this.apiUrl}/Auth/reset-password`, resetPasswordVm)
       .pipe(catchError(this.handleError));
   }
 
@@ -115,6 +114,7 @@ export class AuthService {
         tap((res) => {
           this.saveTokenToLocal(res);
           this.saveRefreshTokenToLocal(res);
+          this.saveUserInfoToLocal(res);
           this.isUserLoginObservable.next(AuthStatus.valid);
         }),
         catchError(this.handleError)
@@ -122,8 +122,8 @@ export class AuthService {
   }
 
   logout() {
-    this.localStorage.removeItem(this.apiToken);
-    this.localStorage.removeItem(this.apiRefreshToken);
+    this.localStorage.removeItem(StorageKeys.TOKEN);
+    this.localStorage.removeItem(StorageKeys.REFRESH_TOKEN);
     this.isUserLoginObservable.next(AuthStatus.refreshTokenExpired);
   }
 
@@ -164,32 +164,30 @@ export class AuthService {
   }
 
   getTokenFromLocal(): ITokenStoreVm | null {
-    return this.localStorage.getItem<ITokenStoreVm>(this.apiToken);
+    return this.localStorage.getItem<ITokenStoreVm>(StorageKeys.TOKEN);
   }
 
   getRefreshTokenFromLocal(): IRefreshTokenStoreVm | null {
     return this.localStorage.getItem<IRefreshTokenStoreVm>(
-      this.apiRefreshToken
+      StorageKeys.REFRESH_TOKEN
     );
   }
-  saveTokenToLocal(res: ILoginResponse) {
-    const token: ITokenStoreVm = {
-      token: res.token,
-      expiresInSeconds: res.expiresIn,
-      createdAt: new Date().toISOString(),
-    };
 
-    this.localStorage.setItem<ITokenStoreVm>(this.apiToken, token);
+  saveTokenToLocal(res: ILoginResponse) {
+    const token = AuthMapper.mapToTokenStore(res);
+    this.localStorage.setItem<ITokenStoreVm>(StorageKeys.TOKEN, token);
   }
+
   saveRefreshTokenToLocal(res: ILoginResponse) {
-    const refreshToken: IRefreshTokenStoreVm = {
-      refreshToken: res.refreshToken,
-      expiresAt: res.refreshTokenExpiration,
-      createdAt: new Date().toISOString(),
-    };
+    const refreshToken = AuthMapper.mapToRefreshTokenStore(res);
     this.localStorage.setItem<IRefreshTokenStoreVm>(
-      this.apiRefreshToken,
+      StorageKeys.REFRESH_TOKEN,
       refreshToken
     );
+  }
+
+  saveUserInfoToLocal(res: ILoginResponse) {
+    const user = AuthMapper.mapToUserStore(res);
+    this.localStorage.setItem<IUserVm>(StorageKeys.USER, user);
   }
 }

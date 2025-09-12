@@ -1,19 +1,17 @@
 1-add the spinner
-5-reset password 
 6-ask about when close the otp what next ?
-
-
-
-
-
-Complete reset the validations and make them one
-Prevent The Actions That do not want the tokens
 Role where ??
 
 
- 
 
 
+
+Create Mapping
+
+
+
+
+ask shrif about confirmpassword 
+Prevent The Actions That do not want the tokens
 make the ui depend on the observable 
-store the user
 

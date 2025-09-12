@@ -10,6 +10,7 @@
       <div *ngIf="code?.errors?.['required']">The Code Is required</div>
       <div *ngIf="code?.errors?.['maxlength']">The Code maxlength must be 6</div>
       <div *ngIf="code?.errors?.['minlength']">The Code maxlength must be 6</div>
+      <div *ngIf="code?.errors?.['backend']">{{ code?.errors?.['backend'] }}</div>
     </div>
   </div>
   <button type="submit" [disabled]="otpFrom.invalid" class="btn btn-primary">Submit</button>

@@ -1,34 +1,43 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Route, Router } from '@angular/router';
+import { IResetPasswordVm } from '../../../../core/view-models/requests/reset-password-vm';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../../../../core/services/auth/auth.service';
-import { ToastService } from '../../../../shared/services/toast.service';
+import { ToastrService } from 'ngx-toastr';
 import { IApiErrorVm } from '../../../../core/view-models/responses/api-error-response';
 import { ErrorMapperService } from '../../../../core/services/error-mapper/errormapper.service';
-import { IOtpVm } from '../../../../core/view-models/requests/otp-vm';
-import { IOtpResendVm } from '../../../../core/view-models/requests/otp-resend-vm';
 
 @Component({
-  selector: 'app-otp',
+  selector: 'app-reset-password',
   standalone: false,
-  templateUrl: './otp.html',
-  styleUrl: './otp.css',
+  templateUrl: './reset-password.html',
+  styleUrl: './reset-password.css',
 })
-export class Otp implements OnInit {
-  otpFrom: FormGroup;
-  email: string = '';
+export class ResetPassword implements OnInit {
+  resetPasswordForm: FormGroup;
+  email: string;
   constructor(
-    private toast: ToastService,
     private fb: FormBuilder,
     private activeRouter: ActivatedRoute,
-    private router: Router,
     private auth: AuthService,
+    private toast: ToastrService,
+    private router: Router,
     private errorMapper: ErrorMapperService
   ) {
-    this.otpFrom = fb.group({
+    this.email = '';
+    this.resetPasswordForm = this.fb.group({
       code: [
         '',
         [Validators.required, Validators.minLength(6), Validators.maxLength(6)],
+      ],
+      newPassword: [
+        '',
+        [
+          Validators.required,
+          Validators.pattern(
+            /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()\-=+{};:,<.>]).{8,}$/
+          ),
+        ],
       ],
     });
   }
@@ -37,22 +46,25 @@ export class Otp implements OnInit {
       this.email = params.get('email')!;
     });
   }
-
   get code() {
-    return this.otpFrom.get('code');
+    return this.resetPasswordForm.get('code');
   }
-
+  get newPassword() {
+    return this.resetPasswordForm.get('newPassword');
+  }
   submit() {
-    let otp: IOtpVm = this.otpFrom.value as IOtpVm;
-    this.auth.confirmEmail(otp).subscribe(
+    let resetPasswordForm: IResetPasswordVm = this.resetPasswordForm
+      .value as IResetPasswordVm;
+    resetPasswordForm.email = this.email;
+    this.auth.resetPassword(resetPasswordForm).subscribe(
       () => {
-        this.toast.success('Correct Code');
+        this.toast.success('Your New Password Has been reset correctly');
         this.router.navigate(['/auth/login']);
       },
       (err: IApiErrorVm) => {
         if (err.errors) {
           let globalErrors: string[] = this.errorMapper.mapBackendErrors(
-            this.otpFrom,
+            this.resetPasswordForm,
             err.errors
           );
           if (globalErrors.length > 0) {
@@ -63,20 +75,6 @@ export class Otp implements OnInit {
         } else {
           this.toast.error(err.title);
         }
-      }
-    );
-  }
-
-  resendOtp() {
-    let otp: IOtpResendVm = {
-      email: this.email,
-    };
-    this.auth.reConfirmEmail(otp).subscribe(
-      () => {
-        this.toast.success('Resend In the Way');
-      },
-      (error: any) => {
-        this.toast.error(error);
       }
     );
   }
