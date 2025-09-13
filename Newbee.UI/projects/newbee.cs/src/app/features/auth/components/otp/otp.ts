@@ -44,6 +44,7 @@ export class Otp implements OnInit {
 
   submit() {
     let otp: IOtpVm = this.otpFrom.value as IOtpVm;
+    otp.email = this.email;
     this.auth.confirmEmail(otp).subscribe(
       () => {
         this.toast.success('Correct Code');
@@ -71,6 +72,7 @@ export class Otp implements OnInit {
     let otp: IOtpResendVm = {
       email: this.email,
     };
+    otp.email = this.email;
     this.auth.reConfirmEmail(otp).subscribe(
       () => {
         this.toast.success('Resend In the Way');

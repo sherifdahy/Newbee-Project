@@ -124,6 +124,7 @@ export class AuthService {
   logout() {
     this.localStorage.removeItem(StorageKeys.TOKEN);
     this.localStorage.removeItem(StorageKeys.REFRESH_TOKEN);
+    this.localStorage.removeItem(StorageKeys.USER);
     this.isUserLoginObservable.next(AuthStatus.refreshTokenExpired);
   }
 

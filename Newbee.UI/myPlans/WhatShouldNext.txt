@@ -6,8 +6,9 @@ Role where ??
 
 
 
-Create Mapping
 
+unsubscribe all the subscriptions
+make resend forgetpassword
 
 
 

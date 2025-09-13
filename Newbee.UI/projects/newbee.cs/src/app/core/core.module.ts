@@ -13,7 +13,8 @@ import { SecondaryLayout } from './layout/secondary-layout/secondary-layout';
 import { SideBar } from './layout/main-layout/side-bar/side-bar';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptor } from './interceptors/auth-interceptor';
-
+import { SpinnerService } from './services/spinner/spinner.service';
+import { SpinnerInterceptor } from './interceptors/spinner/spinner-interceptor';
 @NgModule({
   declarations: [MainLayout, Header, Footer, SecondaryLayout, SideBar],
   imports: [CommonModule, AppRoutingModule, HttpClientModule],
@@ -24,8 +25,13 @@ import { AuthInterceptor } from './interceptors/auth-interceptor';
       useClass: AuthInterceptor,
       multi: true,
     },
+    { provide: HTTP_INTERCEPTORS, useClass: SpinnerInterceptor, multi: true },
+
     AuthService,
     LocalStorgeService,
+    SpinnerService,
   ],
 })
 export class CoreModule {}
+
+//auth
