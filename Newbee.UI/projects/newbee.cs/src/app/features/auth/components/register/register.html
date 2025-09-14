@@ -50,6 +50,20 @@
       </div>
     </div>
 
+        <!-- Confirm Password -->
+    <div class="mb-3">
+      <label for="">confirmPassWord</label>
+      <input type="password" name="confirmPassWord" formControlName="confirmPassword" class="form-control" />
+      <div class="alert alert-warning"
+        *ngIf="(confirmPassword?.touched && password?.touched) &&  (confirmPassword?.invalid || userRegForm?.errors?.['UnmatchedPassword'])">
+        <div *ngIf="confirmPassword?.errors?.['required']">
+          confirmPassWord Is required
+        </div>
+        <div *ngIf="userRegForm?.errors?.['UnmatchedPassword']">
+          confirmPassWord Is Does Not Match
+        </div>
+      </div>
+    </div>
     <!-- SSN -->
     <div class="mb-3">
       <label for="ssn">SSN</label>

@@ -1,18 +1,18 @@
-1-add the spinner
+
+//auth feature
 6-ask about when close the otp what next ?
 Role where ??
+ask shrif about confirmpassword
+
+
+
+//
 
 
 
 
 
 
-unsubscribe all the subscriptions
-make resend forgetpassword
 
-
-
-ask shrif about confirmpassword 
-Prevent The Actions That do not want the tokens
-make the ui depend on the observable 
+ 
 

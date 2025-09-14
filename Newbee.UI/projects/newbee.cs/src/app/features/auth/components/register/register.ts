@@ -6,7 +6,7 @@ import { ToastService } from '../../../../shared/services/toast.service';
 import { Router } from '@angular/router';
 import { ErrorMapperService } from '../../../../core/services/error-mapper/errormapper.service';
 import { IApiErrorVm } from '../../../../core/view-models/responses/api-error-response';
-
+import { passwordMatch } from '../../customevalidators/password-validator';
 @Component({
   selector: 'app-register',
   standalone: false,
@@ -23,62 +23,66 @@ export class Register {
     private router: Router,
     private errorMapper: ErrorMapperService
   ) {
-    this.userRegForm = fb.group({
-      firstName: [
-        '',
-        [
-          Validators.required,
-          Validators.minLength(3),
-          Validators.maxLength(100),
+    this.userRegForm = fb.group(
+      {
+        firstName: [
+          '',
+          [
+            Validators.required,
+            Validators.minLength(3),
+            Validators.maxLength(100),
+          ],
         ],
-      ],
-      lastName: [
-        '',
-        [
-          Validators.required,
-          Validators.minLength(3),
-          Validators.maxLength(100),
+        lastName: [
+          '',
+          [
+            Validators.required,
+            Validators.minLength(3),
+            Validators.maxLength(100),
+          ],
         ],
-      ],
-      email: ['', [Validators.required, Validators.email]],
-      password: [
-        '',
-        [
-          Validators.required,
-          Validators.pattern(
-            /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()\-=+{};:,<.>]).{8,}$/
-          ),
+        email: ['', [Validators.required, Validators.email]],
+        password: [
+          '',
+          [
+            Validators.required,
+            Validators.pattern(
+              /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()\-=+{};:,<.>]).{8,}$/
+            ),
+          ],
         ],
-      ],
-      ssn: [
-        '',
-        [
-          Validators.required,
-          Validators.minLength(10),
-          Validators.maxLength(20),
+        confirmPassword: ['', Validators.required],
+        ssn: [
+          '',
+          [
+            Validators.required,
+            Validators.minLength(10),
+            Validators.maxLength(20),
+          ],
         ],
-      ],
-      name: [
-        '',
-        [
-          Validators.required,
-          Validators.minLength(3),
-          Validators.maxLength(200),
+        name: [
+          '',
+          [
+            Validators.required,
+            Validators.minLength(3),
+            Validators.maxLength(200),
+          ],
         ],
-      ],
-      phoneNumber: [
-        '',
-        [Validators.required, Validators.pattern(/^\d{10,15}$/)],
-      ],
-      taxRegistrationNumber: [
-        '',
-        [
-          Validators.required,
-          Validators.minLength(10),
-          Validators.maxLength(25),
+        phoneNumber: [
+          '',
+          [Validators.required, Validators.pattern(/^\d{10,15}$/)],
         ],
-      ],
-    });
+        taxRegistrationNumber: [
+          '',
+          [
+            Validators.required,
+            Validators.minLength(10),
+            Validators.maxLength(25),
+          ],
+        ],
+      },
+      { validators: passwordMatch() }
+    );
   }
 
   get firstName() {
@@ -92,6 +96,9 @@ export class Register {
   }
   get password() {
     return this.userRegForm.get('password');
+  }
+  get confirmPassword() {
+    return this.userRegForm.get('confirmPassword');
   }
   get ssn() {
     return this.userRegForm.get('ssn');
@@ -107,9 +114,9 @@ export class Register {
   }
 
   submit() {
-    let register: IRegisterCompanyVm = this.userRegForm
-      .value as IRegisterCompanyVm;
+    const { confirmPassword, ...formValue } = this.userRegForm.value;
 
+    let register: IRegisterCompanyVm = formValue as IRegisterCompanyVm;
     this.auth.registerCompany(register).subscribe({
       next: () => {
         this.toast.success('Data Added Successfully');
