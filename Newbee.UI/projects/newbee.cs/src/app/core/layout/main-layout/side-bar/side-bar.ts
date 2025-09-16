@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { LocalStorgeService } from '../../../services/local-storge/local-storge.service';
-import { AuthService } from '../../../services/auth/auth.service';
+import { LocalStorgeService } from '../../../services/frontend/local-storge/local-storge.service';
+import { AuthService } from '../../../services/backend/auth/auth.service';
 import { Router } from '@angular/router';
 
 @Component({

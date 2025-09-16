@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Route, Router } from '@angular/router';
-import { AuthService } from '../../../../core/services/auth/auth.service';
+import { AuthService } from '../../../../core/services/backend/auth/auth.service';
 import { ToastService } from '../../../../shared/services/toast.service';
 import { IApiErrorVm } from '../../../../core/view-models/responses/api-error-response';
-import { ErrorMapperService } from '../../../../core/services/error-mapper/errormapper.service';
+import { ErrorMapperService } from '../../../../core/services/frontend/error-mapper/errormapper.service';
 import { IOtpVm } from '../../../../core/view-models/requests/otp-vm';
 import { IOtpResendVm } from '../../../../core/view-models/requests/otp-resend-vm';
 

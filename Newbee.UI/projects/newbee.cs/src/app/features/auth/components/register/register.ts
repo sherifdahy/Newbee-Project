@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { IRegisterCompanyVm } from '../../../../core/view-models/responses/register-vm';
-import { AuthService } from '../../../../core/services/auth/auth.service';
+import { AuthService } from '../../../../core/services/backend/auth/auth.service';
 import { ToastService } from '../../../../shared/services/toast.service';
 import { Router } from '@angular/router';
-import { ErrorMapperService } from '../../../../core/services/error-mapper/errormapper.service';
+import { ErrorMapperService } from '../../../../core/services/frontend/error-mapper/errormapper.service';
 import { IApiErrorVm } from '../../../../core/view-models/responses/api-error-response';
 import { passwordMatch } from '../../customevalidators/password-validator';
 @Component({

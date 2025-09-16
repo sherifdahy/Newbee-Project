@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { IResetPasswordVm } from '../../../../core/view-models/requests/reset-password-vm';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AuthService } from '../../../../core/services/auth/auth.service';
+import { AuthService } from '../../../../core/services/backend/auth/auth.service';
 import { ToastrService } from 'ngx-toastr';
 import { IApiErrorVm } from '../../../../core/view-models/responses/api-error-response';
-import { ErrorMapperService } from '../../../../core/services/error-mapper/errormapper.service';
+import { ErrorMapperService } from '../../../../core/services/frontend/error-mapper/errormapper.service';
 import { IForgetPassworVm } from '../../../../core/view-models/requests/forget-passwor-vm';
 import { passwordMatch } from '../../customevalidators/password-validator';
 

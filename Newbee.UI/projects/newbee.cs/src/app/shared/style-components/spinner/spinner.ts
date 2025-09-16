@@ -1,5 +1,5 @@
 import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
-import { SpinnerService } from '../../../core/services/spinner/spinner.service';
+import { SpinnerService } from '../../../core/services/frontend/spinner/spinner.service';
 import { Subscription } from 'rxjs';
 
 @Component({

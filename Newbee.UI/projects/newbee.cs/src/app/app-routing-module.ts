@@ -28,6 +28,20 @@ const routes: Routes = [
       },
     ],
   },
+  {
+    path: 'company',
+    canActivate: [authGuard],
+    component: MainLayout,
+    children: [
+      {
+        path: '',
+        loadChildren: () =>
+          import('./features/company/company-module').then(
+            (m) => m.CompanyModule
+          ),
+      },
+    ],
+  },
   { path: '', redirectTo: 'home', pathMatch: 'full' }, // default
   { path: '**', redirectTo: 'home' }, // not-found redirect
 ];

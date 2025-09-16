@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { ILoginVm } from '../../../../core/view-models/requests/login-vm';
-import { AuthService } from '../../../../core/services/auth/auth.service';
+import { AuthService } from '../../../../core/services/backend/auth/auth.service';
 import { Router } from '@angular/router';
 import { IApiErrorVm } from '../../../../core/view-models/responses/api-error-response';
-import { ErrorMapperService } from '../../../../core/services/error-mapper/errormapper.service';
+import { ErrorMapperService } from '../../../../core/services/frontend/error-mapper/errormapper.service';
 
 @Component({
   selector: 'app-login',

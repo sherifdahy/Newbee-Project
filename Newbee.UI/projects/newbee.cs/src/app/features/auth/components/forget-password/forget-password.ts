@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { IForgetPassworVm } from '../../../../core/view-models/requests/forget-passwor-vm';
-import { AuthService } from '../../../../core/services/auth/auth.service';
+import { AuthService } from '../../../../core/services/backend/auth/auth.service';
 import { ToastrService } from 'ngx-toastr';
 import { IApiErrorVm } from '../../../../core/view-models/responses/api-error-response';
-import { ErrorMapperService } from '../../../../core/services/error-mapper/errormapper.service';
+import { ErrorMapperService } from '../../../../core/services/frontend/error-mapper/errormapper.service';
 import { Router } from '@angular/router';
 
 @Component({

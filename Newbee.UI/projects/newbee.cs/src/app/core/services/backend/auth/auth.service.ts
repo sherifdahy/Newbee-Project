@@ -1,23 +1,24 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, catchError, Observable, tap, throwError } from 'rxjs';
-import { IRegisterCompanyVm } from '../../view-models/responses/register-vm';
-import { environment } from '../../../../environments/environment.prod';
+import { IRegisterCompanyVm } from '../../../view-models/responses/register-vm';
+import { environment } from '../../../../../environments/environment.prod';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { IApiErrorVm } from '../../view-models/responses/api-error-response';
-import { IOtpVm } from '../../view-models/requests/otp-vm';
-import { IOtpResendVm } from '../../view-models/requests/otp-resend-vm';
-import { ILoginVm } from '../../view-models/requests/login-vm';
-import { LocalStorgeService } from '../local-storge/local-storge.service';
-import { ILoginResponse } from '../../view-models/responses/login-response-vm';
-import { ITokenStoreVm } from '../../view-models/stores/token-store-vm';
-import { IRefreshTokenStoreVm } from '../../view-models/stores/refresh-token-store-vm';
-import { AuthStatus } from '../../enums/authstatus.enum';
-import { IRefreshRequestVm } from '../../view-models/requests/refresh-request-vm';
-import { IUserVm } from '../../view-models/stores/user-vm';
-import { IForgetPassworVm } from '../../view-models/requests/forget-passwor-vm';
-import { IResetPasswordVm } from '../../view-models/requests/reset-password-vm';
-import { StorageKeys } from '../../statics/storage-keys';
-import { AuthMapper } from '../../mappers/auth-mapper';
+import { IApiErrorVm } from '../../../view-models/responses/api-error-response';
+import { IOtpVm } from '../../../view-models/requests/otp-vm';
+import { IOtpResendVm } from '../../../view-models/requests/otp-resend-vm';
+import { ILoginVm } from '../../../view-models/requests/login-vm';
+import { LocalStorgeService } from '../../frontend/local-storge/local-storge.service';
+import { ILoginResponse } from '../../../view-models/responses/login-response-vm';
+import { ITokenStoreVm } from '../../../view-models/stores/token-store-vm';
+import { IRefreshTokenStoreVm } from '../../../view-models/stores/refresh-token-store-vm';
+import { AuthStatus } from '../../../enums/authstatus.enum';
+import { IRefreshRequestVm } from '../../../view-models/requests/refresh-request-vm';
+import { IUserVm } from '../../../view-models/stores/user-vm';
+import { IForgetPassworVm } from '../../../view-models/requests/forget-passwor-vm';
+import { IResetPasswordVm } from '../../../view-models/requests/reset-password-vm';
+import { StorageKeys } from '../../../statics/storage-keys';
+import { AuthMapper } from '../../../mappers/auth-mapper';
+import { handleError } from '../generic-handel-error';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
@@ -30,21 +31,6 @@ export class AuthService {
   ) {
     this.isUserLoginObservable = new BehaviorSubject<AuthStatus>(
       this.authStatus
-    );
-  }
-
-  private handleError(error: HttpErrorResponse) {
-    if (error.error && error.error.errors) {
-      return throwError(() => error.error as IApiErrorVm);
-    }
-
-    return throwError(
-      () =>
-        ({
-          title: 'An unexpected error occurred, please try again',
-          status: error.status,
-          errors: {},
-        } as IApiErrorVm)
     );
   }
 
@@ -80,31 +66,31 @@ export class AuthService {
   registerCompany(registerVm: IRegisterCompanyVm): Observable<void> {
     return this.http
       .post<void>(`${this.apiUrl}/Auth/register-company`, registerVm)
-      .pipe(catchError(this.handleError));
+      .pipe(catchError(handleError));
   }
 
   confirmEmail(otpVm: IOtpVm): Observable<void> {
     return this.http
       .post<void>(`${this.apiUrl}/Auth/confirm-email`, otpVm)
-      .pipe(catchError(this.handleError));
+      .pipe(catchError(handleError));
   }
 
   reConfirmEmail(otpResendVm: IOtpResendVm): Observable<void> {
     return this.http
       .post<void>(`${this.apiUrl}/Auth/resend-confirmation-email`, otpResendVm)
-      .pipe(catchError(this.handleError));
+      .pipe(catchError(handleError));
   }
 
   forgetPassword(forgetPassworVm: IForgetPassworVm): Observable<void> {
     return this.http
       .post<void>(`${this.apiUrl}/Auth/forget-password`, forgetPassworVm)
-      .pipe(catchError(this.handleError));
+      .pipe(catchError(handleError));
   }
 
   resetPassword(resetPasswordVm: IResetPasswordVm): Observable<void> {
     return this.http
       .post<void>(`${this.apiUrl}/Auth/reset-password`, resetPasswordVm)
-      .pipe(catchError(this.handleError));
+      .pipe(catchError(handleError));
   }
 
   login(user: ILoginVm): Observable<ILoginResponse> {
@@ -117,7 +103,7 @@ export class AuthService {
           this.saveUserInfoToLocal(res);
           this.isUserLoginObservable.next(AuthStatus.valid);
         }),
-        catchError(this.handleError)
+        catchError(handleError)
       );
   }
 
@@ -137,7 +123,7 @@ export class AuthService {
     return this.http
       .post<ILoginResponse>(`${this.apiUrl}/Auth/refresh`, refreshRequest)
       .pipe(
-        catchError(this.handleError),
+        catchError(handleError),
         tap((res) => {
           this.saveTokenToLocal(res);
           this.saveRefreshTokenToLocal(res);

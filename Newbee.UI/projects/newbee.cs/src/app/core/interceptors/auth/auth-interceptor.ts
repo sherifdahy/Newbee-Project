@@ -7,10 +7,10 @@ import {
   HttpRequest,
 } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { AuthService } from '../services/auth/auth.service';
+import { AuthService } from '../../services/backend/auth/auth.service';
 import { Router } from '@angular/router';
 import { Observable, throwError, catchError, switchMap } from 'rxjs';
-import { AuthStatus } from '../enums/authstatus.enum';
+import { AuthStatus } from '../../enums/authstatus.enum';
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {

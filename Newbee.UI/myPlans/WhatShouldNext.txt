@@ -1,14 +1,30 @@
 
 //auth feature
 6-ask about when close the otp what next ?
-Role where ??
-ask shrif about confirmpassword
 
 
 
-//
+//API 
+1.First go and see the code from the beging
+1.make the guard and the UI that depend on the role
+2.seperate the StorgeKey
+3.Handel Error
+4.Handel The Routes 
+5.Complete the Crud
 
 
+
+
+
+
+
+
+
+GET => 200 + The array of the data
+GETBYID =>(ParamId) 200 + the object
+post =>take the obj  return 201 + The Obj
+Put => 
+delete => 204 
 
 
 

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LocalStorgeService } from '../../../../core/services/local-storge/local-storge.service';
+import { LocalStorgeService } from '../../../../core/services/frontend/local-storge/local-storge.service';
 import { IUserVm } from '../../../../core/view-models/stores/user-vm';
 import { StorageKeys } from '../../../../core/statics/storage-keys';
 

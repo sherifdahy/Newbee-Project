@@ -2,9 +2,9 @@ import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 //here import services & incepteros & guards
-import { ApiService } from './services/api/api.service';
-import { AuthService } from './services/auth/auth.service';
-import { LocalStorgeService } from './services/local-storge/local-storge.service';
+import { GenericService } from './services/backend/generic/generic.service';
+import { AuthService } from './services/backend/auth/auth.service';
+import { LocalStorgeService } from './services/frontend/local-storge/local-storge.service';
 import { MainLayout } from './layout/main-layout/main-layout';
 import { Header } from './layout/main-layout/header/header';
 import { Footer } from './layout/main-layout/footer/footer';
@@ -12,14 +12,15 @@ import { AppRoutingModule } from '../app-routing-module';
 import { SecondaryLayout } from './layout/secondary-layout/secondary-layout';
 import { SideBar } from './layout/main-layout/side-bar/side-bar';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { AuthInterceptor } from './interceptors/auth-interceptor';
-import { SpinnerService } from './services/spinner/spinner.service';
+import { AuthInterceptor } from './interceptors/auth/auth-interceptor';
+import { SpinnerService } from './services/frontend/spinner/spinner.service';
 import { SpinnerInterceptor } from './interceptors/spinner/spinner-interceptor';
+import { CompanyService } from './services/backend/company/company.service';
 @NgModule({
   declarations: [MainLayout, Header, Footer, SecondaryLayout, SideBar],
   imports: [CommonModule, AppRoutingModule, HttpClientModule],
   providers: [
-    ApiService,
+    GenericService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
@@ -30,8 +31,7 @@ import { SpinnerInterceptor } from './interceptors/spinner/spinner-interceptor';
     AuthService,
     LocalStorgeService,
     SpinnerService,
+    CompanyService,
   ],
 })
 export class CoreModule {}
-
-//auth
