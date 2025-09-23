@@ -3,13 +3,25 @@ import { CommonModule } from '@angular/common';
 
 import { CompanyRoutingModule } from './company-routing-module';
 
-import { MainFormCompany } from './components/main-form-company/main-form-company';
-import { GetAllCompany } from './components/get-all-company/get-all-company';
-import { DetailsCompany } from './components/details-company/details-company';
-import { DeleteCompany } from './components/delete-company/delete-company';
+import { MainFormCompanyComponent } from './components/main-form-company/main-form-company';
+import { GetAllCompanyComponent } from './components/get-all-company/get-all-company';
+import { DetailsCompanyComponent } from './components/details-company/details-company';
+import { DeleteCompanyComponet } from './components/delete-company/delete-company';
+import { SharedModule } from '../../shared/shared-module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [MainFormCompany, GetAllCompany, DetailsCompany, DeleteCompany],
-  imports: [CommonModule, CompanyRoutingModule],
+  declarations: [
+    MainFormCompanyComponent,
+    GetAllCompanyComponent,
+    DetailsCompanyComponent,
+    DeleteCompanyComponet,
+  ],
+  imports: [
+    CommonModule,
+    CompanyRoutingModule,
+    SharedModule,
+    ReactiveFormsModule,
+  ],
 })
 export class CompanyModule {}

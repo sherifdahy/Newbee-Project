@@ -8,7 +8,11 @@ export class ToastService {
   success(message: string, title?: string) {
     this.toastr.success(message, title);
   }
-
+  errors(messages: string[], title?: string) {
+    messages.forEach((message) => {
+      this.toastr.error(message, title);
+    });
+  }
   error(message: string, title?: string) {
     this.toastr.error(message, title);
   }
@@ -20,5 +24,4 @@ export class ToastService {
   warning(message: string, title?: string) {
     this.toastr.warning(message, title);
   }
-
 }

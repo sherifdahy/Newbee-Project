@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Route, Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../../../../core/services/backend/auth/auth.service';
-import { ToastService } from '../../../../shared/services/toast.service';
 import { IApiErrorVm } from '../../../../core/view-models/responses/api-error-response';
 import { ErrorMapperService } from '../../../../core/services/frontend/error-mapper/errormapper.service';
 import { IOtpVm } from '../../../../core/view-models/requests/otp-vm';
 import { IOtpResendVm } from '../../../../core/view-models/requests/otp-resend-vm';
+import { ToastService } from '../../../../shared/services/toast.service';
+import { UiAuthMessage } from '../../../../core/statics/ui-auth-messages';
 
 @Component({
   selector: 'app-otp',
@@ -14,72 +15,60 @@ import { IOtpResendVm } from '../../../../core/view-models/requests/otp-resend-v
   templateUrl: './otp.html',
   styleUrl: './otp.css',
 })
-export class Otp implements OnInit {
-  otpFrom: FormGroup;
+export class OtpComponent implements OnInit {
+  otpForm: FormGroup;
   email: string = '';
+
   constructor(
-    private toast: ToastService,
     private fb: FormBuilder,
     private activeRouter: ActivatedRoute,
     private router: Router,
     private auth: AuthService,
-    private errorMapper: ErrorMapperService
+    private errorMapper: ErrorMapperService,
+    private toast: ToastService
   ) {
-    this.otpFrom = fb.group({
+    this.otpForm = fb.group({
       code: [
         '',
         [Validators.required, Validators.minLength(6), Validators.maxLength(6)],
       ],
     });
   }
-  ngOnInit(): void {
-    this.activeRouter.paramMap.subscribe((params) => {
-      this.email = params.get('email')!;
-    });
-  }
 
-  get code() {
-    return this.otpFrom.get('code');
+  ngOnInit(): void {
+    this.email = this.activeRouter.snapshot.paramMap.get('email') ?? '';
   }
 
   submit() {
-    let otp: IOtpVm = this.otpFrom.value as IOtpVm;
-    otp.email = this.email;
-    this.auth.confirmEmail(otp).subscribe(
-      () => {
-        this.toast.success('Correct Code');
-        this.router.navigate(['/auth/login']);
-      },
-      (err: IApiErrorVm) => {
-        if (err.errors) {
-          let globalErrors: string[] = this.errorMapper.mapBackendErrors(
-            this.otpFrom,
-            err.errors
-          );
-          if (globalErrors.length > 0) {
-            globalErrors.forEach((global) => {
-              this.toast.error(global);
-            });
-          }
-        } else {
-          this.toast.error(err.title);
-        }
-      }
-    );
+    const otp: IOtpVm = { ...this.otpForm.value, email: this.email };
+    this.auth.confirmEmail(otp).subscribe({
+      next: () => this.submitSuccess(),
+      error: (err: IApiErrorVm) => this.submitFail(err),
+    });
   }
 
   resendOtp() {
-    let otp: IOtpResendVm = {
-      email: this.email,
-    };
-    otp.email = this.email;
-    this.auth.reConfirmEmail(otp).subscribe(
-      () => {
-        this.toast.success('Resend In the Way');
-      },
-      (error: any) => {
-        this.toast.error(error);
-      }
-    );
+    const otp: IOtpResendVm = { email: this.email };
+
+    this.auth.reConfirmEmail(otp).subscribe({
+      next: () => this.toast.success(UiAuthMessage.otpResendInProgress),
+      error: (error: any) => this.toast.error(error),
+    });
+  }
+
+  private submitSuccess() {
+    this.toast.success(UiAuthMessage.otpCorrectCode);
+    this.router.navigate(['/auth/login']);
+  }
+
+  private submitFail(err: IApiErrorVm) {
+    this.errorMapper.getBackEndErrors(this.otpForm, err);
+    if (this.errorMapper.getToastErrors.length > 0) {
+      this.toast.errors(this.errorMapper.getToastErrors);
+    }
+  }
+
+  get code() {
+    return this.otpForm.get('code');
   }
 }

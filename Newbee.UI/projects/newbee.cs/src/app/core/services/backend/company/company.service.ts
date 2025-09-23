@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { StorageKeys } from '../../../statics/storage-keys';
+import { ApiRoute } from '../../../statics/api-routes';
 import { GenericService } from '../generic/generic.service';
 import { ICompany } from '../../../models/company';
 import { Observable } from 'rxjs';
@@ -7,19 +7,19 @@ import { Observable } from 'rxjs';
 export class CompanyService {
   constructor(private genericService: GenericService<ICompany>) {}
   getAll(): Observable<ICompany[]> {
-    return this.genericService.getAll(StorageKeys.COMPANIES);
+    return this.genericService.getAll(ApiRoute.COMPANIES);
   }
   getById(id: number): Observable<ICompany> {
-    return this.genericService.getById(StorageKeys.COMPANIES, id);
+    return this.genericService.getById(ApiRoute.COMPANIES, id);
   }
   post(data: ICompany): Observable<ICompany> {
-    return this.genericService.post(StorageKeys.COMPANIES, data);
+    return this.genericService.post(ApiRoute.COMPANIES, data);
   }
 
   put(data: ICompany, id: number): Observable<ICompany> {
-    return this.genericService.put(StorageKeys.COMPANIES, data, id);
+    return this.genericService.put(ApiRoute.COMPANIES, data, id);
   }
   delete(id: number): Observable<void> {
-    return this.genericService.delete(StorageKeys.COMPANIES, id);
+    return this.genericService.delete(ApiRoute.COMPANIES, id);
   }
 }

@@ -1,27 +1,28 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ToastrService } from 'ngx-toastr';
 import { ILoginVm } from '../../../../core/view-models/requests/login-vm';
 import { AuthService } from '../../../../core/services/backend/auth/auth.service';
 import { Router } from '@angular/router';
 import { IApiErrorVm } from '../../../../core/view-models/responses/api-error-response';
 import { ErrorMapperService } from '../../../../core/services/frontend/error-mapper/errormapper.service';
-
+import { ValidatorPatterns } from '../../../../core/statics/validators-patterns';
+import { ToastService } from '../../../../shared/services/toast.service';
+import { UiAuthMessage } from '../../../../core/statics/ui-auth-messages';
 @Component({
   selector: 'app-login',
   standalone: false,
   templateUrl: './login.html',
   styleUrl: './login.css',
 })
-export class Login {
+export class LoginComponent {
   userLoginForm: FormGroup;
 
   constructor(
-    private toast: ToastrService,
     private fb: FormBuilder,
     private auth: AuthService,
     private router: Router,
-    private errorMapper: ErrorMapperService
+    private errorMapper: ErrorMapperService,
+    private toast: ToastService
   ) {
     this.userLoginForm = fb.group({
       email: ['', [Validators.required, Validators.email]],
@@ -29,9 +30,7 @@ export class Login {
         '',
         [
           Validators.required,
-          Validators.pattern(
-            /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()\-=+{};:,<.>]).{8,}$/
-          ),
+          Validators.pattern(ValidatorPatterns.StrongPassword),
         ],
       ],
     });
@@ -39,27 +38,21 @@ export class Login {
 
   submit() {
     let user: ILoginVm = this.userLoginForm.value as ILoginVm;
-    this.auth.login(user).subscribe(
-      () => {
-        this.toast.success('Login success');
-        this.router.navigate(['/home/welcome']);
-      },
-      (err: IApiErrorVm) => {
-        if (err.errors) {
-          let globalErrors: string[] = this.errorMapper.mapBackendErrors(
-            this.userLoginForm,
-            err.errors
-          );
-          if (globalErrors.length > 0) {
-            globalErrors.forEach((global) => {
-              this.toast.error(global);
-            });
-          }
-        } else {
-          this.toast.error(err.title);
-        }
-      }
-    );
+    this.auth.login(user).subscribe({
+      next: () => this.submitSuccess(),
+      error: (err: IApiErrorVm) => this.submitFail(err),
+    });
+  }
+
+  private submitSuccess() {
+    this.toast.success(UiAuthMessage.loginSuccess);
+    this.router.navigate(['/home/welcome']);
+  }
+  private submitFail(err: IApiErrorVm) {
+    this.errorMapper.getBackEndErrors(this.userLoginForm, err);
+    if (this.errorMapper.getToastErrors.length > 0) {
+      this.toast.errors(this.errorMapper.getToastErrors);
+    }
   }
 
   get email() {

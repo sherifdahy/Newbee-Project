@@ -2,26 +2,29 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { IRegisterCompanyVm } from '../../../../core/view-models/responses/register-vm';
 import { AuthService } from '../../../../core/services/backend/auth/auth.service';
-import { ToastService } from '../../../../shared/services/toast.service';
 import { Router } from '@angular/router';
 import { ErrorMapperService } from '../../../../core/services/frontend/error-mapper/errormapper.service';
 import { IApiErrorVm } from '../../../../core/view-models/responses/api-error-response';
-import { passwordMatch } from '../../customevalidators/password-validator';
+import { passwordMatch } from '../../../../core/custome-validators/password-validator';
+import { ValidatorPatterns } from '../../../../core/statics/validators-patterns';
+import { ToastService } from '../../../../shared/services/toast.service';
+import { UiAuthMessage } from '../../../../core/statics/ui-auth-messages';
+
 @Component({
   selector: 'app-register',
   standalone: false,
   templateUrl: './register.html',
   styleUrl: './register.css',
 })
-export class Register {
+export class RegisterComponent {
   userRegForm: FormGroup;
 
   constructor(
     private fb: FormBuilder,
     private auth: AuthService,
-    private toast: ToastService,
     private router: Router,
-    private errorMapper: ErrorMapperService
+    private errorMapper: ErrorMapperService,
+    private toast: ToastService
   ) {
     this.userRegForm = fb.group(
       {
@@ -46,9 +49,7 @@ export class Register {
           '',
           [
             Validators.required,
-            Validators.pattern(
-              /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()\-=+{};:,<.>]).{8,}$/
-            ),
+            Validators.pattern(ValidatorPatterns.StrongPassword),
           ],
         ],
         confirmPassword: ['', Validators.required],
@@ -76,13 +77,35 @@ export class Register {
           '',
           [
             Validators.required,
-            Validators.minLength(10),
-            Validators.maxLength(25),
+            // Validators.minLength(10),
+            // Validators.maxLength(25),
           ],
         ],
       },
       { validators: passwordMatch() }
     );
+  }
+
+  submit() {
+    const { confirmPassword, ...formValue } = this.userRegForm.value;
+    const register: IRegisterCompanyVm = formValue as IRegisterCompanyVm;
+
+    this.auth.registerCompany(register).subscribe({
+      next: () => this.submitSuccess(register.email),
+      error: (err: IApiErrorVm) => this.submitFail(err),
+    });
+  }
+
+  private submitSuccess(email: string) {
+    this.toast.success(UiAuthMessage.registerDataAdded);
+    this.router.navigate(['/auth/otp', email]);
+  }
+
+  private submitFail(err: IApiErrorVm) {
+    this.errorMapper.getBackEndErrors(this.userRegForm, err);
+    if (this.errorMapper.getToastErrors.length > 0) {
+      this.toast.errors(this.errorMapper.getToastErrors);
+    }
   }
 
   get firstName() {
@@ -111,32 +134,5 @@ export class Register {
   }
   get taxRegistrationNumber() {
     return this.userRegForm.get('taxRegistrationNumber');
-  }
-
-  submit() {
-    const { confirmPassword, ...formValue } = this.userRegForm.value;
-
-    let register: IRegisterCompanyVm = formValue as IRegisterCompanyVm;
-    this.auth.registerCompany(register).subscribe({
-      next: () => {
-        this.toast.success('Data Added Successfully');
-        this.router.navigate(['/auth/otp', register.email]);
-      },
-      error: (err: IApiErrorVm) => {
-        if (err.errors) {
-          let globalErrors: string[] = this.errorMapper.mapBackendErrors(
-            this.userRegForm,
-            err.errors
-          );
-          if (globalErrors.length > 0) {
-            globalErrors.forEach((global) => {
-              this.toast.error(global);
-            });
-          }
-        } else {
-          this.toast.error(err.title);
-        }
-      },
-    });
   }
 }

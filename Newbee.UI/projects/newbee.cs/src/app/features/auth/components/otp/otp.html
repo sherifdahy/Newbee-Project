@@ -1,6 +1,6 @@
 
 <div class="container mt-5">
-<form [formGroup]="otpFrom" (ngSubmit)="submit()">
+<form [formGroup]="otpForm" (ngSubmit)="submit()">
   <div class="mb-3">
     <div class="form-group">
       <label for="code">code</label>
@@ -13,7 +13,7 @@
       <div *ngIf="code?.errors?.['backend']">{{ code?.errors?.['backend'] }}</div>
     </div>
   </div>
-  <button type="submit" [disabled]="otpFrom.invalid" class="btn btn-primary">Submit</button>
+  <button type="submit" [disabled]="otpForm.invalid" class="btn btn-primary">Submit</button>
   <span>Have not recive Any message? <a style="cursor: pointer;" (click)="resendOtp()">resend otp</a></span>
 </form>
   <app-spinner></app-spinner>

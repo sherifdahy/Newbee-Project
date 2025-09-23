@@ -2,15 +2,21 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '../../shared/shared-module';
 import { AuthRoutingModule } from './auth-routing-module';
-import { Login } from './components/login/login';
-import { Register } from './components/register/register';
+import { LoginComponent } from './components/login/login';
+import { RegisterComponent } from './components/register/register';
 import { ReactiveFormsModule } from '@angular/forms';
-import { Otp } from './components/otp/otp';
-import { ForgetPassword } from './components/forget-password/forget-password';
-import { ResetPassword } from './components/reset-password/reset-password';
+import { OtpComponent } from './components/otp/otp';
+import { ForgetPasswordComponent } from './components/forget-password/forget-password';
+import { ResetPasswordComponent } from './components/reset-password/reset-password';
 
 @NgModule({
-  declarations: [Login, Register, Otp, ForgetPassword, ResetPassword],
+  declarations: [
+    LoginComponent,
+    RegisterComponent,
+    OtpComponent,
+    ForgetPasswordComponent,
+    ResetPasswordComponent,
+  ],
   imports: [CommonModule, AuthRoutingModule, SharedModule, ReactiveFormsModule],
 })
 export class AuthModule {}

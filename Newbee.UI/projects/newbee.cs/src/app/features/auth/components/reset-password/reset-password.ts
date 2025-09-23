@@ -3,11 +3,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { IResetPasswordVm } from '../../../../core/view-models/requests/reset-password-vm';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../../../../core/services/backend/auth/auth.service';
-import { ToastrService } from 'ngx-toastr';
 import { IApiErrorVm } from '../../../../core/view-models/responses/api-error-response';
 import { ErrorMapperService } from '../../../../core/services/frontend/error-mapper/errormapper.service';
 import { IForgetPassworVm } from '../../../../core/view-models/requests/forget-passwor-vm';
-import { passwordMatch } from '../../customevalidators/password-validator';
+import { passwordMatch } from '../../../../core/custome-validators/password-validator';
+import { ValidatorPatterns } from '../../../../core/statics/validators-patterns';
+import { ToastService } from '../../../../shared/services/toast.service';
+import { UiAuthMessage } from '../../../../core/statics/ui-auth-messages';
 
 @Component({
   selector: 'app-reset-password',
@@ -15,18 +17,18 @@ import { passwordMatch } from '../../customevalidators/password-validator';
   templateUrl: './reset-password.html',
   styleUrl: './reset-password.css',
 })
-export class ResetPassword implements OnInit {
+export class ResetPasswordComponent implements OnInit {
   resetPasswordForm: FormGroup;
-  email: string;
+  email: string = '';
+
   constructor(
     private fb: FormBuilder,
     private activeRouter: ActivatedRoute,
     private auth: AuthService,
-    private toast: ToastrService,
     private router: Router,
-    private errorMapper: ErrorMapperService
+    private errorMapper: ErrorMapperService,
+    private toast: ToastService
   ) {
-    this.email = '';
     this.resetPasswordForm = this.fb.group(
       {
         code: [
@@ -41,80 +43,56 @@ export class ResetPassword implements OnInit {
           '',
           [
             Validators.required,
-            Validators.pattern(
-              /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()\-=+{};:,<.>]).{8,}$/
-            ),
+            Validators.pattern(ValidatorPatterns.StrongPassword),
           ],
         ],
-        confrimNewPassword: ['', Validators.required],
+        confirmNewPassword: ['', Validators.required],
       },
-
-      { validators: passwordMatch('newPassword', 'confrimNewPassword') }
+      { validators: passwordMatch('newPassword', 'confirmNewPassword') }
     );
   }
+
   ngOnInit(): void {
-    this.activeRouter.paramMap.subscribe((params) => {
-      this.email = params.get('email')!;
+    this.email = this.activeRouter.snapshot.paramMap.get('email') ?? '';
+  }
+
+  submit() {
+    const { confirmNewPassword, ...formValue } = this.resetPasswordForm.value;
+    const resetPassword: IResetPasswordVm = { ...formValue, email: this.email };
+
+    this.auth.resetPassword(resetPassword).subscribe({
+      next: () => this.submitSuccess(),
+      error: (err: IApiErrorVm) => this.submitFail(err),
     });
   }
+  resendCode() {
+    const forgetPassword: IForgetPassworVm = { email: this.email };
+
+    this.auth.forgetPassword(forgetPassword).subscribe({
+      next: () => this.toast.success(UiAuthMessage.resetPasswordCodeReset),
+      error: (err: IApiErrorVm) => this.submitFail(err),
+    });
+  }
+
+  private submitSuccess() {
+    this.toast.success(UiAuthMessage.resetPasswordResetSuccess);
+    this.router.navigate(['/auth/login']);
+  }
+
+  private submitFail(err: IApiErrorVm) {
+    this.errorMapper.getBackEndErrors(this.resetPasswordForm, err);
+    if (this.errorMapper.getToastErrors.length > 0) {
+      this.toast.errors(this.errorMapper.getToastErrors);
+    }
+  }
+
   get code() {
     return this.resetPasswordForm.get('code');
   }
   get newPassword() {
     return this.resetPasswordForm.get('newPassword');
   }
-  get confrimNewPassword() {
-    return this.resetPasswordForm.get('confrimNewPassword');
-  }
-  submit() {
-    const { confrimNewPassword, ...formValue } = this.resetPasswordForm.value;
-    let resetPasswordForm: IResetPasswordVm = formValue as IResetPasswordVm;
-    resetPasswordForm.email = this.email;
-    this.auth.resetPassword(resetPasswordForm).subscribe(
-      () => {
-        this.toast.success('Your New Password Has been reset correctly');
-        this.router.navigate(['/auth/login']);
-      },
-      (err: IApiErrorVm) => {
-        if (err.errors) {
-          let globalErrors: string[] = this.errorMapper.mapBackendErrors(
-            this.resetPasswordForm,
-            err.errors
-          );
-          if (globalErrors.length > 0) {
-            globalErrors.forEach((global) => {
-              this.toast.error(global);
-            });
-          }
-        } else {
-          this.toast.error(err.title);
-        }
-      }
-    );
-  }
-  resendCode() {
-    let forgetPassword: IForgetPassworVm = {
-      email: this.email,
-    };
-    this.auth.forgetPassword(forgetPassword).subscribe(
-      () => {
-        this.toast.success('The Code Has Been Resend Again');
-      },
-      (err: IApiErrorVm) => {
-        if (err.errors) {
-          let globalErrors: string[] = this.errorMapper.mapBackendErrors(
-            this.resetPasswordForm,
-            err.errors
-          );
-          if (globalErrors.length > 0) {
-            globalErrors.forEach((global) => {
-              this.toast.error(global);
-            });
-          }
-        } else {
-          this.toast.error(err.title);
-        }
-      }
-    );
+  get confirmNewPassword() {
+    return this.resetPasswordForm.get('confirmNewPassword');
   }
 }

@@ -1,1 +1,46 @@
-<p>main-form-company works!</p>
+<div class="container mt-5">
+  <h1>Company</h1>
+  <form [formGroup]="mainForm" (ngSubmit)="submit()">
+
+<!-- name -->
+<div class="mb-3">
+  <label for="name">Company Name</label>
+  <input type="text" id="name" class="form-control" formControlName="name" placeholder="Enter company name" />
+  <div class="alert alert-warning" [hidden]="name?.valid || name?.untouched">
+    <div *ngIf="name?.errors?.['required']">Company name is required.</div>
+    <div *ngIf="name?.errors?.['minlength'] || name?.errors?.['maxlength']">
+      Company name must be between 3 and 100 characters.
+    </div>
+    <div *ngIf="name?.errors?.['backend']">{{ name?.errors?.['backend'] }}</div>
+  </div>
+</div>
+
+<!-- taxRegistrationNumber -->
+<div class="mb-3">
+  <label for="taxRegistrationNumber">Tax Registration Number</label>
+  <input type="text" id="taxRegistrationNumber" class="form-control" formControlName="taxRegistrationNumber"
+    placeholder="Enter tax registration number" />
+  <div class="alert alert-warning" [hidden]="taxRegistrationNumber?.valid || taxRegistrationNumber?.untouched">
+    <div *ngIf="taxRegistrationNumber?.errors?.['required']">
+      Tax registration number is required.
+    </div>
+    <div *ngIf="
+        taxRegistrationNumber?.errors?.['minlength'] ||
+        taxRegistrationNumber?.errors?.['maxlength']
+      ">
+      Tax registration number must be between 5 and 50 characters.
+    </div>
+    <div *ngIf="taxRegistrationNumber?.errors?.['backend']">
+      {{ taxRegistrationNumber?.errors?.['backend'] }}
+    </div>
+  </div>
+</div>
+
+    <button [disabled]="mainForm.invalid" type="submit" class="btn btn-primary">
+      Submit
+    </button>
+  </form>
+</div>
+
+<app-spinner></app-spinner>
+

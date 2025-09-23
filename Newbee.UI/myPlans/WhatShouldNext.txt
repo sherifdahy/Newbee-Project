@@ -5,12 +5,26 @@
 
 
 //API 
-1.First go and see the code from the beging
-1.make the guard and the UI that depend on the role
-2.seperate the StorgeKey
-3.Handel Error
-4.Handel The Routes 
+
+
+
 5.Complete the Crud
+solve the strange bug
+add sweeralert Before Delete
+1.make the guard and the UI that depend on the role
+THe performance of the Company
+catigorize the viewModel again and the models
+
+
+
+
+
+
+
+
+
+
+
 
 
 
