@@ -1,0 +1,28 @@
+.page {
+  /* Full-screen centered layout */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+
+  /* Modern gradient using design tokens */
+  background: linear-gradient(135deg, color-mix(in srgb, var(--color-primary) 85%, black 10%), var(--color-bg));
+  color: var(--color-text);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 520px;
+  background: var(--color-surface);
+  border: 1px solid var(--surface-border);
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(2,6,23,0.12);
+  padding: 2rem;
+}
+
+/* Small responsive tweak */
+@media (max-width: 576px) {
+  .page { padding: 1rem; }
+  .login-card { padding: 1.25rem; }
+}

@@ -1,0 +1,63 @@
+/* Landing page custom styles - use design tokens from :root */
+
+/* Navbar */
+.navbar-modern { background: linear-gradient(90deg, var(--color-primary) 0%, color-mix(in srgb, var(--color-primary) 85%, black) 100%); padding-block: .5rem; }
+.navbar-modern .brand-mark { width:38px; height:38px; background: var(--color-surface); color: var(--color-primary); font-weight:700; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; }
+.navbar-modern .brand-title { color: var(--color-surface); font-weight:700; }
+.navbar-modern .nav-link { color: rgba(255,255,255,0.95); padding-inline: .8rem; }
+.navbar-modern .nav-link:hover { color: var(--color-surface); }
+
+/* make navbar slightly transparent on scroll-like effect (static here) */
+.navbar-modern { box-shadow: 0 6px 18px rgba(2,6,23,0.08); }
+
+/* Hero modern */
+.hero { background: linear-gradient(180deg, var(--color-primary) 0%, color-mix(in srgb, var(--color-primary) 85%, black) 100%); padding-block: 3.5rem; }
+.hero .display-3 { font-size: clamp(1.8rem, 5vw, 3rem); line-height: 1.04; }
+.hero-cta .btn-light { background: var(--color-surface); color: var(--color-primary); border-radius: .6rem; box-shadow: 0 12px 36px rgba(15,23,42,0.12); }
+.hero-cta .btn-outline-light { color: rgba(255,255,255,0.95); border-color: rgba(255,255,255,0.18); border-radius: .6rem; }
+.hero .text-white-75 { color: rgba(255,255,255,0.85); }
+
+.hero-content { padding-block: 2.25rem; }
+.hero-card { border-radius: .9rem; }
+.hero-card .demo-icon { font-size: 2.8rem; text-align:center; }
+.hero-card .demo-icon { font-size: 1.6rem; text-align:center; line-height:1; }
+.hero-card h5 { font-weight: 500; font-size: 1rem; }
+.hero-card .demo-icon { font-size: 1.6rem; text-align:center; line-height:1; }
+.hero-card h5 { font-weight: 500; font-size: 1rem; }
+
+/* Invoice demo card */
+.bg-white.rounded.shadow-lg { border-radius: .9rem; }
+.bg-white .display-1 { font-size: 3rem; }
+.bg-white .border.rounded.p-3 { background: var(--color-surface); }
+.bg-white .text-success { color: #16a34a !important; }
+
+/* Features */
+.card.border-0.shadow-sm { border-radius: .9rem; }
+.card .display-4 { font-size: 2.2rem; }
+.card .display-4, .card .display-1 { background: transparent; }
+.feature-icon { width:72px; height:72px; margin:0 auto 12px; display:flex; align-items:center; justify-content:center; border-radius:50%; background: rgba(255,255,255,0.06); color: var(--color-surface); font-size:2rem; }
+.card .text-primary .feature-icon { background: rgba(27,49,136,0.12); color: var(--color-primary); }
+.card .text-success .feature-icon { background: rgba(16,185,129,0.08); color: #10b981; }
+.card .text-warning .feature-icon { background: rgba(245,158,11,0.08); color: #f59e0b; }
+
+/* Pricing */
+.card.border-primary { border-radius: .9rem; }
+.card.border-primary .card-header { border-top-left-radius: .9rem; border-top-right-radius: .9rem; }
+.badge.bg-warning { border-radius: .6rem; padding-inline: .6rem; }
+
+/* Stats */
+section.bg-primary.text-white .display-4 { font-size: 2.2rem; }
+
+/* CTA */
+#contact .btn-primary { border-radius: .6rem; padding-block: .85rem; }
+
+/* Footer */
+footer.bg-dark { background: #0b1220; }
+footer a { color: rgba(255,255,255,0.8); }
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+	.hero-cta .btn-lg { width: 100%; }
+	.bg-white.rounded.shadow-lg { margin-top: 1rem; }
+}
+

@@ -1,0 +1,39 @@
+<div class="m-4">
+  <form [formGroup]="form" (ngSubmit)="handleSubmitForm()">
+    <div class=" mb-3">
+
+      <!-- حقل اسم البلد -->
+      <div class="form-group mb-3">
+        <label class="form-label">اسم البلد</label>
+        <input class="form-control" type="text" formControlName="name" placeholder="ادخل اسم البلد" />
+        <div class="text-danger mt-1" *ngIf="getControl('name')?.touched && getControl('name')?.invalid">
+          <small *ngIf="getControl('name')?.errors?.['required']">
+            هذا الحقل مطلوب
+          </small>
+        </div>
+      </div>
+
+      <!-- حقل كود البلد -->
+      <div class="form-group mb-3">
+        <label class="form-label">كود البلد</label>
+        <input class="form-control" type="text" formControlName="code" placeholder="ادخل كود البلد" />
+        <div class="text-danger mt-1" *ngIf="getControl('code')?.touched && getControl('code')?.invalid">
+          <small *ngIf="getControl('code')?.errors?.['required']">
+            هذا الحقل مطلوب
+          </small>
+          <small *ngIf="getControl('code')?.errors?.['pattern']">
+            كود البلد يجب أن يكون حروف فقط (2 إلى 5 حروف)
+          </small>
+        </div>
+      </div>
+
+    </div>
+
+    <button *ngIf="!editMode" type="submit" class="btn btn-success">
+      انشاء
+    </button>
+    <button *ngIf="editMode" type="submit" class="btn btn-success">
+      تعديل
+    </button>
+  </form>
+</div>

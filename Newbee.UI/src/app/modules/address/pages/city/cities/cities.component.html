@@ -1,0 +1,50 @@
+<div>
+  <div class="text-start mb-3">
+    <button class="btn btn-dark" (click)="handleOpenDialog(0)">انشاء</button>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-hover table-striped align-middle text-center">
+      <thead class="table-dark">
+        <tr>
+          <th class="col-1">#</th>
+          <th class="col-5">الاسم</th>
+          <th class="col-3">المحافظة</th>
+          <th class="col-3">البلد</th>
+          <th class=""></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of cities; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ c.name }}</td>
+          <td>{{ c.governorate.name }}</td>
+          <td>{{ c.governorate.country.name }}</td>
+          <td>
+            <div class="dropdown position-static">
+              <button class="btn btn-sm btn-primary" type="button" id="dropdownMenuButton{{ i }}"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-gear"></i>
+              </button>
+              <ul class="dropdown-menu" [attr.aria-labelledby]="'dropdownMenuButton' + i">
+                <li>
+                  <button class="dropdown-item text-primary" (click)="handleOpenDialog(c.id)">
+                    تعديل
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item text-danger" (click)="handleDeleteGovernorate(c.id)">
+                    حذف
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+
+        <tr *ngIf="cities.length === 0">
+          <td colspan="4" class="text-muted py-4">لا توجد بيانات</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

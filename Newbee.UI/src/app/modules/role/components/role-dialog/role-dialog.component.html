@@ -1,0 +1,61 @@
+<div class="container p-4">
+  <form [formGroup]="form" (ngSubmit)="handleSubmitForm()">
+    <!-- معلومات أساسية -->
+    <div class="mb-3">
+      <h5>معلومات أساسية</h5>
+      <div class="mb-4">
+        <label for="nameInput" class="form-label fw-bold">اسم الوظيفة</label>
+        <input type="text" formControlName="name" id="nameInput" class="form-control" placeholder="أدخل اسم الوظيفة" />
+        <div class="text-danger mt-1" *ngIf="form.get('name')?.invalid && form.get('name')?.touched">
+          هذا الحقل مطلوب
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <!-- الصلاحيات -->
+    <div>
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h5>الصلاحيات</h5>
+        <button type="button" class="btn btn-primary" (click)="handleAddNewPermission()">
+          إضافة
+        </button>
+      </div>
+
+      <div formArrayName="permissions" class="table-responsive">
+        <table class="table table-striped table-hover align-middle text-center">
+          <thead class="table-dark">
+            <tr>
+              <th class="col-1">#</th>
+              <th class="col-11">الصلاحية</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let permission of permissions.controls; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>
+                <select class="form-select" [formControlName]="i">
+                  <ng-container *ngFor="let permissionData of permissionsData">
+                    <option *ngIf="!permissions.value.includes(permissionData) || permissionData === permissions.at(i).value" [value]="permissionData">{{permissionData}}</option>
+                  </ng-container>
+                </select>
+              </td>
+              <td>
+                <button type="button" class="btn btn-danger rounded-0" (click)="handleRemovePermission(i)">
+                  حذف
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <span>{{form.errors | json}}</span>
+      </div>
+    </div>
+
+    <button *ngIf="!isEditMode" class="btn btn-success" type="submit">انشاء</button>
+    <button *ngIf="isEditMode" class="btn btn-success" type="submit">تحديث</button>
+
+  </form>
+</div>
