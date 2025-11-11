@@ -1,0 +1,56 @@
+<div class="m-4">
+  <form [formGroup]="form" (ngSubmit)="handleSubmitForm()">
+    <div class="mb-3">
+      <!-- 🟢 اسم المحافظة -->
+      <div class="form-group mb-3">
+        <label class="form-label">اسم المحافظة</label>
+        <input class="form-control" type="text" formControlName="name" placeholder="ادخل اسم المحافظة" />
+        <div class="text-danger mt-1" *ngIf="getControl('name')?.touched && getControl('name')?.invalid">
+          <small *ngIf="getControl('name')?.errors?.['required']">
+            هذا الحقل مطلوب
+          </small>
+        </div>
+      </div>
+
+      <!-- 🟢 كود المحافظة -->
+      <div class="form-group mb-3">
+        <label class="form-label">كود المحافظة</label>
+        <input class="form-control" type="text" formControlName="code" placeholder="ادخل كود المحافظة" />
+        <div class="text-danger mt-1" *ngIf="getControl('code')?.touched && getControl('code')?.invalid">
+          <small *ngIf="getControl('code')?.errors?.['required']">
+            هذا الحقل مطلوب
+          </small>
+        </div>
+      </div>
+
+      <!-- 🟢 البلد -->
+      <div class="form-group mb-3">
+        <label class="form-label">البلد</label>
+        <select class="form-select" formControlName="countryId">
+          <option value="0" disabled>اختر البلد</option>
+          <option *ngFor="let country of countries" [value]="country.id">
+            {{ country.name }}
+          </option>
+        </select>
+        <div class="text-danger mt-1" *ngIf="
+            getControl('countryId')?.touched &&
+            getControl('countryId')?.invalid
+          ">
+          <small *ngIf="getControl('countryId')?.errors?.['required']">
+            هذا الحقل مطلوب
+          </small>
+          <small *ngIf="getControl('countryId')?.errors?.['min']">
+            يجب اختيار بلد صحيح
+          </small>
+        </div>
+      </div>
+    </div>
+
+    <button *ngIf="editMode" type="submit" class="btn btn-success">
+      تعديل
+    </button>
+    <button *ngIf="!editMode" type="submit" class="btn btn-success">
+      انشاء
+    </button>
+  </form>
+</div>

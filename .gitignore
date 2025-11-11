@@ -1,0 +1,41 @@
+# Ignore Visual Studio cache
+.vs/
+
+# Ignore build folders
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+
+# Build results
+*.dll
+*.exe
+*.pdb
+*.cache
+*.db
+
+# Logs
+*.log
+
+# NuGet packages
+*.nupkg
+packages/
+
+# Temporary files
+*.tmp
+*.bak
+
+# Rider/JetBrains
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Publish
+publish/
+.vs/
+bin/
+obj/

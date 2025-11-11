@@ -1,0 +1,12 @@
+<div class="  m-3">
+  <form [formGroup]="form" (ngSubmit)="handleSubmitForm()">
+    <div class="form-group mb-3">
+      <label class="form-label">الكود</label>
+      <input type="text" class="form-control" formControlName="code">
+    </div>
+
+    <button type="submit" *ngIf="!editMode" class="btn btn-success">انشاء</button>
+    <button type="submit" *ngIf="editMode" class="btn btn-success">تعديل</button>
+
+  </form>
+</div>
