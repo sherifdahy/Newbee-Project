@@ -6,22 +6,23 @@ public class ProductService(IUnitOfWork unitOfWork) : IProductService
 {
     private readonly IUnitOfWork _unitOfWork = unitOfWork;
 
-    public async Task<Result<ProductResponse>> CreateAsync(int branchId, ProductRequest request, CancellationToken cancellationToken = default)
+    public async Task<Result<ProductResponse>> CreateAsync( int categoryId, ProductRequest request, CancellationToken cancellationToken = default)
     {
-        if(!_unitOfWork.Branches.IsExist(x => x.Id == branchId))
-            return Result.Failure<ProductResponse>(BranchErrors.NotFound);
+        if (!_unitOfWork.Categories.IsExist(x => x.Id == categoryId))
+            return Result.Failure<ProductResponse>(CategoryErrors.NotFound);
 
-        if (_unitOfWork.Products.IsExist(x => x.Name == request.Name && x.BranchId == branchId))
+        if (_unitOfWork.Products.IsExist(x => x.Name == request.Name && x.CategoryId == categoryId))
             return Result.Failure<ProductResponse>(ProductErrors.Duplicated);
 
         var product = request.Adapt<Product>();
-        product.BranchId = branchId;
+        product.CategoryId = categoryId;
 
         await _unitOfWork.Products.AddAsync(product, cancellationToken);
         await _unitOfWork.SaveAsync(cancellationToken);
 
         return Result.Success(product.Adapt<ProductResponse>());
     }
+
 
     public async Task<Result> DeleteAsync(int id, CancellationToken cancellationToken = default)
     {
@@ -39,12 +40,12 @@ public class ProductService(IUnitOfWork unitOfWork) : IProductService
         return Result.Success();
     }
 
-    public async Task<Result<IEnumerable<ProductResponse>>> GetAllAsync(int branchId, CancellationToken cancellationToken = default)
+    public async Task<Result<IEnumerable<ProductResponse>>> GetAllAsync(int categoryId, CancellationToken cancellationToken = default)
     {
-        if (!_unitOfWork.Branches.IsExist(x => x.Id == branchId))
-            return Result.Failure<IEnumerable<ProductResponse>>(BranchErrors.NotFound);
+        if(!_unitOfWork.Categories.IsExist(x => x.Id == categoryId))
+            return Result.Failure<IEnumerable<ProductResponse>>(CategoryErrors.NotFound);
 
-        var products = await _unitOfWork.Products.FindAllAsync(x => x.BranchId == branchId,cancellationToken:cancellationToken);
+        var products = await _unitOfWork.Products.FindAllAsync(x => x.CategoryId == categoryId, cancellationToken:cancellationToken);
         return Result.Success(products.Adapt<IEnumerable<ProductResponse>>());
     }
 

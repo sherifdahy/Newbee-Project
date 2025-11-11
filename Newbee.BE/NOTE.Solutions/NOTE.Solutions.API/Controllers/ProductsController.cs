@@ -11,10 +11,10 @@ public class ProductsController(IProductService productService) : ControllerBase
 {
     private readonly IProductService _productService = productService;
 
-    [HttpGet("~/api/branches/{branchId:int}/[controller]")]
-    public async Task<IActionResult> GetAll(int branchId,CancellationToken cancellationToken)
+    [HttpGet("~/api/categories/{categoryId:int}/[controller]")]
+    public async Task<IActionResult> GetAll(int categoryId, CancellationToken cancellationToken)
     {
-        var result = await _productService.GetAllAsync(branchId,cancellationToken);
+        var result = await _productService.GetAllAsync(categoryId, cancellationToken);
         return result.IsSuccess ? Ok(result.Value) : result.ToProblem();
     }
 
@@ -25,11 +25,14 @@ public class ProductsController(IProductService productService) : ControllerBase
         return result.IsSuccess ? Ok(result.Value) : result.ToProblem();
     }
 
-    [HttpPost("~/api/branches/{branchId:int}/[controller]")]
-    public async Task<IActionResult> Create(int branchId, [FromBody] ProductRequest request,CancellationToken cancellationToken)
+    [HttpPost("~/api/categories/{categoryId:int}/[controller]")]
+    public async Task<IActionResult> Create(  [FromRoute] int categoryId, [FromBody] ProductRequest request, CancellationToken cancellationToken)
     {
-        var result = await _productService.CreateAsync(branchId, request,cancellationToken);
-        return result.IsSuccess ? CreatedAtAction(nameof(GetById), new { productId = result.Value.Id }, result.Value) : result.ToProblem();
+        var result = await _productService.CreateAsync( categoryId, request, cancellationToken);
+
+        return result.IsSuccess
+            ? CreatedAtAction(nameof(GetById), new { productId = result.Value.Id }, result.Value)
+            : result.ToProblem();
     }
 
     [HttpPut("{productId:int}")]
