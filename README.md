@@ -15,7 +15,6 @@ A centralized platform that connects and integrates multiple e-commerce platform
 
 ## 👥 Team Members
 - **Sherif Mohamed Dahy** *(Team Leader)*  
-- Omar Zaki Mohamed Zaki El-Sayed  
 - Abdelaziz Ahmed Abdelaziz Mousa  
 - Mohamed Khaled Mohamed Farag  
 - Sherif Mohamed Mahmoud El-Gendy  

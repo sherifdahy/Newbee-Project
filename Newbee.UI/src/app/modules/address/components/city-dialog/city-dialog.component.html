@@ -1,56 +1,0 @@
-<div class="m-4">
-  <form [formGroup]="form" (ngSubmit)="handleSubmitForm()">
-    <div class="mb-3">
-      <div class="form-group mb-3">
-        <label class="form-label">اسم المدينة</label>
-        <input class="form-control" type="text" formControlName="name" placeholder="ادخل اسم المدينة" />
-        <div class="text-danger mt-1" *ngIf="getControl('name')?.touched && getControl('name')?.invalid">
-          <small *ngIf="getControl('name')?.errors?.['required']">
-            هذا الحقل مطلوب
-          </small>
-        </div>
-      </div>
-
-      <!-- 🟢 كود المحافظة -->
-      <div class="form-group mb-3">
-        <label class="form-label">كود المدينة</label>
-        <input class="form-control" type="text" formControlName="code" placeholder="ادخل كود المدينة" />
-        <div class="text-danger mt-1" *ngIf="getControl('code')?.touched && getControl('code')?.invalid">
-          <small *ngIf="getControl('code')?.errors?.['required']">
-            هذا الحقل مطلوب
-          </small>
-        </div>
-      </div>
-
-      <!-- 🟢 البلد -->
-      <div class="form-group mb-3">
-        <label class="form-label">المحافظة</label>
-        <select class="form-select" formControlName="governorateId">
-          <option value="0" disabled>اختر المحافظة</option>
-          <option *ngFor="let governorate of governorates" [value]="governorate.id">
-            {{ governorate.name }}
-          </option>
-        </select>
-        <div class="text-danger mt-1" *ngIf="
-            getControl('governorateId')?.touched &&
-            getControl('governorateId')?.invalid
-          ">
-          <small *ngIf="getControl('governorateId')?.errors?.['required']">
-            هذا الحقل مطلوب
-          </small>
-          <small *ngIf="getControl('governorateId')?.errors?.['min']">
-            يجب اختيار المحافظة صحيح
-          </small>
-        </div>
-      </div>
-    </div>
-
-    <button *ngIf="!editMode" type="submit" class="btn btn-success">
-      انشاء
-    </button>
-
-    <button *ngIf="editMode" type="submit" class="btn btn-success">
-      تحديث
-    </button>
-  </form>
-</div>
