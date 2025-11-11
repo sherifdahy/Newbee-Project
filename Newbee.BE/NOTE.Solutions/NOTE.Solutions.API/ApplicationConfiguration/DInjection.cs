@@ -170,6 +170,7 @@ public static class DInjection
         services.AddScoped<IBranchService, BranchService>();
         services.AddScoped<IEmployeeService, EmployeeService>();
         services.AddScoped<BLL.Interfaces.IReceiptService, BLL.Services.ReceiptService>();
+        services.AddScoped<ICategoryService, CategoryService>();
 
 
         services.AddDistributedMemoryCache();

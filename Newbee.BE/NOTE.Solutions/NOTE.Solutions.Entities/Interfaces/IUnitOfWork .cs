@@ -1,13 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.Storage;
-using NOTE.Solutions.Entities.Entities.Address;
-using NOTE.Solutions.Entities.Entities.Company;
-using NOTE.Solutions.Entities.Entities.Employee;
-using NOTE.Solutions.Entities.Entities.Identity;
-using NOTE.Solutions.Entities.Entities.Manager;
-using NOTE.Solutions.Entities.Entities.Order;
-using NOTE.Solutions.Entities.Entities.Product;
-using NOTE.Solutions.Entities.Entities.Unit;
-
+﻿
 namespace NOTE.Solutions.Entities.Interfaces;
 
 public interface IUnitOfWork : IDisposable
@@ -20,6 +11,7 @@ public interface IUnitOfWork : IDisposable
     public IRepository<ActiveCode> ActiveCodes { get; }
     public IRepository<Unit> Units { get; }
     public IRepository<Product> Products { get; }
+    public IRepository<Category> Categories { get; }
     public IRepository<ProductUnit> ProductUnits { get; }
     public IRepository<Order> Orders { get; }
     public IRepository<POS> POSs { get; }

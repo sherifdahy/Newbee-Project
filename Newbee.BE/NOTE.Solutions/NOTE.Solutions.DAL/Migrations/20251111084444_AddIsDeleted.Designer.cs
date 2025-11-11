@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NOTE.Solutions.DAL.Data;
 
@@ -11,9 +12,11 @@ using NOTE.Solutions.DAL.Data;
 namespace NOTE.Solutions.DAL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251111084444_AddIsDeleted")]
+    partial class AddIsDeleted
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -455,9 +458,6 @@ namespace NOTE.Solutions.DAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("BranchId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
@@ -478,8 +478,6 @@ namespace NOTE.Solutions.DAL.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("BranchId");
 
                     b.HasIndex("CreatedById");
 
@@ -939,7 +937,7 @@ namespace NOTE.Solutions.DAL.Migrations
                             Name = "",
                             NormalizedEmail = "ADMIN@NOTE-SOLUTIONS.COM",
                             NormalizedUserName = "ADMIN@NOTE-SOLUTIONS.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEGFweO5hacYvzG62yyslC/Xcq06vDXlAALK4CpguDWcv/UanOUIukCEZm7bOK2xAFw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEMTAnoY81nOXAJPVcFAoACRgG3U9Ltt+6cRgrjIf7BjtN6G2ZWcK7PlRQz1eUZra3Q==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "3F52186E-A158-4F4A-8822-ABEE912135EB",
                             TwoFactorEnabled = false,
@@ -959,7 +957,7 @@ namespace NOTE.Solutions.DAL.Migrations
                             Name = "",
                             NormalizedEmail = "SUPPORT@NOTE-SOLUTIONS.COM",
                             NormalizedUserName = "SUPPORT@NOTE-SOLUTIONS.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEDYnWC1Jz6N23/L8j/pAQbBcAs8HCvjOZk+gS5alaVkt3jAW3DYI7LB+lKtZqvpg4Q==",
+                            PasswordHash = "AQAAAAIAAYagAAAAENswf+PqMIfbfrkwPnbYjHPDT4tg71nXiuqW+BQvS+L5zfkhM2rphC9sBl/n2YKZNQ==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "D735ECFC-2A3F-4D90-A64A-9608F4720B36",
                             TwoFactorEnabled = false,
@@ -979,7 +977,7 @@ namespace NOTE.Solutions.DAL.Migrations
                             Name = "",
                             NormalizedEmail = "MANAGER@NOTE-SOLUTIONS.COM",
                             NormalizedUserName = "MANAGER@NOTE-SOLUTIONS.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEAQG0sQ9k8MqC91/+/a8ymPhXytkFxL6nX5rOGyTMRqyUK9+KtocMlfY1KVqDceLSw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAENZqnNi89REogIZRhHlQZuY/DC20WdYz1uT/bKcLhJ4sB/u65M3EnnG4UPtGhRUtYw==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "9B7F1E11-13B3-4FF7-95CB-49F4B81486EE",
                             TwoFactorEnabled = false,
@@ -999,7 +997,7 @@ namespace NOTE.Solutions.DAL.Migrations
                             Name = "",
                             NormalizedEmail = "EMPLOYEE@NOTE-SOLUTIONS.COM",
                             NormalizedUserName = "EMPLOYEE@NOTE-SOLUTIONS.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEDzNhDa01X5nxnYZfIthJdxrQIZ8vb0piaHHyhaoAnuiW6XgQ+VtGKrNL1xrx8TaCQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPA2XesDGqI6EpnTkmjYLGGzN70AQfupjemUQK12iaMjgeSwNKqIs2RdJj9Dzu1q4g==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "B770584C-684A-40C4-87E3-BC175BC23550",
                             TwoFactorEnabled = false,
@@ -1365,12 +1363,6 @@ namespace NOTE.Solutions.DAL.Migrations
 
             modelBuilder.Entity("NOTE.Solutions.Entities.Entities.Category.Category", b =>
                 {
-                    b.HasOne("NOTE.Solutions.Entities.Entities.Company.Branch", "Branch")
-                        .WithMany("Categories")
-                        .HasForeignKey("BranchId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
                     b.HasOne("NOTE.Solutions.Entities.Entities.Identity.ApplicationUser", "CreatedBy")
                         .WithMany()
                         .HasForeignKey("CreatedById")
@@ -1380,8 +1372,6 @@ namespace NOTE.Solutions.DAL.Migrations
                     b.HasOne("NOTE.Solutions.Entities.Entities.Identity.ApplicationUser", "UpdatedBy")
                         .WithMany()
                         .HasForeignKey("UpdatedById");
-
-                    b.Navigation("Branch");
 
                     b.Navigation("CreatedBy");
 
@@ -1778,8 +1768,6 @@ namespace NOTE.Solutions.DAL.Migrations
             modelBuilder.Entity("NOTE.Solutions.Entities.Entities.Company.Branch", b =>
                 {
                     b.Navigation("BranchEmplyees");
-
-                    b.Navigation("Categories");
 
                     b.Navigation("PointOfSales");
 

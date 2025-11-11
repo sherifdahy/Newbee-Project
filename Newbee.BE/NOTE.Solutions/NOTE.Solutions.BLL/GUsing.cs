@@ -32,3 +32,6 @@ global using Microsoft.AspNetCore.Http;
 global using Microsoft.AspNetCore.Identity;
 global using NOTE.Solutions.BLL.Authentication;
 global using NOTE.Solutions.BLL.Contracts.Auth.Responses;
+global using NOTE.Solutions.BLL.Contracts.Category.Requests;
+global using NOTE.Solutions.BLL.Contracts.Category.Responses;
+global using NOTE.Solutions.Entities.Entities.Category;

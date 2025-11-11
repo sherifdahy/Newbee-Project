@@ -1,9 +1,3 @@
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using NOTE.Solutions.BLL.Authentication.Filters;
-using NOTE.Solutions.BLL.Contracts.City.Requests;
-using NOTE.Solutions.Entities.Abstractions.Consts;
-
 namespace NOTE.Solutions.API.Controllers;
 
 [Route("api/[controller]")]

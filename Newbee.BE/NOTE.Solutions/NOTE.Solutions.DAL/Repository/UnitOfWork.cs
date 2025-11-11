@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Storage;
 using NOTE.Solutions.DAL.Data;
 using NOTE.Solutions.Entities.Entities.Address;
+using NOTE.Solutions.Entities.Entities.Category;
 using NOTE.Solutions.Entities.Entities.Company;
 using NOTE.Solutions.Entities.Entities.Employee;
 using NOTE.Solutions.Entities.Entities.Identity;
@@ -37,6 +38,7 @@ public class UnitOfWork : IUnitOfWork
         BranchEmployees = new Repository<BranchEmployee>(_context);
         Employees = new Repository<Employee>(_context);
         Managers = new Repository<Manager>(_context);
+        Categories = new Repository<Category>(_context);
     }
 
     public IRepository<Company> Companies { get; }
@@ -56,6 +58,9 @@ public class UnitOfWork : IUnitOfWork
     public IRepository<BranchEmployee> BranchEmployees { get; }
     public IRepository<Employee> Employees { get; }
     public IRepository<Manager> Managers { get; }
+
+    public IRepository<Category> Categories{ get; }
+
     public async Task<IDbContextTransaction> BeginTransactionAsync()
         => await _context.Database.BeginTransactionAsync();
     public void Dispose()

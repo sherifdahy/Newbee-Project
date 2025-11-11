@@ -70,15 +70,8 @@ public class BranchService : IBranchService
 
     public async Task<Result<IEnumerable<BranchResponse>>> GetAllAsync(int companyId,CancellationToken cancellationToken = default)
     {
-        var cachedBranches = await _cacheService.GetAsync<IEnumerable<BranchResponse>>(_cachedKey);
-
-        if (cachedBranches is not null)
-            return Result.Success(cachedBranches);
-
+  
         var branches = await _unitOfWork.Branches.FindAllAsync(x => x.CompanyId == companyId, includes, cancellationToken);
-
-        await _cacheService.SetAsync(_cachedKey, branches.Adapt<IEnumerable<BranchResponse>>(), TimeSpan.FromDays(10));
-
         return Result.Success(branches.Adapt<IEnumerable<BranchResponse>>());
     }
     public async Task<Result<BranchResponse>> GetById(int id, CancellationToken cancellationToken = default)

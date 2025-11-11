@@ -1,0 +1,10 @@
+﻿global using Microsoft.EntityFrameworkCore.Storage;
+global using NOTE.Solutions.Entities.Entities.Address;
+global using NOTE.Solutions.Entities.Entities.Category;
+global using NOTE.Solutions.Entities.Entities.Company;
+global using NOTE.Solutions.Entities.Entities.Employee;
+global using NOTE.Solutions.Entities.Entities.Identity;
+global using NOTE.Solutions.Entities.Entities.Manager;
+global using NOTE.Solutions.Entities.Entities.Order;
+global using NOTE.Solutions.Entities.Entities.Product;
+global using NOTE.Solutions.Entities.Entities.Unit;
