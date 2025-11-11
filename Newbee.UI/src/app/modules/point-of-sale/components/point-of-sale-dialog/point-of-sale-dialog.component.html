@@ -1,0 +1,49 @@
+<div class="p-3" dir="rtl">
+  <h5 class="text-center mb-4 fw-bold text-primary">إضافة جهاز POS</h5>
+
+  <form [formGroup]="posForm" (ngSubmit)="onSubmit()">
+    <!-- الرقم التسلسلي -->
+    <div class="mb-3">
+      <label for="posSerial" class="form-label fw-semibold">الرقم التسلسلي</label>
+      <input type="text" id="posSerial" class="form-control form-control-sm" formControlName="posSerial" [ngClass]="{
+          'is-invalid':
+            posForm.get('posSerial')?.invalid &&
+            posForm.get('posSerial')?.touched
+        }" />
+      <div class="invalid-feedback">الرقم التسلسلي مطلوب.</div>
+    </div>
+
+    <!-- المعرف -->
+    <div class="mb-3">
+      <label for="clientId" class="form-label fw-semibold">المعرف</label>
+      <input type="text" id="clientId" class="form-control form-control-sm" formControlName="clientId" [ngClass]="{
+          'is-invalid':
+            posForm.get('clientId')?.invalid &&
+            posForm.get('clientId')?.touched
+        }" />
+      <div class="invalid-feedback">المعرف مطلوب.</div>
+    </div>
+
+    <!-- كلمة السر -->
+    <div class="mb-4">
+      <label for="clientSecret" class="form-label fw-semibold">كلمة السر</label>
+      <input type="text" id="clientSecret" class="form-control form-control-sm" formControlName="clientSecret"
+        [ngClass]="{
+          'is-invalid':
+            posForm.get('clientSecret')?.invalid &&
+            posForm.get('clientSecret')?.touched
+        }" />
+      <div class="invalid-feedback">كلمة السر مطلوبة.</div>
+    </div>
+
+    <!-- الأزرار -->
+    <div class="d-flex justify-content-end gap-2 mt-3">
+      <button type="button" class="btn btn-outline-secondary px-4" (click)="onCancel()">
+        إلغاء
+      </button>
+      <button type="submit" class="btn btn-primary px-5">
+        حفظ
+      </button>
+    </div>
+  </form>
+</div>

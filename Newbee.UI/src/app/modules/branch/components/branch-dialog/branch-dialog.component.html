@@ -1,0 +1,74 @@
+<div class="m-4">
+  <form [formGroup]="_form" (ngSubmit)="onSubmit()">
+    <!-- 🏷️ Header -->
+    <div class="mb-3">
+      <h4 class="fw-bold text-primary mb-1">
+        {{ data.branchId ? 'تعديل فرع' : 'إضافة فرع جديد' }}
+      </h4>
+      <hr class="mt-0" />
+      <p class="text-muted small mb-0">
+        املأ الحقول المطلوبة ثم اضغط "{{ data.branchId ? 'تعديل' : 'إضافة' }}".
+      </p>
+    </div>
+
+    <!-- 🧾 بيانات أساسية -->
+    <div class="row mb-3 g-3">
+      <div class="col-md-3">
+        <label class="form-label fw-bold">كود الفرع <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" formControlName="code" placeholder="ادخل كود الفرع" />
+      </div>
+
+      <div class="col-md-3">
+        <label class="form-label fw-bold">عمارة <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" formControlName="buildingNumber" placeholder="ادخل رقم العمارة" />
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label fw-bold">شارع <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" formControlName="street" placeholder="ادخل اسم الشارع" />
+      </div>
+    </div>
+
+    <!-- 📍 العنوان -->
+    <div class="row g-3 mb-3 align-items-end">
+      <div class="col-12 col-md-4">
+        <label class="form-label fw-bold">البلد <span class="text-danger">*</span></label>
+        <select class="form-select" formControlName="countryId"
+          [class.is-invalid]="_form.get('countryId')?.invalid && _form.get('countryId')?.touched">
+          <option disabled value="">اختر البلد</option>
+          <option *ngFor="let country of _countries" [value]="country.id">{{ country.name }}</option>
+        </select>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <label class="form-label fw-bold">المحافظة <span class="text-danger">*</span></label>
+        <select class="form-select" formControlName="governorateId"
+          [class.is-invalid]="_form.get('governorateId')?.invalid && _form.get('governorateId')?.touched">
+          <option disabled value="">اختر المحافظة</option>
+          <option *ngFor="let gov of _governorates" [value]="gov.id">{{ gov.name }}</option>
+        </select>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <label class="form-label fw-bold">المدينة <span class="text-danger">*</span></label>
+        <select class="form-select" formControlName="cityId"
+          [class.is-invalid]="_form.get('cityId')?.invalid && _form.get('cityId')?.touched">
+          <option disabled value="">اختر المدينة</option>
+          <option *ngFor="let city of _cities" [value]="city.id">{{ city.name }}</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- 🎯 الأزرار الأساسية -->
+    <div class="d-flex justify-content-end gap-3 mt-4 pt-3 border-top">
+      <button type="button" class="btn btn-outline-secondary px-4" (click)="onCancel()">
+        <i class="fa-solid fa-xmark me-2"></i> إلغاء
+      </button>
+      <button type="submit" class="btn btn-primary px-4">
+        <i class="fa-solid fa-check me-2"></i> {{ data.branchId ? 'تعديل' : 'إضافة' }}
+      </button>
+    </div>
+
+
+  </form>
+</div>

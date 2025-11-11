@@ -1,0 +1,32 @@
+<div class="table-responsive border overflow-hidden bg-white">
+          <table class="table table-hover align-middle mb-0 text-center">
+            <thead class="table-dark">
+              <tr>
+                <th class="col-1">#</th>
+                <th class="col-4">الاسم</th>
+                <th class="col-3">الرقم التعريفي</th>
+                <th class="col-4">ايميل</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let manager of managers; let i = index">
+                <td class="fw-semibold">{{ i + 1 }}</td>
+                <td>{{ manager.name }}</td>
+                <td>{{ manager.identifierNumber }}</td>
+                <td>{{ manager.email }}</td>
+                <td class="text-center d-flex gap-1">
+                  <button type="button" (click)="openManagerDialogListner.emit(manager.id)" class="btn btn-outline-primary btn-sm me-1">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  </button>
+                  <button type="button" (click)="removeManager(manager.id)" class="btn btn-outline-danger btn-sm">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr *ngIf="managers.length === 0">
+                <td colspan="4" class="text-center text-muted py-3">لا يوجد مديرين لعرضهم.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>

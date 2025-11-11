@@ -3,164 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Newbee.CS": {
-      "projectType": "application",
-      "schematics": {},
-      "root": "projects/newbee.cs",
-      "sourceRoot": "projects/newbee.cs/src",
-      "prefix": "app",
-      "architect": {
-        "build": {
-          "builder": "@angular/build:application",
-          "options": {
-            "browser": "projects/newbee.cs/src/main.ts",
-            "tsConfig": "projects/newbee.cs/tsconfig.app.json",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "projects/newbee.cs/public"
-              }
-            ],
-            "styles": [
-              "projects/newbee.cs/src/styles.css",
-              "node_modules/ngx-toastr/toastr.css"
-            ]
-          },
-          "configurations": {
-            "production": {
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
-                }
-              ],
-              "outputHashing": "all"
-            },
-            "development": {
-              "optimization": false,
-              "extractLicenses": false,
-              "sourceMap": true
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "serve": {
-          "builder": "@angular/build:dev-server",
-          "configurations": {
-            "production": {
-              "buildTarget": "Newbee.CS:build:production"
-            },
-            "development": {
-              "buildTarget": "Newbee.CS:build:development"
-            }
-          },
-          "defaultConfiguration": "development"
-        },
-        "extract-i18n": {
-          "builder": "@angular/build:extract-i18n"
-        },
-        "test": {
-          "builder": "@angular/build:karma",
-          "options": {
-            "tsConfig": "projects/newbee.cs/tsconfig.spec.json",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "projects/newbee.cs/public"
-              }
-            ],
-            "styles": [
-              "projects/newbee.cs/src/styles.css"
-            ]
-          }
-        }
-      }
-    },
-    "Newbee.WS": {
-      "projectType": "application",
-      "schematics": {},
-      "root": "projects/newbee.ws",
-      "sourceRoot": "projects/newbee.ws/src",
-      "prefix": "app",
-      "architect": {
-        "build": {
-          "builder": "@angular/build:application",
-          "options": {
-            "browser": "projects/newbee.ws/src/main.ts",
-            "tsConfig": "projects/newbee.ws/tsconfig.app.json",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "projects/newbee.ws/public"
-              }
-            ],
-            "styles": [
-              "projects/newbee.ws/src/styles.css"
-            ]
-          },
-          "configurations": {
-            "production": {
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
-                }
-              ],
-              "outputHashing": "all"
-            },
-            "development": {
-              "optimization": false,
-              "extractLicenses": false,
-              "sourceMap": true
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "serve": {
-          "builder": "@angular/build:dev-server",
-          "configurations": {
-            "production": {
-              "buildTarget": "Newbee.WS:build:production"
-            },
-            "development": {
-              "buildTarget": "Newbee.WS:build:development"
-            }
-          },
-          "defaultConfiguration": "development"
-        },
-        "extract-i18n": {
-          "builder": "@angular/build:extract-i18n"
-        },
-        "test": {
-          "builder": "@angular/build:karma",
-          "options": {
-            "tsConfig": "projects/newbee.ws/tsconfig.spec.json",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "projects/newbee.ws/public"
-              }
-            ],
-            "styles": [
-              "projects/newbee.ws/src/styles.css"
-            ]
-          }
-        }
-      }
-    },
-    "newbee.cs": {
+    "NOTE.Solutions.FE.Administrator": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -173,24 +16,35 @@
           "standalone": false
         }
       },
-      "root": "projects/newbee.cs",
-      "sourceRoot": "projects/newbee.cs/src",
+      "root": "",
+      "sourceRoot": "src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "browser": "projects/newbee.cs/src/main.ts",
-            "tsConfig": "projects/newbee.cs/tsconfig.app.json",
+            "browser": "src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "tsconfig.app.json",
             "assets": [
               {
                 "glob": "**/*",
-                "input": "projects/newbee.cs/public"
+                "input": "public"
               }
+
+
             ],
             "styles": [
-              "projects/newbee.cs/src/styles.css",
-              "node_modules/ngx-toastr/toastr.css"
+              "src/custom-theme.scss",
+              "node_modules/ngx-spinner/animations/ball-clip-rotate.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css"
+            ],
+            "scripts": [
+              "node_modules/@popperjs/core/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           },
           "configurations": {
@@ -221,10 +75,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "newbee.cs:build:production"
+              "buildTarget": "NOTE.Solutions.FE.Administrator:build:production"
             },
             "development": {
-              "buildTarget": "newbee.cs:build:development"
+              "buildTarget": "NOTE.Solutions.FE.Administrator:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -235,103 +89,25 @@
         "test": {
           "builder": "@angular/build:karma",
           "options": {
-            "tsConfig": "projects/newbee.cs/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "tsconfig.spec.json",
             "assets": [
               {
                 "glob": "**/*",
-                "input": "projects/newbee.cs/public"
+                "input": "public"
               }
             ],
             "styles": [
-              "projects/newbee.cs/src/styles.css"
-            ]
-          }
-        }
-      }
-    },
-    "newbee.ec": {
-      "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "standalone": false
-        },
-        "@schematics/angular:directive": {
-          "standalone": false
-        },
-        "@schematics/angular:pipe": {
-          "standalone": false
-        }
-      },
-      "root": "projects/newbee.ec",
-      "sourceRoot": "projects/newbee.ec/src",
-      "prefix": "app",
-      "architect": {
-        "build": {
-          "builder": "@angular/build:application",
-          "options": {
-            "browser": "projects/newbee.ec/src/main.ts",
-            "tsConfig": "projects/newbee.ec/tsconfig.app.json",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "projects/newbee.ec/public"
-              }
+              "node_modules/ngx-spinner/animations/ball-clip-rotate.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css"
             ],
-            "styles": [
-              "projects/newbee.ec/src/styles.css"
-            ]
-          },
-          "configurations": {
-            "production": {
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
-                }
-              ],
-              "outputHashing": "all"
-            },
-            "development": {
-              "optimization": false,
-              "extractLicenses": false,
-              "sourceMap": true
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "serve": {
-          "builder": "@angular/build:dev-server",
-          "configurations": {
-            "production": {
-              "buildTarget": "newbee.ec:build:production"
-            },
-            "development": {
-              "buildTarget": "newbee.ec:build:development"
-            }
-          },
-          "defaultConfiguration": "development"
-        },
-        "extract-i18n": {
-          "builder": "@angular/build:extract-i18n"
-        },
-        "test": {
-          "builder": "@angular/build:karma",
-          "options": {
-            "tsConfig": "projects/newbee.ec/tsconfig.spec.json",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "projects/newbee.ec/public"
-              }
-            ],
-            "styles": [
-              "projects/newbee.ec/src/styles.css"
+            "scripts": [
+              "node_modules/@popperjs/core/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           }
         }
@@ -339,6 +115,6 @@
     }
   },
   "cli": {
-    "analytics": "190e5ca2-e21e-4ea0-8289-a421101102d9"
+    "analytics": "4baa6755-7e2c-4896-b6d8-61118352b290"
   }
 }
