@@ -122,9 +122,6 @@ export class AuthService {
     }
   }
 
-  /**
-   * Decode JWT token
-   */
   private decodeToken(token: string): any {
     try {
       const payload = token.split('.')[1];
