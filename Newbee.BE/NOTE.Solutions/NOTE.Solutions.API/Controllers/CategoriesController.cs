@@ -4,6 +4,7 @@
 [Authorize]
 public class CategoriesController(ICategoryService service) : ControllerBase
 {
+    // crud operations for category done
     private readonly ICategoryService _service = service;
     [HttpPost("/api/branches/{companyId}/categories")]
     public async Task<IActionResult> Create([FromRoute] int companyId, [FromBody] CategoryRequest request, CancellationToken cancellationToken)

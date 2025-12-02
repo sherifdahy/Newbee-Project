@@ -7,6 +7,7 @@ namespace NOTE.Solutions.API.Controllers;
 [Authorize]
 public class ProductUnitsController : ControllerBase
 {
+    // crud operations for product unit done
     private readonly IProductUnitService _productUnitService;
 
     public ProductUnitsController(IProductUnitService productUnitService)

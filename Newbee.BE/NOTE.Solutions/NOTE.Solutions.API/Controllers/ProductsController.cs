@@ -9,6 +9,7 @@ namespace NOTE.Solutions.API.Controllers;
 [Authorize]
 public class ProductsController(IProductService productService) : ControllerBase
 {
+    // crud operations for product done
     private readonly IProductService _productService = productService;
 
     [HttpGet("~/api/categories/{categoryId:int}/[controller]")]
