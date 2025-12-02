@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NOTE.Solutions.DAL.Data;
 
@@ -11,9 +12,11 @@ using NOTE.Solutions.DAL.Data;
 namespace NOTE.Solutions.DAL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251111125412_updateProductTable")]
+    partial class updateProductTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -220,90 +223,6 @@ namespace NOTE.Solutions.DAL.Migrations
                             ClaimType = "permissions",
                             ClaimValue = "roles:toggleStatus",
                             RoleId = 1
-                        },
-                        new
-                        {
-                            Id = 26,
-                            ClaimType = "permissions",
-                            ClaimValue = "companies:read",
-                            RoleId = 1
-                        },
-                        new
-                        {
-                            Id = 27,
-                            ClaimType = "permissions",
-                            ClaimValue = "companies:create",
-                            RoleId = 1
-                        },
-                        new
-                        {
-                            Id = 28,
-                            ClaimType = "permissions",
-                            ClaimValue = "companies:update",
-                            RoleId = 1
-                        },
-                        new
-                        {
-                            Id = 29,
-                            ClaimType = "permissions",
-                            ClaimValue = "companies:toggleStatus",
-                            RoleId = 1
-                        },
-                        new
-                        {
-                            Id = 30,
-                            ClaimType = "permissions",
-                            ClaimValue = "products:read",
-                            RoleId = 1
-                        },
-                        new
-                        {
-                            Id = 31,
-                            ClaimType = "permissions",
-                            ClaimValue = "products:create",
-                            RoleId = 1
-                        },
-                        new
-                        {
-                            Id = 32,
-                            ClaimType = "permissions",
-                            ClaimValue = "products:update",
-                            RoleId = 1
-                        },
-                        new
-                        {
-                            Id = 33,
-                            ClaimType = "permissions",
-                            ClaimValue = "products:toggleStatus",
-                            RoleId = 1
-                        },
-                        new
-                        {
-                            Id = 34,
-                            ClaimType = "permissions",
-                            ClaimValue = "categories:read",
-                            RoleId = 1
-                        },
-                        new
-                        {
-                            Id = 35,
-                            ClaimType = "permissions",
-                            ClaimValue = "categories:create",
-                            RoleId = 1
-                        },
-                        new
-                        {
-                            Id = 36,
-                            ClaimType = "permissions",
-                            ClaimValue = "categories:update",
-                            RoleId = 1
-                        },
-                        new
-                        {
-                            Id = 37,
-                            ClaimType = "permissions",
-                            ClaimValue = "categories:toggleStatus",
-                            RoleId = 1
                         });
                 });
 
@@ -375,11 +294,16 @@ namespace NOTE.Solutions.DAL.Migrations
                         new
                         {
                             UserId = 2,
-                            RoleId = 3
+                            RoleId = 5
                         },
                         new
                         {
                             UserId = 3,
+                            RoleId = 3
+                        },
+                        new
+                        {
+                            UserId = 4,
                             RoleId = 4
                         });
                 });
@@ -435,6 +359,15 @@ namespace NOTE.Solutions.DAL.Migrations
                         .IsUnique();
 
                     b.ToTable("Cities");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "Imbaba",
+                            GovernorateId = 1,
+                            Name = "Imbaba"
+                        });
                 });
 
             modelBuilder.Entity("NOTE.Solutions.Entities.Entities.Address.Country", b =>
@@ -464,6 +397,14 @@ namespace NOTE.Solutions.DAL.Migrations
                         .IsUnique();
 
                     b.ToTable("Countries");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "EGY",
+                            Name = "EGYPT"
+                        });
                 });
 
             modelBuilder.Entity("NOTE.Solutions.Entities.Entities.Address.Governorate", b =>
@@ -498,6 +439,15 @@ namespace NOTE.Solutions.DAL.Migrations
                         .IsUnique();
 
                     b.ToTable("Governorates");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "Giza",
+                            CountryId = 1,
+                            Name = "Giza"
+                        });
                 });
 
             modelBuilder.Entity("NOTE.Solutions.Entities.Entities.Category.Category", b =>
@@ -508,7 +458,7 @@ namespace NOTE.Solutions.DAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("CompanyId")
+                    b.Property<int>("BranchId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
@@ -532,7 +482,7 @@ namespace NOTE.Solutions.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CompanyId");
+                    b.HasIndex("BranchId");
 
                     b.HasIndex("CreatedById");
 
@@ -865,6 +815,15 @@ namespace NOTE.Solutions.DAL.Migrations
                         },
                         new
                         {
+                            Id = 5,
+                            ConcurrencyStamp = "B8EF8D04-CA96-49D2-AB38-A1645EA8E7BB",
+                            IsDefault = false,
+                            IsDeleted = false,
+                            Name = "Support",
+                            NormalizedName = "SUPPORT"
+                        },
+                        new
+                        {
                             Id = 3,
                             ConcurrencyStamp = "34CA1036-7202-46C1-8C0D-D278841CECD8",
                             IsDefault = false,
@@ -878,8 +837,8 @@ namespace NOTE.Solutions.DAL.Migrations
                             ConcurrencyStamp = "D5CD1328-D599-4608-B5B0-C00056B6E7D7",
                             IsDefault = false,
                             IsDeleted = false,
-                            Name = "Client",
-                            NormalizedName = "CLIENT"
+                            Name = "Employee",
+                            NormalizedName = "EMPLOYEE"
                         });
                 });
 
@@ -974,27 +933,27 @@ namespace NOTE.Solutions.DAL.Migrations
                             Id = 1,
                             AccessFailedCount = 0,
                             ConcurrencyStamp = "A999212D-E3FE-410C-BEA5-888AD868482C",
-                            Email = "admin@newbee.com",
+                            Email = "admin@note-solutions.com",
                             EmailConfirmed = true,
                             IdentifierNumber = "",
                             IsDeleted = false,
                             IsDisabled = false,
                             LockoutEnabled = false,
                             Name = "",
-                            NormalizedEmail = "ADMIN@NEWBEE.COM",
-                            NormalizedUserName = "ADMIN@NEWBEE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEP4fDNXOvbqiMtqmM1dk3P9w5XYY+YFIqHpyYibcKD0g8p9PWztiJdeO3FnvT2iWgg==",
+                            NormalizedEmail = "ADMIN@NOTE-SOLUTIONS.COM",
+                            NormalizedUserName = "ADMIN@NOTE-SOLUTIONS.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAEOI+meJfz05Z0Q0eBlC/GiAu4PAs38Wr2tl9Qah6DXhQCVtBIYM8MA/c/F1vWdicFQ==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "3F52186E-A158-4F4A-8822-ABEE912135EB",
                             TwoFactorEnabled = false,
-                            UserName = "admin@newbee.com"
+                            UserName = "admin@note-solutions.com"
                         },
                         new
                         {
                             Id = 2,
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "A6A25E9C-4768-4F1C-87F6-2D5E1CE80252",
-                            Email = "Manager@newbee.com",
+                            ConcurrencyStamp = "AC520F1A-4737-44F8-9DED-D8D0FEDD4CF4",
+                            Email = "Support@note-solutions.com",
                             EmailConfirmed = true,
                             IdentifierNumber = "",
                             IsDeleted = false,
@@ -1005,9 +964,9 @@ namespace NOTE.Solutions.DAL.Migrations
                             NormalizedUserName = "SUPPORT@NOTE-SOLUTIONS.COM",
                             PasswordHash = "AQAAAAIAAYagAAAAELFYSOOF7sAThVgScpKl+EbQWDslrAUGkYJRSPhar4zcv1jCIG8ptvicITv3RfAwOQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "9B7F1E11-13B3-4FF7-95CB-49F4B81486EE",
+                            SecurityStamp = "D735ECFC-2A3F-4D90-A64A-9608F4720B36",
                             TwoFactorEnabled = false,
-                            UserName = "Manager@newbee.com"
+                            UserName = "Support@note-solutions.com"
                         },
                         new
                         {
@@ -1034,20 +993,20 @@ namespace NOTE.Solutions.DAL.Migrations
                             Id = 4,
                             AccessFailedCount = 0,
                             ConcurrencyStamp = "F8F79F8F-BBAE-47BD-BF9D-BDFA8BE91136",
-                            Email = "client@newbee.com",
+                            Email = "Employee@note-solutions.com",
                             EmailConfirmed = true,
                             IdentifierNumber = "",
                             IsDeleted = false,
                             IsDisabled = false,
                             LockoutEnabled = false,
                             Name = "",
-                            NormalizedEmail = "CLIENT@NEWBEE.COM",
-                            NormalizedUserName = "CLIENT@NEWBEE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEExiooVcrWxkmmekY488OU8Ltn1JxixL1D2X8oJuxxBJUfKHI9Ee+jVgg+eifh9LEw==",
+                            NormalizedEmail = "EMPLOYEE@NOTE-SOLUTIONS.COM",
+                            NormalizedUserName = "EMPLOYEE@NOTE-SOLUTIONS.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAEEwxb2QNQw6JwsXTtCRYzqW4Tynh9VS7JN/GBQCR8s825L0r98tLwljMS9eyrsfYtQ==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "B770584C-684A-40C4-87E3-BC175BC23550",
                             TwoFactorEnabled = false,
-                            UserName = "client@newbee.com"
+                            UserName = "Employee@note-solutions.com"
                         });
                 });
 
@@ -1404,9 +1363,9 @@ namespace NOTE.Solutions.DAL.Migrations
 
             modelBuilder.Entity("NOTE.Solutions.Entities.Entities.Category.Category", b =>
                 {
-                    b.HasOne("NOTE.Solutions.Entities.Entities.Company.Company", "Company")
+                    b.HasOne("NOTE.Solutions.Entities.Entities.Company.Branch", "Branch")
                         .WithMany("Categories")
-                        .HasForeignKey("CompanyId")
+                        .HasForeignKey("BranchId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
@@ -1420,7 +1379,7 @@ namespace NOTE.Solutions.DAL.Migrations
                         .WithMany()
                         .HasForeignKey("UpdatedById");
 
-                    b.Navigation("Company");
+                    b.Navigation("Branch");
 
                     b.Navigation("CreatedBy");
 
@@ -1810,6 +1769,8 @@ namespace NOTE.Solutions.DAL.Migrations
                 {
                     b.Navigation("BranchEmplyees");
 
+                    b.Navigation("Categories");
+
                     b.Navigation("PointOfSales");
                 });
 
@@ -1818,8 +1779,6 @@ namespace NOTE.Solutions.DAL.Migrations
                     b.Navigation("ActiveCodeCompanies");
 
                     b.Navigation("Branches");
-
-                    b.Navigation("Categories");
 
                     b.Navigation("Managers");
                 });

@@ -18,7 +18,6 @@ public class Branch
     public City City { get; set; } = default!;
     public Company Company { get; set; } = default!;
     public ICollection<BranchEmployee> BranchEmplyees { get; set; } = new HashSet<BranchEmployee>();
-    public ICollection<Product.Product> Products { get; set; } = new HashSet<Product.Product>();
     public ICollection<POS> PointOfSales { get; set; } = new HashSet<POS>();
 
 

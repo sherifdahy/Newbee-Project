@@ -72,14 +72,14 @@ public class ProductUnitService : IProductUnitService
         return Result.Success();
     }
 
-    public async Task<Result<IEnumerable<ProductUnitResponse>>> GetAllAsync(int branchId, CancellationToken cancellationToken = default)
+    public async Task<Result<IEnumerable<ProductUnitResponse>>> GetAllAsync(int categoryId, CancellationToken cancellationToken = default)
     {
         var cachedProductUnits = await _cacheService.GetAsync<IEnumerable<ProductUnitResponse>>(_cachedKey, cancellationToken);
 
         if (cachedProductUnits is not null)
             return Result.Success(cachedProductUnits);
 
-        var productUnits = await _unitOfWork.ProductUnits.FindAllAsync(x => x.Product!.BranchId == branchId, _includes, cancellationToken);
+        var productUnits = await _unitOfWork.ProductUnits.FindAllAsync(x => x.Product!.CategoryId == categoryId, _includes, cancellationToken);
 
         await _cacheService.SetAsync(_cachedKey, productUnits.Adapt<IEnumerable<ProductUnitResponse>>(), TimeSpan.FromDays(10), cancellationToken);
 

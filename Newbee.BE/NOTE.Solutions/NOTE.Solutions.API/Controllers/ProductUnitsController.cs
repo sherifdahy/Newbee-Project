@@ -14,10 +14,10 @@ public class ProductUnitsController : ControllerBase
         _productUnitService = productUnitService;
     }
 
-    [HttpGet("~/api/branches/{branchId}/productUnits")]
-    public async Task<IActionResult> GetAll(int branchId)
+    [HttpGet("~/api/categories/{categoryId}/productUnits")]
+    public async Task<IActionResult> GetAll(int categoryId)
     {
-        var result = await _productUnitService.GetAllAsync(branchId);
+        var result = await _productUnitService.GetAllAsync(categoryId);
         return result.IsSuccess ? Ok(result.Value) : result.ToProblem();
     }
 
