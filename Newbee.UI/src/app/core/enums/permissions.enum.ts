@@ -33,4 +33,14 @@ export enum Permissions {
   CompaniesCreate = 'companies:create',
   Companiespdate = 'companies:update',
   CompaniesToggleStatus = 'companies:toggleStatus',
+
+  ProductsRead = 'products:read',
+  ProductsCreate = 'products:create',
+  ProductsUpdate = 'products:update',
+  ProductsToggleStatus = 'products:toggleStatus',
+
+  CategoriesRead = 'categories:read',
+  CategoriesCreate = 'categories:create',
+  CategoriesUpdate = 'categories:update',
+  CategoriesToggleStatus = 'categories:toggleStatus',
 }

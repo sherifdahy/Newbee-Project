@@ -23,12 +23,6 @@ public class CountryConfiguration : IEntityTypeConfiguration<Country>
         builder.Property(c => c.Code).IsRequired().HasMaxLength(10);
 
 
-        builder.HasData(new Country()
-        {
-            Id = 1,
-            Code = "EGY",
-            Name = "EGYPT"
-        });
 
     }
 }

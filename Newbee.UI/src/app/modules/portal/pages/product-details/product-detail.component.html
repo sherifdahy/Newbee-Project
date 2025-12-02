@@ -1,0 +1,215 @@
+<!-- Breadcrumb -->
+<div class="container mt-3">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/portal">الرئيسية</a></li>
+      <li class="breadcrumb-item"><a href="/portal">{{product.category}}</a></li>
+      <li class="breadcrumb-item active">{{product.name}}</li>
+    </ol>
+  </nav>
+</div>
+
+<div class="container py-4">
+  <div class="row">
+    <!-- Product Images -->
+    <div class="col-lg-5 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-body p-0">
+          <img [src]="selectedImage" class="img-fluid w-100" [alt]="product.name" style="max-height: 500px; object-fit: cover;">
+        </div>
+      </div>
+
+      <!-- Thumbnail Gallery -->
+      <div class="row g-2 mt-3">
+        <div *ngFor="let img of product.images" class="col-3">
+          <img [src]="img" class="img-fluid border rounded cursor-pointer" [class.border-primary]="selectedImage === img"
+            (click)="selectImage(img)" style="cursor: pointer; height: 80px; object-fit: cover;">
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Details -->
+    <div class="col-lg-7">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <!-- Title -->
+          <h1 class="h2 mb-2">{{product.name}}</h1>
+          <p class="text-muted">{{product.category}}</p>
+
+          <!-- Rating -->
+          <div class="mb-3">
+            <div class="d-flex align-items-center gap-2">
+              <span>{{getStarArray(product.rating).join('')}}</span>
+              <strong>{{product.rating}} من 5</strong>
+              <small class="text-muted">({{product.reviews}} تقييم)</small>
+            </div>
+          </div>
+
+          <!-- Price -->
+          <div class="mb-3">
+            <h3 class="text-success mb-0">{{product.price | number}} ج.م</h3>
+            <small class="text-muted">
+              <del>{{product.originalPrice | number}} ج.م</del>
+              وفر {{(product.originalPrice - product.price) | number}} ج.م ({{((product.originalPrice - product.price) / product.originalPrice * 100) | number: '1.0-0'}}%)
+            </small>
+          </div>
+
+          <!-- Stock Status -->
+          <div class="mb-3">
+            <span *ngIf="product.inStock" class="badge bg-success p-2">متوفر في المخزون ({{product.quantity}} وحدة)</span>
+            <span *ngIf="!product.inStock" class="badge bg-danger p-2">غير متوفر حالياً</span>
+          </div>
+
+          <!-- Features -->
+          <div class="mb-4">
+            <h6 class="fw-bold mb-2">الميزات الأساسية:</h6>
+            <ul class="list-unstyled">
+              <li *ngFor="let feature of product.features" class="mb-1">
+                <span class="me-2">✓</span>{{feature}}
+              </li>
+            </ul>
+          </div>
+
+          <!-- Quantity and Actions -->
+          <div class="mb-3">
+            <div class="d-flex gap-2 align-items-center">
+              <label class="fw-bold">الكمية:</label>
+              <div class="input-group" style="max-width: 120px;">
+                <button class="btn btn-outline-secondary" type="button" (click)="decreaseQuantity()">-</button>
+                <input type="text" class="form-control text-center" [value]="quantity" readonly>
+                <button class="btn btn-outline-secondary" type="button" (click)="increaseQuantity()">+</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="d-grid gap-2 mb-3">
+            <button class="btn btn-primary btn-lg" [disabled]="!product.inStock">
+              <span class="me-2">🛒</span> أضف إلى السلة
+            </button>
+            <button class="btn btn-outline-primary btn-lg">
+              <span class="me-2">❤️</span> أضف إلى المفضلة
+            </button>
+          </div>
+
+          <!-- Shipping Info -->
+          <div class="alert alert-info">
+            <strong>🚚 الشحن والتوصيل:</strong>
+            <ul class="mb-0 mt-2">
+              <li>توصيل مجاني للطلبات أكثر من 500 ج.م</li>
+              <li>توصيل في 2-3 أيام عمل</li>
+              <li>إمكانية الاسترجاع خلال 14 يوم</li>
+            </ul>
+          </div>
+
+          <!-- Seller Info -->
+          <div class="card bg-light">
+            <div class="card-body">
+              <h6>يبيعه: <strong>Newbee Store</strong></h6>
+              <p class="small text-muted mb-0">متجر موثوق ⭐⭐⭐⭐⭐ (1250+ تقييم إيجابي)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Specifications Section -->
+  <div class="row mt-4">
+    <div class="col-12">
+      <div class="card shadow-sm">
+        <div class="card-header">
+          <h5 class="mb-0">المواصفات الكاملة</h5>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <tbody>
+                <tr *ngFor="let spec of product.specifications | keyvalue">
+                  <td class="fw-bold" style="width: 30%;">{{spec.key}}</td>
+                  <td>{{spec.value}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reviews Section -->
+  <div class="row mt-4">
+    <div class="col-lg-8">
+      <div class="card shadow-sm">
+        <div class="card-header">
+          <h5 class="mb-0">تقييمات العملاء ({{product.reviews}})</h5>
+        </div>
+        <div class="card-body">
+          <div *ngFor="let review of product.reviews_list" class="mb-3 pb-3 border-bottom">
+            <div class="d-flex justify-content-between mb-2">
+              <strong>{{review.author}}</strong>
+              <small class="text-muted">{{review.date}}</small>
+            </div>
+            <div class="mb-2">{{review.rating}} {{getStarArray(review.rating).join('')}}</div>
+            <p class="mb-0">{{review.comment}}</p>
+          </div>
+
+          <button class="btn btn-outline-primary w-100 mt-3">عرض جميع التقييمات</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Review Form -->
+    <div class="col-lg-4">
+      <div class="card shadow-sm">
+        <div class="card-header">
+          <h6 class="mb-0">أضف تقييمك</h6>
+        </div>
+        <div class="card-body">
+          <div class="mb-3">
+            <label class="form-label">التقييم:</label>
+            <div class="btn-group w-100" role="group">
+              <input type="radio" class="btn-check" name="rating" id="rating1">
+              <label class="btn btn-outline-warning" for="rating1">⭐</label>
+
+              <input type="radio" class="btn-check" name="rating" id="rating2">
+              <label class="btn btn-outline-warning" for="rating2">⭐⭐</label>
+
+              <input type="radio" class="btn-check" name="rating" id="rating3">
+              <label class="btn btn-outline-warning" for="rating3">⭐⭐⭐</label>
+
+              <input type="radio" class="btn-check" name="rating" id="rating4">
+              <label class="btn btn-outline-warning" for="rating4">⭐⭐⭐⭐</label>
+
+              <input type="radio" class="btn-check" name="rating" id="rating5">
+              <label class="btn btn-outline-warning" for="rating5">⭐⭐⭐⭐⭐</label>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">تعليقك:</label>
+            <textarea class="form-control" rows="3" placeholder="اكتب رأيك في المنتج..."></textarea>
+          </div>
+          <button class="btn btn-primary w-100">أرسل التقييم</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Related Products -->
+  <div class="row mt-4">
+    <div class="col-12">
+      <h4 class="mb-3">منتجات ذات صلة</h4>
+      <div class="row g-3">
+        <div *ngFor="let i of [1,2,3,4]" class="col-md-6 col-lg-3">
+          <div class="card">
+            <img src="https://via.placeholder.com/200x150?text=Product{{i}}" class="card-img-top" alt="product">
+            <div class="card-body p-2">
+              <h6 class="card-title small">منتج مشابه {{i}}</h6>
+              <p class="text-success small mb-0"><strong>999 ج.م</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

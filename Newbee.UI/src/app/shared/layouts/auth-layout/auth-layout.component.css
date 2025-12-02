@@ -1,0 +1,40 @@
+.page {
+  min-height: 100vh;
+  padding: 2rem;
+  background: var(--color-primary);
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column; /* Column layout */
+}
+
+.logos {
+  align-items: center;
+}
+
+.logo h4 {
+  font-size: 1.25rem;
+  color: var(--color-text);
+}
+/* Logo Cards */
+.logo-card {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #4f46e5, #3b82f6); /* gradient جذاب */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.logo-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Small responsive tweak */
+@media (max-width: 576px) {
+  .page { padding: 1rem; }
+  .login-card { padding: 1.25rem; }
+}

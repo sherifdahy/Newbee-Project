@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "NOTE.Solutions.FE.Administrator": {
+    "Newbee.FE": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -75,10 +75,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "NOTE.Solutions.FE.Administrator:build:production"
+              "buildTarget": "Newbee.FE:build:production"
             },
             "development": {
-              "buildTarget": "NOTE.Solutions.FE.Administrator:build:development"
+              "buildTarget": "Newbee.FE:build:development"
             }
           },
           "defaultConfiguration": "development"

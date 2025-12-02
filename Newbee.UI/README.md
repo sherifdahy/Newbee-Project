@@ -1,59 +1,34 @@
-# NOTESolutionsFEAdministrator
+# Newbee
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.1.
+منصة Newbee هي حل مركزي مبتكر يربط منصات التجارة الإلكترونية (مثل أمازون، جوميا والمتاجر المخصصة) بشركات الشحن (مثل بوسطا) عبر واجهة واحدة سهلة الاستخدام.
 
-## Development server
+الهدف: تبسيط إدارة الطلبات، تتبع الشحنات، مزامنة المخزون، وتحسين كفاءة العمليات لتقليل الأخطاء وتوفير الوقت.
 
-To start a local development server, run:
+الميزات الأساسية
+- ربط متعدد الأسواق: دمج متاجر متعددة (Marketplaces) مع لوحة تحكم مركزية.
+- تكامل شركات الشحن: ربط مباشر مع مزوّدي الشحن (Bosta، وموفرين آخرين) لإصدار شحنات وتتبعها.
+- إدارة مركزية للطلبات: استلام وتجميع ومزامنة الطلبات من مصادر مختلفة.
+- تحديث تلقائي للمخزون: مزامنة المخزون بين المتاجر والمتجر المركزي.
+- إشعارات وتتبع: إرسال تحديثات حالة الطلبات والرسائل للعملاء تلقائيا.
 
-```bash
-ng serve
-```
+تشغيل المشروع محلياً
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+1. تثبيت الحزم:
 
 ```bash
-ng generate --help
+npm install
 ```
 
-## Building
-
-To build the project run:
+2. تشغيل بيئة التطوير:
 
 ```bash
-ng build
+npm start
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+ثم افتح المتصفح على `http://localhost:4200/`.
 
-## Running unit tests
+ملاحظات للمطورين
+- هذا واجهة أمامية Angular؛ سيرفر التكامل (APIs) منفصل ويجب توصيله عبر إعدادات البيئة عند توافره.
+- عدل إعدادات الربط (credentials و API endpoints) في ملفات البيئة `src/environments` عند الدمج مع الطرف الخلفي.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+لمزيد من التفاصيل أو مساعدة في إعداد التكامل مع مزوّدي الشحن أو الأسواق، ضع سؤالك هنا أو أضف الملاحظات في مستودع المشروع.

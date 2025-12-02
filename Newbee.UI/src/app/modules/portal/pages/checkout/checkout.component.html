@@ -1,0 +1,242 @@
+<div class="container py-4">
+  <h1 class="mb-4">إتمام الطلب</h1>
+
+  <!-- Progress Steps -->
+  <div class="row mb-5">
+    <div class="col-12">
+      <div class="d-flex justify-content-between">
+        <div class="step-item" [class.active]="currentStep >= 1" (click)="goToStep(1)">
+          <div class="step-number">1</div>
+          <div class="step-label">بيانات الشحن</div>
+        </div>
+        <div class="step-line"></div>
+        <div class="step-item" [class.active]="currentStep >= 2" (click)="goToStep(2)">
+          <div class="step-number">2</div>
+          <div class="step-label">طريقة الدفع</div>
+        </div>
+        <div class="step-line"></div>
+        <div class="step-item" [class.active]="currentStep >= 3" (click)="goToStep(3)">
+          <div class="step-number">3</div>
+          <div class="step-label">مراجعة الطلب</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Main Content -->
+    <div class="col-lg-8">
+      <!-- Step 1: Shipping Information -->
+      <div *ngIf="currentStep === 1" class="card shadow-sm mb-4">
+        <div class="card-header">
+          <h5 class="mb-0">بيانات الشحن</h5>
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label class="form-label">الاسم الأول</label>
+                <input type="text" class="form-control" placeholder="أحمد">
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label">الاسم الأخير</label>
+                <input type="text" class="form-control" placeholder="محمد">
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">البريد الإلكتروني</label>
+              <input type="email" class="form-control" placeholder="example@email.com">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">رقم الهاتف</label>
+              <input type="tel" class="form-control" placeholder="01001234567">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">العنوان</label>
+              <input type="text" class="form-control" placeholder="شارع النيل، الجيزة">
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label class="form-label">المحافظة</label>
+                <select class="form-select">
+                  <option selected>اختر المحافظة</option>
+                  <option>القاهرة</option>
+                  <option>الجيزة</option>
+                  <option>الإسكندرية</option>
+                  <option>الإسماعيلية</option>
+                </select>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label">المنطقة / الحي</label>
+                <input type="text" class="form-control" placeholder="وسط البلد">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label class="form-label">الرمز البريدي</label>
+                <input type="text" class="form-control" placeholder="12345">
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label">البيان الإضافي</label>
+                <input type="text" class="form-control" placeholder="مثل الطابق أو رقم الشقة">
+              </div>
+            </div>
+
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" id="sameAddr" checked>
+              <label class="form-check-label" for="sameAddr">
+                استخدم نفس العنوان للفواتير
+              </label>
+            </div>
+
+            <button type="button" class="btn btn-primary" (click)="goToStep(2)">متابعة لطريقة الدفع</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Step 2: Payment Method -->
+      <div *ngIf="currentStep === 2" class="card shadow-sm mb-4">
+        <div class="card-header">
+          <h5 class="mb-0">طريقة الدفع</h5>
+        </div>
+        <div class="card-body">
+          <div class="mb-3">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="payment" id="card" value="card" checked>
+              <label class="form-check-label" for="card">
+                بطاقة ائتمان / خصم
+              </label>
+            </div>
+            <div class="row mt-3 ms-4">
+              <div class="col-md-6 mb-3">
+                <input type="text" class="form-control" placeholder="رقم البطاقة">
+              </div>
+              <div class="col-md-3 mb-3">
+                <input type="text" class="form-control" placeholder="MM/YY">
+              </div>
+              <div class="col-md-3 mb-3">
+                <input type="text" class="form-control" placeholder="CVV">
+              </div>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="mb-3">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="payment" id="wallet" value="wallet">
+              <label class="form-check-label" for="wallet">
+                محفظة Newbee (الرصيد: 5,000 ج.م)
+              </label>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="mb-3">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="payment" id="cash" value="cash">
+              <label class="form-check-label" for="cash">
+                الدفع عند الاستلام
+              </label>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="mb-3">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="payment" id="bank" value="bank">
+              <label class="form-check-label" for="bank">
+                تحويل بنكي
+              </label>
+            </div>
+          </div>
+
+          <div class="d-flex gap-2">
+            <button type="button" class="btn btn-outline-secondary" (click)="goToStep(1)">رجوع</button>
+            <button type="button" class="btn btn-primary" (click)="goToStep(3)">متابعة إلى المراجعة</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3: Review Order -->
+      <div *ngIf="currentStep === 3" class="card shadow-sm mb-4">
+        <div class="card-header">
+          <h5 class="mb-0">مراجعة الطلب</h5>
+        </div>
+        <div class="card-body">
+          <h6 class="mb-3">بيانات الشحن:</h6>
+          <div class="alert alert-light">
+            <strong>أحمد محمد</strong><br>
+            البريد: example@email.com<br>
+            الهاتف: 01001234567<br>
+            العنوان: شارع النيل، الجيزة، وسط البلد
+          </div>
+
+          <h6 class="mb-3 mt-4">طريقة الدفع:</h6>
+          <div class="alert alert-light">
+            بطاقة ائتمان ****1234
+          </div>
+
+          <h6 class="mb-3 mt-4">المنتجات:</h6>
+          <div class="table-responsive">
+            <table class="table table-sm">
+              <tbody>
+                <tr>
+                  <td>هاتف ذكي Pro Max × 1</td>
+                  <td class="text-end">12,500 ج.م</td>
+                </tr>
+                <tr>
+                  <td>سماعات لاسلكية × 2</td>
+                  <td class="text-end">5,000 ج.م</td>
+                </tr>
+                <tr>
+                  <td>حقيبة يد فاخرة × 1</td>
+                  <td class="text-end">3,500 ج.م</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="d-flex gap-2">
+            <button type="button" class="btn btn-outline-secondary" (click)="goToStep(2)">رجوع</button>
+            <button type="button" class="btn btn-success btn-lg flex-grow-1">تأكيد الطلب</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Order Summary Sidebar -->
+    <div class="col-lg-4">
+      <div class="card shadow-sm position-sticky" style="top: 20px;">
+        <div class="card-header">
+          <h5 class="mb-0">ملخص الطلب</h5>
+        </div>
+        <div class="card-body">
+          <div class="d-flex justify-content-between mb-2">
+            <span>3 منتجات</span>
+            <strong>20,500 ج.م</strong>
+          </div>
+          <div class="d-flex justify-content-between mb-2">
+            <span>الضريبة</span>
+            <strong>2,870 ج.م</strong>
+          </div>
+          <div class="d-flex justify-content-between mb-3 pb-3 border-bottom">
+            <span>الشحن</span>
+            <strong>100 ج.م</strong>
+          </div>
+          <div class="d-flex justify-content-between" style="font-size: 1.1rem;">
+            <span>الإجمالي</span>
+            <strong class="text-success">{{orderTotal | number}} ج.م</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

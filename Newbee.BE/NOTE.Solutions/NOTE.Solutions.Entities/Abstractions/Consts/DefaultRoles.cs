@@ -19,13 +19,8 @@ public static class DefaultRoles
     public const string ManagerRoleConcurrencyStamp = "34CA1036-7202-46C1-8C0D-D278841CECD8";
     public const int ManagerRoleId = 3;
 
-    public const string Employee = nameof(Employee);
-    public const string EmployeeRoleConcurrencyStamp = "D5CD1328-D599-4608-B5B0-C00056B6E7D7";
-    public const int EmployeeRoleId = 4;
-
-    public const string Support = nameof(Support);
-    public const string SupportRoleConcurrencyStamp = "B8EF8D04-CA96-49D2-AB38-A1645EA8E7BB";
-    public const int SupportRoleId = 5;
-
+    public const string Client = nameof(Client);
+    public const string ClientRoleConcurrencyStamp = "D5CD1328-D599-4608-B5B0-C00056B6E7D7";
+    public const int ClientRoleId = 4;
 
 }

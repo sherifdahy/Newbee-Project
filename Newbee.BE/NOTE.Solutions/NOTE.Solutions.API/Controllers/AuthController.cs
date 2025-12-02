@@ -24,17 +24,17 @@ public class AuthController(IAuthService authService) : ControllerBase
     }
 
     [HttpPost("register-company")]
-    public async Task<IActionResult> Register(RegisterCompanyRequest request, CancellationToken cancellationToken)
+    public async Task<IActionResult> RegisterCompany(RegisterCompanyRequest request, CancellationToken cancellationToken)
     {
         var result = await _authService.RegisterCompanyAsync(request, cancellationToken);
         return result.IsSuccess ? Created() : result.ToProblem();
     }
 
+
     [HttpPost("revoke")]
     public async Task<IActionResult> Revoke(RefreshTokenRequest request,CancellationToken cancellationToken)
     {
         var result = await _authService.RevokeAsync(request.Token, request.RefreshToken);
-
         return result.IsSuccess ? Ok() : result.ToProblem();
     }
 

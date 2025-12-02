@@ -7,5 +7,5 @@ import { Component, signal } from '@angular/core';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('NOTE.Solutions.FE.Administrator');
+  protected readonly title = signal('Newbee');
 }

@@ -1,0 +1,148 @@
+<!-- Hero Section -->
+<section class="hero-section py-5" style="background:var(--color-primary); color:var(--color-on-primary);">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold mb-3">اكتشف أفضل المنتجات</h1>
+        <p class="lead mb-4">تسوق بسهولة من أفضل الماركات العالمية مع أسعار منافسة وتوصيل سريع</p>
+        <div class="input-group input-group-lg mb-3" style="max-width: 400px;">
+          <input type="text" class="form-control" placeholder="ابحث عن منتج...">
+        </div>
+      </div>
+      <div class="col-lg-6 text-center">
+        <div class="display-1" style="font-size: 20rem;">🛍️</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container py-5">
+  <div class="row">
+    <!-- Sidebar Categories -->
+    <div class="col-lg-3 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-header">
+          <h5 class="mb-0">الفئات</h5>
+        </div>
+        <div class="list-group list-group-flush">
+          <button class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+            [class.active]="selectedCategory === null"
+            (click)="selectedCategory = null">
+            <span>جميع الفئات</span>
+            <span class="badge bg-primary">{{products.length}}</span>
+          </button>
+          <button *ngFor="let cat of categories"
+            class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+            [class.active]="selectedCategory === cat.id"
+            (click)="selectCategory(cat.id)">
+            <span>{{ cat.icon }} {{ cat.name }}</span>
+            <span class="badge bg-secondary">
+              {{products.length}}
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Price Filter -->
+      <div class="card shadow-sm mt-3">
+        <div class="card-header">
+          <h6 class="mb-0">السعر</h6>
+        </div>
+        <div class="card-body">
+          <div class="mb-3">
+            <label class="form-label">من: <strong>0 ج.م</strong></label>
+            <input type="range" class="form-range" min="0" max="20000">
+          </div>
+          <div>
+            <label class="form-label">إلى: <strong>20000 ج.م</strong></label>
+            <input type="range" class="form-range" min="0" max="20000">
+          </div>
+        </div>
+      </div>
+
+      <!-- Rating Filter -->
+      <div class="card shadow-sm mt-3">
+        <div class="card-header">
+          <h6 class="mb-0">التقييم</h6>
+        </div>
+        <div class="card-body">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="rating5">
+            <label class="form-check-label" for="rating5">⭐⭐⭐⭐⭐ (4.5 فما فوق)</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="rating4">
+            <label class="form-check-label" for="rating4">⭐⭐⭐⭐ (4 فما فوق)</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="rating3">
+            <label class="form-check-label" for="rating3">⭐⭐⭐ (3 فما فوق)</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Products Area -->
+    <div class="col-lg-9">
+      <!-- Sorting and View Options -->
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+          <span class="text-muted">عرض {{filteredProducts.length}} منتج</span>
+        </div>
+        <div>
+          <select class="form-select form-select-sm" style="max-width: 200px;">
+            <option selected>الأفضل مبيعاً</option>
+            <option>السعر: من الأقل للأعلى</option>
+            <option>السعر: من الأعلى للأقل</option>
+            <option>الأحدث أولاً</option>
+            <option>الأعلى تقييماً</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="row g-3">
+        <div *ngFor="let product of filteredProducts" class="col-md-6 col-lg-4">
+          <div class="card h-100 product-card shadow-sm">
+            <div class="position-relative">
+              <img [src]="product.image" class="card-img-top product-image" [alt]="product.name">
+              <span class="badge bg-danger position-absolute top-0 end-0 m-2">عرض</span>
+            </div>
+            <div class="card-body">
+              <h6 class="card-title" style="min-height: 40px;">{{product.name}}</h6>
+              <p class="small text-muted">{{product.category}}</p>
+
+              <!-- Rating -->
+              <div class="mb-2">
+                <small>{{getStarArray(product.rating).join('')}} ({{product.reviews}} تقييم)</small>
+              </div>
+
+              <!-- Price -->
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="mb-0 text-success">{{product.price | number}} ج.م</h5>
+                <del class="text-muted small">{{(product.price * 1.2) | number}} ج.م</del>
+              </div>
+
+              <!-- Actions -->
+              <div class="d-grid gap-2">
+                <button class="btn btn-primary btn-sm" routerLink="/product/{{product.id}}">عرض التفاصيل</button>
+                <button class="btn btn-outline-warning btn-sm">أضف للسلة</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <nav aria-label="Page navigation" class="mt-5">
+        <ul class="pagination justify-content-center">
+          <li class="page-item"><a class="page-link" href="#">السابق</a></li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">التالي</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

@@ -5,18 +5,20 @@
 public class CategoriesController(ICategoryService service) : ControllerBase
 {
     private readonly ICategoryService _service = service;
-    [HttpPost("{branchId}")]
-    public async Task<IActionResult> Create([FromBody] CategoryRequest request,[FromRoute]int branchId, CancellationToken cancellationToken)
+    [HttpPost("/api/branches/{companyId}/categories")]
+    public async Task<IActionResult> Create([FromRoute] int companyId, [FromBody] CategoryRequest request, CancellationToken cancellationToken)
     {
-        var result = await _service.CreateAsync(request, branchId, cancellationToken);
+        var result = await _service.CreateAsync(request,companyId, cancellationToken);
         return result.IsSuccess ? CreatedAtAction(nameof(Create), new { id = result.Value.Id }, result.Value) : result.ToProblem();
     }
-    [HttpGet]
-    public async Task<IActionResult> GetAll(CancellationToken cancellationToken)
+
+    [HttpGet("/api/companies/{companyId}/categories")]
+    public async Task<IActionResult> GetAll(int companyId,CancellationToken cancellationToken)
     {
-        var result = await _service.GetAllAsync(cancellationToken);
+        var result = await _service.GetAllAsync(companyId,cancellationToken);
         return result.IsSuccess ? Ok(result.Value) : result.ToProblem();
     }
+
     [HttpGet("{id}")]
     public async Task<IActionResult> GetById(int id ,CancellationToken cancellationToken)
         {

@@ -15,18 +15,13 @@ public class UserRoleConfiguration : IEntityTypeConfiguration<IdentityUserRole<i
         },
         new IdentityUserRole<int>()
         {
-            RoleId = DefaultRoles.SupportRoleId,
-            UserId = DefaultUsers.SupportId,
-        },
-        new IdentityUserRole<int>()
-        {
             RoleId = DefaultRoles.ManagerRoleId,
             UserId = DefaultUsers.ManagerId,
         },
         new IdentityUserRole<int>()
         {
-            RoleId = DefaultRoles.EmployeeRoleId,
-            UserId = DefaultUsers.EmployeeId
+            RoleId = DefaultRoles.ClientRoleId,
+            UserId = DefaultUsers.ClientId
         });
     }
 }

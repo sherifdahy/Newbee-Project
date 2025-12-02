@@ -1,15 +1,17 @@
 <header class="app-header">
-  <div class="left">
+  <nav class="navbar navbar-expand-lg">
 
-  </div>
-
-  <div class="right">
-    <div class="user" role="button" tabindex="0" (click)="handleLogoutClick()">
-      <img src="/assets/user-placeholder.png" width="36" height="36" alt="User avatar" />
-      <div class="user-info">
-        <div class="name">Admin</div>
-        <div class="role">Super</div>
+    <div class="ms-auto">
+      <div class="dropdown">
+        <button class="btn btn-light dropdown-toggle" type="button" id="userMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+          {{authService.currentUser?.email}} | {{authService.currentUser?.roles}}
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenuButton">
+          <li><a class="dropdown-item" >الملف الشخصي</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><button class="dropdown-item" (click)="handleLogoutClick()">تسجيل الخروج</button></li>
+        </ul>
       </div>
     </div>
-  </div>
+  </nav>
 </header>

@@ -1,0 +1,14 @@
+/* Footer Styles - Using Project Theme */
+footer {
+  margin-top: auto;
+  background: var(--sidebar-bg-start) !important;
+  border-top: 1px solid var(--surface-border);
+}
+
+footer a {
+  color: var(--sidebar-text);
+}
+
+footer a:hover {
+  color: var(--color-primary);
+}

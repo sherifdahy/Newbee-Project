@@ -3,7 +3,7 @@
   <div class="container">
     <a class="navbar-brand d-flex align-items-center gap-2 fw-bold fs-5" href="#">
       <span class="brand-mark rounded-circle d-inline-flex align-items-center justify-content-center">NS</span>
-      <span class="brand-title">NOTE Solutions</span>
+      <span class="brand-title">Newbee</span>
     </a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -21,61 +21,33 @@
 </nav>
 
 <!-- Hero Section (modern) -->
-<section class="hero bg-primary text-white">
+<section class="hero" style="background:var(--color-primary); color:var(--color-on-primary);">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-lg-6">
+      <div class="col-12">
         <div class="hero-content py-5">
-          <h1 class="display-4 fw-bold mb-2">حلول الفوترة والإيصالات الإلكترونية</h1>
-          <p class="lead text-white-75 mb-4">نظام سهل وآمن لإصدار وإدارة الفواتير والإيصالات مع ربط مباشر لمصلحة
-            الضرائب.</p>
+          <h1 class="display-4 fw-bold mb-2">منصة مركزية لتكامل التجارة الإلكترونية والشحن</h1>
+          <p class="lead text-white-75 mb-4">ربط متاجر أمازون، جوميا، والمتاجر المخصصة مع شركات الشحن (مثل بوسطا) لإدارة الطلبات، تتبع الشحنات، ومزامنة المخزون من واجهة واحدة سهلة الاستخدام.</p>
 
           <div class="product-pills d-flex gap-2 flex-wrap mb-3">
-            <span class="badge bg-light text-dark">نظام الفاتورة الإلكترونية</span>
-            <span class="badge bg-light text-dark">نظام الإيصال الإلكتروني</span>
-            <span class="badge bg-light text-dark">تقارير وتحليلات</span>
+            <span class="badge" style="background:var(--color-on-primary); color:var(--color-primary);">تكامل الطلبات</span>
+            <span class="badge" style="background:var(--color-on-primary); color:var(--color-primary);">تتبع الشحنات</span>
+            <span class="badge" style="background:var(--color-on-primary); color:var(--color-primary);">مزامنة المخزون</span>
           </div>
 
           <div class="hero-cta d-flex gap-3 flex-wrap mb-3">
-            <button class="btn btn-light btn-lg px-4" (click)="goToLogin()">ابدأ الآن مجاناً</button>
-            <button class="btn btn-outline-light btn-lg px-4">شاهد العرض التوضيحي</button>
+            <button class="btn btn-lg px-4" (click)="goToLogin()" style="background:var(--color-on-primary); color:var(--color-primary); border:1px solid var(--color-on-primary);">ابدأ الآن مجاناً</button>
+            <button class="btn btn-lg px-4" style="background:transparent; color:var(--color-on-primary); border:1px solid rgba(255,255,255,0.2);">شاهد العرض التوضيحي</button>
           </div>
 
-          <div class="d-flex align-items-center gap-3 text-white-50 small">
-            <span class="badge bg-light text-dark">✓ تجربة مجانية 30 يوم</span>
+          <div class="d-flex align-items-center gap-3 small" style="opacity:.9; color:var(--color-on-primary);">
+            <span class="badge" style="background:var(--color-on-primary); color:var(--color-primary);">✓ تجربة مجانية 30 يوم</span>
             <span>لا حاجة لبطاقة ائتمان</span>
           </div>
         </div>
       </div>
 
-      <div class="col-lg-6">
-        <div class="hero-card bg-white rounded shadow-lg p-4">
-          <div class="demo-icon text-center mb-3">
-            <!-- Document SVG -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none"
-              class="bi bi-file-earmark-text text-dark" aria-hidden="true">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor"
-                stroke-width="0.8" fill="currentColor" opacity="0.08"></path>
-              <path d="M14 2v6h6" stroke="currentColor" stroke-width="1.2" fill="none"></path>
-              <path d="M9 13h6M9 10h6M9 16h4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path>
-            </svg>
-          </div>
-          <h5 class="text-dark text-center mb-3">فاتورة إلكترونية نموذجية</h5>
-          <div class="border rounded p-3 bg-light">
-            <div class="d-flex justify-content-between mb-2"><span class="text-muted">رقم الفاتورة:</span><strong
-                class="text-dark">INV-2025-0001</strong></div>
-            <div class="d-flex justify-content-between mb-2"><span class="text-muted">التاريخ:</span><strong
-                class="text-dark">25/10/2025</strong></div>
-            <div class="d-flex justify-content-between mb-2"><span class="text-muted">العميل:</span><strong
-                class="text-dark">شركة المستقبل للتجارة</strong></div>
-            <hr>
-            <div class="d-flex justify-content-between"><span class="text-muted">الإجمالي:</span>
-              <h5 class="text-success mb-0">15,000 ج.م</h5>
-            </div>
-            <button class="btn btn-success btn-sm w-100 mt-3">✓ مرسلة لمصلحة الضرائب</button>
-          </div>
-        </div>
-      </div>
+
     </div>
   </div>
 </section>
@@ -84,8 +56,8 @@
 <section id="features" class="py-5 bg-light">
   <div class="container py-5">
     <div class="text-center mb-5">
-      <h2 class="display-5 fw-bold mb-3">لماذا نظامنا هو الأفضل؟</h2>
-      <p class="lead text-muted">كل ما تحتاجه لإدارة فواتيرك في مكان واحد</p>
+      <h2 class="display-5 fw-bold mb-3">لماذا Newbee؟</h2>
+      <p class="lead text-muted">منصة موحدة لتجميع الطلبات، مزامنة المخزون، وربط خدمات الشحن بكل سهولة.</p>
     </div>
 
     <div class="row g-4">
@@ -103,9 +75,9 @@
                   stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </div>
-            <h5 class="card-title fw-bold mb-3">ربط مباشر مع مصلحة الضرائب</h5>
+            <h5 class="card-title fw-bold mb-3">تكامل متعدد الأسواق</h5>
             <p class="card-text text-muted">
-              إرسال تلقائي لكل من الفواتير والإيصالات الإلكترونية لمصلحة الضرائب المصرية بضغطة زر واحدة
+              ربط متاجر أمازون، جوميا والمتاجر المخصصة لتجميع الطلبات في لوحة تحكم واحدة.
             </p>
           </div>
         </div>
@@ -124,9 +96,9 @@
                 <rect x="17" y="2" width="3" height="18" rx="0.5" fill="currentColor" opacity="0.7"></rect>
               </svg>
             </div>
-            <h5 class="card-title fw-bold mb-3">تقارير ذكية ومفصلة</h5>
+            <h5 class="card-title fw-bold mb-3">إدارة مركزية للطلبات</h5>
             <p class="card-text text-muted">
-              احصل على تقارير مالية شاملة ورسوم بيانية توضح أداء عملك
+              راجع، حرّر، وصدّر الطلبات من مكان واحد مع سير عمل مدمج للتعامل مع الطلبات المرتجعة والملغاة.
             </p>
           </div>
         </div>
@@ -143,9 +115,9 @@
                 <path d="M13 2L3 14h7l-1 8L21 10h-7l-1-8z" fill="currentColor"></path>
               </svg>
             </div>
-            <h5 class="card-title fw-bold mb-3">سرعة وسهولة في الاستخدام</h5>
+            <h5 class="card-title fw-bold mb-3">مزامنة المخزون تلقائياً</h5>
             <p class="card-text text-muted">
-              واجهة بسيطة وسهلة تمكنك من إنشاء الفواتير في ثوانٍ معدودة
+              تحديث المخزون في المتاجر والمتجر المركزي فوراً عند البيع أو الإرجاع لتجنّب المبيعات الزائدة.
             </p>
           </div>
         </div>
@@ -166,9 +138,9 @@
                 <circle cx="12" cy="15" r="1" fill="currentColor"></circle>
               </svg>
             </div>
-            <h5 class="card-title fw-bold mb-3">أمان وحماية عالية</h5>
+            <h5 class="card-title fw-bold mb-3">ربط سريع مع شركات الشحن</h5>
             <p class="card-text text-muted">
-              بياناتك محمية بأعلى معايير الأمان والتشفير
+              توصيل تلقائي لطلبات الشحن لمزودي الخدمات مثل بوسطا مع طباعة بوليصة وتتبع رقم الشحنة.
             </p>
           </div>
         </div>
@@ -187,9 +159,9 @@
                 <circle cx="12" cy="18" r="0.6" fill="currentColor"></circle>
               </svg>
             </div>
-            <h5 class="card-title fw-bold mb-3">متوافق مع جميع الأجهزة</h5>
+            <h5 class="card-title fw-bold mb-3">تتبع الشحنات وإشعارات العملاء</h5>
             <p class="card-text text-muted">
-              استخدم النظام من الكمبيوتر أو الموبايل أو التابلت بكل سهولة
+              إشعارات تلقائية للعملاء عبر البريد والرسائل القصيرة مع حالة الشحنة ورقم التتبع.
             </p>
           </div>
         </div>
@@ -209,9 +181,9 @@
                 </path>
               </svg>
             </div>
-            <h5 class="card-title fw-bold mb-3">إدارة متعددة الفروع</h5>
+            <h5 class="card-title fw-bold mb-3">لوحة تحكم موحدة</h5>
             <p class="card-text text-muted">
-              أدِر جميع فروعك من حساب واحد بكل احترافية
+              إدارة المتاجر، المنتجات، الطلبات، والشحنات من خلال لوحة مركزية واحدة للمؤسسات المختلفة.
             </p>
           </div>
         </div>
@@ -224,8 +196,8 @@
 <section id="pricing" class="py-5">
   <div class="container py-5">
     <div class="text-center mb-5">
-      <h2 class="display-5 fw-bold mb-3">خطط مرنة تناسب احتياجاتك</h2>
-      <p class="lead text-muted">اختر الباقة المناسبة لحجم عملك</p>
+      <h2 class="display-5 fw-bold mb-3">خطط مرنة تناسب احتياجات التجارة المتصلة</h2>
+      <p class="lead text-muted">خطط تبدأ من باقات للمشروعات الصغيرة حتى حلول مخصصة للشركات.</p>
     </div>
 
     <div class="row g-4 justify-content-center">
@@ -316,7 +288,7 @@
     <div class="row text-center g-4">
       <div class="col-md-3 col-6">
         <h2 class="display-4 fw-bold mb-2">+5000</h2>
-        <p class="mb-0">عميل راضٍ</p>
+        <p class="mb-0">تاجر متصل</p>
       </div>
       <div class="col-md-3 col-6">
         <h2 class="display-4 fw-bold mb-2">+1M</h2>
@@ -361,9 +333,9 @@
   <div class="container">
     <div class="row g-4">
       <div class="col-lg-4">
-        <h5 class="fw-bold mb-3">نظام الفواتير الإلكترونية</h5>
+        <h5 class="fw-bold mb-3">Newbee — تكامل التجارة والشحن</h5>
         <p class="text-white-50">
-          الحل الأمثل لإدارة فواتيرك وإيصالاتك مع الربط المباشر مع مصلحة الضرائب المصرية
+          منصة موحدة لربط متاجرك مع شركات الشحن، لإدارة الطلبات، تتبع الشحنات ومزامنة المخزون بسهولة وموثوقية.
         </p>
       </div>
       <div class="col-lg-2 col-md-4">
@@ -394,7 +366,7 @@
               <path
                 d="M0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.761 4.146A2 2 0 0 0 2 14h12a2 2 0 0 0 1.999-1.024L9.239 8.83 8 9.586l-1.239-.756z" />
             </svg>
-            info@note-solutions.com
+            info@newbee.com
           </li>
           <li class="mb-2 text-white-50">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"

@@ -12,7 +12,7 @@ public class Category : AuditableEntity
     public int Id { get; set; }
     public string Name { get; set; } = string.Empty;
     public bool IsDeleted{ get; set; }= false;
-    public int BranchId { get; set; }
-    public Branch Branch { get; set; }
+    public int CompanyId { get; set; }
+    public Company.Company Company { get; set; } = default!;
     public ICollection<Product.Product> Products { get; set; } = new HashSet<Product.Product>();
 }

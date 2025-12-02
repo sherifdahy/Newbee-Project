@@ -4,15 +4,19 @@ public class CategoryService(IUnitOfWork unitOfWork) : ICategoryService
 {
     private readonly IUnitOfWork _unitOfWork = unitOfWork;
 
-    public async Task<Result<CategoryResponse>> CreateAsync(CategoryRequest request,int branchId, CancellationToken cancellationToken = default)
+    public async Task<Result<CategoryResponse>> CreateAsync(CategoryRequest request,int companyId, CancellationToken cancellationToken = default)
     {
         var categoryExist = _unitOfWork.Categories.IsExist(x => x.Name.ToLower() == request.Name.ToLower());
+        
         if (categoryExist)
             return Result.Failure<CategoryResponse>(CategoryErrors.Duplicated);
-        if(!_unitOfWork.Branches.IsExist(x => x.Id == branchId))
-            return Result.Failure<CategoryResponse>(BranchErrors.NotFound);
+
+        if(!_unitOfWork.Companies.IsExist(x => x.Id == companyId))
+            return Result.Failure<CategoryResponse>(CompanyErrors.NotFound);
+
         var category = request.Adapt<Category>();
-        category.BranchId = branchId;
+        category.CompanyId = companyId;
+        
         await _unitOfWork.Categories.AddAsync(category, cancellationToken);
         await _unitOfWork.SaveAsync(cancellationToken);
 
@@ -20,13 +24,9 @@ public class CategoryService(IUnitOfWork unitOfWork) : ICategoryService
     }
 
 
-    public async Task<Result<IEnumerable<CategoryResponse>>> GetAllAsync(CancellationToken cancellationToken = default)
+    public async Task<Result<IEnumerable<CategoryResponse>>> GetAllAsync(int companyId,CancellationToken cancellationToken = default)
     {
-        var categories = await _unitOfWork.Categories.FindAllAsync(
-            x => !x.IsDeleted,
-            cancellationToken: cancellationToken
-        );
-
+        var categories = await _unitOfWork.Categories.FindAllAsync(x => x.CompanyId == companyId,null,cancellationToken);
         return Result.Success(categories.Adapt<IEnumerable<CategoryResponse>>());
     }
 

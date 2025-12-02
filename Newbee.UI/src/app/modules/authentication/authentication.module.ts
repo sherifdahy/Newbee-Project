@@ -1,15 +1,40 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './pages/login/login.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
+import { ClientRegisterFormComponent } from './components/client-register-form/client-register-form.component';
+import { PartnerRegisterFormComponent } from './components/partner-register-form/partner-register-form.component';
+import { AuthLayoutComponent } from '../../shared/layouts/auth-layout/auth-layout.component';
 
-const routes : Routes = [
+const routes: Routes = [
   {
-    path : 'login',
-    component : LoginComponent,
+    path: '',
+    component: AuthLayoutComponent,
+    children: [
+      {
+        path: 'login',
+        component: LoginFormComponent,
+      },
+      {
+        path: 'partner',
+        children: [
+          {
+            path: 'register',
+            component: PartnerRegisterFormComponent
+          }
+        ]
+      },
+      {
+        path: 'client',
+        children: [
+          {
+            path: 'register',
+            component: ClientRegisterFormComponent
+          }
+        ]
+      }
+    ]
   }
 ]
 
@@ -20,6 +45,11 @@ const routes : Routes = [
     FormsModule,
     RouterModule.forChild(routes),
   ],
-  declarations: [LoginComponent,LoginFormComponent]
+  declarations: [
+    LoginFormComponent,
+    ClientRegisterFormComponent,
+    PartnerRegisterFormComponent,
+    AuthLayoutComponent,
+  ]
 })
 export class AuthenticationModule { }

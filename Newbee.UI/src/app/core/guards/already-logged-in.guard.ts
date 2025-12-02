@@ -9,9 +9,9 @@ export const alreadyLoggedInGuard: CanActivateFn = (route, state) => {
 
 
   if(authService.isLoggedIn && !authService.isTokenExpired()) {
-    if(authService.currentUser?.roles.includes(Role[Role.Admin]))
+    if(authService.currentUser?.roles.includes(Role[Role.Admin]) || authService.currentUser?.roles.includes(Role[Role.Manager]))
     {
-      router.navigateByUrl('admin');
+      router.navigateByUrl('partner/dashboard');
     }
     else{
       router.navigateByUrl('portal');

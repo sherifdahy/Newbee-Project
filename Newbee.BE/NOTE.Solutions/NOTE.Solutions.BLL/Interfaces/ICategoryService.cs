@@ -3,8 +3,8 @@
 namespace NOTE.Solutions.BLL.Interfaces;
 public interface ICategoryService
 {
-    Task<Result<CategoryResponse> >CreateAsync (CategoryRequest request,int BranchId, CancellationToken cancellationToken = default);
-    Task<Result<IEnumerable<CategoryResponse>>> GetAllAsync(CancellationToken cancellationToken = default);
+    Task<Result<CategoryResponse> >CreateAsync (CategoryRequest request,int companyId, CancellationToken cancellationToken = default);
+    Task<Result<IEnumerable<CategoryResponse>>> GetAllAsync(int companyId ,CancellationToken cancellationToken = default);
     Task<Result<CategoryResponse>> GetAsync(int id, CancellationToken cancellationToken = default);
     Task<Result<bool>> UpdateAsync(int id, CategoryRequest request, CancellationToken cancellationToken = default);
     Task<Result<bool>> DeleteAsync(int id, CancellationToken cancellationToken = default);

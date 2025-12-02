@@ -2,12 +2,12 @@
   <aside class="sidebar" role="complementary" aria-label="Primary navigation">
     <div class="brand justify-content-center">
       <a class="brand-link" routerLink="/">
-        <span class="brand-name fs-5">NOTE Solutions</span>
+        <span class="brand-name fs-5">Newbee</span>
       </a>
     </div>
 
     <nav class="nav">
-      <a routerLink="/admin" routerLinkActive="active">لوحة التحكم</a>
+      <a routerLink="dashboard" routerLinkActive="active">لوحة التحكم</a>
       <a *ngIf="hasPermissions(Permissions.CompaniesRead)" routerLink="company-management/companies" routerLinkActive="active">ادارة الشركات</a>
       <a *ngIf="hasPermissions(Permissions.RolesRead)" routerLink="role-management" routerLinkActive="active">ادارة الصلاحيات</a>
       <a *ngIf="hasPermissions(Permissions.ActiveCodesRead)" routerLink="active-code-management/active-codes" routerLinkActive="active">ادارة اكواد النشاط</a>
@@ -16,10 +16,14 @@
         <button class="nav-group-toggle" type="button" [attr.aria-expanded]="addressNavOpen" (click)="toggleNavGroup()">ادارة العنوان</button>
         <div class="subnav">
           <a *ngIf="hasPermissions(Permissions.CountiesRead)" routerLink="address-management/countries" routerLinkActive="active">البلدان</a>
-          <a *ngIf="hasPermissions(Permissions.GovernoratiesRead)" routerLink="address-management/governorates" routerLinkActive="active">المحافظات</a>
+        <a *ngIf="hasPermissions(Permissions.GovernoratiesRead)" routerLink="address-management/governorates" routerLinkActive="active">المحافظات</a>
           <a *ngIf="hasPermissions(Permissions.CitiesRead)" routerLink="address-management/cities" routerLinkActive="active">المدن</a>
         </div>
       </div>
+
+      <a *ngIf="hasPermissions(Permissions.CategoriesRead)" routerLink="category-management/categories" routerLinkActive="active">ادارة الفئات</a>
+      <a *ngIf="hasPermissions(Permissions.ProductsRead)" routerLink="product-management/products" routerLinkActive="active">ادارة المنتجات</a>
+
     </nav>
 
     <div class="sidebar-footer">

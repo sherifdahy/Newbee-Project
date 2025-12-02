@@ -1,0 +1,6 @@
+/* navbar.component.css intentionally empty
+   We're using Bootstrap's navbar classes and the global theme variables
+   (defined in src/styles.css). Remove custom navbar overrides so Bootstrap
+   handles layout, spacing and RTL behavior. Add styles here only if a
+   small, unavoidable tweak is required later. */
+

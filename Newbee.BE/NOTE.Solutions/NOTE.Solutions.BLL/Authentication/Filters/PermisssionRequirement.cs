@@ -14,5 +14,4 @@ public class PermisssionRequirement : IAuthorizationRequirement
         this.permission = permission;
     }
 
-
 }

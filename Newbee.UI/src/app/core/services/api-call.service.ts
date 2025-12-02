@@ -35,6 +35,7 @@ export class ApiCallService {
   put(url:string,body : any,headers?:any) {
     return this.httpClinet.put(`${environment.baseUrl}/${url}`,body,this.buildHttpOptions(headers));
   }
+  
   delete(url: string, headers?: any): Observable<void> {
     return this.httpClinet.delete<void>(`${environment.baseUrl}/${url}`, this.buildHttpOptions(headers));
   }

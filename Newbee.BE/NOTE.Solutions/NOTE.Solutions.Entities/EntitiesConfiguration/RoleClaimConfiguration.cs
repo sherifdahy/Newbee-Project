@@ -1,13 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using NOTE.Solutions.Entities.Abstractions.Consts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NOTE.Solutions.Entities.EntitiesConfiguration;
 public class RoleClaimConfiguration : IEntityTypeConfiguration<IdentityRoleClaim<int>>
@@ -29,8 +23,6 @@ public class RoleClaimConfiguration : IEntityTypeConfiguration<IdentityRoleClaim
             });
         }
 
-
         builder.HasData(adminClaims);
-
     }
 }

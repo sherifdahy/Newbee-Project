@@ -54,6 +54,26 @@ public static class Permissions
     public const string ToggleStatus = "roles:toggleStatus";
     #endregion
 
+    #region Companies Permissions
+    public const string GetCompanies = "companies:read";
+    public const string CreateCompanies = "companies:create";
+    public const string UpdateCompanies = "companies:update";
+    public const string ToggleStatusCompanies = "companies:toggleStatus";
+    #endregion
+
+    #region Products Permissions
+    public const string GetProducts = "products:read";
+    public const string CreateProducts = "products:create";
+    public const string UpdateProducts = "products:update";
+    public const string ToggleStatusProducts = "products:toggleStatus";
+    #endregion
+
+    #region Categories Permissions
+    public const string GetCategories = "categories:read";
+    public const string CreateCategories = "categories:create";
+    public const string UpdateCategories = "categories:update";
+    public const string ToggleStatusCategories = "categories:toggleStatus";
+    #endregion
 
     public static IList<string> GetAllPermissions() 
     { 

@@ -1,0 +1,96 @@
+<div class="d-flex justify-content-center align-items-center">
+  <div class="card shadow-lg border-0 rounded-4 p-4" style="width: 60vw; max-width: 700px;">
+    <div class="card-body">
+      <h3 class="card-title text-center mb-4 fw-bold" style="color:var(--blue-color)">
+        لوحة تسجيل الشركات
+      </h3>
+
+      <form [formGroup]="registerPartnerForm" (ngSubmit)="onSubmit()">
+
+        <!-- اسم الشركة و RIN في صف واحد -->
+        <div class="row g-3 mb-3">
+          <div class="col-md-6">
+            <label for="partnerName" class="form-label">اسم الشركة</label>
+            <input type="text" id="partnerName" class="form-control"
+                   formControlName="name"
+                   [class.is-valid]="registerPartnerForm.get('name')?.valid && registerPartnerForm.get('name')?.touched"
+                   [class.is-invalid]="registerPartnerForm.get('name')?.invalid && registerPartnerForm.get('name')?.touched">
+            <div *ngIf="registerPartnerForm.get('name')?.touched && registerPartnerForm.get('name')?.errors" class="text-danger small mt-1">
+              <span *ngIf="registerPartnerForm.get('name')?.errors?.['required']">اسم الشركة مطلوب</span>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="partnerRin" class="form-label">RIN</label>
+            <input type="text" id="partnerRin" class="form-control"
+                   formControlName="rin"
+                   [class.is-valid]="registerPartnerForm.get('rin')?.valid && registerPartnerForm.get('rin')?.touched"
+                   [class.is-invalid]="registerPartnerForm.get('rin')?.invalid && registerPartnerForm.get('rin')?.touched">
+            <div *ngIf="registerPartnerForm.get('rin')?.touched && registerPartnerForm.get('rin')?.errors" class="text-danger small mt-1">
+              <span *ngIf="registerPartnerForm.get('rin')?.errors?.['required']">RIN مطلوب</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- بيانات المدير -->
+        <div formGroupName="manager">
+          <h5 class="mb-3 mt-4">بيانات المدير</h5>
+          <div class="row g-3">
+
+            <div class="col-md-6">
+              <label for="managerName" class="form-label">اسم المدير</label>
+              <input type="text" id="managerName" class="form-control" formControlName="name"
+                     [class.is-valid]="registerPartnerForm.get('manager.name')?.valid && registerPartnerForm.get('manager.name')?.touched"
+                     [class.is-invalid]="registerPartnerForm.get('manager.name')?.invalid && registerPartnerForm.get('manager.name')?.touched">
+              <div *ngIf="registerPartnerForm.get('manager.name')?.touched && registerPartnerForm.get('manager.name')?.errors" class="text-danger small mt-1">
+                <span *ngIf="registerPartnerForm.get('manager.name')?.errors?.['required']">اسم المدير مطلوب</span>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="managerIdentifier" class="form-label">رقم الهوية</label>
+              <input type="text" id="managerIdentifier" class="form-control" formControlName="identifierNumber">
+            </div>
+
+            <div class="col-md-6">
+              <label for="managerEmail" class="form-label">الإيميل</label>
+              <input type="email" id="managerEmail" class="form-control" formControlName="email"
+                     [class.is-valid]="registerPartnerForm.get('manager.email')?.valid && registerPartnerForm.get('manager.email')?.touched"
+                     [class.is-invalid]="registerPartnerForm.get('manager.email')?.invalid && registerPartnerForm.get('manager.email')?.touched">
+              <div *ngIf="registerPartnerForm.get('manager.email')?.touched && registerPartnerForm.get('manager.email')?.errors" class="text-danger small mt-1">
+                <span *ngIf="registerPartnerForm.get('manager.email')?.errors?.['required']">الإيميل مطلوب</span>
+                <span *ngIf="registerPartnerForm.get('manager.email')?.errors?.['email']">أدخل إيميل صحيح</span>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="managerPhone" class="form-label">رقم الهاتف</label>
+              <input type="text" id="managerPhone" class="form-control" formControlName="phoneNumber">
+            </div>
+
+            <div class="col-md-6">
+              <label for="managerPassword" class="form-label">كلمة المرور</label>
+              <input type="password" id="managerPassword" class="form-control" formControlName="password"
+                     [class.is-valid]="registerPartnerForm.get('manager.password')?.valid && registerPartnerForm.get('manager.password')?.touched"
+                     [class.is-invalid]="registerPartnerForm.get('manager.password')?.invalid && registerPartnerForm.get('manager.password')?.touched">
+              <div *ngIf="registerPartnerForm.get('manager.password')?.touched && registerPartnerForm.get('manager.password')?.errors" class="text-danger small mt-1">
+                <span *ngIf="registerPartnerForm.get('manager.password')?.errors?.['required']">كلمة المرور مطلوبة</span>
+                <span *ngIf="registerPartnerForm.get('manager.password')?.errors?.['minlength']">كلمة المرور قصيرة</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <button class="btn btn-primary w-100 py-2 fw-semibold mt-4" type="submit">
+          <i class="bi bi-box-arrow-in-right me-2"></i> تسجيل الشركة
+        </button>
+      </form>
+
+      <div class="d-grid gap-2 mt-3">
+        <a routerLink="/auth/partner/register" class="btn btn-outline-primary btn-sm">تسجيل كشريك</a>
+        <a routerLink="/auth/client/register" class="btn btn-outline-primary btn-sm">تسجيل كعميل</a>
+      </div>
+    </div>
+  </div>
+</div>

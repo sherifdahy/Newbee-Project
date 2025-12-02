@@ -1,0 +1,21 @@
+/* Cart Page - Using Project Theme */
+.table {
+  font-size: 0.95rem;
+}
+
+.table thead th {
+  background: transparent;
+  border-bottom: 1px solid var(--surface-border);
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.table tbody tr:hover {
+  background: var(--color-bg);
+}
+
+@media (max-width: 768px) {
+  .table-responsive {
+    font-size: 0.85rem;
+  }
+}

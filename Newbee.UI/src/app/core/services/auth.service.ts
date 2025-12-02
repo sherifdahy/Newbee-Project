@@ -3,6 +3,7 @@ import { ApiCallService } from './api-call.service';
 import { AuthResponse } from '../models/authentication/responses/auth-response';
 import { BehaviorSubject, catchError, Observable, tap, throwError } from 'rxjs';
 import { AuthenticatedUserResponse } from '../models/authentication/responses/authenticated-user-response';
+import { RegisterCompanyRequest } from '../models/authentication/requests/register-company-request';
 
 @Injectable({
   providedIn: 'root'
@@ -32,9 +33,18 @@ export class AuthService {
         this.loadUserFromToken();
       }),
       catchError((response) => {
-        return throwError(() => response.error?.errors || response.error);
+        return throwError(() => response.error?.errors);
       })
     );
+  }
+
+  registerCompany(request : RegisterCompanyRequest) : Observable<void>
+  {
+    return this.apiCall.post<void>('api/auth/register-company',request).pipe(
+      catchError((response)=>{
+        return throwError(()=> response.error?.errors);
+      })
+    )
   }
 
   /**

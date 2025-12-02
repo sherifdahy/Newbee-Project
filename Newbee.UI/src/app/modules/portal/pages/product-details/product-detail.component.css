@@ -1,0 +1,13 @@
+/* Product Detail Page - Using Project Theme */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.img-fluid {
+  transition: transform 0.3s ease;
+}
+
+img.border:hover {
+  transform: scale(1.05);
+  border-color: var(--color-primary) !important;
+}

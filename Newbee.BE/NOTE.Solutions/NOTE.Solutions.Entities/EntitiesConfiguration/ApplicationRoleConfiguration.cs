@@ -26,14 +26,6 @@ public class ApplicationRoleConfiguration : IEntityTypeConfiguration<Application
         },
         new ApplicationRole()
         {
-            Id= DefaultRoles.SupportRoleId,
-            Name = DefaultRoles.Support,
-            IsDefault = false,
-            NormalizedName = DefaultRoles.Support.ToUpper(),
-            ConcurrencyStamp = DefaultRoles.SupportRoleConcurrencyStamp
-        },
-        new ApplicationRole()
-        {
             Id = DefaultRoles.ManagerRoleId,
             Name = DefaultRoles.Manager,
             IsDefault = false,
@@ -42,11 +34,11 @@ public class ApplicationRoleConfiguration : IEntityTypeConfiguration<Application
         },
         new ApplicationRole()
         {
-            Id = DefaultRoles.EmployeeRoleId,
-            Name = DefaultRoles.Employee,
+            Id = DefaultRoles.ClientRoleId,
+            Name = DefaultRoles.Client,
             IsDefault = false,
-            NormalizedName = DefaultRoles.Employee.ToUpper(),
-            ConcurrencyStamp = DefaultRoles.EmployeeRoleConcurrencyStamp
+            NormalizedName = DefaultRoles.Client.ToUpper(),
+            ConcurrencyStamp = DefaultRoles.ClientRoleConcurrencyStamp
         });
     }
 }

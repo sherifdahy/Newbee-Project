@@ -1,5 +1,5 @@
 ﻿using NOTE.Solutions.Entities.Abstractions.Consts;
-using NOTE.Solutions.Entities.Enums;
+using NOTE.Solutions.Entities.Entities.Manager;
 using System.Security.Cryptography;
 
 namespace NOTE.Solutions.BLL.Services;
@@ -79,7 +79,7 @@ public class AuthService(SignInManager<ApplicationUser> signInManager,UserManage
 
         return Result.Failure<AuthResponse>(error);        
     }
-
+    
     public async Task<Result<bool>> RegisterCompanyAsync(RegisterCompanyRequest request, CancellationToken cancellationToken)
     {
         if (_unitOfWork.Companies.IsExist(x => x.RIN == request.RIN))
@@ -94,6 +94,8 @@ public class AuthService(SignInManager<ApplicationUser> signInManager,UserManage
             PhoneNumber = request.Manager.PhoneNumber,
         };
 
+        var transaction = await _unitOfWork.BeginTransactionAsync();
+
         var creationResult = await _userManager.CreateAsync(applicationUser,request.Manager.Password);
 
         if(!creationResult.Succeeded)
@@ -101,33 +103,41 @@ public class AuthService(SignInManager<ApplicationUser> signInManager,UserManage
             var error = creationResult.Errors.First();
             return Result.Failure<bool>(new Error("Auth.Registration",error.Description,StatusCodes.Status400BadRequest));
         }
-        else
+        try
         {
-            try
+            var company = new Company()
             {
-                var company = new Company()
-                {
-                    Name = request.Name,
-                    RIN = request.RIN,
-                };
-                await _unitOfWork.Companies.AddAsync(company, cancellationToken);
-                await _unitOfWork.SaveAsync();
-            }
-            catch
+                Name = request.Name,
+                RIN = request.RIN,
+            };
+            await _unitOfWork.Companies.AddAsync(company, cancellationToken);
+            await _unitOfWork.SaveAsync(cancellationToken);
+
+            var manager = new Manager()
             {
-                var result = await _userManager.DeleteAsync(applicationUser);
-                throw;
+                ApplicationUserId = applicationUser.Id,
+                CompanyId = company.Id,
+            };
+            
+            await _unitOfWork.Managers.AddAsync(manager, cancellationToken);
+            await _unitOfWork.SaveAsync(cancellationToken);
+
+            var assignUserToRole = await _userManager.AddToRoleAsync(applicationUser, nameof(DefaultRoles.Manager));
+
+            if (!assignUserToRole.Succeeded)
+            {
+                var error = assignUserToRole.Errors.First();
+                return Result.Failure<bool>(new Error("Auth.Assign To Role", error.Description, StatusCodes.Status400BadRequest));
             }
+
+
+            await transaction.CommitAsync(cancellationToken);
         }
-
-        var assignUserToRole = await _userManager.AddToRoleAsync(applicationUser, nameof(DefaultRoles.Member));
-
-        if (!assignUserToRole.Succeeded)
+        catch
         {
-            var error = assignUserToRole.Errors.First();
-            return Result.Failure<bool>(new Error("Auth.Assign To Role", error.Description, StatusCodes.Status400BadRequest));
+            await transaction.RollbackAsync(cancellationToken);
+            throw;
         }
-        
         return Result.Success<bool>(true);
     }
     public async Task<Result<AuthResponse>> GetRefreshTokenAsync(string token, string refreshToken, CancellationToken cancellationToken = default)
@@ -194,12 +204,10 @@ public class AuthService(SignInManager<ApplicationUser> signInManager,UserManage
 
         return Result.Success(response);
     }
-
     private static string GenerateRefreshToken()
     {
         return Convert.ToBase64String(RandomNumberGenerator.GetBytes(64));
     }
-
     public async Task<Result> RevokeAsync(string token, string refreshToken, CancellationToken cancellationToken = default)
     {
         var userId = _provider.ValidateToken(token);

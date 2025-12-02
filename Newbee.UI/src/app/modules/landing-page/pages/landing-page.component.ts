@@ -19,6 +19,6 @@ export class LandingPageComponent implements OnInit {
   }
 
   goToLogin(): void {
-    this.router.navigate(['/auth/login']);
+    this.router.navigate(['partner/dashboard']);
   }
 }

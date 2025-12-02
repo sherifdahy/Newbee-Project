@@ -13,7 +13,6 @@ public class ApplicationUserConfiguration : IEntityTypeConfiguration<Application
 
         builder.OwnsMany(x => x.RefreshTokens).WithOwner();
 
-
         var passwordHasher = new PasswordHasher<ApplicationUser>();
 
         builder.HasData(new ApplicationUser()
@@ -30,18 +29,6 @@ public class ApplicationUserConfiguration : IEntityTypeConfiguration<Application
         },
         new ApplicationUser()
         {
-            Id = DefaultUsers.SupportId,
-            UserName = DefaultUsers.SupportEmail,
-            Email = DefaultUsers.SupportEmail,
-            NormalizedEmail = DefaultUsers.SupportEmail.ToUpper(),
-            NormalizedUserName = DefaultUsers.SupportEmail.ToUpper(),
-            ConcurrencyStamp = DefaultUsers.SupportConcurrencyStamp,
-            SecurityStamp = DefaultUsers.SupportSecurityStamp,
-            EmailConfirmed = true,
-            PasswordHash = passwordHasher.HashPassword(null!, DefaultUsers.SupportPassword),
-        },
-        new ApplicationUser()
-        {
             Id = DefaultUsers.ManagerId,
             UserName = DefaultUsers.ManagerEmail,
             Email = DefaultUsers.ManagerEmail,
@@ -54,15 +41,15 @@ public class ApplicationUserConfiguration : IEntityTypeConfiguration<Application
         },
         new ApplicationUser()        
         {
-            Id = DefaultUsers.EmployeeId,
-            UserName = DefaultUsers.EmployeeEmail,
-            Email = DefaultUsers.EmployeeEmail,
-            NormalizedEmail = DefaultUsers.EmployeeEmail.ToUpper(),
-            NormalizedUserName = DefaultUsers.EmployeeEmail.ToUpper(),
-            ConcurrencyStamp = DefaultUsers.EmployeeConcurrencyStamp,
-            SecurityStamp = DefaultUsers.EmployeeSecurityStamp,
+            Id = DefaultUsers.ClientId,
+            UserName = DefaultUsers.ClientEmail,
+            Email = DefaultUsers.ClientEmail,
+            NormalizedEmail = DefaultUsers.ClientEmail.ToUpper(),
+            NormalizedUserName = DefaultUsers.ClientEmail.ToUpper(),
+            ConcurrencyStamp = DefaultUsers.ClientConcurrencyStamp,
+            SecurityStamp = DefaultUsers.ClientSecurityStamp,
             EmailConfirmed = true,
-            PasswordHash = passwordHasher.HashPassword(null!, DefaultUsers.EmployeePassword),
+            PasswordHash = passwordHasher.HashPassword(null!, DefaultUsers.ClientPassword),
         });
     }
 }

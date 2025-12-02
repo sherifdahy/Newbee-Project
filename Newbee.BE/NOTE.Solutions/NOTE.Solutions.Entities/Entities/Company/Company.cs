@@ -8,4 +8,5 @@ public class Company
     public ICollection<Manager.Manager> Managers { get; set; } = new HashSet<Manager.Manager>();
     public ICollection<Branch> Branches { get; set; } = new HashSet<Branch>();
     public ICollection<ActiveCodeCompany> ActiveCodeCompanies { get; set; } = new HashSet<ActiveCodeCompany>();
+    public ICollection<Category.Category> Categories { get; set; } = new HashSet<Category.Category>();
 }

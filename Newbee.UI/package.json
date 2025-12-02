@@ -1,6 +1,7 @@
 {
-  "name": "note.solutions.fe.administrator",
-  "version": "0.0.0",
+  "name": "newbee",
+  "version": "0.1.0",
+  "description": "منصة مركزية لربط منصات التجارة الإلكترونية مع شركات الشحن لإدارة الطلبات، تتبع الشحنات وتحديث المخزون.",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -21,6 +22,7 @@
     ]
   },
   "private": true,
+  "author": "Newbee",
   "dependencies": {
     "@angular/cdk": "^20.2.8",
     "@angular/common": "^20.3.0",

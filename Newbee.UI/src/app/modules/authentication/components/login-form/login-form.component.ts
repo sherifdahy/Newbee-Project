@@ -39,12 +39,12 @@ export class LoginFormComponent implements OnInit {
 
     this.authService.login(this.email?.value, this.password?.value)?.subscribe({
       next: () => {
-        if(this.authService.currentUser?.roles.includes(Role[Role.Admin]))
+        if(this.authService.currentUser?.roles.includes(Role[Role.Admin]) || this.authService.currentUser?.roles.includes(Role[Role.Manager]))
         {
-          this.router.navigate(['admin']);
+          this.router.navigate(['partner/dashboard']);
         }
         else{
-          this.router.navigate(['portal']);
+          this.router.navigate(['/']);
         }
 
       },

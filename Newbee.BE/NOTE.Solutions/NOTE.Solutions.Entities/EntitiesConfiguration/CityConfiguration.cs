@@ -21,14 +21,6 @@ public class CityConfiguration : IEntityTypeConfiguration<City>
         builder.HasIndex(c => c.Code).IsUnique();
         builder.Property(c => c.Code).IsRequired().HasMaxLength(50);
 
-        builder.HasData(new City()
-        {
-            Id = 1,
-            Code = "Imbaba",
-            Name = "Imbaba",
-            GovernorateId = 1
-        });
-
         
     }
 }

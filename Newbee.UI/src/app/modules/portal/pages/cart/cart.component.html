@@ -1,0 +1,147 @@
+<div class="container py-4">
+  <h1 class="mb-4">🛒 سلة التسوق</h1>
+
+  <div *ngIf="cartItems.length > 0; else emptyCart">
+    <div class="row">
+      <!-- Cart Items -->
+      <div class="col-lg-8">
+        <div class="card shadow-sm mb-3">
+          <div class="card-header">
+            <h5 class="mb-0">المنتجات ({{cartItems.length}})</h5>
+          </div>
+          <div class="table-responsive">
+            <table class="table mb-0">
+              <thead class="table-light">
+                <tr>
+                  <th>المنتج</th>
+                  <th>السعر</th>
+                  <th>الكمية</th>
+                  <th>الإجمالي</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of cartItems">
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <img [src]="item.image" class="rounded me-2" style="width: 60px; height: 60px; object-fit: cover;">
+                      <div>
+                        <strong>{{item.name}}</strong>
+                      </div>
+                    </div>
+                  </td>
+                  <td>{{item.price | number}} ج.م</td>
+                  <td>
+                    <div class="input-group" style="max-width: 100px;">
+                      <button class="btn btn-sm btn-outline-secondary" type="button"
+                        (click)="updateQuantity(item.id, item.quantity - 1)">-</button>
+                      <input type="text" class="form-control text-center" [value]="item.quantity" readonly>
+                      <button class="btn btn-sm btn-outline-secondary" type="button"
+                        (click)="updateQuantity(item.id, item.quantity + 1)">+</button>
+                    </div>
+                  </td>
+                  <td>
+                    <strong>{{(item.price * item.quantity) | number}} ج.م</strong>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-danger" (click)="removeItem(item.id)">حذف</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Coupon Code -->
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <div class="row g-2">
+              <div class="col-md-8">
+                <input type="text" class="form-control" placeholder="أدخل كود الخصم...">
+              </div>
+              <div class="col-md-4">
+                <button class="btn btn-outline-primary w-100" (click)="applyCoupon()">تطبيق</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Order Summary -->
+      <div class="col-lg-4">
+        <div class="card shadow-sm mb-3">
+          <div class="card-header">
+            <h5 class="mb-0">ملخص الطلب</h5>
+          </div>
+          <div class="card-body">
+            <div class="d-flex justify-content-between mb-2">
+              <span>المجموع الفرعي:</span>
+              <strong>{{subtotal | number}} ج.م</strong>
+            </div>
+            <div class="d-flex justify-content-between mb-2">
+              <span>الضريبة (14%):</span>
+              <strong>{{tax | number: '1.2-2'}} ج.م</strong>
+            </div>
+
+            <!-- Shipping Options -->
+            <div class="mb-3">
+              <label class="form-label">طريقة الشحن:</label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="shipping" id="free" value="free"
+                  (change)="calculateShipping('free')" checked>
+                <label class="form-check-label" for="free">
+                  مجاني (للطلبات أكثر من 500 ج.م)
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="shipping" id="standard" value="standard"
+                  (change)="calculateShipping('standard')">
+                <label class="form-check-label" for="standard">
+                  عادي - 50 ج.م (2-3 أيام)
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="shipping" id="express" value="express"
+                  (change)="calculateShipping('express')">
+                <label class="form-check-label" for="express">
+                  سريع - 100 ج.م (1 يوم)
+                </label>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between mb-3 pb-3 border-bottom">
+              <span>رسوم الشحن:</span>
+              <strong>{{shippingCost | number}} ج.م</strong>
+            </div>
+
+            <div class="d-flex justify-content-between mb-3" style="font-size: 1.2rem;">
+              <span>الإجمالي النهائي:</span>
+              <strong class="text-success">{{total | number}} ج.م</strong>
+            </div>
+
+            <button class="btn btn-primary btn-lg w-100 mb-2" routerLink="/checkout">
+              متابعة الدفع
+            </button>
+            <button class="btn btn-outline-secondary btn-lg w-100" routerLink="/">
+              العودة للتسوق
+            </button>
+          </div>
+        </div>
+
+        <!-- Security Info -->
+        <div class="alert alert-info small">
+          <strong>🔒 آمن:</strong> تم التحقق من الدفع بواسطة Stripe و PayPal
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #emptyCart>
+    <div class="text-center py-5">
+      <div class="display-1 mb-3">🛒</div>
+      <h2>السلة فارغة</h2>
+      <p class="text-muted mb-4">لم تضف أي منتجات إلى السلة حتى الآن</p>
+      <button class="btn btn-primary btn-lg" routerLink="/">العودة للتسوق</button>
+    </div>
+  </ng-template>
+</div>
